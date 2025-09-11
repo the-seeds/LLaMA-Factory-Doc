@@ -22,12 +22,12 @@ Atlas 800I A2推理系列（Atlas 800I A2）
   | /dev/davinci3 |      None      |     None     |
   +---------------+----------------+--------------+
 
-Fine-tuning
+单机微调
 ============
 
 以 ``davinci0`` 单卡为例，下载并使用ascend llamafactory镜像。
 
-首先在环境当前目录下执行如下命令，进入docker。
+首先在环境当前目录下执行如下命令，进入容器。
 
 .. code-block::
 
@@ -52,6 +52,14 @@ Fine-tuning
     --shm-size 16G \
     --name llamafactory   quay.io/ascend/llamafactory:0.9.4-npu-a2 bash
 
+如果在单机上使用多卡微调时，可使用 ``--device /dev/davinci1, --device /dev/davinci2, ...`` 来增加 NPU 卡。
+
+.. note::
+
+    昇腾 NPU 卡从 0 开始编号，docker 容器内也是如此；
+
+    如映射物理机上的 davinci6，davinci7 NPU 卡到容器内使用，其对应的卡号分别为 0，1
+
 
 进入docker后安装相关依赖、设置环境变量、配置 LoRA 微调参数文件(qwen1_5_lora_sft_ds.yaml)
 
@@ -72,51 +80,51 @@ Fine-tuning
   export ASCEND_RT_VISIBLE_DEVICES=0
   export USE_MODELSCOPE_HUB=1
 
-  cat << EOF > qwen1_5_lora_sft_ds.yaml
-  ### model
-  model_name_or_path: qwen/Qwen1.5-7B
+在 LLAMA-Factory 目录下，创建如下 qwen1_5_lora_sft_ds.yaml：
 
-  ### method
-  stage: sft
-  do_train: true
-  finetuning_type: lora
-  lora_target: q_proj,v_proj
+.. code-block::
 
-  ### ddp
-  ddp_timeout: 180000000
-  deepspeed: examples/deepspeed/ds_z0_config.json
+    model_name_or_path: qwen/Qwen1.5-7B
 
-  ### dataset
-  dataset: identity,alpaca_en_demo
-  template: qwen
-  cutoff_len: 1024
-  max_samples: 1000
-  overwrite_cache: true
-  preprocessing_num_workers: 16
+    ### method
+    stage: sft
+    do_train: true
+    finetuning_type: lora
+    lora_target: q_proj,v_proj
 
-  ### output
-  output_dir: saves/Qwen1.5-7B/lora/sft
-  logging_steps: 10
-  save_steps: 500
-  plot_loss: true
-  overwrite_output_dir: true
+    ### ddp
+    ddp_timeout: 180000000
+    deepspeed: examples/deepspeed/ds_z0_config.json
 
-  ### train
-  per_device_train_batch_size: 1
-  gradient_accumulation_steps: 2
-  learning_rate: 0.0001
-  num_train_epochs: 3.0
-  lr_scheduler_type: cosine
-  warmup_ratio: 0.1
-  fp16: true
+    ### dataset
+    dataset: identity,alpaca_en_demo
+    template: qwen
+    cutoff_len: 1024
+    max_samples: 1000
+    overwrite_cache: true
+    preprocessing_num_workers: 16
 
-  ### eval
-  val_size: 0.1
-  per_device_eval_batch_size: 1
-  eval_strategy: steps
-  eval_steps: 500
-  EOF
+    ### output
+    output_dir: saves/Qwen1.5-7B/lora/sft
+    logging_steps: 10
+    save_steps: 500
+    plot_loss: true
+    overwrite_output_dir: true
 
+    ### train
+    per_device_train_batch_size: 1
+    gradient_accumulation_steps: 2
+    learning_rate: 0.0001
+    num_train_epochs: 3.0
+    lr_scheduler_type: cosine
+    warmup_ratio: 0.1
+    fp16: true
+
+    ### eval
+    val_size: 0.1
+    per_device_eval_batch_size: 1
+    eval_strategy: steps
+    eval_steps: 500
 
 使用 torchrun 启动 LoRA 微调，如正常输出模型加载、损失 loss 等日志，即说明成功微调。
 
@@ -195,3 +203,47 @@ Fine-tuning
   6. 每天记录体重和饮食：每天记录体重和饮食可以帮助您更好地掌握自己的减肥进度，及时调整计划。
 
   以上是一个简单的减肥计划，但请注意，减肥需要持之以恒，不能急于求成，建议您在制定计划前咨询专业医生或营养师的建议。
+
+
+多机微调
+============
+
+多机微调时，不建议使用容器部署方式（单机都不够用的情况下，起多个容器资源更加紧张），请直接在每个节点安装 llamafactory（请参考 :doc:`NPU <./npu>` 中的安装步骤），同时仍需要安装 DeepSpeed 和 ModelScope：
+
+.. code-block::
+
+  pip install -e ".[deepspeed,modelscope]" -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+
+安装成功后，请在每个节点上使用 ``export ASCEND_RT_VISIBLE_DEVICES=0,1,2,3`` 显式指定所需的 NPU 卡号，不指定时默认使用当前节点的所有 NPU 卡。
+
+然后，必须在每个节点上使用 ``export HCCL_SOCKET_IFNAME=eth0`` 来指定当前节点的 HCCL 通信网卡（请使用目标网卡名替换 ``eth0``）。
+
+以两机环境为例，分别在主、从节点（机器）上执行如下两条命令即可启动多机训练：
+
+.. code-block:: shell
+
+    # 在主节点执行如下命令，设置 rank_id = 0
+    FORCE_TORCHRUN=1 NNODES=2 NODE_RANK=0 MASTER_ADDR=192.168.0.1 MASTER_PORT=29500 \
+    llamafactory-cli train <your_path>/qwen1_5_lora_sft_ds.yaml
+    
+    # 在从节点执行如下命令，设置 rank_id = 1
+    FORCE_TORCHRUN=1 NNODES=2 NODE_RANK=1 MASTER_ADDR=192.168.0.1 MASTER_PORT=29500 \
+    llamafactory-cli train <your_path>/qwen1_5_lora_sft_ds.yaml
+
+.. list-table::
+    :widths: 30 70  
+    :header-rows: 1
+
+    * - 变量名
+      - 介绍
+    * - FORCE_TORCHRUN
+      - 是否强制使用torchrun
+    * - NNODES
+      - 节点数量
+    * - NODE_RANK
+      - 各个节点的rank。
+    * - MASTER_ADDR
+      - 主节点的地址。
+    * - MASTER_PORT
+      - 主节点的端口。
