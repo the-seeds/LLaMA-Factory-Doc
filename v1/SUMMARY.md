@@ -7,6 +7,10 @@
 * [LlamaBoard Web UI](llamaboard-web-ui.md)
 * [SFT Training](sft-training.md)
 * [Inference](inference.md)
+* [Advanced](advanced/README.md)
+  * [Lora and Quantization](advanced/lora-and-quantization.md)
+  * [Distributed](advanced/distributed.md)
+  * [Custom Kernels](advanced/custom-kernels.md)
 
 ## API References
 
