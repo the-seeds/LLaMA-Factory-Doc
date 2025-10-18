@@ -24,8 +24,12 @@
     * [Fused Operators](advanced/custom-kernels/fused-operators.md)
     * [MoE](advanced/custom-kernels/moe.md)
 
-## API References
+## Hyperparameters
 
-* [Data Engine](api-references/data-engine.md)
-* [Model Engine](api-references/model-engine.md)
-* [Trainer](api-references/trainer.md)
+* [Data Argument](hyperparameters/data-argument.md)
+
+## Dev guide
+
+* [Data Engine](dev-guide/data-engine.md)
+* [Model Engine](dev-guide/model-engine.md)
+* [Trainer](dev-guide/trainer.md)
