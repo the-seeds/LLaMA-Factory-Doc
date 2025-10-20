@@ -4,7 +4,6 @@
 * [Getting Started](getting-started.md)
 * [Installization](installization.md)
 * [Data Preparation](data-preparation/README.md)
-  * [Dataset Convert](data-preparation/data-plugins.md)
 * [LlamaBoard Web UI](llamaboard-web-ui.md)
 * [Training](training/README.md)
   * [SFT](training/sft.md)
