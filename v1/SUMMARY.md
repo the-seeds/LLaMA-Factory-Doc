@@ -29,6 +29,6 @@
 
 ## Dev guide
 
-* [Data Engine](dev-guide/data-engine.md)
-* [Model Engine](dev-guide/model-engine.md)
-* [Trainer](dev-guide/trainer.md)
+* [Data Engine](dev-guide/core/data-engine.md)
+* [Model Engine](dev-guide/core/model-engine.md)
+* [Trainer](dev-guide/core/trainer.md)
