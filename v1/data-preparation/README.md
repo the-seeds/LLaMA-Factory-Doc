@@ -1,4 +1,4 @@
-# LLaMA-Factory `v1` 数据预处理
+# LLaMA-Factory v1 数据预处理
 
 ## 总览
 
@@ -10,7 +10,7 @@ LLaMA-Factory `v1` 采用了全新的数据处理架构，主要包含以下核�
 - **DataIndexPlugin**：数据索引插件，支持数据集的采样和权重调整
 - **DataSelectorPlugin**：数据选择插件，支持灵活的数据访问方式
 
-与 LLama-Factory `v0` 版本相比，`v1` 版本采用了统一的数据格式（Messages Format），所有数据都会被转换为标准的对话消息列表；此外，`v1` 版本通过 DataEngine 与 Plugin 机制，提供了自定义数据处理流的接口，具有更好的可扩展性和一致性。
+与 LLaMA-Factory `v0` 版本相比，`v1` 版本采用了统一的数据格式（Messages Format），所有数据都会被转换为标准的对话消息列表；此外，`v1` 版本通过 DataEngine 与 Plugin 机制，提供了自定义数据处理流的接口，具有更好的可扩展性和一致性。
 
 ---
 
@@ -27,10 +27,10 @@ LLaMA-Factory `v1` 采用了全新的数据处理架构，主要包含以下核�
 
 #### 在训练配置文件，可以通过如下方式配置数据集：
 
-<details>
+<details open>
 <summary>方式 1：使用 HF Hub Repo ID</summary>
 
-直接指定 HF Hub 上的数据集 Repo ID，Data Engine 会自动从 HF Hub 下载并加载数据集。
+直接指定 HF Hub 上的数据集 Repo ID，DataEngine 会自动从 HF Hub 下载并加载数据集。
 
 注：使用 Repo ID 直接加载的数据集需要为标准格式
 
@@ -41,8 +41,7 @@ LLaMA-Factory `v1` 采用了全新的数据处理架构，主要包含以下核�
 
 ...
 
-dataset: llamafactory/v1_sft_demo  # HF Hub Repo ID
-template: qwen
+dataset: llamafactory/v1-sft-demo  # HF Hub Repo ID
 
 ...
 ```
@@ -52,7 +51,7 @@ template: qwen
 <details>
 <summary>方式 2：使用 HF Hub 上的 YAML 配置文件</summary>
 
-`dataset`字段指定 HF Hub 上的 `dataset_info.yaml` 的 URI，Data Engine 会自动下载该配置文件并根据其中的配置加载数据集。
+`dataset`字段指定 HF Hub 上的 `dataset_info.yaml` 的 URI，DataEngine 会自动下载该配置文件并根据其中的配置加载数据集。
 
 **训练配置文件示例：**
 
@@ -62,7 +61,6 @@ template: qwen
 ...
 
 dataset: llamafactory/v1-sft-demo/dataset_info.yaml  # 远程 dataset_info.yaml 路径
-template: qwen
 
 ...
 
@@ -75,6 +73,8 @@ template: qwen
 
 `dataset`字段指定本地的数据集文件路径（`.json`、`.jsonl` 等）
 
+注：直接指定数据集文件路径，要求该数据文件的格式已为标准格式
+
 **训练配置文件示例：**
 
 ```yaml
@@ -83,7 +83,6 @@ template: qwen
 ...
 
 dataset: ~/data/v1_sft_demo.jsonl   # 本地数据集文件绝对路径
-template: qwen
 
 ...
 ```
@@ -93,7 +92,7 @@ template: qwen
 <details>
 <summary>方式 4：使用本地 YAML 配置文件路径</summary>
 
-`dataset`字段指定本地的 `dataset_info.yaml` 配置文件路径，Data Engine 会根据该配置加载其中的数据集。
+`dataset`字段指定本地的 `dataset_info.yaml` 配置文件路径，DataEngine 会根据该配置加载其中的数据集。
 
 **训练配置文件示例：**
 
@@ -103,7 +102,6 @@ template: qwen
 ...
 
 dataset: ~/data/dataset_info.yaml    # 本地 dataset_info.yaml 文件路径
-template: qwen
 
 ...
 ```
@@ -119,7 +117,7 @@ template: qwen
 
 v1 使用统一的 **Messages 格式**作为标准数据格式。每个样本都是一个包含 `messages` 字段的 JSON 对象。
 
-针对alpaca、sharegpt、以及dpo等格式的数据，可以通过内置的`Data Converter Plugin`插件，自动将其转化为标准格式，对于其他自定义格式的数据，用户也可通过自定义`Data Converter Plugin`来实现数据格式标准化，这部分内容参见[`Data Converter Plugin`](../dev-guide/plugins/data-plugins.md/#data-converter-plugin)
+针对alpaca、sharegpt、以及dpo等格式的数据，可以通过内置的`DataConverterPlugin`插件，自动将其转化为标准格式，对于其他自定义格式的数据，用户也可通过自定义`DataConverterPlugin`来实现数据格式标准化，这部分内容参见[`DataConverterPlugin`](../dev-guide/plugins/data-plugins.md/#data-converter-plugin)
 
 ### 1. SFT（监督微调）样本格式
 
@@ -234,19 +232,19 @@ v1 使用统一的 **Messages 格式**作为标准数据格式。每个样本都
 
 ### 1. dataset_info.yaml 配置文件格式
 
-`dataset_info.yaml` 支持同时配置多个数据集，支持分别从 HF Hub 和本地获取数据集。
+`dataset_info.yaml` 支持同时配置多个数据集，支持分别从 HF Hub 和本地获取数据集，数据集默认会混合并打乱顺序。
 
 **示例配置文件：`data/dataset_info.yaml`**
 
 ```yaml
 # 数据集 1：使用本地文件 + Alpaca 转换器
 identity:
-  file_name: ～/data/identity.json            #本地数据集文件绝对路径
+  file_name: ~/data/identity.json            #本地数据集文件绝对路径
   converter: alpaca                           # 使用 alpaca 转换器
 
 # 数据集 2：指定自定义数据集目录
 alpaca_en_demo:
-  file_name:  ～/data/alpaca_en_demo.json     # 数据集文件名
+  file_name:  ~/data/alpaca_en_demo.json     # 数据集文件名
   converter: alpaca                           # 转换器插件
   size: 500                                   # 只使用 500 个样本
   weight: 0.5                                 # 数据集权重，用于控制该数据集的采样频率
@@ -255,12 +253,12 @@ alpaca_en_demo:
 
 # 数据集 3：从 Hugging Face Hub 加载
 hf_dataset:
-  hf_hub_url: llamafactory/v1-sft-demo  # hf repo id
+  hf_hub_url: llamafactory/v1-sft-demo  # HF repo ID
   streaming: false                   
 
 # 数据集 4：已经是标准格式，无需转换器
 standard:
-  file_name: ～/data/v1_sft_demo.jsonl   # 本地标准数据集文件路径
+  file_name: ~/data/v1_sft_demo.jsonl   # 本地标准数据集文件路径
 
 # 数据集 5：自定义数据集和 converter 插件
 custom_dataset:
@@ -303,11 +301,11 @@ from llamafactory.v1.core.data_engine import DataEngine
 
 # 使用本地 YAML 配置
 data_args = DataArguments(
-    dataset="./data/v1_sft_demo.jsonl",
+    dataset="~/data/v1_sft_demo.jsonl",
     cutoff_len=2048
 )
 
-# 初始化 Data Engine
+# 初始化 DataEngine
 engine = DataEngine(data_args=data_args)
 
 # 查看数据集信息
@@ -380,60 +378,6 @@ dataset_3:
 ### 4. 多模态数据示例
 
 **数据文件：`data/multimodal_demo.jsonl`**
-
-原始数据示例：
-
-```json
-[
-  {
-    "messages": [
-      {
-        "content": "<image>Who are they?",
-        "role": "user"
-      },
-      {
-        "content": "They're Kane and Gretzka from Bayern Munich.",
-        "role": "assistant"
-      },
-      {
-        "content": "What are they doing?<image>",
-        "role": "user"
-      },
-      {
-        "content": "They are celebrating on the soccer field.",
-        "role": "assistant"
-      }
-    ],
-    "images": [
-      "mllm_demo_data/1.jpg",
-      "mllm_demo_data/1.jpg"
-    ]
-  },
-  {
-    "messages": [
-      {
-        "content": "<image>Who is he?",
-        "role": "user"
-      },
-      {
-        "content": "He's Thomas Muller from Bayern Munich.",
-        "role": "assistant"
-      },
-      {
-        "content": "Why is he on the ground?",
-        "role": "user"
-      },
-      {
-        "content": "Because he's sliding on his knees to celebrate.",
-        "role": "assistant"
-      }
-    ],
-    "images": [
-      "mllm_demo_data/2.jpg"
-    ]
-  }
-]
-```
 
 标准化后数据示例：
 

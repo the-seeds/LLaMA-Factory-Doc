@@ -2,13 +2,13 @@
 
 ---
 
-## Data Converter Plugin
+## DataConverterPlugin
 
-### 1. Data Converter Plugin 简介
+### 1. DataConverterPlugin 简介
 
-Data Converter 负责将非标准格式的数据集转换为 v1 的标准 Messages 格式。这使得用户可以继续使用现有的数据集（如 Alpaca 格式），而无需手动转换。针对自定义格式的数据集，用户也可以通过构建对应的自定义 Data Converter 插件，来负责其数据格式标准化。
+DataConverter 负责将非标准格式的数据集转换为 v1 的标准 Messages 格式。这使得用户可以继续使用现有的数据集（如 Alpaca 格式），而无需手动转换。针对自定义格式的数据集，用户也可以通过构建对应的自定义 DataConverter 插件，来负责其数据格式标准化。
 
-当前，LLama-Factory 已内置了 `Alpaca Converter` 和 `Pair Converter`，这两类数据集可以直接直接使用对应的 converter 进行标准化，无需自定义转换器。
+当前，LLaMA-Factory 已内置了 `Alpaca Converter` 和 `Pair Converter`，这两类数据集可以直接使用对应的 converter 进行标准化，无需自定义转换器。
 
 
 ### 2. Alpaca Converter 详解
@@ -79,7 +79,7 @@ def alpaca_converter(raw_sample: AlpacaSample) -> SFTSample:
 
 ```
 
-#### 2.2 转换过程
+#### 2.3 转换过程
 
 `alpaca_converter` 函数将 Alpaca 格式转换为标准格式，转换逻辑如下：
 
@@ -115,7 +115,7 @@ def alpaca_converter(raw_sample: AlpacaSample) -> SFTSample:
     return {"messages": messages}
 ```
 
-#### 2.3 转换示例
+#### 2.4 转换示例
 
 **输入（Alpaca 格式）：**
 
@@ -208,9 +208,9 @@ my_dataset:
 
 ---
 
-## Data Loader Plugin
+## DataLoaderPlugin
 
-### 1. Data Loader Plugin简介
+### 1. DataLoaderPlugin 简介
 
 `DataLoaderPlugin` 负责从本地文件加载数据集，当前支持如下文件格式：
 
@@ -221,7 +221,7 @@ my_dataset:
 - **Arrow**: `.arrow`
 - **Text**: `.txt`
 
-### 2. `DataLoaderPlugin` 接口定义
+### 2. DataLoaderPlugin 接口定义
 
 ```python
 @dataclass
@@ -272,7 +272,7 @@ class DataLoaderPlugin:
 
         example:
             >>> plugin = DataLoaderPlugin(args)
-            >>> ds = plugin.auto_load_data({"file_name": "～/data.json", "split": "train"})
+            >>> ds = plugin.auto_load_data({"file_name": "~/data.json", "split": "train"})
         """
         ...
     
@@ -301,11 +301,11 @@ class DataLoaderPlugin:
 
 ---
 
-## Data Index Plugin
+## DataIndexPlugin
 
-### 1. `Data Index Plugin` 简介
+### 1. DataIndexPlugin 简介
 
-`DataIndexPlugin` 负责调整数据索引，支持通过配置 `size` , `weight` 等参数控制数据集样本数量和采样频率。
+`DataIndexPlugin` 负责调整数据索引，支持通过配置 `size`, `weight` 等参数控制数据集样本数量和采样频率。
 
 - 使用 `size` 参数 限制使用的样本数量：
 
@@ -332,7 +332,7 @@ dataset_b:
 - 当 `weight=1.0` 时，数据集按原始比例采样
 - 当 `weight=2.0` 时，该数据集的索引会复制 2 倍，使其样本出现频率翻倍
 
-### 2. `DataIndexPlugin` 接口定义
+### 2. DataIndexPlugin 接口定义
 
 ```python
 @dataclass
@@ -420,14 +420,14 @@ class DataIndexPlugin:
 ```
 ---
 
-## Data Selector Plugin
+## DataSelectorPlugin
 
-### 1. Data Selector Plugin 简介
+### 1. DataSelectorPlugin 简介
 
-`Data Selector Plugin` 为 `DataEngine`提供基于索引访问数据的功能，由 `DataEngine` 的 `__getitem__` 方法自动调用。
+`DataSelectorPlugin` 为 `DataEngine`提供基于索引访问数据的功能，由 `DataEngine` 的 `__getitem__` 方法自动调用。
 
 
-### 2. `DataSelectorPlugin` 接口定义
+### 2. DataSelectorPlugin 接口定义
 
 ```python
 @dataclass

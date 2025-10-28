@@ -1,15 +1,15 @@
-# Data Engine
+# DataEngine
 
 ---
 
-### 1. `DataEngine`简介
+### 1. DataEngine 简介
 
 
-`DataEngine` 是 LLama-Factory v1 数据处理的核心类，继承自 PyTorch 的 `Dataset`，负责各种插件的接入，其他功能（如数据格式转换、数据加载等）均通过插件的形式实现并接入 `DataEngine`。
+`DataEngine` 是 LLaMA-Factory v1 数据处理的核心类，继承自 PyTorch 的 `Dataset`，负责各种插件的接入，其他功能（如数据格式转换、数据加载等）均通过插件的形式实现并接入 `DataEngine`。
 
 `DataEngine`接受一个唯一入参：`DataArguments` 实例，所有的元数据集信息均通过该参数配置传入，
 
-### 2. `DataEngine` 与 `DataArguments` 接口定义
+### 2. DataEngine 与 DataArguments 接口定义
 
 ```python
 @dataclass
@@ -151,19 +151,21 @@ class DataEngine(Dataset):
 
 ```
 
+`DataArguments`  参数说明：
+
 `dataset`: 数据集路径，支持本地或远程，当传入本地数据集文件路径时，需要满足该数据集为标准格式；否则需要传入 `dataset_info.yaml` 来配置数据集的 `converter` 等元信息，以告知 `DataEngine` 应当如何处理该数据。
 
 `cutoff_len`: 数据集的截止长度，即该数据集的最大样本数量。
 
 ---
 
-### 3. `DataEngine` 核心方法
+### 3. DataEngine 核心方法
 
-#### 2.1 `get_dataset_info`：加载数据元信息
+#### 3.1 `get_dataset_info`：加载数据元信息
 
 根据 `dataset` 参数加载数据集配置，获取数据位置、数据格式、插件配置等所有数据元信息，在实例化 `DataEngine` 时会自动调用此方法。
 
-#### 2.2 加载数据集：`load_dataset`
+#### 3.2 加载数据集：`load_dataset`
 
 遍历所有数据源，根据不同的数据源加载数据，在实例化 `DataEngine` 时会自动调用此方法。
 
@@ -182,7 +184,7 @@ for key, value in self.dataset_infos.items():
     self.datasets[key] = dataset
 ```
 
-#### 2.3 `build_data_index`：构建数据索引
+#### 3.3 `build_data_index`：构建数据索引
 
 为每个数据集创建索引列表 `[(dataset_name, sample_index), ...]`, `DataIndexPlugin`插件在此处被调用，可控制各数据集的采样频率、采样方式等，在实例化`DataEngine`时会自动调用此方法。
 
@@ -200,9 +202,9 @@ for dataset_name, dataset in self.datasets.items():
     self.data_index.extend(data_index)
 ```
 
-#### 2.4 `_convert_data_sample`：数据格式标准化
+#### 3.4 `_convert_data_sample`：数据格式标准化
 
-将原始数据转换为标准格式，`DataConverter`插件在此处被调用，具体调用的插件由 `get_dataset_info` 方法获取的 `converter` 信息指定，若 `converter` 为空则假定数据集为标准格式，此方法由`DataEngine`的` __getitem__`方法调用。
+将原始数据转换为标准格式，`DataConverterPlugin`插件在此处被调用，具体调用的插件由 `get_dataset_info` 方法获取的 `converter` 信息指定，若 `converter` 为空则假定数据集为标准格式，此方法由`DataEngine`的` __getitem__`方法调用。
 
 ```python
 def _convert_data_sample(self, raw_sample: dict, dataset_name: str) -> Sample:
@@ -218,7 +220,7 @@ def _convert_data_sample(self, raw_sample: dict, dataset_name: str) -> Sample:
 
 ---
 
-### 3. 初始化
+### 4. 初始化
 
 `DataEngine` 初始化过程只需传入一个构建好的 `DataArguments` 即可，后续可通过该 `DataEngine` 访问数据集中的数据。
 
@@ -228,7 +230,7 @@ from llamafactory.v1.core.data_engine import DataEngine
 
 # 1. 创建数据参数
 data_args = DataArguments(
-    dataset="./datav1_sft_demo.jsonl",
+    dataset="~/data/v1_sft_demo.jsonl",
     cutoff_len=2048
 )
 
@@ -239,7 +241,7 @@ data_engine = DataEngine(data_args=data_args)
 sample = data_engine[0]  # 获取第一个样本
 ```
 
-### 4. 数据访问方式
+### 5. 数据访问方式
 
 实例化后的`DataEngine`支持整数索引、列表索引、以及切片等访问方式，其数据读取用法可等价于 Python 列表。
 

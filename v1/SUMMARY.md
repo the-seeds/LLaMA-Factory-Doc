@@ -2,7 +2,7 @@
 
 * [LlamaFactory Docs](README.md)
 * [Getting Started](getting-started.md)
-* [Installization](installization.md)
+* [Installation](installation.md)
 * [Data Preparation](data-preparation/README.md)
 * [LlamaBoard Web UI](llamaboard-web-ui.md)
 * [Training](training/README.md)
@@ -29,6 +29,6 @@
 
 ## Dev guide
 
-* [Data Engine](dev-guide/core/data-engine.md)
-* [Model Engine](dev-guide/core/model-engine.md)
+* [DataEngine](dev-guide/core/data-engine.md)
+* [ModelEngine](dev-guide/core/model-engine.md)
 * [Trainer](dev-guide/core/trainer.md)
