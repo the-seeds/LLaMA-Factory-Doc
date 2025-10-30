@@ -2,9 +2,8 @@
 
 * [LlamaFactory Docs](README.md)
 * [Getting Started](getting-started.md)
-* [Installization](installization.md)
+* [Installation](installation.md)
 * [Data Preparation](data-preparation/README.md)
-  * [Dataset Convert](data-preparation/dataset-convert.md)
 * [LlamaBoard Web UI](llamaboard-web-ui.md)
 * [Training](training/README.md)
   * [SFT](training/sft.md)
@@ -30,6 +29,6 @@
 
 ## Dev guide
 
-* [Data Engine](dev-guide/data-engine.md)
-* [Model Engine](dev-guide/model-engine.md)
-* [Trainer](dev-guide/trainer.md)
+* [DataEngine](dev-guide/core/data-engine.md)
+* [ModelEngine](dev-guide/core/model-engine.md)
+* [Trainer](dev-guide/core/trainer.md)
