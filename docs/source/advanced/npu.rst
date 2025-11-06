@@ -130,6 +130,7 @@ LLaMA-Factory 提供 :ref:`docker_compose` 和 :ref:`docker_build` 两种构建�
 
 
 .. code-block:: bash
+
     # 通过如下地址：https://www.hiascend.com/developer/download/community/result 查找并下载合适的 CANN 安装包，以 A2 为例，需要下载如下安装包：
     # 1. Ascend-cann-toolkit_8.3.RC1_linux-aarch64.run
     # 2. Ascend-cann-kernels-910b_8.3.RC1_linux-aarch64.run
