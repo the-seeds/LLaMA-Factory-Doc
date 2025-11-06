@@ -114,34 +114,41 @@ LLaMA-Factory 提供 :ref:`docker_compose` 和 :ref:`docker_build` 两种构建�
      - Minimum
      - Recommend
    * - CANN
-     - 8.0.RC1
-     - 8.0.RC1
+     - 8.3.RC1
+     - 8.3.RC1
    * - torch
-     - 2.1.0
-     - 2.1.0
+     - 2.5.1
+     - 2.7.1
    * - torch-npu
-     - 2.1.0
-     - 2.1.0.post3
+     - 2.5.1
+     - 2.7.1
    * - deepspeed
-     - 0.13.2
-     - 0.13.2
+     - 0.16.9
+     - 0.16.9
 
 可以按照 `快速安装昇腾环境 <https://ascend.github.io/docs/sources/ascend/quick_install.html>`_ 指引，或者使用以下命令完成快速安装：
 
 
 .. code-block:: bash
 
-    # replace the url according to your CANN version and devices
-    # install CANN Toolkit
-    wget https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Milan-ASL/Milan-ASL%20V100R001C17SPC701/Ascend-cann-toolkit_8.0.RC1.alpha001_linux-"$(uname -i)".run
-    bash Ascend-cann-toolkit_8.0.RC1.alpha001_linux-"$(uname -i)".run --install
+    # 通过如下地址：https://www.hiascend.com/developer/download/community/result 查找并下载合适的 CANN 安装包，以 A2 为例，需要下载如下安装包：
+    # 1. Ascend-cann-toolkit_8.3.RC1_linux-aarch64.run
+    # 2. Ascend-cann-kernels-910b_8.3.RC1_linux-aarch64.run
+    # 3. Ascend-cann-nnal_8.3.RC1_linux-aarch64.run
+    # 安装 CANN Toolkit
+    bash Ascend-cann-toolkit_8.3.RC1_linux-aarch64.run --install
 
-    # install CANN Kernels
-    wget https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Milan-ASL/Milan-ASL%20V100R001C17SPC701/Ascend-cann-kernels-910b_8.0.RC1.alpha001_linux.run
-    bash Ascend-cann-kernels-910b_8.0.RC1.alpha001_linux.run --install
+    # 安装 CANN Kernels
+    bash Ascend-cann-kernels-910b_8.3.RC1_linux-aarch64.run --install
+
+    # 安装加速库(安装前首先需要source CANN)
+    source /usr/local/Ascend/ascend-toolkit/set_env.sh
+    bash Ascend-cann-nnal_8.3.RC1_linux-aarch64.run --install
+
 
     # set env variables
     source /usr/local/Ascend/ascend-toolkit/set_env.sh
+    source /usr/local/Ascend/nnal/atb/set_env.sh
 
 
 
@@ -181,17 +188,18 @@ LLaMA-Factory 提供 :ref:`docker_compose` 和 :ref:`docker_build` 两种构建�
 
 .. code-block:: shell
   
-  - `llamafactory` version: 0.8.2.dev0
-  - Platform: Linux-4.19.90-vhulk2211.3.0.h1543.eulerosv2r10.aarch64-aarch64-with-glibc2.31
-  - Python version: 3.10.14
-  - PyTorch version: 2.1.0 (NPU)
-  - Transformers version: 4.41.2
-  - Datasets version: 2.19.2
-  - Accelerate version: 0.31.0
-  - PEFT version: 0.11.1
-  - TRL version: 0.9.4
-  - NPU type: xxx
-  - CANN version: 8.0.RC2.alpha001
+    - `llamafactory` version: 0.9.4.dev0
+    - Platform: Linux-5.10.0-60.18.0.50.r865_35.hce2.aarch64-aarch64-with-glibc2.35
+    - Python version: 3.11.13
+    - PyTorch version: 2.7.1+cpu (NPU)
+    - Transformers version: 4.57.1
+    - Datasets version: 4.0.0
+    - Accelerate version: 1.11.0
+    - PEFT version: 0.17.1
+    - NPU type: Ascend910B1
+    - CANN version: 8.3.RC1
+    - TRL version: 0.9.6
+    - Default data directory: detected
 
 
 在 LLaMA-Factory 中使用 NPU 
