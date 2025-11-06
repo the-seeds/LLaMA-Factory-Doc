@@ -104,6 +104,14 @@ LLaMA-Factory 安装
   cd LLaMA-Factory
   pip install -e ".[torch,metrics]"
 
+此外，如果在云端开发机中可以如下操作：
+git clone https://github.com/hiyouga/LLaMA-Factory.git  
+conda create -n llama_factory python=3.10  
+conda activate llama_factory  
+cd LLaMA-Factory  
+pip install -e .[metrics]
+
+
 如果出现环境冲突，请尝试使用 ``pip install --no-deps -e .`` 解决
 
 LLaMA-Factory 校验
