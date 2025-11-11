@@ -4,23 +4,83 @@ NPU 训练
 支持设备
 ============
 
-Atlas A2训练系列（Atlas 800T A2, Atlas 900 A2 PoD, Atlas 200T A2 Box16, Atlas 300T A2）
+LLaMA-Factory当前支持以下设备，您可以通过`npu-smi info`查看具体信息。
 
-Atlas 800I A2推理系列（Atlas 800I A2）
+- Atlas A2训练系列（Atlas 800T A2, Atlas 900 A2 PoD, Atlas 200T A2 Box16, Atlas 300T A2）
 
-使用 npu-list 命令查询设备信息
+- Atlas 800I A2推理系列（Atlas 800I A2）
 
-.. code-block::
 
-  # npu-list
-  +---------------+----------------+--------------+
-  |  Npu devices  | Container name | Container id |
-  +---------------+----------------+--------------+
-  | /dev/davinci0 |      None      |     None     |
-  | /dev/davinci1 |      None      |     None     |
-  | /dev/davinci2 |      None      |     None     |
-  | /dev/davinci3 |      None      |     None     |
-  +---------------+----------------+--------------+
+支持功能
+============
+
+.. raw:: html
+
+   <table class="docutils" style="border-collapse: collapse; border: 1px solid #ccc;">
+     <thead>
+       <tr>
+         <th style="border: 1px solid #ccc; padding: 8px; text-align: left;"></th>
+         <th style="border: 1px solid #ccc; padding: 8px; text-align: left;">功能</th>
+         <th style="border: 1px solid #ccc; padding: 8px; text-align: left;">限制条件</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td rowspan="4" style="border: 1px solid #ccc; padding: 8px; vertical-align: middle;"><strong>训练范式</strong></td>
+         <td style="border: 1px solid #ccc; padding: 8px;">PT</td>
+         <td style="border: 1px solid #ccc; padding: 8px;"></td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #ccc; padding: 8px;">SFT</td>
+         <td style="border: 1px solid #ccc; padding: 8px;"></td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #ccc; padding: 8px;">RM</td>
+         <td style="border: 1px solid #ccc; padding: 8px;"></td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #ccc; padding: 8px;">DPO</td>
+         <td style="border: 1px solid #ccc; padding: 8px;"></td>
+       </tr>
+       <tr>
+         <td rowspan="3" style="border: 1px solid #ccc; padding: 8px; vertical-align: middle;"><strong>参数范式</strong></td>
+         <td style="border: 1px solid #ccc; padding: 8px;">Full</td>
+         <td style="border: 1px solid #ccc; padding: 8px;"></td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #ccc; padding: 8px;">Freeze</td>
+         <td style="border: 1px solid #ccc; padding: 8px;"></td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #ccc; padding: 8px;">LoRA</td>
+         <td style="border: 1px solid #ccc; padding: 8px;"></td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #ccc; padding: 8px;"><strong>模型合并</strong></td>
+         <td style="border: 1px solid #ccc; padding: 8px;">LoRA权重合并</td>
+         <td style="border: 1px solid #ccc; padding: 8px;"></td>
+       </tr>
+       <tr>
+         <td rowspan="3" style="border: 1px solid #ccc; padding: 8px; vertical-align: middle;"><strong>分布式</strong></td>
+         <td style="border: 1px solid #ccc; padding: 8px;">DDP</td>
+         <td style="border: 1px solid #ccc; padding: 8px;"></td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #ccc; padding: 8px;">FSDP</td>
+         <td style="border: 1px solid #ccc; padding: 8px;"></td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #ccc; padding: 8px;">DeepSpeed</td>
+         <td style="border: 1px solid #ccc; padding: 8px;"></td>
+       </tr>
+       <tr>
+         <td style="border: 1px solid #ccc; padding: 8px;"><strong>加速</strong></td>
+         <td style="border: 1px solid #ccc; padding: 8px;">融合算子</td>
+         <td style="border: 1px solid #ccc; padding: 8px;">当前仅支持NPU FA融合算子</td>
+       </tr>
+     </tbody>
+   </table>
+
 
 单机微调
 ============
@@ -208,7 +268,7 @@ Atlas 800I A2推理系列（Atlas 800I A2）
 多机微调
 ============
 
-多机微调时，不建议使用容器部署方式（单机都不够用的情况下，起多个容器资源更加紧张），请直接在每个节点安装 llamafactory（请参考 :doc:`NPU <./npu>` 中的安装步骤），同时仍需要安装 DeepSpeed 和 ModelScope：
+多机微调时，不建议使用容器部署方式（单机都不够用的情况下，起多个容器资源更加紧张），请直接在每个节点安装 llamafactory（请参考 :doc:`NPU <./npu_installation>` 中的安装步骤），同时仍需要安装 DeepSpeed 和 ModelScope：
 
 .. code-block::
 

@@ -42,9 +42,9 @@ Documentation
   advanced/quantization
   advanced/trainers
   advanced/monitor
-  advanced/npu
-  advanced/npu_inference
+  advanced/npu_installation
   advanced/npu_training
+  advanced/npu_inference
   advanced/arguments
   advanced/model_support
   advanced/extras
