@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, LlamaFactory team.
+# This file is distributed under the same license as the LLaMA Factory
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LLaMA Factory \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-05 01:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../source/advanced/npu_inference.rst:2
+msgid "NPU推理"
+msgstr "NPU Inference"
+
+#: ../../source/advanced/npu_inference.rst:56
+msgid "vLLM-Ascend安装"
+msgstr "vLLM-Ascend Installation"
+
+#: ../../source/advanced/npu_inference.rst:59
+msgid "使用下述命令安装 ``vLLM-Ascend`` 。"
+msgstr "Install ``vLLM-Ascend`` using the following commands."
+
+#: ../../source/advanced/npu_inference.rst:69
+msgid "LLaMA-Factory安装"
+msgstr "LLaMA-Factory Installation"
+
+#: ../../source/advanced/npu_inference.rst:72
+msgid "使用下述命令安装 ``LLaMA-Factory`` 。"
+msgstr "Install ``LLaMA-Factory`` using the following commands."
+
+#: ../../source/advanced/npu_inference.rst:80
+msgid "推理测试"
+msgstr "Inference Testing"
+
+#: ../../source/advanced/npu_inference.rst:83
+msgid "可视化界面"
+msgstr "Visualization Interface"
+
+#: ../../source/advanced/npu_inference.rst:86
+msgid "使用下述命令启动LLaMA-Factory的可视化界面。"
+msgstr "Start the LLaMA-Factory visualization interface using the following command."
+
+#: ../../source/advanced/npu_inference.rst:92
+msgid "浏览器访问到如下界面则项目启动成功。"
+msgstr "If the following interface is accessed in the browser, the project has started successfully."
+
+#: ../../source/advanced/npu_inference.rst:97
+msgid "选择模型并切换到chat模式并将推理引擎修改为vLLM，然后点击加载模型。"
+msgstr "Select a model, switch to chat mode, change the inference engine to vLLM, and then click Load Model."
+
+#: ../../source/advanced/npu_inference.rst:102
+msgid "加载完成后可以进行对话。"
+msgstr "After loading is complete, you can start a conversation."
+
+#: ../../source/advanced/npu_inference.rst:107
+msgid "性能对比"
+msgstr "Performance Comparison"
+
+#: ../../source/advanced/npu_inference.rst:110
+msgid "硬件：``Ascend 910B1 ✖ 2``"
+msgstr "Hardware: ``Ascend 910B1 ✖ 2``"
+
+#: ../../source/advanced/npu_inference.rst:113
+msgid "模型名称"
+msgstr "Model Name"
+
+#: ../../source/advanced/npu_inference.rst:113
+msgid "vLLM"
+msgstr "vLLM"
+
+#: ../../source/advanced/npu_inference.rst:113
+msgid "Hugging Face"
+msgstr "Hugging Face"
+
+#: ../../source/advanced/npu_inference.rst:113
+msgid "速度提升比"
+msgstr "Speed Improvement Ratio"
+
+#: ../../source/advanced/npu_inference.rst:115
+msgid "qwen2.5-0.5B"
+msgstr "qwen2.5-0.5B"
+
+#: ../../source/advanced/npu_inference.rst:115
+msgid "22.7 tokens/s"
+msgstr "22.7 tokens/s"
+
+#: ../../source/advanced/npu_inference.rst:115
+msgid "10.9 tokens/s"
+msgstr "10.9 tokens/s"
+
+#: ../../source/advanced/npu_inference.rst:115
+msgid "108.3%"
+msgstr "108.3%"
+
+#: ../../source/advanced/npu_inference.rst:117
+msgid "qwen2.5-7B"
+msgstr "qwen2.5-7B"
+
+#: ../../source/advanced/npu_inference.rst:117
+msgid "20.2 tokens/s"
+msgstr "20.2 tokens/s"
+
+#: ../../source/advanced/npu_inference.rst:117
+msgid "9.9 tokens/s"
+msgstr "9.9 tokens/s"
+
+#: ../../source/advanced/npu_inference.rst:117
+msgid "104.0%"
+msgstr "104.0%"
+
+#: ../../source/advanced/npu_inference.rst:120
+msgid "在推理性能上。vLLM框架比huggingface的推理速度提升了超过一倍。"
+msgstr "In terms of inference performance, the vLLM framework has more than doubled the inference speed compared to Hugging Face."
+

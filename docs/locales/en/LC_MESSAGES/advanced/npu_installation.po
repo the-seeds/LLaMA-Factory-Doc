@@ -1,0 +1,294 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, LlamaFactory team.
+# This file is distributed under the same license as the LLaMA Factory
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LLaMA Factory \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-05 01:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../source/advanced/npu_installation.rst:2
+msgid "NPU安装及配置"
+msgstr "NPU Installation"
+
+#: ../../source/advanced/npu_installation.rst:4
+msgid "目前LLaMA-Factory 通过 torch-npu 库完成了对华为昇腾 910b 系列芯片的支持, 包含 32GB 和 64GB 两个版本。跟其他使用相比，会需要额外3个前置条件"
+msgstr "Currently, LLaMA-Factory has completed support for Huawei Ascend 910b series chips through the torch-npu library, including 32GB and 64GB versions. Compared to other usage, 3 additional prerequisites are required"
+
+#: ../../source/advanced/npu_installation.rst:6
+msgid "加速卡本身的驱动正常安装"
+msgstr "The accelerator card driver is properly installed"
+
+#: ../../source/advanced/npu_installation.rst:7
+msgid "CANN Toolkit 和 Kernels库正常安装"
+msgstr "CANN Toolkit and Kernels library are properly installed"
+
+#: ../../source/advanced/npu_installation.rst:8
+msgid "torch-npu 库正常安装"
+msgstr "torch-npu library is properly installed"
+
+#: ../../source/advanced/npu_installation.rst:10
+msgid "为方便昇腾用户使用，LLaMA-Factory 提供已预装昇腾环境的 :ref:`install_form_docker` 及自行安装昇腾环境，:ref:`install_form_pip` 两种方式，可按需自行选择："
+msgstr "For the convenience of Ascend users, LLaMA-Factory provides two methods: :ref:`install_form_docker` with pre-installed Ascend environment and :ref:`install_form_pip` for manual installation. You can choose according to your needs:"
+
+#: ../../source/advanced/npu_installation.rst:14
+msgid "Docker 安装"
+msgstr "Docker Installation"
+
+#: ../../source/advanced/npu_installation.rst:18
+msgid "请确保宿主机已根据昇腾卡型号成功安装对应的固件和驱动，可参考 `快速安装昇腾环境 <https://ascend.github.io/docs/sources/ascend/quick_install.html>`_ 指引。"
+msgstr "Please ensure that the host machine has successfully installed the corresponding firmware and drivers according to the Ascend card model. Refer to the `Quick Installation of Ascend Environment <https://ascend.github.io/docs/sources/ascend/quick_install.html>`_ guide."
+
+#: ../../source/advanced/npu_installation.rst:20
+msgid "LLaMA-Factory 提供 :ref:`docker_compose` 和 :ref:`docker_build` 两种构建方式，请根据需求选择其一。"
+msgstr "LLaMA-Factory provides two build methods: :ref:`docker_compose` and :ref:`docker_build`. Please choose one according to your needs."
+
+#: ../../source/advanced/npu_installation.rst:25
+msgid "使用 docker-compose 构建并启动 docker 容器"
+msgstr "Build and Start Docker Container Using docker-compose"
+
+#: ../../source/advanced/npu_installation.rst:28
+msgid "进入 LLaMA-Factory 项目中存放 Dockerfile 及 docker-compose.yaml 的 docker-npu 目录："
+msgstr "Enter the docker-npu directory in the LLaMA-Factory project where Dockerfile and docker-compose.yaml are stored:"
+
+#: ../../source/advanced/npu_installation.rst:35
+msgid "构建 docker 镜像并启动 docker 容器："
+msgstr "Build docker image and start docker container:"
+
+#: ../../source/advanced/npu_installation.rst:41
+msgid "进入 docker 容器："
+msgstr "Enter docker container:"
+
+#: ../../source/advanced/npu_installation.rst:51
+msgid "不使用 docker-compose"
+msgstr "Without Using docker-compose"
+
+#: ../../source/advanced/npu_installation.rst:54
+msgid "使用 docker build 直接构建 docker 镜像："
+msgstr "Build docker image directly using docker build:"
+
+#: ../../source/advanced/npu_installation.rst:61
+msgid "启动 docker 容器："
+msgstr "Start docker container:"
+
+#: ../../source/advanced/npu_installation.rst:94
+msgid "自行 pip 安装"
+msgstr "Install by pip"
+
+#: ../../source/advanced/npu_installation.rst:97
+msgid "自行 pip 安装时， python 版本建议使用3.10， 目前该版本对于 NPU 的使用情况会相对稳定，其他版本可能会遇到一些未知的情况"
+msgstr "When installing via pip, Python version 3.10 is recommended. Currently, this version is relatively stable for NPU usage. Other versions may encounter some unknown issues"
+
+#: ../../source/advanced/npu_installation.rst:99
+msgid "依赖1: NPU 驱动"
+msgstr "Dependency 1: NPU Driver"
+
+#: ../../source/advanced/npu_installation.rst:102
+msgid "根据昇腾卡型号安装对应的固件和驱动，可参考 `快速安装昇腾环境 <https://ascend.github.io/docs/sources/ascend/quick_install.html>`_ 指引，使用 ``npu-smi info`` 验证如下"
+msgstr "Install the corresponding firmware and drivers according to the Ascend card model. Refer to the `Quick Installation of Ascend Environment <https://ascend.github.io/docs/sources/ascend/quick_install.html>`_ guide, and verify with ``npu-smi info`` as follows"
+
+#: ../../source/advanced/npu_installation.rst:106
+msgid "依赖2: NPU 开发包"
+msgstr "Dependency 2: NPU Development Package"
+
+#: ../../source/advanced/npu_installation.rst:109
+msgid "相关包建议版本"
+msgstr "Recommended Versions for Related Packages"
+
+#: ../../source/advanced/npu_installation.rst:113
+msgid "Requirement"
+msgstr "Requirement"
+
+#: ../../source/advanced/npu_installation.rst:114
+msgid "Minimum"
+msgstr "Minimum"
+
+#: ../../source/advanced/npu_installation.rst:115
+msgid "Recommend"
+msgstr "Recommend"
+
+#: ../../source/advanced/npu_installation.rst:116
+msgid "CANN"
+msgstr "CANN"
+
+#: ../../source/advanced/npu_installation.rst:117
+msgid "8.3.RC1"
+msgstr "8.3.RC1"
+
+#: ../../source/advanced/npu_installation.rst:119
+msgid "torch"
+msgstr "torch"
+
+#: ../../source/advanced/npu_installation.rst:120
+msgid "2.5.1"
+msgstr "2.5.1"
+
+#: ../../source/advanced/npu_installation.rst:121
+msgid "2.7.1"
+msgstr "2.7.1"
+
+#: ../../source/advanced/npu_installation.rst:122
+msgid "torch-npu"
+msgstr "torch-npu"
+
+#: ../../source/advanced/npu_installation.rst:125
+msgid "deepspeed"
+msgstr "deepspeed"
+
+#: ../../source/advanced/npu_installation.rst:126
+msgid "0.16.9"
+msgstr "0.16.9"
+
+#: ../../source/advanced/npu_installation.rst:129
+msgid "可以按照 `快速安装昇腾环境 <https://ascend.github.io/docs/sources/ascend/quick_install.html>`_ 指引，或者使用以下命令完成快速安装："
+msgstr "You can follow the `Quick Installation of Ascend Environment <https://ascend.github.io/docs/sources/ascend/quick_install.html>`_ guide, or use the following commands for quick installation:"
+
+#: ../../source/advanced/npu_installation.rst:155
+msgid "依赖3: torch-npu"
+msgstr "Dependency 3: torch-npu"
+
+#: ../../source/advanced/npu_installation.rst:158
+msgid "依赖3建议在安装 LLaMA-Factory 的时候一起选配安装， 把 ``torch-npu`` 一起加入安装目标，命令如下"
+msgstr "It is recommended to install Dependency 3 together when installing LLaMA-Factory by including ``torch-npu`` in the installation target, as follows"
+
+#: ../../source/advanced/npu_installation.rst:164
+msgid "依赖校验"
+msgstr "Dependency Verification"
+
+#: ../../source/advanced/npu_installation.rst:166
+msgid "3个依赖都安装后，可以通过如下的 python 脚本对 ``torch_npu`` 的可用情况做一下校验"
+msgstr "After installing all 3 dependencies, you can verify the availability of ``torch_npu`` using the following python script"
+
+#: ../../source/advanced/npu_installation.rst:174
+msgid "预期结果是打印true"
+msgstr "The expected result is to print true"
+
+#: ../../source/advanced/npu_installation.rst:178
+msgid "安装校验"
+msgstr "Installation Verification"
+
+#: ../../source/advanced/npu_installation.rst:181
+msgid "使用以下指令对 LLaMA-Factory × 昇腾的安装进行校验："
+msgstr "Use the following command to verify the installation of LLaMA-Factory × Ascend:"
+
+#: ../../source/advanced/npu_installation.rst:187
+msgid "如下所示，正确显示 LLaMA-Factory、PyTorch NPU 和 CANN 版本号及 NPU 型号等信息即说明安装成功。"
+msgstr "As shown below, if it correctly displays information such as LLaMA-Factory, PyTorch NPU and CANN version numbers, and NPU model, the installation is successful."
+
+#: ../../source/advanced/npu_installation.rst:205
+msgid "在 LLaMA-Factory 中使用 NPU"
+msgstr "Using NPU in LLaMA-Factory"
+
+#: ../../source/advanced/npu_installation.rst:209
+msgid ""
+"前面依赖安装完毕和完成校验后，即可像文档的其他部分一样正常使用 ``llamafactory-cli`` 的相关功能， NPU 的使用是无侵入的。主要的区别是需要修改一下命令行中 设备变量使用 "
+"将原来的 Nvidia 卡的变量 ``CUDA_VISIBLE_DEVICES`` 替换为 ``ASCEND_RT_VISIBLE_DEVICES``， 类似如下命令"
+msgstr ""
+"After completing the dependency installation and verification, you can use the relevant functions of ``llamafactory-cli`` as described in other parts of the documentation. NPU usage is non-intrusive. The main difference is that you need to modify the device variable in the command line. "
+"Replace the original Nvidia card variable ``CUDA_VISIBLE_DEVICES`` with ``ASCEND_RT_VISIBLE_DEVICES``, similar to the following command"
+
+#: ../../source/advanced/npu_installation.rst:214
+msgid "FAQ"
+msgstr "FAQ"
+
+#: ../../source/advanced/npu_installation.rst:217
+msgid "1. 设备指定"
+msgstr "1. Device Specification"
+
+#: ../../source/advanced/npu_installation.rst:220
+msgid "**Q：NPU 调用失败**"
+msgstr "**Q: NPU call failed**"
+
+#: ../../source/advanced/npu_installation.rst:222
+msgid "A: 通过以下两种方法排查解决："
+msgstr "A: Troubleshoot and resolve through the following two methods:"
+
+#: ../../source/advanced/npu_installation.rst:224
+msgid "通过 ``ASCEND_RT_VISIBLE_DEVICES`` 环境变量指定昇腾 NPU 卡，如 ``ASCEND_RT_VISIBLE_DEVICES=0,1,2,3`` 指定使用 0，1，2，3四张 NPU 卡进行微调/推理。"
+msgstr "Specify Ascend NPU cards through the ``ASCEND_RT_VISIBLE_DEVICES`` environment variable, for example, ``ASCEND_RT_VISIBLE_DEVICES=0,1,2,3`` specifies using 4 NPU cards (0, 1, 2, 3) for fine-tuning/inference."
+
+#: ../../source/advanced/npu_installation.rst:231
+msgid "检查是否安装 torch-npu，建议通过 ``pip install -e '.[torch-npu,metrics]'`` 安装 LLaMA-Factory。"
+msgstr "Check if torch-npu is installed. It is recommended to install LLaMA-Factory via ``pip install -e '.[torch-npu,metrics]'``."
+
+#: ../../source/advanced/npu_installation.rst:234
+msgid "2. 推理报错"
+msgstr "2. Inference Errors"
+
+#: ../../source/advanced/npu_installation.rst:237
+msgid "**Q：使用昇腾 NPU 推理报错 RuntimeError: ACL stream synchronize failed, error code:507018**"
+msgstr "**Q: When using Ascend NPU for inference, encountered RuntimeError: ACL stream synchronize failed, error code:507018**"
+
+#: ../../source/advanced/npu_installation.rst:239
+msgid "A: 设置 do_sample: false，取消随机抽样策略。"
+msgstr "A: Set do_sample: false to disable random sampling strategy."
+
+#: ../../source/advanced/npu_installation.rst:241
+msgid "比如在 yaml 中修改"
+msgstr "For example, modify in yaml"
+
+#: ../../source/advanced/npu_installation.rst:249
+msgid "比如在 api 请求中指定"
+msgstr "For example, specify in API request"
+
+#: ../../source/advanced/npu_installation.rst:264
+msgid "关联 issues："
+msgstr "Related issues:"
+
+#: ../../source/advanced/npu_installation.rst:269
+msgid "3. 微调/训练报错"
+msgstr "3. Fine-tuning/Training Errors"
+
+#: ../../source/advanced/npu_installation.rst:272
+msgid "**Q：使用 ChatGLM 系列模型微调/训练模型时，报错 NotImplementedError: Unknown device for graph fuser**"
+msgstr "**Q: When fine-tuning/training with ChatGLM series models, encountered NotImplementedError: Unknown device for graph fuser**"
+
+#: ../../source/advanced/npu_installation.rst:274
+msgid "A: 在 modelscope 或 huggingface 下载的 repo 里修改 ``modeling_chatglm.py`` 代码，取消 torch.jit 装饰器注释"
+msgstr "A: Modify the ``modeling_chatglm.py`` code in the repo downloaded from modelscope or huggingface, uncomment the torch.jit decorator"
+
+#: ../../source/advanced/npu_installation.rst:282
+msgid "**Q：微调/训练启动后，HCCL 报错，包含如下关键信息：**"
+msgstr "**Q: After starting fine-tuning/training, HCCL error occurred with the following key information:**"
+
+#: ../../source/advanced/npu_installation.rst:297
+msgid "A: 杀掉 device 侧所有进程，等待 10s 后重新启动训练。"
+msgstr "A: Kill all processes on the device side, wait 10 seconds, then restart training."
+
+#: ../../source/advanced/npu_installation.rst:307
+msgid "**Q：使用 TeleChat 模型在昇腾 NPU 推理时，报错 AssertionError： Torch not compiled with CUDA enabled**"
+msgstr "**Q: When using TeleChat model for Ascend NPU inference, encountered AssertionError: Torch not compiled with CUDA enabled**"
+
+#: ../../source/advanced/npu_installation.rst:309
+msgid "A: 此问题一般由代码中包含 cuda 相关硬编码造成，根据报错信息，找到 cuda 硬编码所在位置，对应修改为 NPU 代码。如 ``.cuda()`` 替换为 ``.npu()`` ； ``.to(\"cuda\")`` 替换为  ``.to(\"npu\")``"
+msgstr "A: This problem is generally caused by CUDA-related hard coding in the code. According to the error message, find the location of CUDA hard coding and modify it to NPU code accordingly. For example, replace ``.cuda()`` with ``.npu()``; replace ``.to(\"cuda\")`` with ``.to(\"npu\")``"
+
+#: ../../source/advanced/npu_installation.rst:311
+msgid "**Q：模型微调遇到报错 DeviceType must be NPU. Actual DeviceType is: cpu，例如下列报错信息**"
+msgstr "**Q: Model fine-tuning encountered error DeviceType must be NPU. Actual DeviceType is: cpu, for example the following error message**"
+
+#: ../../source/advanced/npu_installation.rst:322
+msgid "A: 此类报错通常为部分 Tensor 未放到 NPU 上，请确保报错中算子所涉及的操作数均在 NPU 上。如上面的报错中，MulKernelNpuOpApi 算子为乘法算子，应确保 next_tokens 和 unfinished_sequences 均已放在 NPU 上。"
+msgstr "A: This type of error usually occurs when some Tensors are not placed on the NPU. Please ensure that all operands involved in the operators in the error are on the NPU. For example, in the above error, MulKernelNpuOpApi is a multiplication operator, you should ensure that both next_tokens and unfinished_sequences are placed on the NPU."
+
+#: ../../source/advanced/npu_installation.rst:324
+msgid "昇腾实践参考"
+msgstr "Ascend Practice Reference"
+
+#: ../../source/advanced/npu_installation.rst:327
+msgid "如需更多 LLaMA-Factory × 昇腾实践指引，可参考 `全流程昇腾实践 <https://ascend.github.io/docs/sources/llamafactory/example.html>`_ 。"
+msgstr "For more LLaMA-Factory × Ascend practice guidance, please refer to `Full Ascend Practice <https://ascend.github.io/docs/sources/llamafactory/example.html>`_."
+

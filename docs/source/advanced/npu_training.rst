@@ -1,141 +1,149 @@
-NPU 训练
-###############
+NPU训练
+================
+
+本文档介绍如何在华为昇腾 NPU 上进行 LLaMA-Factory 模型训练，包括设备支持、训练范式、分布式策略以及性能优化等内容。
 
 支持设备
-============
+----------------
 
-Atlas A2训练系列（Atlas 800T A2, Atlas 900 A2 PoD, Atlas 200T A2 Box16, Atlas 300T A2）
+LLaMA-Factory 当前已适配以下昇腾 NPU 设备：
 
-Atlas 800I A2推理系列（Atlas 800I A2）
+- **Atlas A2 训练系列**
+- **Atlas 800I A2 推理系列**
 
-使用 npu-list 命令查询设备信息
 
-.. code-block::
+支持功能
+----------------
 
-  # npu-list
-  +---------------+----------------+--------------+
-  |  Npu devices  | Container name | Container id |
-  +---------------+----------------+--------------+
-  | /dev/davinci0 |      None      |     None     |
-  | /dev/davinci1 |      None      |     None     |
-  | /dev/davinci2 |      None      |     None     |
-  | /dev/davinci3 |      None      |     None     |
-  +---------------+----------------+--------------+
+.. list-table::
+   :align: left
+   :widths: 20 30 50
+   :header-rows: 1
+
+   * - 
+     - 功能
+     - 支持情况
+   * - **训练范式**
+     - PT
+     - 已支持
+   * - 
+     - SFT
+     - 已支持
+   * - 
+     - RM
+     - 已支持
+   * - 
+     - DPO
+     - 已支持
+   * - **参数范式**
+     - Full
+     - 已支持
+   * - 
+     - Freeze
+     - 已支持
+   * - 
+     - LoRA
+     - 已支持
+   * - **模型合并**
+     - LoRA权重合并
+     - 已支持
+   * - **分布式**
+     - DDP
+     - 已支持
+   * - 
+     - FSDP
+     - 已支持
+   * - 
+     - DeepSpeed
+     - 已支持
+   * - **加速**
+     - 融合算子
+     - 当前仅支持NPU FA融合算子
+
+
+.. note::
+   除特别说明外，NPU 的使用方式与 GPU 保持一致，无需额外配置。以下将重点介绍 NPU 特定的配置和注意事项。
+
+分布式训练
+----------------
 
 单机微调
-============
+~~~~~~~~~~~~~~~~
 
-以 ``davinci0`` 单卡为例，下载并使用ascend llamafactory镜像。
+本节介绍如何在单机环境下使用 Docker 容器进行 NPU 模型微调。LLaMA-Factory 提供了两种 Docker 部署方式。
 
-首先在环境当前目录下执行如下命令，进入容器。
+**方法一：使用 Docker Compose（推荐）**
 
-.. code-block::
+.. code-block:: bash
 
-  docker pull quay.io/ascend/llamafactory:0.9.4-npu-a2
+   cd docker/docker-npu/
+   docker compose up -d
+   docker compose exec llamafactory bash
 
-  docker run -it \
-    -v $PWD/hf_cache:/root/.cache/huggingface \
-    -v $PWD/ms_cache:/root/.cache/modelscope \
-    -v $PWD/data:/app/data \
-    -v $PWD/output:/app/output \
-    -v /usr/local/dcmi:/usr/local/dcmi \
-    -v /usr/local/bin/npu-smi:/usr/local/bin/npu-smi \
-    -v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
-    -v /etc/ascend_install.info:/etc/ascend_install.info \
-    -v $PWD/Test:/home/Test/ \
-    -p 7860:7860 \
-    -p 8000:8000 \
-    --device /dev/davinci0 \
-    --device /dev/davinci_manager \
-    --device /dev/devmm_svm \
-    --device /dev/hisi_hdc \
-    --shm-size 16G \
-    --name llamafactory   quay.io/ascend/llamafactory:0.9.4-npu-a2 bash
+**方法二：使用 Docker Run**
 
-如果在单机上使用多卡微调时，可使用 ``--device /dev/davinci1, --device /dev/davinci2, ...`` 来增加 NPU 卡。
+拉取昇腾 LLaMA-Factory的 `预构建镜像 <https://hub.docker.com/r/hiyouga/llamafactory/tags>`_ ，请根据实际需要选择合适的版本标签，建议选取最新版本以获得更好的功能支持和性能表现：
+
+.. code-block:: bash
+
+   #hub.docker.com
+   docker pull hiyouga/llamafactory:<version>-npu-a2
+   
+   #quay.io
+   docker pull quay.io/ascend/llamafactory:<version>-npu-a2
+   
+
+
+启动容器：
+
+.. code-block:: bash
+
+  CONTAINER_NAME=llama_factory_npu
+  DOCKER_IMAGE=hiyouga/llamafactory:latest-npu-a2
+  docker run -itd \
+      --cap-add=SYS_PTRACE \
+      --net=host \
+      --device=/dev/davinci0 \
+      --device=/dev/davinci1 \
+      --device=/dev/davinci2 \
+      --device=/dev/davinci3 \
+      --device=/dev/davinci4 \
+      --device=/dev/davinci5 \
+      --device=/dev/davinci6 \
+      --device=/dev/davinci7 \
+      --device=/dev/davinci_manager \
+      --device=/dev/devmm_svm \
+      --device=/dev/hisi_hdc \
+      --shm-size=1200g \
+      -v /usr/local/sbin/npu-smi:/usr/local/sbin/npu-smi \
+      -v /usr/local/dcmi:/usr/local/dcmi \
+      -v /etc/ascend_install.info:/etc/ascend_install.info \
+      -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+      -v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
+      -v /data:/data \
+      --privileged=true \
+      --name "$CONTAINER_NAME" \
+      "$DOCKER_IMAGE" \
+      /bin/bash
+
+进入容器：
+
+.. code-block:: bash
+
+   docker exec -it llama_factory_npu bash
 
 .. note::
+   **NPU 设备挂载说明**：
+   
+   - 通过 ``--device /dev/davinci<N>`` 参数可挂载指定的 NPU 卡，最多可挂载全部 8 卡
+   - 昇腾 NPU 设备从 0 开始编号，容器内的设备编号会自动重新映射
+   - 例如：将物理机上的 davinci6 和 davinci7 挂载到容器，容器内对应的设备编号将为 0 和 1
 
-    昇腾 NPU 卡从 0 开始编号，docker 容器内也是如此；
+进入容器后，LLaMA-Factory 已预装完成，可直接使用 ``llamafactory-cli train`` 命令启动训练。该命令会自动识别容器内所有挂载的 NPU 设备并启用分布式训练：
 
-    如映射物理机上的 davinci6，davinci7 NPU 卡到容器内使用，其对应的卡号分别为 0，1
+.. code-block:: bash
 
-
-进入docker后安装相关依赖、设置环境变量、配置 LoRA 微调参数文件(qwen1_5_lora_sft_ds.yaml)
-
-.. note::
-
-  deepspeed用于训练优化
-
-  modelscope用于模型下载
-
-  ASCEND_RT_VISIBLE_DEVICES=0指定使用容器内卡号
-
-  USE_MODELSCOPE_HUB=1使用modelscope  
-
-.. code-block::
-  
-  pip install -e ".[deepspeed,modelscope]" -i https://pypi.tuna.tsinghua.edu.cn/simple
-
-  export ASCEND_RT_VISIBLE_DEVICES=0
-  export USE_MODELSCOPE_HUB=1
-
-在 LLAMA-Factory 目录下，创建如下 qwen1_5_lora_sft_ds.yaml：
-
-.. code-block::
-
-    model_name_or_path: qwen/Qwen1.5-7B
-
-    ### method
-    stage: sft
-    do_train: true
-    finetuning_type: lora
-    lora_target: q_proj,v_proj
-
-    ### ddp
-    ddp_timeout: 180000000
-    deepspeed: examples/deepspeed/ds_z0_config.json
-
-    ### dataset
-    dataset: identity,alpaca_en_demo
-    template: qwen
-    cutoff_len: 1024
-    max_samples: 1000
-    overwrite_cache: true
-    preprocessing_num_workers: 16
-
-    ### output
-    output_dir: saves/Qwen1.5-7B/lora/sft
-    logging_steps: 10
-    save_steps: 500
-    plot_loss: true
-    overwrite_output_dir: true
-
-    ### train
-    per_device_train_batch_size: 1
-    gradient_accumulation_steps: 2
-    learning_rate: 0.0001
-    num_train_epochs: 3.0
-    lr_scheduler_type: cosine
-    warmup_ratio: 0.1
-    fp16: true
-
-    ### eval
-    val_size: 0.1
-    per_device_eval_batch_size: 1
-    eval_strategy: steps
-    eval_steps: 500
-
-使用 torchrun 启动 LoRA 微调，如正常输出模型加载、损失 loss 等日志，即说明成功微调。
-
-.. code-block:: shell
-
-  torchrun --nproc_per_node 1 \
-      --nnodes 1 \
-      --node_rank 0 \
-      --master_addr 127.0.0.1 \
-      --master_port 7007 \
-      src/train.py qwen1_5_lora_sft_ds.yaml
+   llamafactory-cli train examples/train_full/llama3_full_sft.yaml
 
 部分微调输出如下所示：
 
@@ -160,90 +168,228 @@ Atlas 800I A2推理系列（Atlas 800I A2）
   [INFO|modelcard.py:450] 2025-07-21 06:26:59,899 >> Dropping the following result as it does not have all the necessary fields:
   {'task': {'name': 'Causal Language Modeling', 'type': 'text-generation'}}
 
+若需指定特定的 NPU 设备进行训练（如仅使用卡 0 和卡 1），可通过 ``ASCEND_RT_VISIBLE_DEVICES`` 环境变量进行配置：
 
-经 LoRA 微调后，通过 ``llamafactory-cli chat`` 使用微调后的模型进行交互对话，使用 Ctrl+C 或输入 exit 退出该问答聊天。
+.. code-block:: bash
 
-.. code-block:: shell
+   ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_full/llama3_full_sft.yaml
 
-  llamafactory-cli chat --model_name_or_path qwen/Qwen1.5-7B \
-              --adapter_name_or_path saves/Qwen1.5-7B/lora/sft \
-              --template qwen \
-              --finetuning_type lora
-
-部分交互对话输出如下所示:
-
-.. code-block:: shell
-
-  ...
-  [INFO|configuration_utils.py:1135] 2025-07-21 06:31:19,166 >> Generate config GenerationConfig {
-    "bos_token_id": 151643,
-    "eos_token_id": 151643,
-    "max_new_tokens": 2048
-  }
-
-  [INFO|2025-07-21 06:31:19] llamafactory.model.model_utils.attention:143 >> Using torch SDPA for faster training and inference.
-  [INFO|2025-07-21 06:31:19] llamafactory.model.adapter:143 >> Merged 1 adapter(s).
-  [INFO|2025-07-21 06:31:19] llamafactory.model.adapter:143 >> Loaded adapter(s): saves/Qwen1.5-7B/lora/sft
-  [INFO|2025-07-21 06:31:19] llamafactory.model.loader:143 >> all params: 7,721,324,544
-  Welcome to the CLI application, use `clear` to remove the history, use `exit` to exit the application.
-
-  User: 帮我定制一个减肥计划
-  Assistant: 当然可以，以下是一个简单的减肥计划，供您参考：
-
-  1. 制定一个目标：首先要明确自己的减肥目标，是想在一个月内减掉5斤还是10斤，或者更久。制定目标后，可以更清晰地制定减肥计划。
-
-  2. 控制饮食：减肥最重要的就是控制饮食，少吃高热量的食物，增加蔬菜、水果和蛋白质的摄入。可以适当减少碳水化合物的摄入，但不要完全戒掉，以免影响身体的能量。
-
-  3. 增加运动量：除了控制饮食，增加运动量也是减肥的关键。可以每天进行30分钟的有氧运动，比如快走、跑步、游泳等，也可以增加力量训练来增强肌肉。
-
-  4. 控制饮酒：酒精是高热量的饮料，容易导致体重增加。所以要控制饮酒量，尽量少喝或者不喝。
-
-  5. 规律作息：保持规律的作息可以有助于身体代谢的正常运转，也可以提高身体的免疫力。
-
-  6. 每天记录体重和饮食：每天记录体重和饮食可以帮助您更好地掌握自己的减肥进度，及时调整计划。
-
-  以上是一个简单的减肥计划，但请注意，减肥需要持之以恒，不能急于求成，建议您在制定计划前咨询专业医生或营养师的建议。
+.. note::
+   **模型权重下载配置**：
+   
+   - 默认情况下，系统会从 `Hugging Face <https://huggingface.co/models>`_ 下载模型权重
+   - 如遇到网络访问问题，可设置环境变量 ``export USE_MODELSCOPE_HUB=1`` 切换至 `ModelScope <https://modelscope.cn/models>`_ 镜像源
 
 
 多机微调
-============
+~~~~~~~~~~~~~~~~
 
-多机微调时，不建议使用容器部署方式（单机都不够用的情况下，起多个容器资源更加紧张），请直接在每个节点安装 llamafactory（请参考 :doc:`NPU <./npu>` 中的安装步骤），同时仍需要安装 DeepSpeed 和 ModelScope：
+多机微调场景下，建议直接在物理机上部署 LLaMA-Factory 以获得更好的资源利用率。请参考 :doc:`NPU安装及配置 <./npu_installation>` 完成基础环境配置。
 
-.. code-block::
+.. code-block:: bash
+   pip install -e .
+   
 
-  pip install -e ".[deepspeed,modelscope]" -i https://pypi.tuna.tsinghua.edu.cn/simple
+**环境配置要求**：
 
+1. **指定 NPU 设备**：在每个节点上通过环境变量 ``ASCEND_RT_VISIBLE_DEVICES`` 指定参与训练的 NPU 设备（如 ``export ASCEND_RT_VISIBLE_DEVICES=0,1,2,3``）。若不指定，将默认使用节点上的所有 NPU 设备。
 
-安装成功后，请在每个节点上使用 ``export ASCEND_RT_VISIBLE_DEVICES=0,1,2,3`` 显式指定所需的 NPU 卡号，不指定时默认使用当前节点的所有 NPU 卡。
+2. **配置通信网卡**：在每个节点上通过环境变量 ``HCCL_SOCKET_IFNAME`` 指定 HCCL 集合通信使用的网卡接口（如 ``export HCCL_SOCKET_IFNAME=eth0``）。可通过 ``ifconfig`` 命令查看可用网卡名称。
 
-然后，必须在每个节点上使用 ``export HCCL_SOCKET_IFNAME=eth0`` 来指定当前节点的 HCCL 通信网卡（请使用目标网卡名替换 ``eth0``）。
+**启动训练**：
 
-以两机环境为例，分别在主、从节点（机器）上执行如下两条命令即可启动多机训练：
+以双节点训练为例，分别在主节点和从节点执行以下命令：
 
-.. code-block:: shell
+.. code-block:: bash
 
-    # 在主节点执行如下命令，设置 rank_id = 0
-    FORCE_TORCHRUN=1 NNODES=2 NODE_RANK=0 MASTER_ADDR=192.168.0.1 MASTER_PORT=29500 \
-    llamafactory-cli train <your_path>/qwen1_5_lora_sft_ds.yaml
-    
-    # 在从节点执行如下命令，设置 rank_id = 1
-    FORCE_TORCHRUN=1 NNODES=2 NODE_RANK=1 MASTER_ADDR=192.168.0.1 MASTER_PORT=29500 \
-    llamafactory-cli train <your_path>/qwen1_5_lora_sft_ds.yaml
+   # master node（NODE_RANK=0）
+   FORCE_TORCHRUN=1 NNODES=2 NODE_RANK=0 MASTER_ADDR=192.168.0.1 MASTER_PORT=29500 \
+   llamafactory-cli train <your_path>/qwen1_5_lora_sft_ds.yaml
+   
+   # worker node（NODE_RANK=1）
+   FORCE_TORCHRUN=1 NNODES=2 NODE_RANK=1 MASTER_ADDR=192.168.0.1 MASTER_PORT=29500 \
+   llamafactory-cli train <your_path>/qwen1_5_lora_sft_ds.yaml
+
+**环境变量说明**：
 
 .. list-table::
-    :widths: 30 70  
-    :header-rows: 1
+   :align: left
+   :widths: 30 70
+   :header-rows: 1
 
-    * - 变量名
-      - 介绍
-    * - FORCE_TORCHRUN
-      - 是否强制使用torchrun
-    * - NNODES
-      - 节点数量
-    * - NODE_RANK
-      - 各个节点的rank。
-    * - MASTER_ADDR
-      - 主节点的地址。
-    * - MASTER_PORT
-      - 主节点的端口。
+   * - 环境变量
+     - 说明
+   * - ``FORCE_TORCHRUN``
+     - 强制使用 torchrun 启动分布式训练
+   * - ``NNODES``
+     - 参与训练的节点总数
+   * - ``NODE_RANK``
+     - 当前节点的全局排名（主节点为 0，从节点依次递增）
+   * - ``MASTER_ADDR``
+     - 主节点的 IP 地址
+   * - ``MASTER_PORT``
+     - 主节点用于分布式通信的端口号
+
+训练范式
+----------------
+
+LLaMA-Factory 在 NPU 上支持多种训练范式，使用方式与 GPU 保持一致。以下是各训练范式的启动示例：
+
+**预训练（Pre-Training, PT）**
+
+.. code-block:: bash
+
+   llamafactory-cli train examples/train_lora/llama3_lora_pretrain.yaml
+
+**监督微调（Supervised Fine-Tuning, SFT）**
+
+.. code-block:: bash
+
+   llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
+
+**奖励模型训练（Reward Modeling, RM）**
+
+.. code-block:: bash
+
+   llamafactory-cli train examples/train_lora/llama3_lora_reward.yaml
+
+**直接偏好优化（Direct Preference Optimization, DPO）**
+
+.. code-block:: bash
+
+   llamafactory-cli train examples/train_lora/llama3_lora_dpo.yaml
+
+参数范式
+----------------
+
+LLaMA-Factory 在 NPU 上支持多种参数微调策略，使用方式与 GPU 保持一致。以下是各参数范式的启动示例：
+
+**全参数微调（Full Fine-Tuning）**
+
+对模型的所有参数进行更新：
+
+.. code-block:: bash
+
+   llamafactory-cli train examples/train_full/llama3_full_sft.yaml
+
+**冻结微调（Freeze Fine-Tuning）**
+
+冻结部分层的参数，仅更新指定层：
+
+.. code-block:: bash
+
+   llamafactory-cli train examples/train_full/qwen2_5vl_full_sft.yaml
+
+**LoRA 微调**
+
+使用低秩适配器（Low-Rank Adaptation）进行参数高效微调：
+
+.. code-block:: bash
+
+   llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
+
+模型合并
+----------------
+
+使用 LoRA 方法训练完成后，会生成相应的适配器权重文件。如需将适配器权重合并到基础模型中，请参考 :doc:`LoRA 模型合并 <../getting_started/merge_lora>` 文档。
+
+
+分布式策略
+----------------
+
+LLaMA-Factory 在 NPU 上支持多种分布式训练策略，包括 DDP、FSDP 和 DeepSpeed，使用方式与 GPU 保持一致。
+
+DeepSpeed
+~~~~~~~~~~~~~~~~
+
+LLaMA-Factory 在 ``examples/deepspeed`` 目录下提供了多种 DeepSpeed 配置文件。NPU 当前已支持 ZeRO Stage 1/2/3 及 Offload 功能，可根据训练需求选择相应配置。
+
+在训练配置文件中添加 ``deepspeed`` 参数即可启用 DeepSpeed：
+
+.. code-block:: yaml
+
+   ### model
+   model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
+   trust_remote_code: true
+
+   ### method
+   stage: sft
+   do_train: true
+   finetuning_type: full
+   deepspeed: examples/deepspeed/ds_z3_config.json
+
+FSDP
+~~~~~~~~~~~~~~~~
+
+LLaMA-Factory 通过 Accelerate 库支持 FSDP（Fully Sharded Data Parallel）分布式训练。Torch-NPU 已实现与 PyTorch FSDP 接口的兼容，可通过以下命令启动 FSDP 训练：
+
+.. code-block:: bash
+
+   accelerate launch --config_file examples/accelerate/fsdp_config.yaml \
+     src/train.py examples/extras/fsdp_qlora/llama3_lora_sft.yaml
+
+若需指定特定 NPU 设备，可通过 ``ASCEND_RT_VISIBLE_DEVICES`` 环境变量进行配置：
+
+.. code-block:: bash
+
+   ASCEND_RT_VISIBLE_DEVICES=0,1 accelerate launch \
+     --config_file examples/accelerate/fsdp_config.yaml \
+     src/train.py examples/extras/fsdp_qlora/llama3_lora_sft.yaml
+
+LLaMA-Factory 提供了多种 FSDP 配置文件供选择：
+
+- ``examples/accelerate/fsdp_config.yaml``：标准 FSDP 配置
+- ``examples/accelerate/fsdp_config_offload.yaml``：支持 CPU Offload 的 FSDP 配置
+
+
+性能优化
+----------------
+
+本节介绍 NPU 训练场景下已验证的性能优化方法。更多优化特性将在验证后持续更新。
+
+融合算子
+~~~~~~~~~~~~~~~~
+
+LLaMA-Factory 已支持昇腾 NPU 的 FA 融合算子，可显著提升训练性能。在训练配置文件中设置 ``flash_attn: fa2`` 即可启用：
+
+.. code-block:: yaml
+
+   ### model
+   model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
+   trust_remote_code: true
+
+   ### method
+   stage: sft
+   do_train: true
+   finetuning_type: full
+   deepspeed: examples/deepspeed/ds_z3_config.json
+   flash_attn: fa2
+
+.. note::
+   融合算子优化仅在训练阶段生效，推理阶段不启用。系统会自动检测并替换相应的算子实现。
+
+算子下发优化
+~~~~~~~~~~~~~~~~
+
+昇腾提供了 ``TASK_QUEUE_ENABLE`` 环境变量用于优化算子下发性能，可通过流水线并行机制降低算子下发延迟：
+
+.. code-block:: bash
+
+   export TASK_QUEUE_ENABLE=2
+
+**配置选项说明**：
+
+- **Level 0（TASK_QUEUE_ENABLE=0）**：关闭 task_queue 算子下发队列优化
+  
+- **Level 1（TASK_QUEUE_ENABLE=1，默认值）**：启用基础的 task_queue 优化，将算子下发任务分为两级流水线：
+  
+  - 一级流水：处理常规算子调用
+  - 二级流水：处理 ACLNN 算子调用
+  - 两级流水通过队列并行执行，部分掩盖下发延迟
+  
+- **Level 2（TASK_QUEUE_ENABLE=2，推荐）**：在 Level 1 基础上进一步优化任务负载均衡：
+  
+  - 将 workspace 相关任务迁移至二级流水
+  - 提供更好的延迟掩盖效果和性能收益
+  - 建议在训练场景中使用该配置以获得最佳性能
+

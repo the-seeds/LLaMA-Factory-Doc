@@ -1,57 +1,5 @@
-NPU 推理
+NPU推理
 =============
-
-环境安装
---------
-
-版本需求
-~~~~~~~~
-
-- 操作系统：Linux
-- Python：>= 3.10, < 3.12
-- gcc：>= 9
-
-硬件环境
-~~~~~~~~
-
-使用如下命令查看显卡固件和驱动版本。
-
-.. code-block:: shell
-
-   npu-smi info
-
-输出显卡信息则驱动安装正常。
-
-更多细节参考 `快速安装昇腾环境 <https://ascend.github.io/docs/sources/ascend/quick_install.html>`_ 。
-
-软件环境
-~~~~~~~~
-
-- CANN >= 8.1.RC1，包括 ``toolkit``、``kernels``、``nnal``。
-
-使用下述命令安装。
-
-.. code-block:: shell
-
-   # Install required python packages.
-   pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple attrs 'numpy<2.0.0' decorator sympy cffi pyyaml pathlib2 psutil protobuf scipy requests absl-py wheel typing_extensions
-
-   # Download and install the CANN package.
-   wget https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/CANN/CANN%208.1.RC1/Ascend-cann-toolkit_8.1.RC1_linux-"$(uname -i)".run
-   chmod +x ./Ascend-cann-toolkit_8.1.RC1_linux-"$(uname -i)".run
-   ./Ascend-cann-toolkit_8.1.RC1_linux-"$(uname -i)".run --full
-
-   source /usr/local/Ascend/ascend-toolkit/set_env.sh
-
-   wget https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/CANN/CANN%208.1.RC1/Ascend-cann-kernels-910b_8.1.RC1_linux-"$(uname -i)".run
-   chmod +x ./Ascend-cann-kernels-910b_8.1.RC1_linux-"$(uname -i)".run
-   ./Ascend-cann-kernels-910b_8.1.RC1_linux-"$(uname -i)".run --install
-
-   wget https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/CANN/CANN%208.1.RC1/Ascend-cann-nnal_8.1.RC1_linux-"$(uname -i)".run
-   chmod +x ./Ascend-cann-nnal_8.1.RC1_linux-"$(uname -i)".run
-   ./Ascend-cann-nnal_8.1.RC1_linux-"$(uname -i)".run --install
-
-   source /usr/local/Ascend/nnal/atb/set_env.sh
 
 vLLM-Ascend安装
 ~~~~~~~~~~~~~~~
