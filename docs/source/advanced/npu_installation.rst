@@ -1,4 +1,4 @@
-NPU 安装及配置
+NPU安装及配置
 ================
 
 目前LLaMA-Factory 通过 torch-npu 库完成了对华为昇腾 910b 系列芯片的支持, 包含 32GB 和 64GB 两个版本。跟其他使用相比，会需要额外3个前置条件
@@ -131,17 +131,18 @@ LLaMA-Factory 提供 :ref:`docker_compose` 和 :ref:`docker_build` 两种构建�
 
 .. code-block:: bash
 
-    # 通过如下地址：https://www.hiascend.com/developer/download/community/result 查找并下载合适的 CANN 安装包，以 A2 为例，需要下载如下安装包：
+    # Atlas A2 Training Series*
+    # https://www.hiascend.com/developer/download/community/result
     # 1. Ascend-cann-toolkit_8.3.RC1_linux-aarch64.run
     # 2. Ascend-cann-kernels-910b_8.3.RC1_linux-aarch64.run
     # 3. Ascend-cann-nnal_8.3.RC1_linux-aarch64.run
-    # 安装 CANN Toolkit
+    # CANN Toolkit
     bash Ascend-cann-toolkit_8.3.RC1_linux-aarch64.run --install
 
-    # 安装 CANN Kernels
+    # CANN Kernels
     bash Ascend-cann-kernels-910b_8.3.RC1_linux-aarch64.run --install
 
-    # 安装加速库(安装前首先需要source CANN)
+    # nnal
     source /usr/local/Ascend/ascend-toolkit/set_env.sh
     bash Ascend-cann-nnal_8.3.RC1_linux-aarch64.run --install
 
@@ -204,6 +205,7 @@ LLaMA-Factory 提供 :ref:`docker_compose` 和 :ref:`docker_build` 两种构建�
 
 在 LLaMA-Factory 中使用 NPU 
 ----------------------------------
+
 前面依赖安装完毕和完成校验后，即可像文档的其他部分一样正常使用 ``llamafactory-cli`` 的相关功能， NPU 的使用是无侵入的。主要的区别是需要修改一下命令行中 设备变量使用
 将原来的 Nvidia 卡的变量 ``CUDA_VISIBLE_DEVICES`` 替换为 ``ASCEND_RT_VISIBLE_DEVICES``， 类似如下命令
 
@@ -222,12 +224,6 @@ FAQ
 A: 通过以下两种方法排查解决：
 
 1. 通过 ``ASCEND_RT_VISIBLE_DEVICES`` 环境变量指定昇腾 NPU 卡，如 ``ASCEND_RT_VISIBLE_DEVICES=0,1,2,3`` 指定使用 0，1，2，3四张 NPU 卡进行微调/推理。
-
-.. hint::
-    
-    昇腾 NPU 卡从 0 开始编号，docker 容器内也是如此；
-    如映射物理机上的 6，7 号 NPU 卡到容器内使用，其对应的卡号分别为 0，1
-
 2. 检查是否安装 torch-npu，建议通过 ``pip install -e '.[torch-npu,metrics]'`` 安装 LLaMA-Factory。
 
 
