@@ -24,54 +24,6 @@ msgstr ""
 msgid "NPU推理"
 msgstr "NPU Inference"
 
-#: ../../source/advanced/npu_inference.rst:4
-msgid "环境安装"
-msgstr "Environment Installation"
-
-#: ../../source/advanced/npu_inference.rst:7
-msgid "版本需求"
-msgstr "Version Requirements"
-
-#: ../../source/advanced/npu_inference.rst:10
-msgid "操作系统：Linux"
-msgstr "Operating System: Linux"
-
-#: ../../source/advanced/npu_inference.rst:11
-msgid "Python：>= 3.10, < 3.12"
-msgstr "Python: >= 3.10, < 3.12"
-
-#: ../../source/advanced/npu_inference.rst:12
-msgid "gcc：>= 9"
-msgstr "gcc: >= 9"
-
-#: ../../source/advanced/npu_inference.rst:14
-msgid "硬件环境"
-msgstr "Hardware Environment"
-
-#: ../../source/advanced/npu_inference.rst:17
-msgid "使用如下命令查看显卡固件和驱动版本。"
-msgstr "Use the following command to view the graphics card firmware and driver version."
-
-#: ../../source/advanced/npu_inference.rst:23
-msgid "输出显卡信息则驱动安装正常。"
-msgstr "If the graphics card information is displayed, the driver is installed correctly."
-
-#: ../../source/advanced/npu_inference.rst:25
-msgid "更多细节参考 `快速安装昇腾环境 <https://ascend.github.io/docs/sources/ascend/quick_install.html>`_ 。"
-msgstr "For more details, refer to `Quick Installation of Ascend Environment <https://ascend.github.io/docs/sources/ascend/quick_install.html>`_."
-
-#: ../../source/advanced/npu_inference.rst:27
-msgid "软件环境"
-msgstr "Software Environment"
-
-#: ../../source/advanced/npu_inference.rst:30
-msgid "CANN >= 8.1.RC1，包括 ``toolkit``、``kernels``、``nnal``。"
-msgstr "CANN >= 8.1.RC1, including ``toolkit``, ``kernels``, ``nnal``."
-
-#: ../../source/advanced/npu_inference.rst:32
-msgid "使用下述命令安装。"
-msgstr "Install using the following commands."
-
 #: ../../source/advanced/npu_inference.rst:56
 msgid "vLLM-Ascend安装"
 msgstr "vLLM-Ascend Installation"
