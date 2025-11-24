@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, LlamaFactory team.
+# Copyright (C) 2025, LlamaFactory team.
 # This file is distributed under the same license as the LLaMA Factory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -7,14 +7,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory \n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-03-05 01:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,7 +26,7 @@ msgstr "Merge"
 #: ../../source/getting_started/merge_lora.rst:5
 #: 47db7e8b42e9454a869f6be40965bc36
 msgid "合并"
-msgstr ""
+msgstr "Merge"
 
 #: ../../source/getting_started/merge_lora.rst:7
 #: df8ee9a509c14f4588b784b576150e7d
@@ -36,6 +34,8 @@ msgid ""
 "当我们基于预训练模型训练好 LoRA 适配器后，我们不希望在每次推理的时候分别加载预训练模型和 LoRA 适配器，因此我们需要将预训练模型和 "
 "LoRA 适配器合并导出成一个模型，并根据需要选择是否量化。根据是否量化以及量化算法的不同，导出的配置文件也有所区别。"
 msgstr ""
+"After training a LoRA adapter based on a pre-trained model, we don't want to load the pre-trained model and LoRA adapter separately during each inference. Therefore, we need to merge the pre-trained model and "
+"LoRA adapter into a single model and choose whether to quantize as needed. The exported configuration file differs depending on whether quantization is used and which quantization algorithm is selected."
 
 #: ../../source/getting_started/merge_lora.rst:9
 #: 2fea33c0477948da90ba148c1dd662af
@@ -43,11 +43,13 @@ msgid ""
 "您可以通过 ``llamafactory-cli export merge_config.yaml`` 指令来合并模型。其中 "
 "``merge_config.yaml`` 需要您根据不同情况进行配置。"
 msgstr ""
+"You can merge models using the command ``llamafactory-cli export merge_config.yaml``. "
+"The ``merge_config.yaml`` needs to be configured according to different situations."
 
 #: ../../source/getting_started/merge_lora.rst:11
 #: 7a11aee7f24f4310a18de87a3334c44b
 msgid "``examples/merge_lora/llama3_lora_sft.yaml`` 提供了合并时的配置示例。"
-msgstr ""
+msgstr "``examples/merge_lora/llama3_lora_sft.yaml`` provides a configuration example for merging."
 
 #: ../../source/getting_started/merge_lora.rst:30
 #: ede2310ec40c4042af82d3a13dc3f9ae
@@ -55,51 +57,53 @@ msgid ""
 "模型 ``model_name_or_path`` 需要存在且与 ``template`` 相对应。 "
 "``adapter_name_or_path`` 需要与微调中的适配器输出路径 ``output_dir`` 相对应。"
 msgstr ""
+"The model ``model_name_or_path`` must exist and correspond to the ``template``. "
+"``adapter_name_or_path`` must correspond to the adapter output path ``output_dir`` from fine-tuning."
 
 #: ../../source/getting_started/merge_lora.rst:31
 #: 55370c34341b4999903f981be9aa2d6c
 msgid "合并 LoRA 适配器时，不要使用量化模型或指定量化位数。您可以使用本地或下载的未量化的预训练模型进行合并。"
-msgstr ""
+msgstr "When merging LoRA adapters, do not use quantized models or specify quantization bits. You can use local or downloaded unquantized pre-trained models for merging."
 
 #: ../../source/getting_started/merge_lora.rst:35
 #: 8662657120a04cb79c482ae7ce9dfd66
 msgid "量化"
-msgstr ""
+msgstr "Quantization"
 
 #: ../../source/getting_started/merge_lora.rst:37
 #: a3faffe950944cc7acfad87ada0653c8
 msgid "在完成模型合并并获得完整模型后，为了优化部署效果，人们通常会基于显存占用、使用成本和推理速度等因素，选择通过量化技术对模型进行压缩，从而实现更高效的部署。"
-msgstr ""
+msgstr "After completing model merging and obtaining the complete model, to optimize deployment performance, people usually choose to compress the model through quantization techniques based on factors such as memory usage, cost, and inference speed, thereby achieving more efficient deployment."
 
 #: ../../source/getting_started/merge_lora.rst:39
 #: 99900a487b1b442b9870928e6ea58c7d
 msgid "量化（Quantization）通过数据精度压缩有效地减少了显存使用并加速推理。LLaMA-Factory 支持多种量化方法，包括:"
-msgstr ""
+msgstr "Quantization effectively reduces memory usage and accelerates inference through data precision compression. LLaMA-Factory supports multiple quantization methods, including:"
 
 #: ../../source/getting_started/merge_lora.rst:41
 #: ea9ff8f775944c878809696aac4fd48b
 msgid "AQLM"
-msgstr ""
+msgstr "AQLM"
 
 #: ../../source/getting_started/merge_lora.rst:42
 #: 8b025911a8aa4606911dc9dbe0e0894f
 msgid "AWQ"
-msgstr ""
+msgstr "AWQ"
 
 #: ../../source/getting_started/merge_lora.rst:43
 #: 04a77523af244517b26bbdef08e30b27
 msgid "GPTQ"
-msgstr ""
+msgstr "GPTQ"
 
 #: ../../source/getting_started/merge_lora.rst:44
 #: cb70147f764c47debc40b32348ed48bf
 msgid "QLoRA"
-msgstr ""
+msgstr "QLoRA"
 
 #: ../../source/getting_started/merge_lora.rst:45
 #: 95723d45f9e34aa787c95df7df72f45c
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: ../../source/getting_started/merge_lora.rst:47
 #: ef111db9f283405f956fb2060aef4cc8
@@ -108,65 +112,67 @@ msgid ""
 "Quantization)是一种在训练后对预训练模型进行量化的方法。我们通过量化技术将高精度表示的预训练模型转换为低精度的模型，从而在避免过多损失模型性能的情况下减少显存占用并加速推理，我们希望低精度数据类型在有限的表示范围内尽可能地接近高精度数据类型的表示，因此我们需要指定量化位数"
 " ``export_quantization_bit`` 以及校准数据集 ``export_quantization_dataset``。"
 msgstr ""
+"Post Training Quantization methods such as GPTQ are methods for quantizing pre-trained models after training. We convert pre-trained models represented in high precision to low precision models through quantization techniques, thereby reducing memory usage and accelerating inference while avoiding excessive loss of model performance. We want low-precision data types to approximate high-precision data type representations as closely as possible within a limited representation range, so we need to specify the quantization bits "
+"``export_quantization_bit`` and the calibration dataset ``export_quantization_dataset``."
 
 #: ../../source/getting_started/merge_lora.rst:50
 #: b3d5fc2c8bf24623b43cae718155f016
 msgid "在进行模型合并时，请指定："
-msgstr ""
+msgstr "When merging models, please specify:"
 
 #: ../../source/getting_started/merge_lora.rst:52
 #: 65386c7326354a75a6d3a0eeb11be963
 msgid "``model_name_or_path``: 预训练模型的名称或路径"
-msgstr ""
+msgstr "``model_name_or_path``: Name or path of the pre-trained model"
 
 #: ../../source/getting_started/merge_lora.rst:53
 #: c123caf97ac4423bbadefa14eda5eff8
 msgid "``template``: 模型模板"
-msgstr ""
+msgstr "``template``: Model template"
 
 #: ../../source/getting_started/merge_lora.rst:54
 #: dd1ef24670584eefb1b99c61aec39dd3
 msgid "``export_dir``: 导出路径"
-msgstr ""
+msgstr "``export_dir``: Export path"
 
 #: ../../source/getting_started/merge_lora.rst:55
 #: fc705891d4b04f77bb8ef87edbad88c4
 msgid "``export_quantization_bit``: 量化位数"
-msgstr ""
+msgstr "``export_quantization_bit``: Quantization bits"
 
 #: ../../source/getting_started/merge_lora.rst:56
 #: 330186ccef2542f78b7bea1b202a0950
 msgid "``export_quantization_dataset``: 量化校准数据集"
-msgstr ""
+msgstr "``export_quantization_dataset``: Quantization calibration dataset"
 
 #: ../../source/getting_started/merge_lora.rst:57
 #: 8e5a5ac6899a42859f1630cbb8dc576a
 msgid "``export_size``: 最大导出模型文件大小"
-msgstr ""
+msgstr "``export_size``: Maximum export model file size"
 
 #: ../../source/getting_started/merge_lora.rst:58
 #: ffe07574951b4e1f8efc9fcc308386bb
 msgid "``export_device``: 导出设备"
-msgstr ""
+msgstr "``export_device``: Export device"
 
 #: ../../source/getting_started/merge_lora.rst:59
 #: 4f503e2db12e4f799529c4d979b06ca2
 msgid "``export_legacy_format``: 是否使用旧格式导出"
-msgstr ""
+msgstr "``export_legacy_format``: Whether to export in legacy format"
 
 #: ../../source/getting_started/merge_lora.rst:61
 #: ../../source/getting_started/merge_lora.rst:84
 #: 8bcc6a20d815430ba4d47f46463e3836 cae57b9aebb34af98ae7cb8d98da6baf
 msgid "下面提供一个配置文件示例："
-msgstr ""
+msgstr "Below is an example configuration file:"
 
 #: ../../source/getting_started/merge_lora.rst:79
 #: 4901711dcdc54c73a1711dd12cc8dd6d
 msgid "QLoRA 是一种在 4-bit 量化模型基础上使用 LoRA 方法进行训练的技术。它在极大地保持了模型性能的同时大幅减少了显存占用和推理时间。"
-msgstr ""
+msgstr "QLoRA is a technique that uses the LoRA method for training on 4-bit quantized models. It greatly maintains model performance while significantly reducing memory usage and inference time."
 
 #: ../../source/getting_started/merge_lora.rst:82
 #: ba2451479a4b4765bbb4b5236f0c642c
 msgid "不要使用量化模型或设置量化位数 ``quantization_bit``"
-msgstr ""
+msgstr "Do not use quantized models or set quantization bits ``quantization_bit``"
 

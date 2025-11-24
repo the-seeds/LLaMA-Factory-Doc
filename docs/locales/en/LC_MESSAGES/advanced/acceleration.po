@@ -1,6 +1,7 @@
-# Translations template for PROJECT.
-# Copyright (C) 2025 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, LlamaFactory team.
+# This file is distributed under the same license as the LLaMA Factory
+# package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 #, fuzzy
@@ -26,24 +27,28 @@ msgid ""
 "LLaMA-Factory 支持多种加速技术，包括：:ref:`FlashAttention <flashattn>` 、 "
 ":ref:`Unsloth <sloth>` 、 :ref:`Liger Kernel <ligerkernel>`  。"
 msgstr ""
+"LLaMA-Factory supports multiple acceleration techniques, including: :ref:`FlashAttention <flashattn>`, "
+":ref:`Unsloth <sloth>`, :ref:`Liger Kernel <ligerkernel>`."
 
 #: ../../source/advanced/acceleration.rst:13 df4db3178001448291a4ae64f3d93d5f
 msgid "FlashAttention"
-msgstr ""
+msgstr "FlashAttention"
 
 #: ../../source/advanced/acceleration.rst:15 4f0e0d4f2dd545e19583944e50d9cf7c
 msgid ""
 "`FlashAttention  <https://github.com/Dao-AILab/flash-attention/>`_ "
 "能够加快注意力机制的运算速度，同时减少对内存的使用。"
 msgstr ""
+"`FlashAttention  <https://github.com/Dao-AILab/flash-attention/>`_ "
+"can speed up attention mechanism computation while reducing memory usage."
 
 #: ../../source/advanced/acceleration.rst:17 896c7a78bfd544d18995f478cd480d5b
 msgid "如果您想使用 FlashAttention,请在启动训练时在训练配置文件中添加以下参数："
-msgstr ""
+msgstr "If you want to use FlashAttention, please add the following parameters to the training configuration file when starting training:"
 
 #: ../../source/advanced/acceleration.rst:28 bc69ca4beff54386a9ba53730141909c
 msgid "Unsloth"
-msgstr ""
+msgstr "Unsloth"
 
 #: ../../source/advanced/acceleration.rst:30 8dc1ea34909248ecb499dee09a47597c
 msgid ""
@@ -51,22 +56,27 @@ msgid ""
 "Phi-3, Gemma, Yi, DeepSeek, Qwen等大语言模型并且支持 4-bit 和 16-bit 的 QLoRA/LoRA "
 "微调，该框架在提高运算速度的同时还减少了显存占用。"
 msgstr ""
+"The `Unsloth <https://github.com/unslothai/unsloth/>`_ framework supports large language models such as Llama, Mistral, "
+"Phi-3, Gemma, Yi, DeepSeek, Qwen, and supports 4-bit and 16-bit QLoRA/LoRA "
+"fine-tuning. This framework improves computation speed while reducing memory usage."
 
 #: ../../source/advanced/acceleration.rst:32 d96418753a1f4bb6977ac35f712859a8
 msgid "如果您想使用 Unsloth, 请在启动训练时在训练配置文件中添加以下参数："
-msgstr ""
+msgstr "If you want to use Unsloth, please add the following parameters to the training configuration file when starting training:"
 
 #: ../../source/advanced/acceleration.rst:42 1258202a00fa4b32aa0d0f5c4ee1e60b
 msgid "Liger Kernel"
-msgstr ""
+msgstr "Liger Kernel"
 
 #: ../../source/advanced/acceleration.rst:43 b6a019d2a60c48149d0b7bc2789a4f17
 msgid ""
 "`Liger Kernel <https://github.com/linkedin/Liger-Kernel/>`_  "
 "是一个大语言模型训练的性能优化框架, 可有效地提高吞吐量并减少内存占用。"
 msgstr ""
+"`Liger Kernel <https://github.com/linkedin/Liger-Kernel/>`_  "
+"is a performance optimization framework for large language model training that can effectively improve throughput and reduce memory usage."
 
 #: ../../source/advanced/acceleration.rst:45 97a66b523681481fbe78fb1d4bea2542
 msgid "如果您想使用 Liger Kernel,请在启动训练时在训练配置文件中添加以下参数："
-msgstr ""
+msgstr "If you want to use Liger Kernel, please add the following parameters to the training configuration file when starting training:"
 

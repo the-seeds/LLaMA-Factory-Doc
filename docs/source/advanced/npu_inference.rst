@@ -67,7 +67,7 @@ vLLM-Ascend安装
    pip install vllm-ascend==0.8.5rc1
 
 LLaMA-Factory安装
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 使用下述命令安装 ``LLaMA-Factory`` 。
 

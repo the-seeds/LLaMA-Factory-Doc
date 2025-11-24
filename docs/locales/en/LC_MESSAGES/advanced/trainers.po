@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, LlamaFactory team.
+# Copyright (C) 2025, LlamaFactory team.
 # This file is distributed under the same license as the LLaMA Factory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -7,14 +7,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory \n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-03-05 01:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,25 +24,27 @@ msgstr "Trainers"
 
 #: ../../source/advanced/trainers.rst:6 82e1dd2a84374a0d9db8f2b3013c1ce6
 msgid "Pre-training"
-msgstr ""
+msgstr "Pre-training"
 
 #: ../../source/advanced/trainers.rst:8 318d99e0a7ea43ab888be4697323f799
 msgid ""
 "大语言模型通过在一个大型的通用数据集上通过无监督学习的方式进行预训练来学习语言的表征/初始化模型权重/学习概率分布。 "
 "我们期望在预训练后模型能够处理大量、多种类的数据集，进而可以通过监督学习的方式来微调模型使其适应特定的任务。"
 msgstr ""
+"Large language models learn language representations/initialize model weights/learn probability distributions through unsupervised learning pre-training on a large general dataset. "
+"We expect that after pre-training, the model can handle large amounts of diverse datasets, and can then be fine-tuned through supervised learning to adapt to specific tasks."
 
 #: ../../source/advanced/trainers.rst:12 f1ac2aa20f4748d29819677cce0981fd
 msgid "预训练时，请将 ``stage`` 设置为 ``pt`` ，并确保使用的数据集符合 :ref:`预训练数据集` 格式 。"
-msgstr ""
+msgstr "When pre-training, please set ``stage`` to ``pt`` and ensure the dataset used conforms to the :ref:`预训练数据集` format."
 
 #: ../../source/advanced/trainers.rst:14 498289062bf143b4a8334385ddba8cab
 msgid "下面提供预训练的配置示例："
-msgstr ""
+msgstr "Below is a pre-training configuration example:"
 
 #: ../../source/advanced/trainers.rst:57 024ae12367ff4bae85cd56b3f2db2fa8
 msgid "Post-training"
-msgstr ""
+msgstr "Post-training"
 
 #: ../../source/advanced/trainers.rst:59 557c283d39e548b1951626a7339a4d9b
 msgid ""
@@ -52,24 +52,29 @@ msgid ""
 "尽管模型涌现出的零样本学习，少样本学习的特性使其能在一定程度上完成特定任务， "
 "但仅通过提示（prompt）并不一定能使其表现令人满意。因此，我们需要后训练(post-training)来使得模型在特定任务上也有足够好的表现。"
 msgstr ""
+"After pre-training, the model's parameters are initialized, and the model can understand semantics, grammar, and identify contextual relationships, performing well on general tasks. "
+"Although the model's emergent zero-shot learning and few-shot learning capabilities enable it to complete specific tasks to a certain extent, "
+"prompts alone may not necessarily lead to satisfactory performance. Therefore, we need post-training to enable the model to perform well on specific tasks."
 
 #: ../../source/advanced/trainers.rst:66 fb88dfe9de9047e18d07cf3b71e04b3b
 msgid "Supervised Fine-Tuning"
-msgstr ""
+msgstr "Supervised Fine-Tuning"
 
 #: ../../source/advanced/trainers.rst:68 a2338836885d4d13805cf80a3c002114
 msgid ""
 "Supervised Fine-Tuning(监督微调)是一种在预训练模型上使用小规模有标签数据集进行训练的方法。 "
 "相比于预训练一个全新的模型，对已有的预训练模型进行监督微调是更快速更节省成本的途径。"
 msgstr ""
+"Supervised Fine-Tuning is a method of training on a pre-trained model using a small-scale labeled dataset. "
+"Compared to pre-training a completely new model, supervised fine-tuning of an existing pre-trained model is a faster and more cost-effective approach."
 
 #: ../../source/advanced/trainers.rst:72 529320a4fb674c0685f72dad25b01bca
 msgid "监督微调时，请将 ``stage`` 设置为 ``sft`` 。 下面提供监督微调的配置示例："
-msgstr ""
+msgstr "When performing supervised fine-tuning, please set ``stage`` to ``sft``. Below is a supervised fine-tuning configuration example:"
 
 #: ../../source/advanced/trainers.rst:84 575ce4bf5574478a92b1711160bb9328
 msgid "RLHF"
-msgstr ""
+msgstr "RLHF"
 
 #: ../../source/advanced/trainers.rst:86 4f1c17bc74764893b5105e8c3d353049
 msgid ""
@@ -77,10 +82,13 @@ msgid ""
 " 通过 RLHF(Reinforcement Learning from Human Feedback) "
 "方法，我们可以通过人类反馈来进一步微调模型，使得模型能够更好更安全地遵循用户指令。"
 msgstr ""
+"Since the data that language models learn from during supervised fine-tuning comes from the internet, the model may not follow user instructions well and may even output illegal or violent content. Therefore, we need to align model behavior with user needs. "
+"Through RLHF (Reinforcement Learning from Human Feedback) "
+"methods, we can further fine-tune the model through human feedback, enabling the model to follow user instructions better and more safely."
 
 #: ../../source/advanced/trainers.rst:92 1647b5c7eb5148cc8126d0c750b3c673
 msgid "Reward model"
-msgstr ""
+msgstr "Reward model"
 
 #: ../../source/advanced/trainers.rst:94 a2d474800b954d37b42d9c6acafa26b6
 msgid ""
@@ -89,60 +97,68 @@ msgid ""
 "为了训练这个奖励模型，我们需要让奖励模型获知人类偏好，而这通常通过输入经过人类标注的偏好数据集来实现。 "
 "在偏好数据集中，数据由三部分组成：输入、好的回答、坏的回答。奖励模型在偏好数据集上训练，从而可以更符合人类偏好地评价语言模型的输出。"
 msgstr ""
+"However, obtaining real human data is very time-consuming and expensive. A natural idea is that we can train a reward "
+"model to replace humans in evaluating language model outputs. "
+"To train this reward model, we need to let the reward model learn human preferences, which is typically achieved by inputting human-annotated preference datasets. "
+"In preference datasets, data consists of three parts: input, good response, and bad response. The reward model is trained on preference datasets, allowing it to evaluate language model outputs more in line with human preferences."
 
 #: ../../source/advanced/trainers.rst:98 0cf2761571b94d7d96ee45eedd4d8333
 msgid ""
 "在训练奖励模型时，请将 ``stage`` 设置为 ``rm`` ，确保使用的数据集符合 :ref:`偏好数据集 <偏好数据集-1>` "
 "格式并且指定奖励模型的保存路径。 以下提供一个示例："
 msgstr ""
+"When training a reward model, please set ``stage`` to ``rm``, ensure the dataset used conforms to the :ref:`Preference Dataset <偏好数据集-1>` "
+"format, and specify the save path for the reward model. Here is an example:"
 
 #: ../../source/advanced/trainers.rst:112 ae53e0db1be940c7a1c56b02e0f21644
 msgid "PPO"
-msgstr ""
+msgstr "PPO"
 
 #: ../../source/advanced/trainers.rst:114 7aa15131391a4e87a24f2139345a7b6a
 msgid ""
-"在训练奖励完模型之后，我们可以开始进行模型的强化学习部分。与监督学习不同，在强化学习中我们没有标注好的数据。语言模型接受prompt作为输入，其输出作为奖励模型的输入。奖励模型评价语言模型的输出，并将评价返回给语言模型。确保两个模型都能良好运行是一个具有挑战性的任务。"
-" 一种实现方式是使用近端策略优化（PPO，Proximal Policy "
-"Optimization）。其主要思想是：我们既希望语言模型的输出能够尽可能地获得奖励模型的高评价，又不希望语言模型的变化过于“激进”。 "
-"通过这种方法，我们可以使得模型在学习趋近人类偏好的同时不过多地丢失其原有的解决问题的能力。"
+"在训练奖励完模型之后，我们可以开始进行模型的强化学习部分。与监督学习不同，在强化学习中我们没有标注好的数据。语言模型接受prompt作为输入，其输出作为奖励模型的输入。奖励模型评价语言模型的输出，并将评价返回给语言模型。确保两个模型都能良好运行是一个具有挑战性的任务。 一种实现方式是使用近端策略优化（PPO，Proximal Policy Optimization）。其主要思想是：我们既希望语言模型的输出能够尽可能地获得奖励模型的高评价，又不希望语言模型的变化过于“激进”。 通过这种方法，我们可以使得模型在学习趋近人类偏好的同时不过多地丢失其原有的解决问题的能力。"
 msgstr ""
+"After training the reward model, we can start the reinforcement learning phase of the model. Unlike supervised learning, reinforcement learning does not have labeled data. The language model takes prompts as input, and its output serves as input to the reward model. The reward model evaluates the language model's output and returns the evaluation to the language model. Ensuring that both models run smoothly is a challenging task. One way to implement this is by using Proximal Policy Optimization (PPO). The main idea is that we want the language model's output to receive as high ratings as possible from the reward model, while avoiding overly 'aggressive' changes to the language model. This approach allows the model to learn to align with human preferences without losing too much of its original problem-solving ability."
 
 #: ../../source/advanced/trainers.rst:118 a77aecbe227441bf8f5bad687719a085
 msgid "在使用 PPO 进行强化学习时，请将 ``stage`` 设置为 ``ppo``，并且指定所使用奖励模型的路径。 下面是一个示例："
-msgstr ""
+msgstr "When using PPO for reinforcement learning, please set ``stage`` to ``ppo`` and specify the path to the reward model being used. Here is an example:"
 
 #: ../../source/advanced/trainers.rst:131 40952e27cebe475bb92b1c968457ebd8
 msgid "DPO"
-msgstr ""
+msgstr "DPO"
 
 #: ../../source/advanced/trainers.rst:133 75741a597bc44dada4242e6602e14955
 msgid ""
-"既然同时保证两个语言模型与奖励模型的良好运行是有挑战性的，一种想法是我们可以丢弃奖励模型， "
-"进而直接基于人类偏好训练我们的语言模型，这大大简化了训练过程。"
+"既然同时保证语言模型与奖励模型的良好运行是有挑战性的，一种想法是我们可以丢弃奖励模型，进而直接基于人类偏好训练我们的语言模型，这大大简化了训练过程。"
 msgstr ""
+"Since ensuring the good operation of both the language model and reward model simultaneously is challenging, one idea is that we can discard the reward model and train our language model directly based on human preferences, which greatly simplifies the training process."
 
 #: ../../source/advanced/trainers.rst:136 345ea649ad2240a08f20359eeac336d7
 msgid ""
 "在使用 DPO 时，请将 ``stage`` 设置为 ``dpo``，确保使用的数据集符合 :ref:`偏好数据集-1` "
 "格式并且设置偏好优化相关参数。 以下是一个示例："
 msgstr ""
+"When using DPO, please set ``stage`` to ``dpo``, ensure the dataset used conforms to the :ref:`偏好数据集-1` "
+"format, and set preference optimization related parameters. Here is an example:"
 
 #: ../../source/advanced/trainers.rst:151 adec3bdcc093491caababb1a613d436e
 msgid "KTO"
-msgstr ""
+msgstr "KTO"
 
 #: ../../source/advanced/trainers.rst:153 7784fea1caa443288f6fea957a4687e4
 msgid ""
 "KTO(Kahneman-Taversky Optimization) 的出现是为了解决成对的偏好数据难以获得的问题。 "
 "KTO使用了一种新的损失函数使其只需二元的标记数据， 即只需标注回答的好坏即可训练，并取得与 DPO 相似甚至更好的效果。"
 msgstr ""
+"KTO (Kahneman-Taversky Optimization) emerged to solve the problem of paired preference data being difficult to obtain. "
+"KTO uses a new loss function that only requires binary labeled data, meaning training only requires labeling whether responses are good or bad, and achieves similar or even better results than DPO."
 
 #: ../../source/advanced/trainers.rst:156 c56a61e1940449879b8d0e853af1383f
 msgid "在使用 KTO 时，请将 ``stage`` 设置为 ``kto`` ，设置偏好优化相关参数并使用 KTO 数据集。"
-msgstr ""
+msgstr "When using KTO, please set ``stage`` to ``kto``, set preference optimization related parameters, and use the KTO dataset."
 
 #: ../../source/advanced/trainers.rst:158 2c1e94c1e16f4d3d8e0db594db6d7661
 msgid "以下是一个示例："
-msgstr ""
+msgstr "Here is an example:"
 

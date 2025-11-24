@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, LlamaFactory team.
+# Copyright (C) 2025, LlamaFactory team.
 # This file is distributed under the same license as the LLaMA Factory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -7,14 +7,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory \n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-03-05 01:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,11 +30,11 @@ msgstr "Finetuning Arguments"
 #: ../../source/advanced/arguments.rst:493 043d785d0c2a419b96eeb55674806ef8
 #: 83d1b4277282435d8802200f23421264
 msgid "基本参数"
-msgstr ""
+msgstr "Basic Parameters"
 
 #: ../../source/advanced/arguments.rst:10 05483c50af6d43ce96b7f612096de07f
 msgid "FinetuningArguments"
-msgstr ""
+msgstr "FinetuningArguments"
 
 #: ../../source/advanced/arguments.rst:14
 #: ../../source/advanced/arguments.rst:74
@@ -64,7 +62,7 @@ msgstr ""
 #: ede98fc492de46858bac13c3a2af2586 f2cf46579326467e805e7306bbfd379b
 #: f89239e3f5634e0e97e0a2ea7c442134 f998ccc836ce46b8b4b366d03c4a01f1
 msgid "参数名称"
-msgstr ""
+msgstr "Parameter Name"
 
 #: ../../source/advanced/arguments.rst:15
 #: ../../source/advanced/arguments.rst:75
@@ -92,7 +90,7 @@ msgstr ""
 #: ca8e8f4498184b34a40cdbf09cc31b0d d9debcb8ec3b4946b6fc432fad295e81
 #: e5d0bf412bfc413db6027c22c299a58c fb9bcbea4ef34925b7749f031ae83d06
 msgid "类型"
-msgstr ""
+msgstr "Type"
 
 #: ../../source/advanced/arguments.rst:16
 #: ../../source/advanced/arguments.rst:76
@@ -120,7 +118,7 @@ msgstr ""
 #: c2d4979ccd3d4c6c85180f524248752f c8d63856c058423fb0ab871db70a93ad
 #: d945a06f407a4c468164e31177a36fd5 f56d0c51a8594d1ba850fa62310b85a9
 msgid "介绍"
-msgstr ""
+msgstr "Description"
 
 #: ../../source/advanced/arguments.rst:17
 #: ../../source/advanced/arguments.rst:77
@@ -148,11 +146,11 @@ msgstr ""
 #: de6ed9e7dc5b4582a759da0c59111eb9 ee0f4a361810415bbfbf38a36bb411e9
 #: f25b7bf5925240988240af3ea02f1d0c fae990a00f1a483782f5af21507a7df3
 msgid "默认值"
-msgstr ""
+msgstr "Default Value"
 
 #: ../../source/advanced/arguments.rst:18 2fd56713e6d944cab16e055f66f38440
 msgid "pure_bf16"
-msgstr ""
+msgstr "pure_bf16"
 
 #: ../../source/advanced/arguments.rst:19
 #: ../../source/advanced/arguments.rst:31
@@ -233,11 +231,11 @@ msgstr ""
 #: f72e2d66652d4d169fa0d55b38d7adaf fa10f6f8a6174ca99aaa58dc80e27472
 #: fa968bd8b35545caa227d9c16592c573
 msgid "bool"
-msgstr ""
+msgstr "bool"
 
 #: ../../source/advanced/arguments.rst:20 8dcc8e1786f1419993678e2d7c917a08
 msgid "是否以纯 bf16 精度训练模型（不使用 AMP）。"
-msgstr ""
+msgstr "Whether to train the model in pure bf16 precision (without using AMP)."
 
 #: ../../source/advanced/arguments.rst:21
 #: ../../source/advanced/arguments.rst:33
@@ -303,65 +301,65 @@ msgstr ""
 #: f735e38dfae34b229475e257949e9d20 fa8a3e2c507e4aaf89f1e18e64a1e256
 #: ff5bd7435018474bb0d11f5308182ae9
 msgid "False"
-msgstr ""
+msgstr "False"
 
 #: ../../source/advanced/arguments.rst:22 f1195e85a13e41fdb02395fc3a8e092b
 msgid "stage"
-msgstr ""
+msgstr "stage"
 
 #: ../../source/advanced/arguments.rst:23 c5f7018c71ed4b808ba4c2bfd3f3b17a
 msgid "Literal[\"pt\", \"sft\", \"rm\", \"ppo\", \"dpo\", \"kto\"]"
-msgstr ""
+msgstr "Literal[\"pt\", \"sft\", \"rm\", \"ppo\", \"dpo\", \"kto\"]"
 
 #: ../../source/advanced/arguments.rst:24 b4fb1f9818cc426397c75762a180ff48
 msgid "训练阶段"
-msgstr ""
+msgstr "Training Stage"
 
 #: ../../source/advanced/arguments.rst:25 1531cbacdd124c88ad3e6f4ab2022452
 msgid "sft"
-msgstr ""
+msgstr "sft"
 
 #: ../../source/advanced/arguments.rst:26 64a30b11d29d4fdbbd0e334898d9581a
 msgid "finetuning_type"
-msgstr ""
+msgstr "finetuning_type"
 
 #: ../../source/advanced/arguments.rst:27 38d2ab376700495881be2bd193e8b152
 msgid "Literal[\"lora\", \"freeze\", \"full\"]"
-msgstr ""
+msgstr "Literal[\"lora\", \"freeze\", \"full\"]"
 
 #: ../../source/advanced/arguments.rst:28 04897adf10e84cd8acbadc9ef0843ff3
 msgid "微调方法"
-msgstr ""
+msgstr "Fine-tuning Method"
 
 #: ../../source/advanced/arguments.rst:29
 #: ../../source/advanced/arguments.rst:218 00c371e89e3d479b937e3178fcbf0271
 #: a511b0af34644c3e8049004da66cee2e
 msgid "lora"
-msgstr ""
+msgstr "lora"
 
 #: ../../source/advanced/arguments.rst:30 96350d275ec043239341c91f782f32fd
 msgid "use_llama_pro"
-msgstr ""
+msgstr "use_llama_pro"
 
 #: ../../source/advanced/arguments.rst:32 6af9efcaa81441e5b4d93142022062f4
 msgid "是否仅训练扩展块中的参数（LLaMA Pro 模式）。"
-msgstr ""
+msgstr "Whether to only train parameters in extension blocks (LLaMA Pro mode)."
 
 #: ../../source/advanced/arguments.rst:34 4ecb8f7061a149e9b13711b14e430492
 msgid "use_adam_mini"
-msgstr ""
+msgstr "use_adam_mini"
 
 #: ../../source/advanced/arguments.rst:36 ffdcd2c96abd45978eb75ad6968978d5
 msgid "是否使用 Adam-mini 优化器。"
-msgstr ""
+msgstr "Whether to use Adam-mini optimizer."
 
 #: ../../source/advanced/arguments.rst:38 4f80887682fa488783e8bb8c47b92063
 msgid "freeze_vision_tower"
-msgstr ""
+msgstr "freeze_vision_tower"
 
 #: ../../source/advanced/arguments.rst:40 47f93124a5614cdcae01a256a2614fb3
 msgid "MLLM 训练时是否冻结视觉塔。"
-msgstr ""
+msgstr "Whether to freeze vision tower during MLLM training."
 
 #: ../../source/advanced/arguments.rst:41
 #: ../../source/advanced/arguments.rst:45
@@ -379,67 +377,67 @@ msgstr ""
 #: afd7a8fc53654ba18668a1dd95757bc3 f0e2665acab84d808401607ffe3df894
 #: f568776a06374caa95b8da7f5ae6110e
 msgid "True"
-msgstr ""
+msgstr "True"
 
 #: ../../source/advanced/arguments.rst:42 1593db9a74d244f692dd4ec2b1e1ce5f
 msgid "freeze_multi_modal_projector"
-msgstr ""
+msgstr "freeze_multi_modal_projector"
 
 #: ../../source/advanced/arguments.rst:44 a00017c6b3074ac691c61813d30d69d4
 msgid "MLLM 训练时是否冻结多模态投影器。"
-msgstr ""
+msgstr "Whether to freeze multimodal projector during MLLM training."
 
 #: ../../source/advanced/arguments.rst:46 4625d23d475a4a7fa9692a2a903a9910
 msgid "train_mm_proj_only"
-msgstr ""
+msgstr "train_mm_proj_only"
 
 #: ../../source/advanced/arguments.rst:48 a42f59dcbc6949ecb74bf574ce0d91e8
 msgid "是否仅训练多模态投影器。"
-msgstr ""
+msgstr "Whether to train only the multimodal projector."
 
 #: ../../source/advanced/arguments.rst:50 c59cc11407394412b985da36753773aa
 msgid "compute_accuracy"
-msgstr ""
+msgstr "compute_accuracy"
 
 #: ../../source/advanced/arguments.rst:52 5b3c62c540d54f31a09b58772d81a689
 msgid "是否在评估时计算 token 级别的准确率。"
-msgstr ""
+msgstr "Whether to compute token-level accuracy during evaluation."
 
 #: ../../source/advanced/arguments.rst:54 4c2bb2589a254f628d40d237aff341b9
 msgid "disable_shuffling"
-msgstr ""
+msgstr "disable_shuffling"
 
 #: ../../source/advanced/arguments.rst:56 8342016cfe9c4f3fb71ab6fcd47a25d4
 msgid "是否禁用训练集的随机打乱。"
-msgstr ""
+msgstr "Whether to disable shuffling of the training set."
 
 #: ../../source/advanced/arguments.rst:58 77236de1cfd74b9f9460853425b06852
 msgid "plot_loss"
-msgstr ""
+msgstr "plot_loss"
 
 #: ../../source/advanced/arguments.rst:60 0cae9bdbab7b4039a4c6883b32e16431
 msgid "是否保存训练过程中的损失曲线。"
-msgstr ""
+msgstr "Whether to save the loss curve during training."
 
 #: ../../source/advanced/arguments.rst:62 dda55cbab254454aa8dc95d63bc47f8e
 msgid "include_effective_tokens_per_second"
-msgstr ""
+msgstr "include_effective_tokens_per_second"
 
 #: ../../source/advanced/arguments.rst:64 e6ae090a892a4aa69a07ea8aba7664ba
 msgid "是否计算有效的每秒 token 数。"
-msgstr ""
+msgstr "Whether to compute effective tokens per second."
 
 #: ../../source/advanced/arguments.rst:69 4636b5008d8d4d6681e48a24fd0ee90b
 msgid "LoRA"
-msgstr ""
+msgstr "LoRA"
 
 #: ../../source/advanced/arguments.rst:70 3491071ee7b1438da5009362968387d7
 msgid "LoraArguments"
-msgstr ""
+msgstr "LoraArguments"
 
 #: ../../source/advanced/arguments.rst:78 0eb338b13ed743b0a168c3b53f42117d
 msgid "additional_target"
-msgstr ""
+msgstr "additional_target"
 
 #: ../../source/advanced/arguments.rst:79
 #: ../../source/advanced/arguments.rst:192
@@ -479,11 +477,11 @@ msgstr ""
 #: bd3e862624974c0aa9f020b3b522b909 db41dc53a62c4a48be5f4eca51b3ec8b
 #: e62cdb24169b442aa3385da19d312919 f5edc08c49314cf88f34c61d13bd3c1e
 msgid "Optional[str]"
-msgstr ""
+msgstr "Optional[str]"
 
 #: ../../source/advanced/arguments.rst:80 2240cc49f69b49569ffd3f8bb4e88a60
 msgid "除 LoRA 层之外设置为可训练并保存在最终检查点中的模块名称。使用逗号分隔多个模块。"
-msgstr ""
+msgstr "Names of modules besides LoRA layers that are set as trainable and saved in the final checkpoint. Use commas to separate multiple modules."
 
 #: ../../source/advanced/arguments.rst:81
 #: ../../source/advanced/arguments.rst:85
@@ -561,11 +559,11 @@ msgstr ""
 #: fc7c06c165fe49bca48b78650ee9da28 fe542d1646e84874a8a0765695329c61
 #: fefadc1c328d4b5ca528e05628b539a2
 msgid "None"
-msgstr ""
+msgstr "None"
 
 #: ../../source/advanced/arguments.rst:82 ee9c200eeae94f9a9e629dc3a0909772
 msgid "lora_alpha"
-msgstr ""
+msgstr "lora_alpha"
 
 #: ../../source/advanced/arguments.rst:83
 #: ../../source/advanced/arguments.rst:119
@@ -586,15 +584,15 @@ msgstr ""
 #: d02c9aa7444d4c21bd67d91f1fbbfa0d f092ddf684534edc8a56d1ba26435eb9
 #: fcef9e4fe7ac4597b44f21d869d6316b
 msgid "Optional[int]"
-msgstr ""
+msgstr "Optional[int]"
 
 #: ../../source/advanced/arguments.rst:84 5c0b0d546ad74bceb86a93a52eb8a3a2
 msgid "LoRA 缩放系数。一般情况下为 lora_rank * 2。"
-msgstr ""
+msgstr "LoRA scaling coefficient. Generally lora_rank * 2."
 
 #: ../../source/advanced/arguments.rst:86 fb369df7ff0843c2b87ab77c3c625379
 msgid "lora_dropout"
-msgstr ""
+msgstr "lora_dropout"
 
 #: ../../source/advanced/arguments.rst:87
 #: ../../source/advanced/arguments.rst:144
@@ -624,21 +622,21 @@ msgstr ""
 #: bfdf0bfb961a4a96abf75554644d5e26 c3dbff53da79462e9f47eb98b9c7be2a
 #: efc95a6e9f7c49e1a355848930e9fbb8
 msgid "float"
-msgstr ""
+msgstr "float"
 
 #: ../../source/advanced/arguments.rst:88 33092feb56c345b886d4a50d6a11c072
 msgid "LoRA 微调中的 dropout 率。"
-msgstr ""
+msgstr "Dropout rate in LoRA fine-tuning."
 
 #: ../../source/advanced/arguments.rst:89
 #: ../../source/advanced/arguments.rst:340 41668fa4db8a4a92a5ba4a89e317a3b7
 #: 79ba9e05dfc64f1fa3756719dcc92bef
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../../source/advanced/arguments.rst:90 d5cd060f7b2c4841af40ba0796f473c6
 msgid "lora_rank"
-msgstr ""
+msgstr "lora_rank"
 
 #: ../../source/advanced/arguments.rst:91
 #: ../../source/advanced/arguments.rst:172
@@ -686,19 +684,19 @@ msgstr ""
 #: edcafb02d5614ef8a19acea71cd4f951 f27a0b6a0f8f4cae8411ce919f853827
 #: fd7bc72888d3415f8ec9e44d74284667
 msgid "int"
-msgstr ""
+msgstr "int"
 
 #: ../../source/advanced/arguments.rst:92 dfe533c7f3364cd7a8f578d2e13086fa
 msgid "LoRA 微调的本征维数 ``r``，``r`` 越大可训练的参数越多。"
-msgstr ""
+msgstr "Intrinsic dimensionality ``r`` of LoRA fine-tuning. Larger ``r`` means more trainable parameters."
 
 #: ../../source/advanced/arguments.rst:93 09b474a619ab45c2b34ee12f0483c6ff
 msgid "8"
-msgstr ""
+msgstr "8"
 
 #: ../../source/advanced/arguments.rst:94 acb5a44bf278476280475e911c481112
 msgid "lora_target"
-msgstr ""
+msgstr "lora_target"
 
 #: ../../source/advanced/arguments.rst:95
 #: ../../source/advanced/arguments.rst:238
@@ -728,11 +726,11 @@ msgstr ""
 #: ec31d904ada546f3a00fa621f2e01f51 f2851b046c674990a06af961d173d6ee
 #: f76adfa60e6a4b0eb189875983f16e65
 msgid "str"
-msgstr ""
+msgstr "str"
 
 #: ../../source/advanced/arguments.rst:96 88aa58cebb5547d29b27d4d058336966
 msgid "应用 LoRA 方法的模块名称。使用逗号分隔多个模块，使用 ``all`` 指定所有模块。"
-msgstr ""
+msgstr "Names of modules to apply LoRA method to. Use commas to separate multiple modules, use ``all`` to specify all modules."
 
 #: ../../source/advanced/arguments.rst:97
 #: ../../source/advanced/arguments.rst:240
@@ -741,158 +739,160 @@ msgstr ""
 #: 3008f858959b406b9915502889853647 40bf24f4723b4e86821bcd0252c08dfe
 #: d86e23a63b2e47cebc80251cece649aa
 msgid "all"
-msgstr ""
+msgstr "all"
 
 #: ../../source/advanced/arguments.rst:98 d759103e06874911b977ae1df6e5a99a
 msgid "loraplus_lr_ratio"
-msgstr ""
+msgstr "loraplus_lr_ratio"
 
 #: ../../source/advanced/arguments.rst:99
 #: ../../source/advanced/arguments.rst:103
 #: ../../source/advanced/arguments.rst:571 3055a939bab54737952cfb16197676a9
 #: 60944f2a56d64985ace05fab57003baf e9b7aa50d3364fb8a0f2cb27c793469f
 msgid "Optional[float]"
-msgstr ""
+msgstr "Optional[float]"
 
 #: ../../source/advanced/arguments.rst:100 9bb0b0d5e47c4d0bb24e0c7c68295fef
 msgid "LoRA+ 学习率比例(``λ = ηB/ηA``)。 ``ηA, ηB`` 分别是 adapter matrices A 与 B 的学习率。"
-msgstr ""
+msgstr "LoRA+ learning rate ratio (``λ = ηB/ηA``). ``ηA, ηB`` are the learning rates of adapter matrices A and B respectively."
 
 #: ../../source/advanced/arguments.rst:102 a8fb3a0aaa5a44b6a2b17e74feb876ef
 msgid "loraplus_lr_embedding"
-msgstr ""
+msgstr "loraplus_lr_embedding"
 
 #: ../../source/advanced/arguments.rst:104 e5b5f0ab0e4941e9b76a707a3aa856b6
 msgid "LoRA+ 嵌入层的学习率。"
-msgstr ""
+msgstr "Learning rate for LoRA+ embedding layer."
 
 #: ../../source/advanced/arguments.rst:105 bc602907a8c649128eed44b7b4cf8e1b
 msgid "1e-6"
-msgstr ""
+msgstr "1e-6"
 
 #: ../../source/advanced/arguments.rst:106 6b513f6339a34ac3aea52cb7d8e24c0d
 msgid "use_rslora"
-msgstr ""
+msgstr "use_rslora"
 
 #: ../../source/advanced/arguments.rst:108 0147c31b1b624f43a47ec6a6a7c919d3
 msgid "是否使用秩稳定 LoRA (Rank-Stabilized LoRA)。"
-msgstr ""
+msgstr "Whether to use Rank-Stabilized LoRA."
 
 #: ../../source/advanced/arguments.rst:110 9085783df0a4405c99c5a2ebdd6bfcd3
 msgid "use_dora"
-msgstr ""
+msgstr "use_dora"
 
 #: ../../source/advanced/arguments.rst:112 c60d1793848540798bfe14da1da3aad9
 msgid "是否使用权重分解 LoRA（Weight-Decomposed LoRA）。"
-msgstr ""
+msgstr "Whether to use Weight-Decomposed LoRA."
 
 #: ../../source/advanced/arguments.rst:114 28c263675d2e4ce4a2e0763def6be753
 msgid "pissa_init"
-msgstr ""
+msgstr "pissa_init"
 
 #: ../../source/advanced/arguments.rst:116 e4b7c0082270451d9234fd5071768a78
 msgid "是否初始化 PiSSA 适配器。"
-msgstr ""
+msgstr "Whether to initialize PiSSA adapter."
 
 #: ../../source/advanced/arguments.rst:118 6ec145b9f5ad4a099733342c803f1898
 msgid "pissa_iter"
-msgstr ""
+msgstr "pissa_iter"
 
 #: ../../source/advanced/arguments.rst:120 aa317953c7714722b48665fd009a28b2
 msgid "PiSSA 中 FSVD 执行的迭代步数。使用 ``-1`` 将其禁用。"
-msgstr ""
+msgstr "Number of iteration steps for FSVD execution in PiSSA. Use ``-1`` to disable it."
 
 #: ../../source/advanced/arguments.rst:121
 #: ../../source/advanced/arguments.rst:268
 #: ../../source/advanced/arguments.rst:364 823092ec9ba94c53a3e96a8b659fffb3
 #: 95d6f6d843174a51997286abb8a4262d e07ef0c45e7d4d7a9c8485d38d8f2853
 msgid "16"
-msgstr ""
+msgstr "16"
 
 #: ../../source/advanced/arguments.rst:122 2f8f9dc8d1af4cc28e4dc495aa03dcdf
 msgid "pissa_convert"
-msgstr ""
+msgstr "pissa_convert"
 
 #: ../../source/advanced/arguments.rst:124 0c30fcae58f44edead7b272b227f6348
 msgid "是否将 PiSSA 适配器转换为正常的 LoRA 适配器。"
-msgstr ""
+msgstr "Whether to convert PiSSA adapter to normal LoRA adapter."
 
 #: ../../source/advanced/arguments.rst:126 e289e0173fa244508ec8bb1b10aca1bb
 msgid "create_new_adapter"
-msgstr ""
+msgstr "create_new_adapter"
 
 #: ../../source/advanced/arguments.rst:128 8e63208a3cfb48998787eeb5e123594b
 msgid "是否创建一个具有随机初始化权重的新适配器。"
-msgstr ""
+msgstr "Whether to create a new adapter with randomly initialized weights."
 
 #: ../../source/advanced/arguments.rst:134 d786311fadf34d6fac7e17b31e12b12f
 msgid "RLHF"
-msgstr ""
+msgstr "RLHF"
 
 #: ../../source/advanced/arguments.rst:135 c74f717742e84cc7970a1e52cd11894a
 msgid "RLHF训练参数介绍"
-msgstr ""
+msgstr "RLHF Training Parameters"
 
 #: ../../source/advanced/arguments.rst:143 872ddee5af864e8e9050727d49fd4c97
 msgid "pref_beta"
-msgstr ""
+msgstr "pref_beta"
 
 #: ../../source/advanced/arguments.rst:145 14276b3dd36c4b82ad437dbc87af0af5
 msgid "偏好损失中的 beta 参数。"
-msgstr ""
+msgstr "Beta parameter in preference loss."
 
 #: ../../source/advanced/arguments.rst:146 358c602f851c4d75beb0b4ee91ce9d2e
 msgid "0.1"
-msgstr ""
+msgstr "0.1"
 
 #: ../../source/advanced/arguments.rst:147 4107f7fc4b32459da1a3231a07a5c654
 msgid "pref_ftx"
-msgstr ""
+msgstr "pref_ftx"
 
 #: ../../source/advanced/arguments.rst:149 ecfac77da4ad4d2a9394f5ee06356901
 msgid "DPO 训练中的 sft loss 系数。"
-msgstr ""
+msgstr "SFT loss coefficient in DPO training."
 
 #: ../../source/advanced/arguments.rst:150
 #: ../../source/advanced/arguments.rst:158
 #: ../../source/advanced/arguments.rst:469 68fe8e82bb9a48798a7edeb5e6ed5234
 #: 87f82ae3b075463dbbee592736cbdc4b fc441c75eedd48baaa6a849c983a56c7
 msgid "0.0"
-msgstr ""
+msgstr "0.0"
 
 #: ../../source/advanced/arguments.rst:151 3cbbe5ddaf724d539a19092ae657bf54
 msgid "pref_loss"
-msgstr ""
+msgstr "pref_loss"
 
 #: ../../source/advanced/arguments.rst:152 0bff9d26ada6445db2ad8ce0aa29edfa
 msgid ""
 "Literal[\"sigmoid\", \"hinge\", \"ipo\", \"kto_pair\", \"orpo\", "
 "\"simpo\"]"
 msgstr ""
+"Literal[\"sigmoid\", \"hinge\", \"ipo\", \"kto_pair\", \"orpo\", "
+"\"simpo\"]"
 
 #: ../../source/advanced/arguments.rst:153 bfa4b227e3d34113b05b3071e432b3f4
 msgid "DPO 训练中使用的偏好损失类型。可选值为： sigmoid, hinge, ipo, kto_pair, orpo, simpo。"
-msgstr ""
+msgstr "Type of preference loss used in DPO training. Available values are: sigmoid, hinge, ipo, kto_pair, orpo, simpo."
 
 #: ../../source/advanced/arguments.rst:154 de292f74f1c84d21abab6f6e8d6123cd
 msgid "sigmoid"
-msgstr ""
+msgstr "sigmoid"
 
 #: ../../source/advanced/arguments.rst:155 056d93048f854d12adb3e1b722293416
 msgid "dpo_label_smoothing"
-msgstr ""
+msgstr "dpo_label_smoothing"
 
 #: ../../source/advanced/arguments.rst:157 2c23a0824a9748ebaf8e29a4a20ce07d
 msgid "标签平滑系数，取值范围为 [0,0.5]。"
-msgstr ""
+msgstr "Label smoothing coefficient, range [0,0.5]."
 
 #: ../../source/advanced/arguments.rst:159 4e379eb9c10b4f178035efb5b557dffd
 msgid "kto_chosen_weight"
-msgstr ""
+msgstr "kto_chosen_weight"
 
 #: ../../source/advanced/arguments.rst:161 e364f0dc32cb41af879cfb9f89e5e84c
 msgid "KTO 训练中 chosen 标签 loss 的权重。"
-msgstr ""
+msgstr "Weight of chosen label loss in KTO training."
 
 #: ../../source/advanced/arguments.rst:162
 #: ../../source/advanced/arguments.rst:166
@@ -901,477 +901,477 @@ msgstr ""
 #: 41b82436c1e248c39f8a76e8a08552a3 46c5f9fddeec4711b382e7e17b02a1ba
 #: 8d471bd625a04505b11879baf6d7114e
 msgid "1.0"
-msgstr ""
+msgstr "1.0"
 
 #: ../../source/advanced/arguments.rst:163 4d2255f1717e492fbe2afebff7b9f798
 msgid "kto_rejected_weight"
-msgstr ""
+msgstr "kto_rejected_weight"
 
 #: ../../source/advanced/arguments.rst:165 1dc80088fb9946d1a7233ae2fd7f2fab
 msgid "KTO 训练中 rejected 标签 loss 的权重。"
-msgstr ""
+msgstr "Weight of rejected label loss in KTO training."
 
 #: ../../source/advanced/arguments.rst:167 a286446b4e4b46ec88995dc31f57bfce
 msgid "simpo_gamma"
-msgstr ""
+msgstr "simpo_gamma"
 
 #: ../../source/advanced/arguments.rst:169 aae2c56bf74346808a9a8658db0f8936
 msgid "SimPO 损失中的 reward margin。"
-msgstr ""
+msgstr "Reward margin in SimPO loss."
 
 #: ../../source/advanced/arguments.rst:170 dd0f4f6071844374b3c1ea6c9a3496b5
 msgid "0.5"
-msgstr ""
+msgstr "0.5"
 
 #: ../../source/advanced/arguments.rst:171 82d661f625cd49d5ab4bc22aa6fe2af9
 msgid "ppo_buffer_size"
-msgstr ""
+msgstr "ppo_buffer_size"
 
 #: ../../source/advanced/arguments.rst:173 fc4d497df9004f0cadb17e60eadf190b
 msgid "PPO 训练中的 mini-batch 大小。"
-msgstr ""
+msgstr "Mini-batch size in PPO training."
 
 #: ../../source/advanced/arguments.rst:174
 #: ../../source/advanced/arguments.rst:876
 #: ../../source/advanced/arguments.rst:963 1c775f5581d248eb9f4c578fbc22ef9b
 #: aabbbc8bfb284cae8f577687608900f4 f3ef44fbc5184427a6100f46b55ce241
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: ../../source/advanced/arguments.rst:175 65efb2636c7d457d81e26f9fb9611c95
 msgid "ppo_epochs"
-msgstr ""
+msgstr "ppo_epochs"
 
 #: ../../source/advanced/arguments.rst:177 675583868131470ea1974673069a6691
 msgid "PPO 训练迭代次数。"
-msgstr ""
+msgstr "Number of PPO training iterations."
 
 #: ../../source/advanced/arguments.rst:178
 #: ../../source/advanced/arguments.rst:823 99354276d29648b18cc513f3b3af0386
 #: c9a4de2ab6ff466cb60efe96c21c9a3c
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../../source/advanced/arguments.rst:179 c181af7a19534f38904bc0f380fa053f
 msgid "ppo_score_norm"
-msgstr ""
+msgstr "ppo_score_norm"
 
 #: ../../source/advanced/arguments.rst:181 e4b6aa4692354b169018fa2588e8da73
 msgid "是否在 PPO 训练中使用归一化分数。"
-msgstr ""
+msgstr "Whether to use normalized scores in PPO training."
 
 #: ../../source/advanced/arguments.rst:183 b1dfec7179fd4ce9bdd8cdb7dda3dad4
 msgid "ppo_target"
-msgstr ""
+msgstr "ppo_target"
 
 #: ../../source/advanced/arguments.rst:185 815dfd7f43314f679d4a086f0ace6abd
 msgid "PPO 训练中自适应 KL 控制的目标 KL 值。"
-msgstr ""
+msgstr "Target KL value for adaptive KL control in PPO training."
 
 #: ../../source/advanced/arguments.rst:186 1f98b52b37bb4e1ea81877c6e0b0a79f
 msgid "6.0"
-msgstr ""
+msgstr "6.0"
 
 #: ../../source/advanced/arguments.rst:187 f044cbe7d8b445e196c4d1d5e07e3a92
 msgid "ppo_whiten_rewards"
-msgstr ""
+msgstr "ppo_whiten_rewards"
 
 #: ../../source/advanced/arguments.rst:189 b7f48ee9f9604d4fb571fbcdd9f188c1
 msgid "PPO 训练中是否对奖励进行归一化。"
-msgstr ""
+msgstr "Whether to normalize rewards in PPO training."
 
 #: ../../source/advanced/arguments.rst:191 4b9bbf9d82b64158a38ec545680ad9d7
 msgid "ref_model"
-msgstr ""
+msgstr "ref_model"
 
 #: ../../source/advanced/arguments.rst:193 6b891b874c2f4ca9b711d6913466691f
 msgid "PPO 或 DPO 训练中使用的参考模型路径。"
-msgstr ""
+msgstr "Path to reference model used in PPO or DPO training."
 
 #: ../../source/advanced/arguments.rst:195 f7b2b816effd4f73b04998f52da6c548
 msgid "ref_model_adapters"
-msgstr ""
+msgstr "ref_model_adapters"
 
 #: ../../source/advanced/arguments.rst:197 c9e380f7ea8346118281e0cedba3f891
 msgid "参考模型的适配器路径。"
-msgstr ""
+msgstr "Adapter path for reference model."
 
 #: ../../source/advanced/arguments.rst:199 a4da547aceba4caaa4c685203cdecf43
 msgid "ref_model_quantization_bit"
-msgstr ""
+msgstr "ref_model_quantization_bit"
 
 #: ../../source/advanced/arguments.rst:201 f0dd81e758c94c36a48469955c172333
 msgid "参考模型的量化位数，支持 4 位或 8 位量化。"
-msgstr ""
+msgstr "Quantization bit width for reference model, supports 4-bit or 8-bit quantization."
 
 #: ../../source/advanced/arguments.rst:203 1dabdd743e284aeab3bb5ec968e9ca44
 msgid "reward_model"
-msgstr ""
+msgstr "reward_model"
 
 #: ../../source/advanced/arguments.rst:205 fb9e87ea8b0d4f1ab78b10128c6c4a14
 msgid "PPO 训练中使用的奖励模型路径。"
-msgstr ""
+msgstr "Path to reward model used in PPO training."
 
 #: ../../source/advanced/arguments.rst:207 12f8c1275de845378cc27601c839b534
 msgid "reward_model_adapters"
-msgstr ""
+msgstr "reward_model_adapters"
 
 #: ../../source/advanced/arguments.rst:209 24258c6729344a0aa5bc7d90fcb66d92
 msgid "奖励模型的适配器路径。"
-msgstr ""
+msgstr "Adapter path for reward model."
 
 #: ../../source/advanced/arguments.rst:211 87c6d46c06224e2da744311deb7085f2
 msgid "reward_model_quantization_bit"
-msgstr ""
+msgstr "reward_model_quantization_bit"
 
 #: ../../source/advanced/arguments.rst:213 711d6ca8192145918bb6768d42104a8d
 msgid "奖励模型的量化位数。"
-msgstr ""
+msgstr "Quantization bit width for reward model."
 
 #: ../../source/advanced/arguments.rst:215 56a692fb327c431881ac46ef67d0ef2f
 msgid "reward_model_type"
-msgstr ""
+msgstr "reward_model_type"
 
 #: ../../source/advanced/arguments.rst:216 a3d089042a3e47e6a1c97a30b2ca5bdf
 msgid "Literal[\"lora\", \"full\", \"api\"]"
-msgstr ""
+msgstr "Literal[\"lora\", \"full\", \"api\"]"
 
 #: ../../source/advanced/arguments.rst:217 a6540d3b87a049cf9ccb6b61ff3880ba
 msgid "PPO 训练中使用的奖励模型类型。可选值为： lora, full, api。"
-msgstr ""
+msgstr "Type of reward model used in PPO training. Available values are: lora, full, api."
 
 #: ../../source/advanced/arguments.rst:224 3361a748c1ed4ca6b37d77328fd2bb80
 msgid "Freeze"
-msgstr ""
+msgstr "Freeze"
 
 #: ../../source/advanced/arguments.rst:225 e8f2869adb2e476d8ecc9ee21b868e7f
 msgid "FreezeArguments"
-msgstr ""
+msgstr "FreezeArguments"
 
 #: ../../source/advanced/arguments.rst:233 b0633642459d4c8b8346438d15ed8471
 msgid "freeze_trainable_layers"
-msgstr ""
+msgstr "freeze_trainable_layers"
 
 #: ../../source/advanced/arguments.rst:235 fa07510a5af248f99bfcb4f3b438fd56
 msgid "可训练层的数量。正数表示最后 n 层被设置为可训练的，负数表示前 n 层被设置为可训练的。"
-msgstr ""
+msgstr "Number of trainable layers. Positive numbers indicate the last n layers are set as trainable, negative numbers indicate the first n layers are set as trainable."
 
 #: ../../source/advanced/arguments.rst:236 24180d409d2f40698bb1fdd0c7ae002e
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: ../../source/advanced/arguments.rst:237 a9f25a4885e64079b937aa1da66eb586
 msgid "freeze_trainable_modules"
-msgstr ""
+msgstr "freeze_trainable_modules"
 
 #: ../../source/advanced/arguments.rst:239 314b9c6557ac4ad7a018b18f23e303bc
 msgid "可训练层的名称。使用 all 来指定所有模块。"
-msgstr ""
+msgstr "Names of trainable layers. Use all to specify all modules."
 
 #: ../../source/advanced/arguments.rst:241 9e3d4814b46749cfb623b1b0aa678985
 msgid "freeze_extra_modules"
-msgstr ""
+msgstr "freeze_extra_modules"
 
 #: ../../source/advanced/arguments.rst:243 f8373eca2c9b45ddbe16de9651a8aa3c
 msgid "除了隐藏层外可以被训练的模块名称，被指定的模块将会被设置为可训练的。使用逗号分隔多个模块。"
-msgstr ""
+msgstr "Names of modules that can be trained besides hidden layers; specified modules will be set as trainable. Use commas to separate multiple modules."
 
 #: ../../source/advanced/arguments.rst:248 1858d453ce374bdfb8625db22890dcb5
 msgid "Apollo"
-msgstr ""
+msgstr "Apollo"
 
 #: ../../source/advanced/arguments.rst:249 70308a11fdea4bd1ae16225783c12557
 msgid "ApolloArguments"
-msgstr ""
+msgstr "ApolloArguments"
 
 #: ../../source/advanced/arguments.rst:257 474a195317f14fd5ae2d9ef13066a618
 msgid "use_apollo"
-msgstr ""
+msgstr "use_apollo"
 
 #: ../../source/advanced/arguments.rst:259 f35dde93bde44fe09d56d15728b0ff25
 msgid "是否使用 APOLLO 优化器。"
-msgstr ""
+msgstr "Whether to use APOLLO optimizer."
 
 #: ../../source/advanced/arguments.rst:261 bf1e159bc0b04d55ab66c8a69b6812bc
 msgid "apollo_target"
-msgstr ""
+msgstr "apollo_target"
 
 #: ../../source/advanced/arguments.rst:263 517e1eb84eac4c64993afc7c06b4c5b9
 msgid "适用 APOLLO 的模块名称。使用逗号分隔多个模块，使用 `all` 指定所有线性模块。"
-msgstr ""
+msgstr "Names of modules to apply APOLLO to. Use commas to separate multiple modules, use `all` to specify all linear modules."
 
 #: ../../source/advanced/arguments.rst:265 5113cdc422bc480a99d4d81fc9fa769f
 msgid "apollo_rank"
-msgstr ""
+msgstr "apollo_rank"
 
 #: ../../source/advanced/arguments.rst:267 e1b069325ed045b19fe42b9d498eb597
 msgid "APOLLO 梯度的秩。"
-msgstr ""
+msgstr "Rank of APOLLO gradient."
 
 #: ../../source/advanced/arguments.rst:269 67a8bbe83ef846b78174c9d5671ba5a2
 msgid "apollo_update_interval"
-msgstr ""
+msgstr "apollo_update_interval"
 
 #: ../../source/advanced/arguments.rst:271 f4a050df1413498793ebd3d1a8ddeac4
 msgid "更新 APOLLO 投影的步数间隔。"
-msgstr ""
+msgstr "Step interval for updating APOLLO projection."
 
 #: ../../source/advanced/arguments.rst:272
 #: ../../source/advanced/arguments.rst:368 0897f54df4c74ea1a6aeee50ab32e919
 #: fc4da602ed8b4d41ba617b60850813b4
 msgid "200"
-msgstr ""
+msgstr "200"
 
 #: ../../source/advanced/arguments.rst:273 2e1daee834d54433a67609d84cb49e66
 msgid "apollo_scale"
-msgstr ""
+msgstr "apollo_scale"
 
 #: ../../source/advanced/arguments.rst:275 0063b6929e6443f9b572b4fff0eb0cf0
 msgid "APOLLO 缩放系数。"
-msgstr ""
+msgstr "APOLLO scaling coefficient."
 
 #: ../../source/advanced/arguments.rst:276 b31bb34ef1bc431fab93c605b9ff83e8
 msgid "32.0"
-msgstr ""
+msgstr "32.0"
 
 #: ../../source/advanced/arguments.rst:277 2e4dd25d93414bb69e34d736f902c830
 msgid "apollo_proj"
-msgstr ""
+msgstr "apollo_proj"
 
 #: ../../source/advanced/arguments.rst:278 e5f238b94c734c2d9cd600b4d16895dc
 msgid "Literal[\"svd\", \"random\"]"
-msgstr ""
+msgstr "Literal[\"svd\", \"random\"]"
 
 #: ../../source/advanced/arguments.rst:279 0c4679c607de408c917bacac30459d2d
 msgid "APOLLO 低秩投影算法类型（svd 或 random）。"
-msgstr ""
+msgstr "APOLLO low-rank projection algorithm type (svd or random)."
 
 #: ../../source/advanced/arguments.rst:280 b0b29ab9e8a84c278e898f786897df83
 msgid "random"
-msgstr ""
+msgstr "random"
 
 #: ../../source/advanced/arguments.rst:281 d86a74e3673a486e92f2822f6f5427ea
 msgid "apollo_proj_type"
-msgstr ""
+msgstr "apollo_proj_type"
 
 #: ../../source/advanced/arguments.rst:282 a36afbeee8f443f499e40c8d54e96b65
 msgid "Literal[\"std\", \"right\", \"left\"]"
-msgstr ""
+msgstr "Literal[\"std\", \"right\", \"left\"]"
 
 #: ../../source/advanced/arguments.rst:283 4367aa001a254ecfac7cf61db7372f5e
 msgid "APOLLO 投影类型。"
-msgstr ""
+msgstr "APOLLO projection type."
 
 #: ../../source/advanced/arguments.rst:284
 #: ../../source/advanced/arguments.rst:376 4d479467f402426c8218ae08dcd71172
 #: 8fef7d3f9e2d492f90ba07cc20f76ad7
 msgid "std"
-msgstr ""
+msgstr "std"
 
 #: ../../source/advanced/arguments.rst:285 5119528a263d43ac978138a7f2d26598
 msgid "apollo_scale_type"
-msgstr ""
+msgstr "apollo_scale_type"
 
 #: ../../source/advanced/arguments.rst:286 e59fe70db5cf4d559552c9fea15451fb
 msgid "Literal[\"channel\", \"tensor\"]"
-msgstr ""
+msgstr "Literal[\"channel\", \"tensor\"]"
 
 #: ../../source/advanced/arguments.rst:287 83a22f9952b945b688b45a3bafd82b63
 msgid "APOLLO 缩放类型（channel 或 tensor）。"
-msgstr ""
+msgstr "APOLLO scaling type (channel or tensor)."
 
 #: ../../source/advanced/arguments.rst:288 2d89f3787e784468b63498884f76bbd2
 msgid "channel"
-msgstr ""
+msgstr "channel"
 
 #: ../../source/advanced/arguments.rst:289 07df790a0c5140b098d890520f47b0c3
 msgid "apollo_layerwise"
-msgstr ""
+msgstr "apollo_layerwise"
 
 #: ../../source/advanced/arguments.rst:291 ae9c73147040410b869c89f2b203d081
 msgid "是否启用层级更新以进一步节省内存。"
-msgstr ""
+msgstr "Whether to enable layer-wise updates to further save memory."
 
 #: ../../source/advanced/arguments.rst:293 7c3948e4439645f8b910e2128c9fa247
 msgid "apollo_scale_front"
-msgstr ""
+msgstr "apollo_scale_front"
 
 #: ../../source/advanced/arguments.rst:295 9cebeac9b7914b1cb3c401a86fecbead
 msgid "是否在梯度缩放前使用范数增长限制器。"
-msgstr ""
+msgstr "Whether to use norm growth limiter before gradient scaling."
 
 #: ../../source/advanced/arguments.rst:300 265a0662f8974805a1ad5c980ff1a55b
 msgid "BAdam"
-msgstr ""
+msgstr "BAdam"
 
 #: ../../source/advanced/arguments.rst:301 111cb14fa6484d0ebf0a8f934e03253d
 msgid "BAdamArgument"
-msgstr ""
+msgstr "BAdamArgument"
 
 #: ../../source/advanced/arguments.rst:309 904c711c3b0049b58654a564e63645ea
 msgid "use_badam"
-msgstr ""
+msgstr "use_badam"
 
 #: ../../source/advanced/arguments.rst:311 1061422d1c414a8d9bb98efc632e9d9b
 msgid "是否使用 BAdam 优化器。"
-msgstr ""
+msgstr "Whether to use BAdam optimizer."
 
 #: ../../source/advanced/arguments.rst:313 f958a18a74264a01886af718896cf441
 msgid "badam_mode"
-msgstr ""
+msgstr "badam_mode"
 
 #: ../../source/advanced/arguments.rst:314
 #: ../../source/advanced/arguments.rst:334
 #: ../../source/advanced/arguments.rst:374 5146670b8b4f4e9abe354f9ef238b73d
 #: e0565f1d560b46389c7fa769ede5557a ef2ff25db86a4103bdefadcc13bff543
 msgid "Literal"
-msgstr ""
+msgstr "Literal"
 
 #: ../../source/advanced/arguments.rst:315 c389a35c7bef4bc9bf983e9c718f8742
 msgid "BAdam 的使用模式，可选值为 layer 或 ratio。"
-msgstr ""
+msgstr "BAdam usage mode, available values are layer or ratio."
 
 #: ../../source/advanced/arguments.rst:316 2b88317f81124149adff421b1853f88c
 msgid "layer"
-msgstr ""
+msgstr "layer"
 
 #: ../../source/advanced/arguments.rst:317 2244c8a4f70942b3bde574a9d878e1b2
 msgid "badam_start_block"
-msgstr ""
+msgstr "badam_start_block"
 
 #: ../../source/advanced/arguments.rst:319 2c95dfd468164edaa497f67e1e159f33
 msgid "layer-wise BAdam 的起始块索引。"
-msgstr ""
+msgstr "Starting block index for layer-wise BAdam."
 
 #: ../../source/advanced/arguments.rst:321 59d15a564de8448e87e48bfbc0383488
 msgid "badam_switch_mode"
-msgstr ""
+msgstr "badam_switch_mode"
 
 #: ../../source/advanced/arguments.rst:322 219701913d7c4281b75f1be395be7ce3
 msgid "Optional[Literal]"
-msgstr ""
+msgstr "Optional[Literal]"
 
 #: ../../source/advanced/arguments.rst:323 226f9dfeee8949f48fd7ec5b670860ef
 msgid "layer-wise BAdam 中块更新策略，可选值有： ascending, descending, random, fixed。"
-msgstr ""
+msgstr "Block update strategy in layer-wise BAdam, available values are: ascending, descending, random, fixed."
 
 #: ../../source/advanced/arguments.rst:324 0bab2066a4c84c9a8ddda5a161e42ef9
 msgid "ascending"
-msgstr ""
+msgstr "ascending"
 
 #: ../../source/advanced/arguments.rst:325 ffd279dc8b9f4e71a75008d95fd60ef2
 msgid "badam_switch_interval"
-msgstr ""
+msgstr "badam_switch_interval"
 
 #: ../../source/advanced/arguments.rst:327 fb8a11f2d2614444a2e34cbf8b471e3a
 msgid "layer-wise BAdam 中块更新步数间隔。使用 -1 禁用块更新。"
-msgstr ""
+msgstr "Step interval for block updates in layer-wise BAdam. Use -1 to disable block updates."
 
 #: ../../source/advanced/arguments.rst:328
 #: ../../source/advanced/arguments.rst:872 23bb9686c43b4c39b120f2eb762eb1be
 #: 8ff546047334438080a3db07dbac78aa
 msgid "50"
-msgstr ""
+msgstr "50"
 
 #: ../../source/advanced/arguments.rst:329 1104d9a2547545fd89b2911d64403031
 msgid "badam_update_ratio"
-msgstr ""
+msgstr "badam_update_ratio"
 
 #: ../../source/advanced/arguments.rst:331 cbdfa89c1dca41a0bcd251d6c510afe1
 msgid "ratio-wise BAdam 中的更新比例。"
-msgstr ""
+msgstr "Update ratio in ratio-wise BAdam."
 
 #: ../../source/advanced/arguments.rst:332 1ffae3c816dd47eb95e71fa58613d98c
 msgid "0.05"
-msgstr ""
+msgstr "0.05"
 
 #: ../../source/advanced/arguments.rst:333 3ed2485214e347839d59677faf0aef39
 msgid "badam_mask_mode"
-msgstr ""
+msgstr "badam_mask_mode"
 
 #: ../../source/advanced/arguments.rst:335 608652b1a1304362bfdfdfe92c312f1f
 msgid "BAdam 优化器的掩码模式，可选值为 adjacent 或 scatter。"
-msgstr ""
+msgstr "Mask mode for BAdam optimizer, available values are adjacent or scatter."
 
 #: ../../source/advanced/arguments.rst:336 b920824b48724ffb94a9c895b2fd3e70
 msgid "adjacent"
-msgstr ""
+msgstr "adjacent"
 
 #: ../../source/advanced/arguments.rst:337 f0ba216f602149dba01ba7c649b97ede
 msgid "badam_verbose"
-msgstr ""
+msgstr "badam_verbose"
 
 #: ../../source/advanced/arguments.rst:339 5118af7997da41efb04d1e1c450b7233
 msgid "BAdam 优化器的详细输出级别，0 表示无输出，1 表示输出块前缀，2 表示输出可训练参数。"
-msgstr ""
+msgstr "Verbose output level for BAdam optimizer, 0 means no output, 1 means output block prefix, 2 means output trainable parameters."
 
 #: ../../source/advanced/arguments.rst:344 78728e8db9a34a788cafc7a3c2ecb33a
 msgid "GaLore"
-msgstr ""
+msgstr "GaLore"
 
 #: ../../source/advanced/arguments.rst:345 e7b1bbbd36ba48cca868ba82452b3af8
 msgid "GaLoreArguments"
-msgstr ""
+msgstr "GaLoreArguments"
 
 #: ../../source/advanced/arguments.rst:353 326b4e8bd7384daeb0d8a695e93dc6cb
 msgid "use_galore"
-msgstr ""
+msgstr "use_galore"
 
 #: ../../source/advanced/arguments.rst:355 4cce88b7a8ef408d8aa7ca3072f5c804
 msgid "是否使用 GaLore 算法。"
-msgstr ""
+msgstr "Whether to use GaLore algorithm."
 
 #: ../../source/advanced/arguments.rst:357 68fd9e3047d543a2932e498aa89cb1d4
 msgid "galore_target"
-msgstr ""
+msgstr "galore_target"
 
 #: ../../source/advanced/arguments.rst:359 d95fbc2e0a924ae08b540f60c926aa83
 msgid "应用 GaLore 的模块名称。使用逗号分隔多个模块，使用 all 指定所有线性模块。"
-msgstr ""
+msgstr "Names of modules to apply GaLore to. Use commas to separate multiple modules, use all to specify all linear modules."
 
 #: ../../source/advanced/arguments.rst:361 253f22fc9ddf4ee2bea1c7d44ed1e746
 msgid "galore_rank"
-msgstr ""
+msgstr "galore_rank"
 
 #: ../../source/advanced/arguments.rst:363 d7d005f2813f48ccb6a041ed275b8ba1
 msgid "GaLore 梯度的秩。"
-msgstr ""
+msgstr "Rank of GaLore gradient."
 
 #: ../../source/advanced/arguments.rst:365 62db80d20c8241ed81c6d7b8cfb6eda3
 msgid "galore_update_interval"
-msgstr ""
+msgstr "galore_update_interval"
 
 #: ../../source/advanced/arguments.rst:367 db7000a806af459b89d89ebe1a2083fc
 msgid "更新 GaLore 投影的步数间隔。"
-msgstr ""
+msgstr "Step interval for updating GaLore projection."
 
 #: ../../source/advanced/arguments.rst:369 ef1fc24e938f401dbc88596b935b5cfc
 msgid "galore_scale"
-msgstr ""
+msgstr "galore_scale"
 
 #: ../../source/advanced/arguments.rst:371 c55b7083cf6e4402843ffc60ea2f0f94
 msgid "GaLore 的缩放系数。"
-msgstr ""
+msgstr "Scaling coefficient for GaLore."
 
 #: ../../source/advanced/arguments.rst:372 d407b1c127814ab585a6213b2f163043
 msgid "0.25"
-msgstr ""
+msgstr "0.25"
 
 #: ../../source/advanced/arguments.rst:373 5425c6133fd9423a91b674ced2523559
 msgid "galore_proj_type"
-msgstr ""
+msgstr "galore_proj_type"
 
 #: ../../source/advanced/arguments.rst:375 9618a36d448a42f1aee3647df692d84d
 msgid "GaLore 投影的类型，可选值有： std, reverse_std, right, left, full。"
-msgstr ""
+msgstr "Type of GaLore projection, available values are: std, reverse_std, right, left, full."
 
 #: ../../source/advanced/arguments.rst:377 a7539496dbc84ccabc44485c13657285
 msgid "galore_layerwise"
-msgstr ""
+msgstr "galore_layerwise"
 
 #: ../../source/advanced/arguments.rst:379 545d443b3898408fab31e830a4ff1682
 msgid "是否启用逐层更新以进一步节省内存。"
-msgstr ""
+msgstr "Whether to enable layer-wise updates to further save memory."
 
 #: ../../source/advanced/arguments.rst:385 e8640f7116d9465aa2c88ec94062cf1a
 msgid "数据参数"
@@ -1379,221 +1379,249 @@ msgstr "Data Arguments"
 
 #: ../../source/advanced/arguments.rst:386 01bb674d625548f0b35be0d62425c257
 msgid "DataArguments"
-msgstr ""
+msgstr "DataArguments"
 
 #: ../../source/advanced/arguments.rst:394 81c6e0b80c3b446db8ca50adee5f1620
 msgid "template"
-msgstr ""
+msgstr "template"
 
 #: ../../source/advanced/arguments.rst:396 865cd5f6b9aa438d8baacf0396be902a
 msgid "训练和推理时构造 prompt 的模板。"
-msgstr ""
+msgstr "Template for constructing prompts during training and inference."
 
 #: ../../source/advanced/arguments.rst:398 dc0e03f5f4dd406ba8e3c0bd8ea107a6
 msgid "dataset"
-msgstr ""
+msgstr "dataset"
 
 #: ../../source/advanced/arguments.rst:400 a15b89d1769b4a23bff5f81844271388
 msgid "用于训练的数据集名称。使用逗号分隔多个数据集。"
-msgstr ""
+msgstr "Name of dataset(s) for training. Use commas to separate multiple datasets."
 
 #: ../../source/advanced/arguments.rst:402 12306f15bcbf4e10b78e47659454d0a2
 msgid "eval_dataset"
-msgstr ""
+msgstr "eval_dataset"
 
 #: ../../source/advanced/arguments.rst:404 b3a9fc46e64f46119ca9aff53bde9e71
 msgid "用于评估的数据集名称。使用逗号分隔多个数据集。"
-msgstr ""
+msgstr "Name of dataset(s) for evaluation. Use commas to separate multiple datasets."
 
 #: ../../source/advanced/arguments.rst:406 231f08bfaf0a4e138f72cc949f1b1a8a
-msgid "dataset_dir"
+msgid ""
+"存储数据集的文件夹路径，可以是字符串或字典。\n"
+"类型：``str`` 或 ``dict``（需符合 `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_ 的格式）。\n"
+"\n"
+"**当为字符串时：**\n"
+"表示数据集目录的路径，例如：\n"
+"`data <https://github.com/hiyouga/LLaMA-Factory/tree/main/data>`_ 。\n"
+"\n"
+"**当为字典时：**\n"
+"将覆盖默认从本地 `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_ 加载的行为。其格式如下：\n"
+"\n"
+".. code-block:: json\n"
+"\n"
+"   {\n"
+"     \"dataset_name\": {\n"
+"       \"file_name\": \"your_file_name\"\n"
+"     }\n"
+"   }\n"
 msgstr ""
-
-#: ../../source/advanced/arguments.rst:408 6e915de1324b4167af8116b2739b02c1
-msgid "存储数据集的文件夹路径。"
-msgstr ""
-
-#: ../../source/advanced/arguments.rst:409 dd7fd429c8e74fdab1cc645fa20a9628
-msgid "\"data\""
-msgstr ""
+"The folder path where datasets are stored. It can be either a string or a dictionary.\n"
+"Type: ``str`` or ``dict`` (must follow the format of `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_).\n"
+"\n"
+"**When it is a string:**\n"
+"It represents the path to the dataset directory, for example:\n"
+"`data <https://github.com/hiyouga/LLaMA-Factory/tree/main/data>`_.\n"
+"\n"
+"**When it is a dictionary:**\n"
+"It overrides the default behavior of loading from the local `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_. The expected format is:\n"
+"\n"
+".. code-block:: json\n"
+"\n"
+"   {\n"
+"     \"dataset_name\": {\n"
+"       \"file_name\": \"your_file_name\"\n"
+"     }\n"
+"   }\n"
 
 #: ../../source/advanced/arguments.rst:410 2acd56ebb48b4d9ebf4e23c5ee547c8a
 msgid "media_dir"
-msgstr ""
+msgstr "media_dir"
 
 #: ../../source/advanced/arguments.rst:412 74782e5b8c8e430fb68d1f2f6705fdab
 msgid "存储图像、视频或音频的文件夹路径。如果未指定，默认为 dataset_dir。"
-msgstr ""
+msgstr "Folder path where images, videos, or audio are stored. If not specified, defaults to dataset_dir."
 
 #: ../../source/advanced/arguments.rst:414 626a15d6523947c28284cda055cb9b3b
 msgid "cutoff_len"
-msgstr ""
+msgstr "cutoff_len"
 
 #: ../../source/advanced/arguments.rst:416 84cff31b80624556b4e2212c6783a687
 msgid "输入的最大 token 数，超过该长度会被截断。"
-msgstr ""
+msgstr "Maximum number of tokens for input, inputs exceeding this length will be truncated."
 
 #: ../../source/advanced/arguments.rst:417 0300b9c7c5e7427aae1c672472cf366f
 msgid "2048"
-msgstr ""
+msgstr "2048"
 
 #: ../../source/advanced/arguments.rst:418 62fe353aebc14734a7bc01646ba8dc9a
 msgid "train_on_prompt"
-msgstr ""
+msgstr "train_on_prompt"
 
 #: ../../source/advanced/arguments.rst:420 00895d8190cc4bac94c9736a07a2d3e7
 msgid "是否在输入 prompt 上进行训练。"
-msgstr ""
+msgstr "Whether to train on input prompts."
 
 #: ../../source/advanced/arguments.rst:422 de5a357785384a979bd4236e547444ee
 msgid "mask_history"
-msgstr ""
+msgstr "mask_history"
 
 #: ../../source/advanced/arguments.rst:424 fa16828fd49f40fdae69ca2427fc3474
 msgid "是否仅使用当前对话轮次进行训练。"
-msgstr ""
+msgstr "Whether to train only on the current dialogue turn."
 
 #: ../../source/advanced/arguments.rst:426 95ba48f0ee9a4b938d00d8c351049fdd
 msgid "streaming"
-msgstr ""
+msgstr "streaming"
 
 #: ../../source/advanced/arguments.rst:428 464121b2c6774851bee8813e7af0f443
 msgid "是否启用数据流模式。"
-msgstr ""
+msgstr "Whether to enable streaming mode."
 
 #: ../../source/advanced/arguments.rst:430 80aeb33f8d464931a29d8505f5c8859a
 msgid "buffer_size"
-msgstr ""
+msgstr "buffer_size"
 
 #: ../../source/advanced/arguments.rst:432 619238ac287540819480c9b667e536aa
 msgid "启用 streaming 时用于随机选择样本的 buffer 大小。"
-msgstr ""
+msgstr "Buffer size for randomly selecting samples when streaming is enabled."
 
 #: ../../source/advanced/arguments.rst:433 31eb8aa179664c9da34651efadbe016c
 msgid "16384"
-msgstr ""
+msgstr "16384"
 
 #: ../../source/advanced/arguments.rst:434 14795a6898f342d8ae6328048416851a
 msgid "mix_strategy"
-msgstr ""
+msgstr "mix_strategy"
 
 #: ../../source/advanced/arguments.rst:435 10b1dc2387cf4853aa60afeaf4c6b887
 msgid "Literal[\"concat\", \"interleave_under\", \"interleave_over\"]"
-msgstr ""
+msgstr "Literal[\"concat\", \"interleave_under\", \"interleave_over\"]"
 
 #: ../../source/advanced/arguments.rst:436 aa82241986dd4443a752f21d26dfdc93
 msgid "数据集混合策略，支持 concat、 interleave_under、 interleave_over。"
-msgstr ""
+msgstr "Dataset mixing strategy, supports concat, interleave_under, interleave_over."
 
 #: ../../source/advanced/arguments.rst:437 c450eed76d9f48c5b58d842dfc9a3df7
 msgid "concat"
-msgstr ""
+msgstr "concat"
 
 #: ../../source/advanced/arguments.rst:438 57f1bb8d01d843d292a0f1d91e4bc5f8
 msgid "interleave_probs"
-msgstr ""
+msgstr "interleave_probs"
 
 #: ../../source/advanced/arguments.rst:440 a5202e9c66ab4c95b56c54e9940f3782
 msgid "使用 interleave 策略时，指定从多个数据集中采样的概率。多个数据集的概率用逗号分隔。"
-msgstr ""
+msgstr "When using interleave strategy, specify the probability of sampling from multiple datasets. Separate probabilities for multiple datasets with commas."
 
 #: ../../source/advanced/arguments.rst:442 687879b0d4b544f79a9ae2786ee3c2db
 msgid "overwrite_cache"
-msgstr ""
+msgstr "overwrite_cache"
 
 #: ../../source/advanced/arguments.rst:444 044f7976d1194d39b86097da6c2c4b1b
 msgid "是否覆盖缓存的训练和评估数据集。"
-msgstr ""
+msgstr "Whether to overwrite the cached training and evaluation datasets."
 
 #: ../../source/advanced/arguments.rst:446 767ee8de06434113b5922d03382a9803
 msgid "preprocessing_batch_size"
-msgstr ""
+msgstr "preprocessing_batch_size"
 
 #: ../../source/advanced/arguments.rst:448 7369ea7f7f964ef9808ec5e20da28ed8
 msgid "预处理时每批次的示例数量。"
-msgstr ""
+msgstr "Number of examples per batch during preprocessing."
 
 #: ../../source/advanced/arguments.rst:449 042880ea531a43c5abda2fb8987a9aa5
 msgid "1000"
-msgstr ""
+msgstr "1000"
 
 #: ../../source/advanced/arguments.rst:450 a9688f1fdbc944dbb9aa9090e0ab5fbb
 msgid "preprocessing_num_workers"
-msgstr ""
+msgstr "preprocessing_num_workers"
 
 #: ../../source/advanced/arguments.rst:452 78db67cf874a446fab9281aeace87e7b
 msgid "预处理时使用的进程数量。"
-msgstr ""
+msgstr "Number of processes to use during preprocessing."
 
 #: ../../source/advanced/arguments.rst:454 30c60da306674f65bf4477a9d3c2e0a8
 msgid "max_samples"
-msgstr ""
+msgstr "max_samples"
 
 #: ../../source/advanced/arguments.rst:456 82d5bf910b5d4c6ca332e69ae0503382
 msgid "每个数据集的最大样本数：设置后，每个数据集的样本数将被截断至指定的 max_samples。"
-msgstr ""
+msgstr "Maximum number of samples per dataset: when set, the number of samples from each dataset will be truncated to the specified max_samples."
 
 #: ../../source/advanced/arguments.rst:458 47db0aad05db4778b0a0052d0831bafe
 msgid "eval_num_beams"
-msgstr ""
+msgstr "eval_num_beams"
 
 #: ../../source/advanced/arguments.rst:460 648a883c7caa479c82b596795487fc65
 msgid "模型评估时的 num_beams 参数。"
-msgstr ""
+msgstr "The num_beams parameter during model evaluation."
 
 #: ../../source/advanced/arguments.rst:462 b1e3c01df6b5479ba015656435186802
 msgid "ignore_pad_token_for_loss"
-msgstr ""
+msgstr "ignore_pad_token_for_loss"
 
 #: ../../source/advanced/arguments.rst:464 a58f0cd1cf4c4e49ba93cf115088d992
 msgid "计算 loss 时是否忽略 pad token。"
-msgstr ""
+msgstr "Whether to ignore pad tokens when computing loss."
 
 #: ../../source/advanced/arguments.rst:466 c640759674f64989bf24b48e7eb6d4e3
 msgid "val_size"
-msgstr ""
+msgstr "val_size"
 
 #: ../../source/advanced/arguments.rst:468 4e94fbc55c0e49eca2697e0c5fc0dc96
 msgid "验证集相对所使用的训练数据集的大小。取值在 [0,1) 之间。启用 streaming 时 val_size 应是整数。"
-msgstr ""
+msgstr "Size of validation set relative to the training dataset used. Value should be in [0,1). When streaming is enabled, val_size should be an integer."
 
 #: ../../source/advanced/arguments.rst:470 4869f7300d4347c8a01be6e89c33b276
 msgid "packing"
-msgstr ""
+msgstr "packing"
 
 #: ../../source/advanced/arguments.rst:471 55619701b3e44ccbb2f924fcd0c9a6c5
 msgid "Optional[bool]"
-msgstr ""
+msgstr "Optional[bool]"
 
 #: ../../source/advanced/arguments.rst:472 eb52b0f5cd2e417ca913a953b011e7de
 msgid "是否启用 sequences packing。预训练时默认启用。"
-msgstr ""
+msgstr "Whether to enable sequence packing. Enabled by default during pre-training."
 
 #: ../../source/advanced/arguments.rst:474 7611a7518c0c4ce087ee475296e16333
 msgid "neat_packing"
-msgstr ""
+msgstr "neat_packing"
 
 #: ../../source/advanced/arguments.rst:476 a619ce4327844a6bbdf9a320abeb4234
 msgid "是否启用不使用 cross-attention 的 sequences packing。"
-msgstr ""
+msgstr "Whether to enable sequence packing without using cross-attention."
 
 #: ../../source/advanced/arguments.rst:478 a87dcc38ca734f1ca2a8af96849592e3
 msgid "tool_format"
-msgstr ""
+msgstr "tool_format"
 
 #: ../../source/advanced/arguments.rst:480 d60a0487b6f44cb1bfef2c7d0c91899c
 msgid "用于构造函数调用示例的格式。"
-msgstr ""
+msgstr "Format used for constructing function calling examples."
 
 #: ../../source/advanced/arguments.rst:482 c049ff0175a0460dbd697f8fa60a2882
 msgid "tokenized_path"
-msgstr ""
+msgstr "tokenized_path"
 
 #: ../../source/advanced/arguments.rst:484 7dbd57f464304171b5d94da1272d044d
 msgid ""
 "Tokenized datasets的保存或加载路径。如果路径存在，会加载已有的 tokenized "
 "datasets；如果路径不存在，则会在分词后将 tokenized datasets 保存在此路径中。"
 msgstr ""
+"Path to save or load tokenized datasets. If the path exists, existing tokenized "
+"datasets will be loaded; if the path does not exist, tokenized datasets will be saved to this path after tokenization."
 
 #: ../../source/advanced/arguments.rst:490 0e59c023c0fe4a9386a98ac9bd1a97df
 msgid "模型参数"
@@ -1601,658 +1629,660 @@ msgstr "Model Arguments"
 
 #: ../../source/advanced/arguments.rst:494 95cb7a2f24e843ef8cf78eb4e67847bd
 msgid "ModelArguments"
-msgstr ""
+msgstr "ModelArguments"
 
 #: ../../source/advanced/arguments.rst:502 7a4b723a931244b9ab74538a5c638640
 msgid "model_name_or_path"
-msgstr ""
+msgstr "model_name_or_path"
 
 #: ../../source/advanced/arguments.rst:504 88afd102df98437684020fb8f1e6c606
 msgid "模型路径（本地路径或 Huggingface/ModelScope 路径）。"
-msgstr ""
+msgstr "Model path (local path or Huggingface/ModelScope path)."
 
 #: ../../source/advanced/arguments.rst:506 d5fbd3c2b66e4268bde3b60160d9d831
 msgid "adapter_name_or_path"
-msgstr ""
+msgstr "adapter_name_or_path"
 
 #: ../../source/advanced/arguments.rst:508 9ef4007a0f51460c9946f20aab2421e4
 msgid "适配器路径（本地路径或 Huggingface/ModelScope 路径）。使用逗号分隔多个适配器路径。"
-msgstr ""
+msgstr "Adapter path (local path or Huggingface/ModelScope path). Use commas to separate multiple adapter paths."
 
 #: ../../source/advanced/arguments.rst:510 f5b21bfe9b7e45d989956bdbca619848
 msgid "adapter_folder"
-msgstr ""
+msgstr "adapter_folder"
 
 #: ../../source/advanced/arguments.rst:512 8c3e7674163c449cb65842664ed3f4b0
 msgid "包含适配器权重的文件夹路径。"
-msgstr ""
+msgstr "Folder path containing adapter weights."
 
 #: ../../source/advanced/arguments.rst:514 609c3ffa7e4d45f59fe3dadaeb56541d
 msgid "cache_dir"
-msgstr ""
+msgstr "cache_dir"
 
 #: ../../source/advanced/arguments.rst:516 acfcf7b7ca284951a48ee58c39a98a11
 msgid "保存从 Hugging Face 或 ModelScope 下载的模型的本地路径。"
-msgstr ""
+msgstr "Local path to save models downloaded from Hugging Face or ModelScope."
 
 #: ../../source/advanced/arguments.rst:518 2913321701684a36a7c3eab10c959aa0
 msgid "use_fast_tokenizer"
-msgstr ""
+msgstr "use_fast_tokenizer"
 
 #: ../../source/advanced/arguments.rst:520 a11031d749834210ad023681dda406c1
 msgid "是否使用 fast_tokenizer 。"
-msgstr ""
+msgstr "Whether to use fast_tokenizer."
 
 #: ../../source/advanced/arguments.rst:522 0e1aa828dfe84bf7ba2ccb1977234a18
 msgid "resize_vocab"
-msgstr ""
+msgstr "resize_vocab"
 
 #: ../../source/advanced/arguments.rst:524 5d5f7368aa894bbb91e203cfb9b6373b
 msgid "是否调整词表和嵌入层的大小。"
-msgstr ""
+msgstr "Whether to resize vocabulary and embedding layer."
 
 #: ../../source/advanced/arguments.rst:526 2391212544e24b22941aac6d6d6e8b2d
 msgid "split_special_tokens"
-msgstr ""
+msgstr "split_special_tokens"
 
 #: ../../source/advanced/arguments.rst:528 c9226557ebca4778afdd809fb89b9719
 msgid "是否在分词时将 special token 分割。"
-msgstr ""
+msgstr "Whether to split special tokens during tokenization."
 
 #: ../../source/advanced/arguments.rst:530 978e0bd8d8a545d7ac6e36923c1c4b36
 msgid "new_special_tokens"
-msgstr ""
+msgstr "new_special_tokens"
 
 #: ../../source/advanced/arguments.rst:532 3494fade27de493cb3c46b0710f4c5f3
 msgid "要添加到 tokenizer 中的 special token。多个 special token 用逗号分隔。"
-msgstr ""
+msgstr "Special tokens to add to the tokenizer. Separate multiple special tokens with commas."
 
 #: ../../source/advanced/arguments.rst:534 bac0af817bfb45deb52facce036feb4f
 msgid "model_revision"
-msgstr ""
+msgstr "model_revision"
 
 #: ../../source/advanced/arguments.rst:536 b0248d39514c4352acbefed6612db5db
 msgid "所使用的特定模型版本。"
-msgstr ""
+msgstr "The specific model version to use."
 
 #: ../../source/advanced/arguments.rst:537 405fcafcf78c4cf58d2222b117946a44
 msgid "main"
-msgstr ""
+msgstr "main"
 
 #: ../../source/advanced/arguments.rst:538 09bdf679cf7c47f585215a9e540bfdc6
 msgid "low_cpu_mem_usage"
-msgstr ""
+msgstr "low_cpu_mem_usage"
 
 #: ../../source/advanced/arguments.rst:540 07454147325f4844ae4c70f035a099f0
 msgid "是否使用节省内存的模型加载方式。"
-msgstr ""
+msgstr "Whether to use memory-efficient model loading."
 
 #: ../../source/advanced/arguments.rst:542 c18ac0406ee54f45b989370c54776537
 msgid "rope_scaling"
-msgstr ""
+msgstr "rope_scaling"
 
 #: ../../source/advanced/arguments.rst:543 baabac44f5b14a5aa343158dd0b03ffb
 msgid "Optional[Literal[\"linear\", \"dynamic\", \"yarn\", \"llama3\"]]"
-msgstr ""
+msgstr "Optional[Literal[\"linear\", \"dynamic\", \"yarn\", \"llama3\"]]"
 
 #: ../../source/advanced/arguments.rst:544 50b1a168e2714dd2ac4bcb5be7b6b0bc
 msgid "RoPE Embedding 的缩放策略，支持 linear、dynamic、yarn 或 llama3。"
-msgstr ""
+msgstr "Scaling strategy for RoPE Embedding, supports linear, dynamic, yarn, or llama3."
 
 #: ../../source/advanced/arguments.rst:546 14921a9656f14697a20055ca6e12dcf8
 msgid "flash_attn"
-msgstr ""
+msgstr "flash_attn"
 
 #: ../../source/advanced/arguments.rst:547 557c5d0be8f64fcda949254c5400680f
 msgid "Literal[\"auto\", \"disabled\", \"sdpa\", \"fa2\"]"
-msgstr ""
+msgstr "Literal[\"auto\", \"disabled\", \"sdpa\", \"fa2\"]"
 
 #: ../../source/advanced/arguments.rst:548 5d7861847bc346bda3b60ace3c6df308
 msgid "是否启用 FlashAttention 来加速训练和推理。可选值为 auto, disabled, sdpa, fa2。"
-msgstr ""
+msgstr "Whether to enable FlashAttention to accelerate training and inference. Available values are auto, disabled, sdpa, fa2."
 
 #: ../../source/advanced/arguments.rst:549
 #: ../../source/advanced/arguments.rst:609 3450265d2ee64605b00557129279fd18
 #: 3a42fc78590b466f9aff0382bb8d2d45
 msgid "auto"
-msgstr ""
+msgstr "auto"
 
 #: ../../source/advanced/arguments.rst:550 697c8a09c8c44e0a80660cfac5a1bad6
 msgid "shift_attn"
-msgstr ""
+msgstr "shift_attn"
 
 #: ../../source/advanced/arguments.rst:552 593ea0c1eefb4cd9b868416f2fb6d09a
 msgid "是否启用 Shift Short Attention (S^2-Attn)。"
-msgstr ""
+msgstr "Whether to enable Shift Short Attention (S^2-Attn)."
 
 #: ../../source/advanced/arguments.rst:554 00503847ec9b431897bd4280fe7af8e9
 msgid "mixture_of_depths"
-msgstr ""
+msgstr "mixture_of_depths"
 
 #: ../../source/advanced/arguments.rst:555 7eb92869a413446c87b6f45b53b46aff
 msgid "Optional[Literal[\"convert\", \"load\"]]"
-msgstr ""
+msgstr "Optional[Literal[\"convert\", \"load\"]]"
 
 #: ../../source/advanced/arguments.rst:556 7d2e919a374649cb8c9bc9b709522cd4
 msgid ""
 "需要将模型转换为 mixture_of_depths（MoD）模型时指定： convert 需要加载 "
 "mixture_of_depths（MoD）模型时指定： load。"
 msgstr ""
+"Specify: convert when need to convert model to mixture_of_depths (MoD) model. "
+"Specify: load when need to load mixture_of_depths (MoD) model."
 
 #: ../../source/advanced/arguments.rst:558 6a2a4f09eea846c08e7943b44775ee08
 msgid "use_unsloth"
-msgstr ""
+msgstr "use_unsloth"
 
 #: ../../source/advanced/arguments.rst:560 357d632346614515a11a2122279d54eb
 msgid "是否使用 unsloth 优化 LoRA 微调。"
-msgstr ""
+msgstr "Whether to use unsloth to optimize LoRA fine-tuning."
 
 #: ../../source/advanced/arguments.rst:562 31b2270230464649ba3255c2851aa45e
 msgid "use_unsloth_gc"
-msgstr ""
+msgstr "use_unsloth_gc"
 
 #: ../../source/advanced/arguments.rst:564 44059fdb69ef44bcb729f43f604c8634
 msgid "是否使用 unsloth 的梯度检查点。"
-msgstr ""
+msgstr "Whether to use unsloth's gradient checkpointing."
 
 #: ../../source/advanced/arguments.rst:566 b8eaa84bf0c64d69b3fc74d5063ef85c
 msgid "enable_liger_kernel"
-msgstr ""
+msgstr "enable_liger_kernel"
 
 #: ../../source/advanced/arguments.rst:568 232795d92fed4480b069a14dcbfdac9d
 msgid "是否启用 liger 内核以加速训练。"
-msgstr ""
+msgstr "Whether to enable liger kernel to accelerate training."
 
 #: ../../source/advanced/arguments.rst:570 9c606df25546413896ae50a3cbd6a069
 msgid "moe_aux_loss_coef"
-msgstr ""
+msgstr "moe_aux_loss_coef"
 
 #: ../../source/advanced/arguments.rst:572 a57817f415db4ad6b84540af013a2609
 msgid "MoE 架构中 aux_loss 系数。数值越大，各个专家负载越均衡。"
-msgstr ""
+msgstr "The aux_loss coefficient in MoE architecture. Larger values lead to more balanced load across experts."
 
 #: ../../source/advanced/arguments.rst:574 fde3eb9e0c524952a947eb0da3c3ec63
 msgid "disable_gradient_checkpointing"
-msgstr ""
+msgstr "disable_gradient_checkpointing"
 
 #: ../../source/advanced/arguments.rst:576 f54dc3f99a824466b78c67e1a08dd99a
 msgid "是否禁用梯度检查点。"
-msgstr ""
+msgstr "Whether to disable gradient checkpointing."
 
 #: ../../source/advanced/arguments.rst:578 06901b7cb0dc4c9ebfce2a596c5131d7
 msgid "use_reentrant_gc"
-msgstr ""
+msgstr "use_reentrant_gc"
 
 #: ../../source/advanced/arguments.rst:580 2bc3684d87d7429da5ef2c98ea6442a4
 msgid "是否启用可重入梯度检查点"
-msgstr ""
+msgstr "Whether to enable reentrant gradient checkpointing"
 
 #: ../../source/advanced/arguments.rst:582 d8e6ba0a2355424ba6b93f2e7ece6091
 msgid "upcast_layernorm"
-msgstr ""
+msgstr "upcast_layernorm"
 
 #: ../../source/advanced/arguments.rst:584 cd4bf23da9864fab84f224067e3f3ed3
 msgid "是否将 layernorm 层权重精度提高至 fp32。"
-msgstr ""
+msgstr "Whether to upcast layernorm layer weight precision to fp32."
 
 #: ../../source/advanced/arguments.rst:586 defdf5f0075742ec8e0d44dd3fc1146c
 msgid "upcast_lmhead_output"
-msgstr ""
+msgstr "upcast_lmhead_output"
 
 #: ../../source/advanced/arguments.rst:588 d704e554b6644ad18689191ad195bb66
 msgid "是否将 lm_head 输出精度提高至 fp32。"
-msgstr ""
+msgstr "Whether to upcast lm_head output precision to fp32."
 
 #: ../../source/advanced/arguments.rst:590 0858ec3246e04451aa190c78e433db10
 msgid "train_from_scratch"
-msgstr ""
+msgstr "train_from_scratch"
 
 #: ../../source/advanced/arguments.rst:592 767c45e7937a4419806cbb3a9c8411cf
 msgid "是否随机初始化模型权重。"
-msgstr ""
+msgstr "Whether to randomly initialize model weights."
 
 #: ../../source/advanced/arguments.rst:594 ca055deb25c24464a757b9a238fff9b8
 msgid "infer_backend"
-msgstr ""
+msgstr "infer_backend"
 
 #: ../../source/advanced/arguments.rst:595 960bfa4dbbe34e82a146d9e079d8bddb
 msgid "Literal[\"huggingface\", \"vllm\"]"
-msgstr ""
+msgstr "Literal[\"huggingface\", \"vllm\"]"
 
 #: ../../source/advanced/arguments.rst:596 5d68088428a442df8b6fb48e92e8d29d
 msgid "推理时使用的后端引擎，支持 huggingface 或 vllm。"
-msgstr ""
+msgstr "Backend engine used during inference, supports huggingface or vllm."
 
 #: ../../source/advanced/arguments.rst:597 ca06c0bf8a5b4c5f80a59f43c7a8ee46
 msgid "huggingface"
-msgstr ""
+msgstr "huggingface"
 
 #: ../../source/advanced/arguments.rst:598 836ee5bdab28424e9eabf44f97c78314
 msgid "offload_folder"
-msgstr ""
+msgstr "offload_folder"
 
 #: ../../source/advanced/arguments.rst:600 644884d8e0574ccdbcb0fe46f353ad80
 msgid "卸载模型权重的路径。"
-msgstr ""
+msgstr "Path to offload model weights."
 
 #: ../../source/advanced/arguments.rst:601 cea3597ab32d4f018e454d8ee33ed5fe
 msgid "offload"
-msgstr ""
+msgstr "offload"
 
 #: ../../source/advanced/arguments.rst:602 0ce73225df404f5f9e82d4b58f90ac10
 msgid "use_cache"
-msgstr ""
+msgstr "use_cache"
 
 #: ../../source/advanced/arguments.rst:604 2d733ed8fcd449c2b79b5aef17e7b7e2
 msgid "是否在生成时使用 KV 缓存。"
-msgstr ""
+msgstr "Whether to use KV cache during generation."
 
 #: ../../source/advanced/arguments.rst:606 7568fc75c5da43528ace5400ad6c260f
 msgid "infer_dtype"
-msgstr ""
+msgstr "infer_dtype"
 
 #: ../../source/advanced/arguments.rst:607 fef0d24ff3364dd8820b0c344ff839b5
 msgid "Literal[\"auto\", \"float16\", \"bfloat16\", \"float32\"]"
-msgstr ""
+msgstr "Literal[\"auto\", \"float16\", \"bfloat16\", \"float32\"]"
 
 #: ../../source/advanced/arguments.rst:608 ff12d7f3c9d245b5aa853009a1eecb17
 msgid "推理时使用的模型权重和激活值的数据类型。支持 auto, float16, bfloat16, float32。"
-msgstr ""
+msgstr "Data type of model weights and activation values used during inference. Supports auto, float16, bfloat16, float32."
 
 #: ../../source/advanced/arguments.rst:610 3d4b0da1a4ec455e8b9751c17426a967
 msgid "hf_hub_token"
-msgstr ""
+msgstr "hf_hub_token"
 
 #: ../../source/advanced/arguments.rst:612 c92321bbe4f8451587671e89016cf935
 msgid "用于登录 HuggingFace 的验证 token。"
-msgstr ""
+msgstr "Authentication token for logging in to HuggingFace."
 
 #: ../../source/advanced/arguments.rst:614 9c5f99acb36a49bcaa87e345797792dc
 msgid "ms_hub_token"
-msgstr ""
+msgstr "ms_hub_token"
 
 #: ../../source/advanced/arguments.rst:616 534f07aa94b645eb93666f9a27847090
 msgid "用于登录 ModelScope Hub 的验证 token。"
-msgstr ""
+msgstr "Authentication token for logging in to ModelScope Hub."
 
 #: ../../source/advanced/arguments.rst:618 45c30cb7d22f47b1856e5692f080299e
 msgid "om_hub_token"
-msgstr ""
+msgstr "om_hub_token"
 
 #: ../../source/advanced/arguments.rst:620 999d2c0fa89f4466a2a57e17a908d13f
 msgid "用于登录 Modelers Hub 的验证 token。"
-msgstr ""
+msgstr "Authentication token for logging in to Modelers Hub."
 
 #: ../../source/advanced/arguments.rst:622 0684b2d49ff54ceba6e103b6b98de935
 msgid "print_param_status"
-msgstr ""
+msgstr "print_param_status"
 
 #: ../../source/advanced/arguments.rst:624 feeaefcbdb8a4b2d9bd14e8824c594d0
 msgid "是否打印模型参数的状态。"
-msgstr ""
+msgstr "Whether to print the status of model parameters."
 
 #: ../../source/advanced/arguments.rst:626 d605c027d7d84b73bff316b40b629b5c
 msgid "trust_remote_code"
-msgstr ""
+msgstr "trust_remote_code"
 
 #: ../../source/advanced/arguments.rst:628 3ddb5fa5fe1f40119b125bd8d9589f26
 msgid "是否信任来自 Hub 上数据集/模型的代码执行。"
-msgstr ""
+msgstr "Whether to trust code execution from datasets/models on the Hub."
 
 #: ../../source/advanced/arguments.rst:630 4ae335d04cde47b19e360c7f7a37234c
 msgid "compute_dtype"
-msgstr ""
+msgstr "compute_dtype"
 
 #: ../../source/advanced/arguments.rst:631 f5984daf978a4d21b3f5d35a88fb46f7
 msgid "Optional[torch.dtype]"
-msgstr ""
+msgstr "Optional[torch.dtype]"
 
 #: ../../source/advanced/arguments.rst:632 38c579481a1f4d5689c56645af2f04ae
 msgid "用于计算模型输出的数据类型，无需手动指定。"
-msgstr ""
+msgstr "Data type used for computing model output, no manual specification needed."
 
 #: ../../source/advanced/arguments.rst:634 279ec8183df140699d5be19f770b0bbc
 msgid "device_map"
-msgstr ""
+msgstr "device_map"
 
 #: ../../source/advanced/arguments.rst:635 6840a1e89fc54e8b9280377f0c823034
 msgid "Optional[Union[str, Dict[str, Any]]]"
-msgstr ""
+msgstr "Optional[Union[str, Dict[str, Any]]]"
 
 #: ../../source/advanced/arguments.rst:636 939cfcc4f7f641ebb14ab8864a1f3f6f
 msgid "模型分配的设备映射，无需手动指定。"
-msgstr ""
+msgstr "Device map for model allocation, no manual specification needed."
 
 #: ../../source/advanced/arguments.rst:638 6a36661051c14f1292a4e79cbbe61d3e
 msgid "model_max_length"
-msgstr ""
+msgstr "model_max_length"
 
 #: ../../source/advanced/arguments.rst:640 b71cb6413a594fbcb65d7674f4c974ed
 msgid "模型的最大输入长度，无需手动指定。"
-msgstr ""
+msgstr "Maximum input length for the model, no manual specification needed."
 
 #: ../../source/advanced/arguments.rst:642 e7e08c417b92490f9330a0432079cdb7
 msgid "block_diag_attn"
-msgstr ""
+msgstr "block_diag_attn"
 
 #: ../../source/advanced/arguments.rst:644 79e7dc1083614dfda02d2f2928a401c7
 msgid "是否使用块对角注意力，无需手动指定。"
-msgstr ""
+msgstr "Whether to use block diagonal attention, no manual specification needed."
 
 #: ../../source/advanced/arguments.rst:649 ea2d8985ea5840a381d750420217d529
 msgid "多模态模型"
-msgstr ""
+msgstr "Multimodal Model"
 
 #: ../../source/advanced/arguments.rst:650 0b61cef9171a40aa8ef6dc500c3aca58
 msgid "ProcessorArguments"
-msgstr ""
+msgstr "ProcessorArguments"
 
 #: ../../source/advanced/arguments.rst:658 b7eaaff5a6d2443c96c6e7a5c19f1e17
 msgid "image_max_pixels"
-msgstr ""
+msgstr "image_max_pixels"
 
 #: ../../source/advanced/arguments.rst:660 57ead96405ad4f48a3be179ae32394dc
 msgid "图像输入的最大像素数。"
-msgstr ""
+msgstr "Maximum number of pixels for image input."
 
 #: ../../source/advanced/arguments.rst:661 b72a2167f8314e638d4a36469ba2ca0e
 msgid "768 x 768"
-msgstr ""
+msgstr "768 x 768"
 
 #: ../../source/advanced/arguments.rst:662 7bdf73b5eddf4456883363a164c5801b
 msgid "image_min_pixels"
-msgstr ""
+msgstr "image_min_pixels"
 
 #: ../../source/advanced/arguments.rst:664 58f5135c0d2a46f5aadbc83bd93cb65b
 msgid "图像输入的最小像素数。"
-msgstr ""
+msgstr "Minimum number of pixels for image input."
 
 #: ../../source/advanced/arguments.rst:665 6a2ad62c245f4e7e99e448af775292fb
 msgid "32 x 32"
-msgstr ""
+msgstr "32 x 32"
 
 #: ../../source/advanced/arguments.rst:666 1b192a42b06146d4adace35c341b4e2b
 msgid "video_max_pixels"
-msgstr ""
+msgstr "video_max_pixels"
 
 #: ../../source/advanced/arguments.rst:668 c3e5ed9fefc64079b9c47f2f2c4a7812
 msgid "视频输入的最大像素数。"
-msgstr ""
+msgstr "Maximum number of pixels for video input."
 
 #: ../../source/advanced/arguments.rst:669 47f8e76608ed43fa904184aa33d7d81d
 msgid "256 x 256"
-msgstr ""
+msgstr "256 x 256"
 
 #: ../../source/advanced/arguments.rst:670 fe763c286962425e90d0cc9b76290126
 msgid "video_min_pixels"
-msgstr ""
+msgstr "video_min_pixels"
 
 #: ../../source/advanced/arguments.rst:672 7cf97d04c3234d938afd96856878fab1
 msgid "视频输入的最小像素数。"
-msgstr ""
+msgstr "Minimum number of pixels for video input."
 
 #: ../../source/advanced/arguments.rst:673 56a166d621234b54a29a0b74550daa29
 msgid "16 x 16"
-msgstr ""
+msgstr "16 x 16"
 
 #: ../../source/advanced/arguments.rst:674 122484861f2642e6ab503024be68b702
 msgid "video_fps"
-msgstr ""
+msgstr "video_fps"
 
 #: ../../source/advanced/arguments.rst:676 e3a4c629305b433c80d110214accd8ce
 msgid "视频输入的采样帧率（每秒采样帧数）。"
-msgstr ""
+msgstr "Sampling frame rate for video input (frames sampled per second)."
 
 #: ../../source/advanced/arguments.rst:677 34751f0728624d4eb73c7ab1d5457c97
 msgid "2.0"
-msgstr ""
+msgstr "2.0"
 
 #: ../../source/advanced/arguments.rst:678 c75ceb1ff35d455aad8b58fa983daa25
 msgid "video_maxlen"
-msgstr ""
+msgstr "video_maxlen"
 
 #: ../../source/advanced/arguments.rst:680 9529677770b84a30b669766e0036fcdc
 msgid "视频输入的最大采样帧数。"
-msgstr ""
+msgstr "Maximum number of sampled frames for video input."
 
 #: ../../source/advanced/arguments.rst:681
 #: ../../source/advanced/arguments.rst:785 7971c51f0afe48d79144956355bc0a61
 #: ab2bbff229514b9daf648d901866b4aa
 msgid "128"
-msgstr ""
+msgstr "128"
 
 #: ../../source/advanced/arguments.rst:687 e33f11d309734a8c8962559ce6308f70
 msgid "vllm 推理"
-msgstr ""
+msgstr "vLLM Inference"
 
 #: ../../source/advanced/arguments.rst:689 fa8153d4826d4b1a8fe9318345b633c9
 msgid "VllmArguments"
-msgstr ""
+msgstr "VllmArguments"
 
 #: ../../source/advanced/arguments.rst:697 38b8585fafef4603bd367167e7d7a24f
 msgid "vllm_maxlen"
-msgstr ""
+msgstr "vllm_maxlen"
 
 #: ../../source/advanced/arguments.rst:699 64de0618791e4f0db99b0f1165f9ec62
 msgid "最大序列长度（包括输入文本和生成文本）。"
-msgstr ""
+msgstr "Maximum sequence length (including input text and generated text)."
 
 #: ../../source/advanced/arguments.rst:700 da0dc2adb92c47319af4e5a03acd2670
 msgid "4096"
-msgstr ""
+msgstr "4096"
 
 #: ../../source/advanced/arguments.rst:701 f78f63b885034501a368df3b4f844a21
 msgid "vllm_gpu_util"
-msgstr ""
+msgstr "vllm_gpu_util"
 
 #: ../../source/advanced/arguments.rst:703 3b535775c2bc4f61945c097bf65bad43
 msgid "GPU使用比例，范围在(0, 1)之间。"
-msgstr ""
+msgstr "GPU utilization ratio, range between (0, 1)."
 
 #: ../../source/advanced/arguments.rst:704 f77f515581bb45a7b7e10003dd3af0c7
 msgid "0.9"
-msgstr ""
+msgstr "0.9"
 
 #: ../../source/advanced/arguments.rst:705 6beccc59f4dd401bb281ff3e9608ce24
 msgid "vllm_enforce_eager"
-msgstr ""
+msgstr "vllm_enforce_eager"
 
 #: ../../source/advanced/arguments.rst:707 72fe683534034733aede06751626354a
 msgid "是否禁用 vLLM 中的 CUDA graph。"
-msgstr ""
+msgstr "Whether to disable CUDA graph in vLLM."
 
 #: ../../source/advanced/arguments.rst:709 e3993222a98a4867bec661847492fae4
 msgid "vllm_max_lora_rank"
-msgstr ""
+msgstr "vllm_max_lora_rank"
 
 #: ../../source/advanced/arguments.rst:711 d32f2c8274f14702af01d318090cafac
 msgid "推理所允许的最大的 LoRA Rank。"
-msgstr ""
+msgstr "Maximum allowed LoRA Rank for inference."
 
 #: ../../source/advanced/arguments.rst:712 2480527440a24a04b693b058b8b2a10c
 msgid "32"
-msgstr ""
+msgstr "32"
 
 #: ../../source/advanced/arguments.rst:713 737b74e560b745128982d6c635f11156
 msgid "vllm_config"
-msgstr ""
+msgstr "vllm_config"
 
 #: ../../source/advanced/arguments.rst:714 ddfd3343c7174b408cfe14282fa7fcc4
 msgid "Optional[Union[dict, str]]"
-msgstr ""
+msgstr "Optional[Union[dict, str]]"
 
 #: ../../source/advanced/arguments.rst:715 fbaecbb20b2a4031bf2e095fc0cb83fc
 msgid "vLLM引擎初始化配置。以字典或JSON字符串输入。"
-msgstr ""
+msgstr "vLLM engine initialization configuration. Input as dictionary or JSON string."
 
 #: ../../source/advanced/arguments.rst:721 f4b5d4d10cf9458d9d849d97f610d360
 msgid "模型量化"
-msgstr ""
+msgstr "Model Quantization"
 
 #: ../../source/advanced/arguments.rst:722 95ec33503e2544b1a5141d9cec70d7d1
 msgid "QuantizationArguments"
-msgstr ""
+msgstr "QuantizationArguments"
 
 #: ../../source/advanced/arguments.rst:730 60898bba03ba41b88b97cb1d150a7123
 msgid "quantization_method"
-msgstr ""
+msgstr "quantization_method"
 
 #: ../../source/advanced/arguments.rst:731 d3b99691c7994a6b9ed0e5a1c5311e4c
 msgid "Literal[\"bitsandbytes\", \"hqq\", \"eetq\"]"
-msgstr ""
+msgstr "Literal[\"bitsandbytes\", \"hqq\", \"eetq\"]"
 
 #: ../../source/advanced/arguments.rst:732 2d92e9cb5c2a407098998e77327fd88c
 msgid "指定用于量化的算法，支持 \"bitsandbytes\", \"hqq\" 和 \"eetq\"。"
-msgstr ""
+msgstr "Specify the algorithm for quantization, supports \"bitsandbytes\", \"hqq\" and \"eetq\"."
 
 #: ../../source/advanced/arguments.rst:733 9c058e7f648c48eeb880221e32ec0b22
 msgid "bitsandbytes"
-msgstr ""
+msgstr "bitsandbytes"
 
 #: ../../source/advanced/arguments.rst:734 d50072795faa4a4bad0a47adb7d92bea
 msgid "quantization_bit"
-msgstr ""
+msgstr "quantization_bit"
 
 #: ../../source/advanced/arguments.rst:736 9e13b08ad9764120a205c77d5f9c8e56
 msgid "指定在量化过程中使用的位数，通常是4位、8位等。"
-msgstr ""
+msgstr "Specify the number of bits used in the quantization process, typically 4-bit, 8-bit, etc."
 
 #: ../../source/advanced/arguments.rst:738 bcd4eb5cf4134e6aaea450c308d43771
 msgid "quantization_type"
-msgstr ""
+msgstr "quantization_type"
 
 #: ../../source/advanced/arguments.rst:739 8f2d7d06bc224675bf252f015d5b885c
 msgid "Literal[\"fp4\", \"nf4\"]"
-msgstr ""
+msgstr "Literal[\"fp4\", \"nf4\"]"
 
 #: ../../source/advanced/arguments.rst:740 54c139e4021a48ce848ffcf166ba63a5
 msgid "量化时使用的数据类型，支持 \"fp4\" 和 \"nf4\"。"
-msgstr ""
+msgstr "Data type used during quantization, supports \"fp4\" and \"nf4\"."
 
 #: ../../source/advanced/arguments.rst:741 12b0bd7b769d46eb9954511a14325428
 msgid "nf4"
-msgstr ""
+msgstr "nf4"
 
 #: ../../source/advanced/arguments.rst:742 07790d50928740f6b1f86e682a0c2e56
 msgid "double_quantization"
-msgstr ""
+msgstr "double_quantization"
 
 #: ../../source/advanced/arguments.rst:744 a44416fa906643ceb244d8743152b863
 msgid "是否在量化过程中使用 double quantization，通常用于 \"bitsandbytes\" int4 量化训练。"
-msgstr ""
+msgstr "Whether to use double quantization during the quantization process, typically used for \"bitsandbytes\" int4 quantization training."
 
 #: ../../source/advanced/arguments.rst:746 05f5e8ab6d6e4f3d93e863fe78aae93f
 msgid "quantization_device_map"
-msgstr ""
+msgstr "quantization_device_map"
 
 #: ../../source/advanced/arguments.rst:747 3ca1a5e49bfb4573aab44290db4236b9
 msgid "Optional[Literal[\"auto\"]]"
-msgstr ""
+msgstr "Optional[Literal[\"auto\"]]"
 
 #: ../../source/advanced/arguments.rst:748 133d1736d7c440bcb07d822c4ec8632c
 msgid "用于推理 4-bit 量化模型的设备映射。需要 \"bitsandbytes >= 0.43.0\"。"
-msgstr ""
+msgstr "Device map for inference with 4-bit quantized models. Requires \"bitsandbytes >= 0.43.0\"."
 
 #: ../../source/advanced/arguments.rst:753 cb681e615a3a4409b61bdfc1a3756dc1
 msgid "模型导出"
-msgstr ""
+msgstr "Model Export"
 
 #: ../../source/advanced/arguments.rst:754 4809f4ba65ce4c9d9eed769f53872027
 msgid "ExportArguments"
-msgstr ""
+msgstr "ExportArguments"
 
 #: ../../source/advanced/arguments.rst:762 873aa9d39f8e46b0a0bcb1ca0146ce23
 msgid "export_dir"
-msgstr ""
+msgstr "export_dir"
 
 #: ../../source/advanced/arguments.rst:764 3244003dafdd40eaa8dce088625bbef3
 msgid "导出模型保存目录的路径。"
-msgstr ""
+msgstr "Path to the directory where the exported model will be saved."
 
 #: ../../source/advanced/arguments.rst:766 7542607c890d44c5b3bbcefd39e80003
 msgid "export_size"
-msgstr ""
+msgstr "export_size"
 
 #: ../../source/advanced/arguments.rst:768 33b83e510858452b8f3a4c290fcfa728
 msgid "导出模型的文件分片大小（以GB为单位）。"
-msgstr ""
+msgstr "File shard size of the exported model (in GB)."
 
 #: ../../source/advanced/arguments.rst:769
 #: ../../source/advanced/arguments.rst:835 53695ce33cc342d09b019ab95849cc54
 #: 781dc02cde90435bb8bde59639f768af
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: ../../source/advanced/arguments.rst:770 24fd4da579464f779dc4caf226dbab0c
 msgid "export_device"
-msgstr ""
+msgstr "export_device"
 
 #: ../../source/advanced/arguments.rst:771 a95fabd4616c48298e891600f5235f4d
 msgid "Literal[\"cpu\", \"auto\"]"
-msgstr ""
+msgstr "Literal[\"cpu\", \"auto\"]"
 
 #: ../../source/advanced/arguments.rst:772 d467a4df7a5d4059876237fcbc03f8f9
 msgid "导出模型时使用的设备，auto 可自动加速导出。"
-msgstr ""
+msgstr "Device used when exporting model, auto can automatically accelerate export."
 
 #: ../../source/advanced/arguments.rst:773 5f10c1283e6845c896fc75ce221d4a9a
 msgid "cpu"
-msgstr ""
+msgstr "cpu"
 
 #: ../../source/advanced/arguments.rst:774 082f3b144e3c481c9ce30d83bbaa3cec
 msgid "export_quantization_bit"
-msgstr ""
+msgstr "export_quantization_bit"
 
 #: ../../source/advanced/arguments.rst:776 f2f34c6705814761aa877df42250777c
 msgid "量化导出模型时使用的位数。"
-msgstr ""
+msgstr "Number of bits used when quantizing exported model."
 
 #: ../../source/advanced/arguments.rst:778 f210931d37434765a082b6f6acc22e97
 msgid "export_quantization_dataset"
-msgstr ""
+msgstr "export_quantization_dataset"
 
 #: ../../source/advanced/arguments.rst:780 ee34ebe1bdde4094b1438525124607d0
 msgid "用于量化导出模型的数据集路径或数据集名称。"
-msgstr ""
+msgstr "Dataset path or dataset name for quantizing exported model."
 
 #: ../../source/advanced/arguments.rst:782 27ef6cf25c6f457c9016f5354752db6e
 msgid "export_quantization_nsamples"
-msgstr ""
+msgstr "export_quantization_nsamples"
 
 #: ../../source/advanced/arguments.rst:784 7694e947ee4d418e9a153a58ef3728d8
 msgid "量化时使用的样本数量。"
-msgstr ""
+msgstr "Number of samples used during quantization."
 
 #: ../../source/advanced/arguments.rst:786 cfbd3a1bdd594dc98fe5e480e628ae08
 msgid "export_quantization_maxlen"
-msgstr ""
+msgstr "export_quantization_maxlen"
 
 #: ../../source/advanced/arguments.rst:788 54dce40c1793434bb2c5836b982201e5
 msgid "用于量化的模型输入的最大长度。"
-msgstr ""
+msgstr "Maximum length of model input for quantization."
 
 #: ../../source/advanced/arguments.rst:789
 #: ../../source/advanced/arguments.rst:880
 #: ../../source/advanced/arguments.rst:884 140fe8c1eebc4aa5ad2a860a11477cae
 #: 53465ef1d33347c1a23f7735d91eeb2b bee51536fab44f43a6be2840f7a7adf7
 msgid "1024"
-msgstr ""
+msgstr "1024"
 
 #: ../../source/advanced/arguments.rst:790 cf700496708a4f56ad62e21e7388ee4e
 msgid "export_legacy_format"
-msgstr ""
+msgstr "export_legacy_format"
 
 #: ../../source/advanced/arguments.rst:792 d2ff68c7e1764e419c3803b5ef10847b
 msgid "True： .bin 格式保存。 False： .safetensors 格式保存。"
-msgstr ""
+msgstr "True: save in .bin format. False: save in .safetensors format."
 
 #: ../../source/advanced/arguments.rst:794 6ab78554e3a74e9399e603490f131197
 msgid "export_hub_model_id"
-msgstr ""
+msgstr "export_hub_model_id"
 
 #: ../../source/advanced/arguments.rst:796 a9694f0f1cd1487aad96edf4f3e43623
 msgid "模型上传至 Huggingface 的仓库名称。"
-msgstr ""
+msgstr "Repository name for uploading model to Huggingface."
 
 #: ../../source/advanced/arguments.rst:803 20813b75084246f5ae4e4c8ce84865fb
 msgid "评估参数"
@@ -2260,87 +2290,87 @@ msgstr "Eval Arguments"
 
 #: ../../source/advanced/arguments.rst:804 5b2ec2d56e1147338fc89d78fd0bd549
 msgid "EvalArguments"
-msgstr ""
+msgstr "EvalArguments"
 
 #: ../../source/advanced/arguments.rst:812 3b9692ab6d8447e7a2152a5ba8dffe1b
 msgid "task"
-msgstr ""
+msgstr "task"
 
 #: ../../source/advanced/arguments.rst:814 abe8b3784efe4f59a874b3aa371cc819
 msgid "评估任务的名称，可选项有 mmlu_test, ceval_validation, cmmlu_test"
-msgstr ""
+msgstr "Name of evaluation task, available options are mmlu_test, ceval_validation, cmmlu_test"
 
 #: ../../source/advanced/arguments.rst:816 5c8e1c448de5495baf5ba302fd5a3054
 msgid "task_dir"
-msgstr ""
+msgstr "task_dir"
 
 #: ../../source/advanced/arguments.rst:818 5b3b3b9ac0e8415581fff8ee8e824dbd
 msgid "包含评估数据集的文件夹路径。"
-msgstr ""
+msgstr "Path to the folder containing evaluation datasets."
 
 #: ../../source/advanced/arguments.rst:819 92baa1d95dff40fdb3621a021982c05a
 msgid "evaluation"
-msgstr ""
+msgstr "evaluation"
 
 #: ../../source/advanced/arguments.rst:820 9c1c6dfe46ac47d9aed48281ae6e2662
 msgid "batch_size"
-msgstr ""
+msgstr "batch_size"
 
 #: ../../source/advanced/arguments.rst:822 a5386e83779544fdbbf2a51f5c83327f
 msgid "每个GPU使用的批量大小。"
-msgstr ""
+msgstr "Batch size per GPU."
 
 #: ../../source/advanced/arguments.rst:824 18d5c73e128a47289ad66e9bb1900477
 msgid "seed"
-msgstr ""
+msgstr "seed"
 
 #: ../../source/advanced/arguments.rst:826 c0e1e53f61ba46bd94e54c41d27e9489
 msgid "用于数据加载器的随机种子。"
-msgstr ""
+msgstr "Random seed for data loader."
 
 #: ../../source/advanced/arguments.rst:827 0e637be801e64bc0bf7cec8ff5fb747f
 msgid "42"
-msgstr ""
+msgstr "42"
 
 #: ../../source/advanced/arguments.rst:828 4529c4c6d1ea40e7b91bd61de15f8bba
 msgid "lang"
-msgstr ""
+msgstr "lang"
 
 #: ../../source/advanced/arguments.rst:830 754a9ddab4c9481cba844485cc83a027
 msgid "评估使用的语言，可选值为 en、zh。"
-msgstr ""
+msgstr "Language for evaluation, available values are en, zh."
 
 #: ../../source/advanced/arguments.rst:831 6fa29ce231654e048d0e8b90a1947694
 msgid "en"
-msgstr ""
+msgstr "en"
 
 #: ../../source/advanced/arguments.rst:832 f10bd4a3e7a448a381ce3383f7b34ba2
 msgid "n_shot"
-msgstr ""
+msgstr "n_shot"
 
 #: ../../source/advanced/arguments.rst:834 e7c97486b55a42dc829cbc74e25a930a
 msgid "few-shot 的示例数量。"
-msgstr ""
+msgstr "Number of few-shot examples."
 
 #: ../../source/advanced/arguments.rst:836 37cae031e23b4871b8e034271ae794e8
 msgid "save_dir"
-msgstr ""
+msgstr "save_dir"
 
 #: ../../source/advanced/arguments.rst:838 807a2ce625b14283b8cd7a6cae3749c6
 msgid "保存评估结果的路径。 如果该路径已经存在则会抛出错误。"
-msgstr ""
+msgstr "Path to save evaluation results. If the path already exists, an error will be thrown."
 
 #: ../../source/advanced/arguments.rst:840 413c09e735344b639374276341cfaa7c
 msgid "download_mode"
-msgstr ""
+msgstr "download_mode"
 
 #: ../../source/advanced/arguments.rst:842 b7e1bca4a3bc47fdb9e4809d6da3bfc9
 msgid "评估数据集的下载模式，如果数据集已经存在则重复使用，否则则下载。"
-msgstr ""
+msgstr "Download mode for evaluation dataset, reuse if dataset already exists, otherwise download."
 
 #: ../../source/advanced/arguments.rst:843 d1211028c11d424bb23f2edb8f69e5a8
 msgid "DownloadMode.REUSE_DATASET_IF_EXISTS"
-msgstr ""
+msgstr "DownloadMode.REUSE_DATASET_IF_EXISTS"
 
 #: ../../source/advanced/arguments.rst:848 0005b23ff40d41c08abc359e2c6347b1
 msgid "生成参数"
@@ -2348,109 +2378,115 @@ msgstr "Generating Arguments"
 
 #: ../../source/advanced/arguments.rst:849 2df3e30231294080a00d721815cb601f
 msgid "GeneratingArguments"
-msgstr ""
+msgstr "GeneratingArguments"
 
 #: ../../source/advanced/arguments.rst:857 29d55d3b849b42d2a12f56e1d8974b56
 msgid "do_sample"
-msgstr ""
+msgstr "do_sample"
 
 #: ../../source/advanced/arguments.rst:859 2792c9cbb63b45a9b7622943c7906ee3
 msgid "是否使用采样策略生成文本。如果设置为 False，将使用 greedy decoding。"
-msgstr ""
+msgstr "Whether to use sampling strategy for text generation. If set to False, greedy decoding will be used."
 
 #: ../../source/advanced/arguments.rst:861 ebdf1c7928b343efabd3fcf3179f6aa4
 msgid "temperature"
-msgstr ""
+msgstr "temperature"
 
 #: ../../source/advanced/arguments.rst:863 9f7f59e36fe749eeb3f4dbcb9908e28e
 msgid "用于调整生成文本的随机性。temperature 越高，生成的文本越随机；temperature 越低，生成的文本越确定。"
-msgstr ""
+msgstr "Used to adjust the randomness of generated text. Higher temperature makes text more random; lower temperature makes text more deterministic."
 
 #: ../../source/advanced/arguments.rst:864 2ab234e223414dd5b4f1d0c0081a164c
 msgid "0.95"
-msgstr ""
+msgstr "0.95"
 
 #: ../../source/advanced/arguments.rst:865 4b8f2820a4ab4bc5881c400e459f167a
 msgid "top_p"
-msgstr ""
+msgstr "top_p"
 
 #: ../../source/advanced/arguments.rst:867 a009c16cc2bf4d34a11bf7f99c8d1c28
 msgid ""
 "用于控制生成时候选 token 集合大小的参数。例如：top_p = 0.7 意味着模型会先选择概率最高的若干个 token "
 "直到其累积概率之和大于 0.7，然后在这些 token 组成的集合中进行采样。"
 msgstr ""
+"Parameter to control the size of candidate token set during generation. For example: top_p = 0.7 means "
+"the model will first select tokens with highest probabilities until their cumulative probability exceeds 0.7, then sample from this set of tokens."
 
 #: ../../source/advanced/arguments.rst:868 144c3c11dc474b2da7f45aeb813665cb
 msgid "0.7"
-msgstr ""
+msgstr "0.7"
 
 #: ../../source/advanced/arguments.rst:869 75a444c806a045bfaa5968e0875810d2
 msgid "top_k"
-msgstr ""
+msgstr "top_k"
 
 #: ../../source/advanced/arguments.rst:871 ad7861cde66548ebaf229ff3aa5d7137
 msgid "用于控制生成时候选 token 集合大小的参数。例如：top_k = 50 意味着模型会在概率最高的50个 token 组成的集合中进行采样。"
-msgstr ""
+msgstr "Parameter to control the size of candidate token set during generation. For example: top_k = 50 means the model will sample from the set of 50 tokens with highest probability."
 
 #: ../../source/advanced/arguments.rst:873 983caf543c4d43219088ac2a68860588
 msgid "num_beams"
-msgstr ""
+msgstr "num_beams"
 
 #: ../../source/advanced/arguments.rst:875 6a9cc41e8e2440f18e0906da2d7c07c7
 msgid "用于 beam_search 的束宽度。值为 1 表示不使用 beam_search。"
-msgstr ""
+msgstr "Beam width for beam_search. Value of 1 means not using beam_search."
 
 #: ../../source/advanced/arguments.rst:877 2e8bb656096d45149fed03f091b90a50
 msgid "max_length"
-msgstr ""
+msgstr "max_length"
 
 #: ../../source/advanced/arguments.rst:879 dec3dbcba69f4ffc889092c6ad3573c7
 msgid "文本最大长度（包括输入文本和生成文本的长度）。"
-msgstr ""
+msgstr "Maximum text length (including both input and generated text)."
 
 #: ../../source/advanced/arguments.rst:881 f5f1a87de5c6458e99d864f6bda7f09f
 msgid "max_new_tokens"
-msgstr ""
+msgstr "max_new_tokens"
 
 #: ../../source/advanced/arguments.rst:883 2fd32b62016f42ee9f4b60c3ae750e00
 msgid "生成文本的最大长度。设置 max_new_tokens 会覆盖 max_length。"
-msgstr ""
+msgstr "Maximum length of generated text. Setting max_new_tokens will override max_length."
 
 #: ../../source/advanced/arguments.rst:885 32211557800c45bfac0a061bd7c767de
 msgid "repetition_penalty"
-msgstr ""
+msgstr "repetition_penalty"
 
 #: ../../source/advanced/arguments.rst:887 7edc09867c094564a42494aa49884379
 msgid ""
 "对生成重复 token 的惩罚系数。对于已经生成过的 token 生成概率乘以 1/repetition_penalty。值小于 1.0 "
 "会提高重复 token 的生成概率，大于 1.0 则会降低重复 token 的生成概率。"
 msgstr ""
+"Penalty coefficient for generating repeated tokens. Generation probability for already generated tokens is multiplied by 1/repetition_penalty. "
+"Values less than 1.0 increase probability of repeating tokens, values greater than 1.0 decrease it."
 
 #: ../../source/advanced/arguments.rst:889 434d38aaae674b37bdae649684c0bc1c
 msgid "length_penalty"
-msgstr ""
+msgstr "length_penalty"
 
 #: ../../source/advanced/arguments.rst:891 ac22f8a5ae74462bbc1bdad05101cb0d
 msgid ""
 "在使用 beam_search 时对生成文本长度的惩罚系数。length_penalty > 0 "
 "鼓励模型生成更长的序列，length_penalty < 0 会鼓励模型生成更短的序列。"
 msgstr ""
+"Penalty coefficient for generated text length when using beam_search. length_penalty > 0 "
+"encourages model to generate longer sequences, length_penalty < 0 encourages shorter sequences."
 
 #: ../../source/advanced/arguments.rst:893 0fcdcfb5e67544aeb389acab7f496294
 msgid "default_system"
-msgstr ""
+msgstr "default_system"
 
 #: ../../source/advanced/arguments.rst:895 bdddadca6e594afc9a7e41537363ad6e
 msgid "默认的 system_message，例如: \"You are a helpful assistant.\""
-msgstr ""
+msgstr "Default system_message, for example: \"You are a helpful assistant.\""
 
 #: ../../source/advanced/arguments.rst:897 7d192caba82645548f3049e2bbb5e869
 msgid "skip_special_tokens"
-msgstr ""
+msgstr "skip_special_tokens"
 
 #: ../../source/advanced/arguments.rst:899 04b1a99743f94ee58295a0b0809e7c81
 msgid "解码时是否忽略特殊 token。"
-msgstr ""
+msgstr "Whether to skip special tokens during decoding."
 
 #: ../../source/advanced/arguments.rst:904 0066f6072a364dc2b50feb4c52f19440
 msgid "SwanLab 参数"
@@ -2458,67 +2494,67 @@ msgstr "SwanLab Arguments"
 
 #: ../../source/advanced/arguments.rst:905 e53c3a1d09ee4ce2b891738ce6d40686
 msgid "SwanLabArguments"
-msgstr ""
+msgstr "SwanLabArguments"
 
 #: ../../source/advanced/arguments.rst:913 1b363813b5ae4d2e978e78b6fcd4d4fd
 msgid "use_swanlab"
-msgstr ""
+msgstr "use_swanlab"
 
 #: ../../source/advanced/arguments.rst:915 de940d57976b443096d8f5cb83962779
 msgid "是否使用 SwanLab。"
-msgstr ""
+msgstr "Whether to use SwanLab."
 
 #: ../../source/advanced/arguments.rst:917 ae63e5c0733f40f49142b99ea6cc81c9
 msgid "swanlab_project"
-msgstr ""
+msgstr "swanlab_project"
 
 #: ../../source/advanced/arguments.rst:919 6bfe82c3a2f94e4b94c3b9e9bbfbf327
 msgid "SwanLab 中的项目名称。"
-msgstr ""
+msgstr "Project name in SwanLab."
 
 #: ../../source/advanced/arguments.rst:920 014365e6d1b24630846b61afe2961e9c
 msgid "\"llamafactory\""
-msgstr ""
+msgstr "\"llamafactory\""
 
 #: ../../source/advanced/arguments.rst:921 50d739813eb548efaae92ac07e60fbc3
 msgid "swanlab_workspace"
-msgstr ""
+msgstr "swanlab_workspace"
 
 #: ../../source/advanced/arguments.rst:923 61457dddea1c4ec28f36898e08c27a97
 msgid "SwanLab 中的工作区名称。"
-msgstr ""
+msgstr "Workspace name in SwanLab."
 
 #: ../../source/advanced/arguments.rst:925 8c146285ac424c1e81fbe6da0e0a2e33
 msgid "swanlab_run_name"
-msgstr ""
+msgstr "swanlab_run_name"
 
 #: ../../source/advanced/arguments.rst:927 0154f383f5c342d2bc8da5a4f0d3f4cd
 msgid "SwanLab 中的实验名称。"
-msgstr ""
+msgstr "Experiment name in SwanLab."
 
 #: ../../source/advanced/arguments.rst:929 63d55d7cc91843d79d86cdfe6ef56248
 msgid "swanlab_mode"
-msgstr ""
+msgstr "swanlab_mode"
 
 #: ../../source/advanced/arguments.rst:930 b5a717b32d2a4626b3689b8ce9160d42
 msgid "Literal[\"cloud\", \"local\"]"
-msgstr ""
+msgstr "Literal[\"cloud\", \"local\"]"
 
 #: ../../source/advanced/arguments.rst:931 65774aa9f59e4015b2b2051371141406
 msgid "SwanLab 的运行模式。"
-msgstr ""
+msgstr "Run mode for SwanLab."
 
 #: ../../source/advanced/arguments.rst:932 8c36f6523df24302959da297e182dd4b
 msgid "cloud"
-msgstr ""
+msgstr "cloud"
 
 #: ../../source/advanced/arguments.rst:933 c973adb6946f4a1084842b35c7bda1cd
 msgid "swanlab_api_key"
-msgstr ""
+msgstr "swanlab_api_key"
 
 #: ../../source/advanced/arguments.rst:935 30b59b89573f4217b0d2994887920dce
 msgid "SwanLab 的 API 密钥。"
-msgstr ""
+msgstr "API key for SwanLab."
 
 #: ../../source/advanced/arguments.rst:940 afe79780f964459c9630e8ec831beb5d
 msgid "训练参数"
@@ -2526,69 +2562,204 @@ msgstr "Training Arguments"
 
 #: ../../source/advanced/arguments.rst:943 32769caaea4449d2a96d1d37c523cb1c
 msgid "RAY"
-msgstr ""
+msgstr "RAY"
 
 #: ../../source/advanced/arguments.rst:944 3f1c0a04b5d44487a01ac57b1a2be969
 msgid "RayArguments"
-msgstr ""
+msgstr "RayArguments"
 
 #: ../../source/advanced/arguments.rst:952 58ece0e02c3f4443b5ead390bf57c563
 msgid "ray_run_name"
-msgstr ""
+msgstr "ray_run_name"
 
 #: ../../source/advanced/arguments.rst:954 7464819fbbae43d2a2054c423fd060ee
 msgid "训练结果将保存在 <ray_storage_path>/ray_run_name 路径下。"
-msgstr ""
+msgstr "Training results will be saved in <ray_storage_path>/ray_run_name path."
 
 #: ../../source/advanced/arguments.rst:956 dc7a260291554266935646b7db2dc192
 msgid "ray_storage_path"
-msgstr ""
+msgstr "ray_storage_path"
 
 #: ../../source/advanced/arguments.rst:958 bfddf83ac7ad436487b2c94ac407e72a
 msgid "保存训练结果的存储路径。"
-msgstr ""
+msgstr "Storage path for saving training results."
 
 #: ../../source/advanced/arguments.rst:959 30866b67132349ed9fca53f8ab0b0a71
 msgid "./saves"
-msgstr ""
+msgstr "./saves"
 
 #: ../../source/advanced/arguments.rst:960 8787670919814852b46be75c03ed2b12
 msgid "ray_num_workers"
-msgstr ""
+msgstr "ray_num_workers"
 
 #: ../../source/advanced/arguments.rst:962 7129503b523f4447b8125bf3b63925f9
 msgid "Ray 训练所使用的工作进程数量。"
-msgstr ""
+msgstr "Number of worker processes used by Ray training."
 
 #: ../../source/advanced/arguments.rst:964 6375337fcf304ddb80307163aea0c757
 msgid "resources_per_worker"
-msgstr ""
+msgstr "resources_per_worker"
 
 #: ../../source/advanced/arguments.rst:965 2a46c9c4a3f54602b0b4a17be7c546ba
 msgid "Union[dict, str]"
-msgstr ""
+msgstr "Union[dict, str]"
 
 #: ../../source/advanced/arguments.rst:966 1ba750504bea4e44a5be1cfc35fe8253
 msgid "每个工作进程分配的资源。默认使用 1 GPU。"
-msgstr ""
+msgstr "Resources allocated per worker process. Uses 1 GPU by default."
 
 #: ../../source/advanced/arguments.rst:967 4070ab761dbb40b295b44ef5c3603d8e
 msgid "{\"GPU\": 1}"
-msgstr ""
+msgstr "{\"GPU\": 1}"
 
 #: ../../source/advanced/arguments.rst:968 57200939e21540d7a4acc1482f6d50f9
 msgid "placement_strategy"
-msgstr ""
+msgstr "placement_strategy"
 
 #: ../../source/advanced/arguments.rst:969 9b34870e792e49198f1bc45cbac0d80a
 msgid "Literal[\"SPREAD\", \"PACK\", \"STRICT_SPREAD\", \"STRICT_PACK\"]"
-msgstr ""
+msgstr "Literal[\"SPREAD\", \"PACK\", \"STRICT_SPREAD\", \"STRICT_PACK\"]"
 
 #: ../../source/advanced/arguments.rst:970 27e908618b444d92923c42a8b6a14167
 msgid "Ray 训练的资源调度策略。可选值包括 SPREAD、PACK、STRICT_SPREAD 和 STRICT_PACK。"
-msgstr ""
+msgstr "Resource scheduling strategy for Ray training. Available values include SPREAD, PACK, STRICT_SPREAD and STRICT_PACK."
 
 #: ../../source/advanced/arguments.rst:971 8d677dde4b2d45068672a9e93e31bb48
 msgid "PACK"
-msgstr ""
+msgstr "PACK"
 
+
+msgid "环境变量"
+msgstr "Environment Variables"
+
+msgid "Environment Variables"
+msgstr "Environment Variables"
+
+msgid "名称"
+msgstr "Name"
+
+msgid "类型"
+msgstr "Type"
+
+msgid "介绍"
+msgstr "Description"
+
+msgid "API"
+msgstr "API"
+
+msgid "API 服务器监听的主机地址"
+msgstr "The host address the API server listens on"
+
+msgid "API 服务器监听的端口号"
+msgstr "The port number the API server listens on"
+
+msgid "访问 API 的密码。"
+msgstr "The password for accessing the API."
+
+msgid "指定 API 服务要加载和使用的模型名称"
+msgstr "Specifies the model name to be loaded and used by the API service"
+
+msgid "控制 API 日志的详细程度"
+msgstr "Controls the verbosity level of API logs"
+
+msgid "设置 FastAPI 应用的根路径"
+msgstr "Sets the root path for the FastAPI application"
+
+msgid "API 的最大并发请求数。"
+msgstr "The maximum number of concurrent requests for the API."
+
+msgid "General"
+msgstr "General"
+
+msgid "是否禁用启动时的版本检查。"
+msgstr "Whether to disable version check on startup."
+
+msgid "强制检查可选的导入"
+msgstr "Forces checking of optional imports"
+
+msgid "允许在命令行中传递额外参数"
+msgstr "Allows passing extra arguments in the command line"
+
+msgid "设置 LLaMA-Factory 的日志级别(\"DEBUG\",\"INFO\",\"WARN\")"
+msgstr "Sets the log level of LLaMA-Factory (\"DEBUG\", \"INFO\", \"WARN\")"
+
+msgid "优先使用 ModelScope 下载模型/数据集或使用缓存路径中的模型/数据集"
+msgstr "Prioritizes using ModelScope to download models/datasets or uses them from the cache path"
+
+msgid "优先使用 Openmind 下载模型/数据集或使用缓存路径中的模型/数据集"
+msgstr "Prioritizes using Openmind to download models/datasets or uses them from the cache path"
+
+msgid "是否使用 Ray 进行分布式执行或任务管理。"
+msgstr "Whether to use Ray for distributed execution or task management."
+
+msgid "是否记录 VRAM 使用情况。"
+msgstr "Whether to record VRAM usage."
+
+msgid "是否表示启用特定的 PyTorch 优化。"
+msgstr "Whether to enable specific PyTorch optimizations."
+
+msgid "是否为 NPU启用 JIT 编译。"
+msgstr "Whether to enable JIT compilation for NPU."
+
+msgid "GPU 选择。"
+msgstr "GPU selection."
+
+msgid "NPU 选择。"
+msgstr "NPU selection."
+
+msgid "Torchrun"
+msgstr "Torchrun"
+
+msgid "是否强制使用 ``torchrun`` 启动脚本"
+msgstr "Whether to force using ``torchrun`` to start the script"
+
+msgid "Torchrun部署中主节点 (master node) 的网络地址"
+msgstr "The network address of the master node in Torchrun deployment"
+
+msgid "Torchrun部署中主节点用于通信的端口号"
+msgstr "The port number used for communication by the master node in Torchrun deployment"
+
+msgid "参与分布式部署的总节点数量"
+msgstr "The total number of nodes participating in the distributed deployment"
+
+msgid "当前节点在所有节点中的 rank，通常从 0 到 ``NNODES-1``。"
+msgstr "The rank of the current node among all nodes, typically from 0 to ``NNODES-1``."
+
+msgid "每个节点上的 GPU 数"
+msgstr "The number of GPUs per node"
+
+msgid "Log"
+msgstr "Log"
+
+msgid "是否禁用 wandb"
+msgstr "Whether to disable wandb"
+
+msgid "设置 wandb 中的项目名称。"
+msgstr "Sets the project name in wandb."
+
+msgid "访问 wandb 的 api key"
+msgstr "The API key for accessing wandb"
+
+msgid "Web UI"
+msgstr "Web UI"
+
+msgid "是否创建一个可共享的 webui 链接"
+msgstr "Whether to create a shareable Web UI link"
+
+msgid "设置 Gradio 服务器 IP 地址（例如 ``0.0.0.0``）"
+msgstr "Sets the Gradio server IP address (e.g., ``0.0.0.0``)"
+
+msgid "设置 Gradio 服务器的端口"
+msgstr "Sets the Gradio server port"
+
+msgid "设置 Gradio 应用的根路径"
+msgstr "Sets the root path for the Gradio application"
+
+msgid "启用 Gradio 服务器的 IPv6 支持"
+msgstr "Enables IPv6 support for the Gradio server"
+
+msgid "Setting"
+msgstr "Setting"
+
+msgid "支持使用 ``lmf`` 表示 ``llamafactory-cli``"
+msgstr "Supports using ``lmf`` as an alias for ``llamafactory-cli``"

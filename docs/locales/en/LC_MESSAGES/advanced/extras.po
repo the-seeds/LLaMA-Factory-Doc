@@ -1,10 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, LlamaFactory team.
+# Copyright (C) 2025, LlamaFactory team.
 # This file is distributed under the same license as the LLaMA Factory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 #, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-03-05 01:10+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
 msgid ""
 msgstr ""
 "Project-Id-Version: LLaMA Factory \n"
@@ -26,7 +39,7 @@ msgstr "Extras"
 
 #: ../../source/advanced/extras.rst:6 80cf6b25cfc7467eaed19ae53121ee74
 msgid "LLaMA Pro"
-msgstr ""
+msgstr "LLaMA Pro"
 
 #: ../../source/advanced/extras.rst:8 a1b665e091ba4f0ea6477621b560e2a4
 msgid ""
@@ -34,8 +47,11 @@ msgid ""
 "LLaMA-Factory 支持 LLaMA Pro 的使用。 您可以使用运行 ``expand.sh`` 将 ``Meta-Llama-3"
 "-8B-Instruct`` 扩展为 ``llama3-8b-instruct-pro``。"
 msgstr ""
+"To address the forgetting problem in large language models, LLaMA Pro adds new modules to the original model to adapt to new tasks, enabling it to perform better than the original model on multiple new tasks. "
+"LLaMA-Factory supports the use of LLaMA Pro. You can run ``expand.sh`` to expand ``Meta-Llama-3"
+"-8B-Instruct`` to ``llama3-8b-instruct-pro``."
 
 #: ../../source/advanced/extras.rst:12 116528b1860a4e75af83bf813af8f34b
 msgid "对于 LLaMA Pro 模型进行训练时，您需要指定 ``use_llama_pro`` 为 ``true``。"
-msgstr ""
+msgstr "When training LLaMA Pro models, you need to specify ``use_llama_pro`` as ``true``."
 

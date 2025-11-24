@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, LlamaFactory team.
+# Copyright (C) 2025, LlamaFactory team.
 # This file is distributed under the same license as the LLaMA Factory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -7,14 +7,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory \n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-03-05 01:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,21 +24,23 @@ msgstr "Eval"
 
 #: ../../source/getting_started/eval.rst:5 dfeb77d7b3bc4bbc86d79f5a36b33e80
 msgid "通用能力评估"
-msgstr ""
+msgstr "General Capability Evaluation"
 
 #: ../../source/getting_started/eval.rst:7 670eb3732bcd4409aac4fdb2223153f9
 msgid ""
 "在完成模型训练后，您可以通过 ``llamafactory-cli eval "
 "examples/train_lora/llama3_lora_eval.yaml`` 来评估模型效果。"
 msgstr ""
+"After completing model training, you can evaluate the model's performance using ``llamafactory-cli eval "
+"examples/train_lora/llama3_lora_eval.yaml``."
 
 #: ../../source/getting_started/eval.rst:9 5cd10e7e3a8d44e3975c453b393bfb55
 msgid "配置示例文件 ``examples/train_lora/llama3_lora_eval.yaml`` 具体如下："
-msgstr ""
+msgstr "The configuration example file ``examples/train_lora/llama3_lora_eval.yaml`` is as follows:"
 
 #: ../../source/getting_started/eval.rst:35 948f8fdcd0a9406d976ace6310fa1887
 msgid "NLG 评估"
-msgstr ""
+msgstr "NLG Evaluation"
 
 #: ../../source/getting_started/eval.rst:37 69999651fa8840aba115c44f3b786cdf
 msgid ""
@@ -48,10 +48,12 @@ msgid ""
 "examples/extras/nlg_eval/llama3_lora_predict.yaml`` 来获得模型的 BLEU 和 ROUGE "
 "分数以评价模型生成质量。"
 msgstr ""
+"Additionally, you can obtain the model's BLEU and ROUGE scores to evaluate the model's generation quality using ``llamafactory-cli train "
+"examples/extras/nlg_eval/llama3_lora_predict.yaml``."
 
 #: ../../source/getting_started/eval.rst:39 24a8580830e0419fbb1a09d8cab0d824
 msgid "配置示例文件 ``examples/extras/nlg_eval/llama3_lora_predict.yaml`` 具体如下："
-msgstr ""
+msgstr "The configuration example file ``examples/extras/nlg_eval/llama3_lora_predict.yaml`` is as follows:"
 
 #: ../../source/getting_started/eval.rst:70 5d7130ac0ad74691b4618c8532dd4c44
 msgid ""
@@ -59,30 +61,32 @@ msgid ""
 "path_to_merged_model --dataset alpaca_en_demo`` 中指定模型、数据集以使用 vllm "
 "推理框架以取得更快的推理速度。"
 msgstr ""
+"Similarly, you can also use the vllm inference framework for faster inference speed by specifying the model and dataset in the command ``python scripts/vllm_infer.py --model_name_or_path "
+"path_to_merged_model --dataset alpaca_en_demo``."
 
 #: ../../source/getting_started/eval.rst:75 c32cc9c275c34b14866ad024e5647e38
 msgid "评估相关参数"
-msgstr ""
+msgstr "Evaluation-Related Arguments"
 
 #: ../../source/getting_started/eval.rst:77 4030ad7288e64cdba34e1ba5cf3e6fd1
 msgid "EvalArguments"
-msgstr ""
+msgstr "EvalArguments"
 
 #: ../../source/getting_started/eval.rst:81 9ca730aec72743d5b5a224b08df4ac84
 msgid "参数名称"
-msgstr ""
+msgstr "Parameter Name"
 
 #: ../../source/getting_started/eval.rst:82 784ba69f6810472caba5b415fed9fc08
 msgid "类型"
-msgstr ""
+msgstr "Type"
 
 #: ../../source/getting_started/eval.rst:83 89d2a82c536d4696963e3cd407521fd1
 msgid "介绍"
-msgstr ""
+msgstr "Description"
 
 #: ../../source/getting_started/eval.rst:84 5ee4f564b5b24c7098afb6581a9d6493
 msgid "task"
-msgstr ""
+msgstr "task"
 
 #: ../../source/getting_started/eval.rst:85
 #: ../../source/getting_started/eval.rst:88
@@ -92,74 +96,76 @@ msgstr ""
 #: 808467dde7c84ba29392a12ee120396b 932fa8cdb88b4d74a8ff2e9b8f42fecd
 #: c8b60700253341eaa0aafc7e595e3375 d6277f6160654e2692cf9500914d4ead
 msgid "str"
-msgstr ""
+msgstr "str"
 
 #: ../../source/getting_started/eval.rst:86 0fcb2106d424430580566267b3061d7d
 msgid "评估任务的名称，可选项有 mmlu_test, ceval_validation, cmmlu_test"
-msgstr ""
+msgstr "Name of the evaluation task. Options: mmlu_test, ceval_validation, cmmlu_test"
 
 #: ../../source/getting_started/eval.rst:87 f5c7eb4ff7414e43914dc6a571c27490
 msgid "task_dir"
-msgstr ""
+msgstr "task_dir"
 
 #: ../../source/getting_started/eval.rst:89 953e11ada72d40fd8a0d046f5a0169b9
 msgid "包含评估数据集的文件夹路径，默认值为 ``evaluation``。"
-msgstr ""
+msgstr "Path to the folder containing the evaluation dataset. Default: ``evaluation``."
 
 #: ../../source/getting_started/eval.rst:90 e42f196cbfe549e38ad330e97cb36e00
 msgid "batch_size"
-msgstr ""
+msgstr "batch_size"
 
 #: ../../source/getting_started/eval.rst:91
 #: ../../source/getting_started/eval.rst:94
 #: ../../source/getting_started/eval.rst:100 10d38d0c5a0647be8b52e3806c896b43
 #: 66a7cdd8511b483ba1c059c53d3c0810 ac30faf5668a4124930597b7ebfe7356
 msgid "int"
-msgstr ""
+msgstr "int"
 
 #: ../../source/getting_started/eval.rst:92 3fc669389ce04f92a00414fd61d2e377
 msgid "每个GPU使用的批量大小，默认值为 ``4``。"
-msgstr ""
+msgstr "Batch size per GPU. Default: ``4``."
 
 #: ../../source/getting_started/eval.rst:93 ea3e4b2ceabd48288e0350292c92c881
 msgid "seed"
-msgstr ""
+msgstr "seed"
 
 #: ../../source/getting_started/eval.rst:95 483c486bd37a494f878aed9eca69f084
 msgid "用于数据加载器的随机种子，默认值为 ``42``。"
-msgstr ""
+msgstr "Random seed for data loader. Default: ``42``."
 
 #: ../../source/getting_started/eval.rst:96 057ebe3531a241bab991a7eb23dde6ac
 msgid "lang"
-msgstr ""
+msgstr "lang"
 
 #: ../../source/getting_started/eval.rst:98 cc5db96c2f2a4ec09c84525718dc51a5
 msgid "评估使用的语言，可选值为 ``en``、 ``zh``。默认值为 ``en``。"
-msgstr ""
+msgstr "Language for evaluation. Options: ``en``, ``zh``. Default: ``en``."
 
 #: ../../source/getting_started/eval.rst:99 fe9763cb5ead4bddb46422fae93ae2f0
 msgid "n_shot"
-msgstr ""
+msgstr "n_shot"
 
 #: ../../source/getting_started/eval.rst:101 3d6048b9934c4375a91fe91e15847857
 msgid "few-shot 的示例数量，默认值为 ``5``。"
-msgstr ""
+msgstr "Number of few-shot examples. Default: ``5``."
 
 #: ../../source/getting_started/eval.rst:102 c315112e947141149372558e116ce197
 msgid "save_dir"
-msgstr ""
+msgstr "save_dir"
 
 #: ../../source/getting_started/eval.rst:104 ea808335b6394350b6fbbd851e06e504
 msgid "保存评估结果的路径，默认值为 ``None``。 如果该路径已经存在则会抛出错误。"
-msgstr ""
+msgstr "Path to save evaluation results. Default: ``None``. An error will be thrown if this path already exists."
 
 #: ../../source/getting_started/eval.rst:105 08cc9c6f379c4ac9995781eea312381e
 msgid "download_mode"
-msgstr ""
+msgstr "download_mode"
 
 #: ../../source/getting_started/eval.rst:107 6b1280f690c443fb85e6c6c13003864b
 msgid ""
 "评估数据集的下载模式，默认值为 "
 "``DownloadMode.REUSE_DATASET_IF_EXISTS``。如果数据集已经存在则重复使用，否则则下载。"
 msgstr ""
+"Download mode for the evaluation dataset. Default: "
+"``DownloadMode.REUSE_DATASET_IF_EXISTS``. Reuses the dataset if it already exists, otherwise downloads it."
 

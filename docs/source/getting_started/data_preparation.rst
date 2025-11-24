@@ -27,7 +27,7 @@ Alpaca
 指令监督微调数据集
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**样例数据集**： `指令监督微调样例数据集 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/alpaca_zh_demo.json/>`_
+**样例数据集**： `指令监督微调样例数据集 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/alpaca_zh_demo.json/>`__
 
 指令监督微调(Instruct Tuning)通过让模型学习详细的指令以及对应的回答来优化模型在特定指令下的表现。
 
@@ -44,8 +44,7 @@ Alpaca
   },
 
 
-在进行指令监督微调时， ``instruction`` 列对应的内容会与 ``input`` 列对应的内容拼接后作为最终的人类输入，即人类输入为 ``instruction\ninput``。而 ``output`` 列对应的内容为模型回答。
-在上面的例子中，人类的最终输入是：
+在进行指令监督微调时，``instruction`` 列对应的内容会与 ``input`` 列对应的内容拼接后作为最终的人类输入，即人类输入为``instruction\ninput``。而 ``output`` 列对应的内容为模型回答。在上面的例子中，人类的最终输入是：
 
 .. code-block:: text
 
@@ -108,7 +107,7 @@ Alpaca
 
 .. code-block:: json
 
-  "数据集名称": {
+  "dataset_name": {
     "file_name": "data.json",
     "columns": {
       "prompt": "instruction",
@@ -126,8 +125,8 @@ Alpaca
 
 **样例数据集**： `预训练样例数据集 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/c4_demo.json/>`_
 
-
 大语言模型通过学习未被标记的文本进行预训练，从而学习语言的表征。通常，预训练数据集从互联网上获得，因为互联网上提供了大量的不同领域的文本信息，有助于提升模型的泛化能力。
+
 预训练数据集文本描述格式如下：
 
 .. code-block:: json
@@ -143,7 +142,7 @@ Alpaca
 
 .. code-block:: json
 
-  "数据集名称": {
+  "dataset_name": {
     "file_name": "data.json",
     "columns": {
       "prompt": "text"
@@ -152,15 +151,13 @@ Alpaca
 
 
 .. _偏好数据集-1:
+
 偏好数据集
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
 偏好数据集用于奖励模型训练、DPO 训练和 ORPO 训练。对于系统指令和人类输入，偏好数据集给出了一个更优的回答和一个更差的回答。
 
-`一些研究 <https://openai.com/index/instruction-following/>`_ 表明通过让模型学习“什么更好”可以使得模型更加迎合人类的需求。
-甚至可以使得参数相对较少的模型的表现优于参数更多的模型。
-
+`一些研究 <https://openai.com/index/instruction-following/>`_ 表明通过让模型学习“什么更好”可以使得模型更加迎合人类的需求。甚至可以使得参数相对较少的模型的表现优于参数更多的模型。
 
 偏好数据集需要在 ``chosen`` 列中提供更优的回答，并在 ``rejected`` 列中提供更差的回答，在一轮问答中其格式如下：
 
@@ -179,7 +176,7 @@ Alpaca
 
 .. code-block:: json
 
-  "数据集名称": {
+  "dataset_name": {
     "file_name": "data.json",
     "ranking": true,
     "columns": {
@@ -191,10 +188,12 @@ Alpaca
   }
 
 .. _KTO数据集:
+
 KTO 数据集
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 KTO数据集与偏好数据集类似，但不同于给出一个更优的回答和一个更差的回答，KTO数据集对每一轮问答只给出一个 true/false 的 ``label``。
+
 除了 ``instruction`` 以及 ``input`` 组成的人类最终输入和模型回答 ``output`` ，KTO 数据集还需要额外添加一个 ``kto_tag`` 列（true/false）来表示人类的反馈。
 
 在一轮问答中其格式如下：
@@ -213,7 +212,7 @@ KTO数据集与偏好数据集类似，但不同于给出一个更优的回答�
 
 .. code-block:: json
 
-  "数据集名称": {
+  "dataset_name": {
     "file_name": "data.json",
     "columns": {
       "prompt": "instruction",
@@ -231,14 +230,12 @@ KTO数据集与偏好数据集类似，但不同于给出一个更优的回答�
 
 目前我们支持 :ref:`多模态图像数据集 <多模态图像数据集>`、 :ref:`视频数据集 <多模态视频数据集>` 以及 :ref:`音频数据集 <多模态音频数据集>` 的输入。
 
-
-
-
 .. _多模态图像数据集:
+
 图像数据集
 """"""""""""""""""""""""""""
-多模态图像数据集需要额外添加一个 ``images`` 列，包含输入图像的路径。
-注意图片的数量必须与文本中所有 <image> 标记的数量严格一致。
+
+多模态图像数据集需要额外添加一个 ``images`` 列，包含输入图像的路径。注意图片的数量必须与文本中所有 <image> 标记的数量严格一致。
 
 
 .. code-block:: json
@@ -258,7 +255,7 @@ KTO数据集与偏好数据集类似，但不同于给出一个更优的回答�
 
 .. code-block:: json
 
-  "数据集名称": {
+  "dataset_name": {
     "file_name": "data.json",
     "columns": {
       "prompt": "instruction",
@@ -270,10 +267,11 @@ KTO数据集与偏好数据集类似，但不同于给出一个更优的回答�
 
 
 .. _多模态视频数据集:
+
 视频数据集
 """""""""""""""""""""""""
-多模态视频数据集需要额外添加一个 ``videos`` 列，包含输入视频的路径。
-注意视频的数量必须与文本中所有 <video> 标记的数量严格一致。
+
+多模态视频数据集需要额外添加一个 ``videos`` 列，包含输入视频的路径。注意视频的数量必须与文本中所有 <video> 标记的数量严格一致。
 
 .. code-block:: json
 
@@ -292,7 +290,7 @@ KTO数据集与偏好数据集类似，但不同于给出一个更优的回答�
 
 .. code-block:: json
 
-  "数据集名称": {
+  "dataset_name": {
     "file_name": "data.json",
     "columns": {
       "prompt": "instruction",
@@ -304,11 +302,11 @@ KTO数据集与偏好数据集类似，但不同于给出一个更优的回答�
 
 
 .. _多模态音频数据集:
+
 音频数据集
 """"""""""""""""""""""""""
-多模态音频数据集需要额外添加一个 ``audio`` 列，包含输入图像的路径。
-注意音频的数量必须与文本中所有 <audio> 标记的数量严格一致。
 
+多模态音频数据集需要额外添加一个 ``audio`` 列，包含输入图像的路径。注意音频的数量必须与文本中所有 <audio> 标记的数量严格一致。
 
 .. code-block:: json
 
@@ -327,7 +325,7 @@ KTO数据集与偏好数据集类似，但不同于给出一个更优的回答�
 
 .. code-block:: json
 
-  "数据集名称": {
+  "dataset_name": {
     "file_name": "data.json",
     "columns": {
       "prompt": "instruction",
@@ -352,20 +350,19 @@ ShareGPT
 * :ref:`OpenAI格式 <OpenAI格式>`
 
 .. note::
-  * ShareGPT 格式中的 KTO数据集(`样例 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/kto_en_demo.json/>`_)和多模态数据集(`样例 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/mllm_demo.json/>`_) 与 Alpaca 格式的类似。
+
+  * ShareGPT 格式中的 KTO 数据集（`样例 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/kto_en_demo.json/>`__）和多模态数据集（`样例 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/mllm_demo.json/>`__）与 Alpaca 格式的类似。
   * 预训练数据集不支持 ShareGPT 格式。
 
-
-
 .. _指令监督微调数据集-2:
+
 指令监督微调数据集
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-**样例数据集**： `指令监督微调样例数据集 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/glaive_toolcall_zh_demo.json/>`_
+**样例数据集**： `指令监督微调样例数据集 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/glaive_toolcall_zh_demo.json/>`__
 
-相比 ``alpaca`` 格式的数据集， ``sharegpt`` 格式支持 **更多** 的角色种类，例如 human、gpt、observation、function 等等。它们构成一个对象列表呈现在 ``conversations`` 列中。
-下面是 ``sharegpt`` 格式的一个例子：
+相比 ``alpaca`` 格式的数据集， ``sharegpt`` 格式支持 **更多** 的角色种类，例如 human、gpt、observation、function 等等。它们构成一个对象列表呈现在 ``conversations`` 列中。下面是 ``sharegpt`` 格式的一个例子：
 
 .. code-block:: json
 
@@ -422,10 +419,9 @@ ShareGPT
 
 对于上述格式的数据， ``dataset_info.json`` 中的 **数据集描述** 应为：
 
-
 .. code-block:: json
 
-  "数据集名称": {
+  "dataset_name": {
     "file_name": "data.json",
     "formatting": "sharegpt",
     "columns": {
@@ -437,13 +433,13 @@ ShareGPT
 
 
 .. _偏好数据集-2:
+
 偏好数据集
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **样例数据集**： `偏好数据样例数据集 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dpo_zh_demo.json/>`_
 
-Sharegpt 格式的偏好数据集同样需要在 ``chosen`` 列中提供更优的消息，并在 ``rejected`` 列中提供更差的消息。
-下面是一个例子：
+Sharegpt 格式的偏好数据集同样需要在 ``chosen`` 列中提供更优的消息，并在 ``rejected`` 列中提供更差的消息。下面是一个例子：
 
 .. code-block:: json
 
@@ -499,7 +495,7 @@ Sharegpt 格式的偏好数据集同样需要在 ``chosen`` 列中提供更优�
 
 .. code-block:: json
 
-  "数据集名称": {
+  "dataset_name": {
     "file_name": "data.json",
     "formatting": "sharegpt",
     "ranking": true,
@@ -511,6 +507,7 @@ Sharegpt 格式的偏好数据集同样需要在 ``chosen`` 列中提供更优�
   }
 
 .. _OpenAI格式:
+
 OpenAI格式
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -543,7 +540,7 @@ OpenAI 格式仅仅是 ``sharegpt`` 格式的一种特殊情况，其中第一�
 
 .. code-block:: json
 
-  "数据集名称": {
+  "dataset_name": {
     "file_name": "data.json",
     "formatting": "sharegpt",
     "columns": {

@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, LlamaFactory team.
+# Copyright (C) 2025, LlamaFactory team.
 # This file is distributed under the same license as the LLaMA Factory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -7,14 +7,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory \n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-03-05 01:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,7 +26,7 @@ msgstr "Inference"
 #: ../../source/getting_started/inference.rst:4
 #: d88fc64d59e7426fbed12621e54af563
 msgid "LLaMA-Factory 支持多种推理方式。"
-msgstr ""
+msgstr "LLaMA-Factory supports multiple inference methods."
 
 #: ../../source/getting_started/inference.rst:6
 #: ae16a772e0f64983bbbbe03cf22a28f6
@@ -38,6 +36,10 @@ msgid ""
 "``model_name_or_path`` 和 ``template`` ，并根据是否是微调模型指定 "
 "``adapter_name_or_path`` 和 ``finetuning_type``。"
 msgstr ""
+"You can use ``llamafactory-cli chat inference_config.yaml`` or ``llamafactory-"
+"cli webchat inference_config.yaml`` for inference and conversation with the model. During conversation, the configuration file only needs to specify the original model "
+"``model_name_or_path`` and ``template``, and specify "
+"``adapter_name_or_path`` and ``finetuning_type`` depending on whether it is a fine-tuned model."
 
 #: ../../source/getting_started/inference.rst:8
 #: d09e13d0447a4a41808092b7de667a83
@@ -45,6 +47,8 @@ msgid ""
 "如果您希望向模型输入大量数据集并保存推理结果，您可以启动 :ref:`vllm <vllm>` "
 "推理引擎对大量数据集进行快速的批量推理。您也可以通过 :ref:`部署 api <api>` 服务的形式通过 api 调用来进行批量推理。"
 msgstr ""
+"If you want to input a large dataset to the model and save the inference results, you can start the :ref:`vllm <vllm>` "
+"inference engine for fast batch inference on large datasets. You can also perform batch inference through API calls by :ref:`deploying an api <api>` service."
 
 #: ../../source/getting_started/inference.rst:10
 #: ff76711b7d274958ade05c7003beb6dc
@@ -52,16 +56,18 @@ msgid ""
 "默认情况下，模型推理将使用 Huggingface 引擎。 您也可以指定 ``infer_backend: vllm`` 以使用 vllm "
 "推理引擎以获得更快的推理速度。"
 msgstr ""
+"By default, model inference will use the Huggingface engine. You can also specify ``infer_backend: vllm`` to use the vllm "
+"inference engine for faster inference speed."
 
 #: ../../source/getting_started/inference.rst:14
 #: d32150b85b404923876a2e306461048a
 msgid "使用任何方式推理时，模型 ``model_name_or_path`` 需要存在且与 ``template`` 相对应。"
-msgstr ""
+msgstr "When using any inference method, the model ``model_name_or_path`` must exist and correspond to the ``template``."
 
 #: ../../source/getting_started/inference.rst:17
 #: 13ff14e7b6464b05b0e0ebe85924ec27
 msgid "原始模型推理配置"
-msgstr ""
+msgstr "Original Model Inference Configuration"
 
 #: ../../source/getting_started/inference.rst:18
 #: c1d56b39d5144a02a61ab43085e0cb17
@@ -69,11 +75,13 @@ msgid ""
 "对于原始模型推理， ``inference_config.yaml`` 中 只需指定原始模型 ``model_name_or_path`` 和 "
 "``template`` 即可。"
 msgstr ""
+"For original model inference, only the original model ``model_name_or_path`` and "
+"``template`` need to be specified in ``inference_config.yaml``."
 
 #: ../../source/getting_started/inference.rst:29
 #: 0546f1a84ad44a8f90f34be64d343c17
 msgid "微调模型推理配置"
-msgstr ""
+msgstr "Fine-tuned Model Inference Configuration"
 
 #: ../../source/getting_started/inference.rst:30
 #: f5d7d6defa7b4e6eac1382db8155ef7f
@@ -81,56 +89,58 @@ msgid ""
 "对于微调模型推理，除原始模型和模板外，还需要指定适配器路径 ``adapter_name_or_path`` 和微调类型 "
 "``finetuning_type``。"
 msgstr ""
+"For fine-tuned model inference, in addition to the original model and template, you also need to specify the adapter path ``adapter_name_or_path`` and the fine-tuning type "
+"``finetuning_type``."
 
 #: ../../source/getting_started/inference.rst:43
 #: d5be70295ef4436abaaa000ec894c747
 msgid "多模态模型"
-msgstr ""
+msgstr "Multimodal Model"
 
 #: ../../source/getting_started/inference.rst:45
 #: c428b5b0ec3f44ce8661a4cb9ec34e6c
 msgid "对于多模态模型，您可以运行以下指令进行推理。"
-msgstr ""
+msgstr "For multimodal models, you can run the following command for inference."
 
 #: ../../source/getting_started/inference.rst:51
 #: 75b4747a5d534edaaeeca36bc8d0e265
 msgid "``examples/inference/llava1_5.yaml`` 的配置示例如下："
-msgstr ""
+msgstr "The configuration example of ``examples/inference/llava1_5.yaml`` is as follows:"
 
 #: ../../source/getting_started/inference.rst:64
 #: ed1288dcd8324a2eb95d9ad5db469c71
 msgid "批量推理"
-msgstr ""
+msgstr "Batch Inference"
 
 #: ../../source/getting_started/inference.rst:70
 #: 12c21cf3a2034bba8b3a69f71a98ab6f
 msgid "数据集"
-msgstr ""
+msgstr "Dataset"
 
 #: ../../source/getting_started/inference.rst:71
 #: 2d847f26c5d54c589df806602c89f297
 msgid "您可以通过以下指令启动 vllm 推理引擎并使用数据集进行批量推理："
-msgstr ""
+msgstr "You can start the vllm inference engine and perform batch inference using a dataset with the following command:"
 
 #: ../../source/getting_started/inference.rst:81
 #: 597ecf4109844fe1b4dd12f866312fcc
 msgid "api"
-msgstr ""
+msgstr "api"
 
 #: ../../source/getting_started/inference.rst:82
 #: 5999b17503d04b989ad0d26e15a253e5
 msgid "如果您需要使用 api 进行批量推理，您只需指定模型、适配器（可选）、模板、微调方式等信息。"
-msgstr ""
+msgstr "If you need to use API for batch inference, you only need to specify the model, adapter (optional), template, fine-tuning method, and other information."
 
 #: ../../source/getting_started/inference.rst:84
 #: 4868d67e887e415fb3651fc963225951
 msgid "下面是一个配置文件的示例："
-msgstr ""
+msgstr "Below is an example of a configuration file:"
 
 #: ../../source/getting_started/inference.rst:95
 #: 312f0bc687384921ba10fa65b7e486d4
 msgid "下面是一个启动并调用 api 服务的示例："
-msgstr ""
+msgstr "Below is an example of starting and calling the API service:"
 
 #: ../../source/getting_started/inference.rst:97
 #: 295a2c7fab534b00b3452853c206d007
@@ -138,4 +148,6 @@ msgid ""
 "您可以使用 ``API_PORT=8000 CUDA_VISIBLE_DEVICES=0 llamafactory-cli api "
 "examples/inference/llama3_lora_sft.yaml`` 启动 api 服务并运行以下示例程序进行调用："
 msgstr ""
+"You can start the API service using ``API_PORT=8000 CUDA_VISIBLE_DEVICES=0 llamafactory-cli api "
+"examples/inference/llama3_lora_sft.yaml`` and run the following example program to make API calls:"
 

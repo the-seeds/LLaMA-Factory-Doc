@@ -12,6 +12,7 @@ LlamaBoard 是指 WebUI 中自带的Loss曲线看板，可以方便的查看训�
 如果你想使用 LlamaBoard，只需使用 WebUI 启动训练即可。
 
 .. _SwanLab:
+
 SwanLab
 --------------------------
 
@@ -35,6 +36,7 @@ SwanLab 是一个开源的训练跟踪与可视化工具，云端和离线均可
 
 
 .. _TensorBoard:
+
 TensorBoard
 --------------------------
 
@@ -71,6 +73,7 @@ Wandb（Weights and Biases）是一个云端的训练跟踪工具，可以用于
 
 
 .. _MLflow:
+
 MLflow
 --------------------------
 

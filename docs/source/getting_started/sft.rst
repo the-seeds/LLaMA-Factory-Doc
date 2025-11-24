@@ -3,8 +3,6 @@
 SFT 训练
 ==============
 
-
-
 命令行
 -------------------------
 
@@ -13,7 +11,6 @@ SFT 训练
 .. code-block:: bash
 
     llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
-
 
 也可以通过追加参数更新 yaml 文件中的参数:
 
@@ -70,6 +67,7 @@ SFT 训练
 
 
 .. note:: 
+
     模型 ``model_name_or_path`` 、数据集 ``dataset`` 需要存在且与 ``template`` 相对应。
 
 

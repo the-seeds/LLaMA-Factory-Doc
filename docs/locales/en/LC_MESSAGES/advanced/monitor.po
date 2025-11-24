@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, LlamaFactory team.
+# Copyright (C) 2025, LlamaFactory team.
 # This file is distributed under the same license as the LLaMA Factory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -7,14 +7,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory \n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-03-05 01:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,86 +28,91 @@ msgid ""
 ":ref:`SwanLab <SwanLab>`、:ref:`TensorBoard <TensorBoard>` 、 :ref:`Wandb "
 "<Wandb>` 、 :ref:`MLflow <MLflow>` 。"
 msgstr ""
+"LLaMA-Factory supports multiple training visualization tools, including: :ref:`LlamaBoard <LlamaBoard>`, "
+":ref:`SwanLab <SwanLab>`, :ref:`TensorBoard <TensorBoard>`, :ref:`Wandb "
+"<Wandb>`, :ref:`MLflow <MLflow>`."
 
 #: ../../source/advanced/monitor.rst:7 386608f36c794783879e55a29f221f7a
 msgid "LlamaBoard"
-msgstr ""
+msgstr "LlamaBoard"
 
 #: ../../source/advanced/monitor.rst:10 e94b7f1daa0f4b0490047825d61d14a8
 msgid "LlamaBoard 是指 WebUI 中自带的Loss曲线看板，可以方便的查看训练过程中的Loss变化情况。"
-msgstr ""
+msgstr "LlamaBoard refers to the built-in Loss curve dashboard in the WebUI, which allows convenient viewing of Loss changes during the training process."
 
 #: ../../source/advanced/monitor.rst:12 6ad26af78d5646ce83587f34c519411b
 msgid "如果你想使用 LlamaBoard，只需使用 WebUI 启动训练即可。"
-msgstr ""
+msgstr "If you want to use LlamaBoard, simply start training using the WebUI."
 
 #: ../../source/advanced/monitor.rst:16 66fdd3efef784c52b7c2d9d3aba7f507
 msgid "SwanLab"
-msgstr ""
+msgstr "SwanLab"
 
 #: ../../source/advanced/monitor.rst:18 a5023532e42f48f8bb87aa4df655092b
 msgid ""
 "SwanLab "
 "是一个开源的训练跟踪与可视化工具，云端和离线均可使用，支持超参数记录、指标记录、多实验对比、硬件监控、实验环境记录等功能，可以有效地帮助开发者管理实验。"
 msgstr ""
+"SwanLab "
+"is an open-source training tracking and visualization tool that can be used both online and offline, supporting features such as hyperparameter logging, metric recording, multi-experiment comparison, hardware monitoring, and experiment environment recording, effectively helping developers manage experiments."
 
 #: ../../source/advanced/monitor.rst:20 c11b276db8a94100a043a010c8ebe657
 msgid "如果你想使用 SwanLab，请在启动训练时在训练配置文件中添加以下参数："
-msgstr ""
+msgstr "If you want to use SwanLab, please add the following parameters to the training configuration file when starting training:"
 
 #: ../../source/advanced/monitor.rst:28 fdb8cae798bc4ac0b40085bd3bdb417d
 msgid "或者，在WebUI的 SwanLab 模块中开启 SwanLab 记录："
-msgstr ""
+msgstr "Alternatively, enable SwanLab recording in the SwanLab module of the WebUI:"
 
 #: ../../source/advanced/monitor.rst:32 c84b25f8b14942f59672828c97574546
 msgid "可视化样例："
-msgstr ""
+msgstr "Visualization example:"
 
 #: ../../source/advanced/monitor.rst:39 b4970a4b979f4134931c44fc268cca6a
 msgid "TensorBoard"
-msgstr ""
+msgstr "TensorBoard"
 
 #: ../../source/advanced/monitor.rst:41 ee0eb161237f4ba6ab7d4823c3e46bb6
 msgid "TensorBoard 是 TensorFlow 开源的离线训练跟踪工具，可以用于记录与可视化训练过程。"
-msgstr ""
+msgstr "TensorBoard is an open-source offline training tracking tool from TensorFlow, which can be used for recording and visualizing the training process."
 
 #: ../../source/advanced/monitor.rst:43 1107bd948c1b484983120714520c1d9d
 msgid "如果你想使用 TensorBoard，请在启动训练时在训练配置文件中添加以下参数："
-msgstr ""
+msgstr "If you want to use TensorBoard, please add the following parameters to the training configuration file when starting training:"
 
 #: ../../source/advanced/monitor.rst:49 8cca0e459b2e46df9d51fac3d9488cd0
 msgid "或者，在WebUI的 其他参数设置 模块中的 启用外部记录面板 中开启 TensorBoard 记录："
-msgstr ""
+msgstr "Alternatively, enable TensorBoard recording in the Enable External Logging Panel under the Other Parameter Settings module of the WebUI:"
 
 #: ../../source/advanced/monitor.rst:57 66136ff7f5b648f785dd30d67b2ea2cd
 msgid "Wandb"
-msgstr ""
+msgstr "Wandb"
 
 #: ../../source/advanced/monitor.rst:59 7f757b792b73472296f91d08f8b1a3e3
 msgid "Wandb（Weights and Biases）是一个云端的训练跟踪工具，可以用于记录与可视化训练过程。"
-msgstr ""
+msgstr "Wandb (Weights and Biases) is a cloud-based training tracking tool that can be used for recording and visualizing the training process."
 
 #: ../../source/advanced/monitor.rst:61 a3d37eff139e44079ac906b8bf89b5e6
 msgid "如果你想使用 Wandb，请在启动训练时在训练配置文件中添加以下参数："
-msgstr ""
+msgstr "If you want to use Wandb, please add the following parameters to the training configuration file when starting training:"
 
 #: ../../source/advanced/monitor.rst:68 c1c21c8a5b04473dae9eea9708de1d98
 msgid "或者，在WebUI的 其他参数设置 模块中的 启用外部记录面板 中开启 Wandb 记录："
-msgstr ""
+msgstr "Alternatively, enable Wandb recording in the Enable External Logging Panel under the Other Parameter Settings module of the WebUI:"
 
 #: ../../source/advanced/monitor.rst:75 7b83868056db4bf7bd25cedbca1b7e93
 msgid "MLflow"
-msgstr ""
+msgstr "MLflow"
 
 #: ../../source/advanced/monitor.rst:77 c669ee68f19148a58683aa80101a59dc
 msgid "MLflow 是Databricks开源的离线训练跟踪工具，用于记录与可视化训练过程。"
-msgstr ""
+msgstr "MLflow is an open-source offline training tracking tool from Databricks, used for recording and visualizing the training process."
 
 #: ../../source/advanced/monitor.rst:79 40aa91bc0a274d1eae763bcd7a83ab97
 msgid "如果你想使用 MLflow，请在启动训练时在训练配置文件中添加以下参数："
-msgstr ""
+msgstr "If you want to use MLflow, please add the following parameters to the training configuration file when starting training:"
 
 #: ../../source/advanced/monitor.rst:85 273926e7298847ca9ab8606001c81fdb
 msgid "或者，在WebUI的 其他参数设置 模块中的 启用外部记录面板 中开启 MLflow 记录："
-msgstr ""
+msgstr "Alternatively, enable MLflow recording in the Enable External Logging Panel under the Other Parameter Settings module of the WebUI:"
 
