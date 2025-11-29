@@ -376,7 +376,7 @@ if device_type in self._registry[kernel_type]:
 
 #### 1. 创建 Kernel 实现文件
 
-在相应的子目录中创建新的 kernel 实现文件，例如 `mlp/cuda_swiglu.py`：
+在相应的子目录中创建新的 kernel 实现文件，例如 `mlp/cuda_swiglu.py`，或者在已有的kernel 实现文件中新增一个Kernel类（此时不需要执行步骤2）：
 
 ```python
 import types
