@@ -192,7 +192,9 @@ class MetaKernel(ABC, metaclass=AutoRegisterKernelMeta):
 
 ### **_ensure_kernels_loaded**
 
-`_ensure_kernels_loaded` 仅被用于触发所有已定义 kernel 的自动注册，本接口为受保护接口，不应当在外部调用，也无需任何入参。在新增一个kernel module 时，应当在 `kernel_modules` 列表中增加该 module 的路径该（注意：仅需 python module 层级的增减需要修改 `kernel_modules`，kernel class 级的增减无需修改 ）。接口的实现如下：
+`_ensure_kernels_loaded` 仅被用于触发所有已定义 kernel 的自动注册行为，本接口为受保护接口，不应当在外部调用，也无需任何入参。在新增一个 kernel module 时，应当在 `kernel_modules` 列表中增加该 module 的路径（注意：仅需 python module 层级的增减需要修改 `kernel_modules`，kernel class 层级的增减无需修改 ）。
+
+该接口的实现如下：
 
 ```python
 def _ensure_kernels_loaded() -> None:
