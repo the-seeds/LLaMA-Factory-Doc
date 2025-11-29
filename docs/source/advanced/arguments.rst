@@ -409,19 +409,8 @@ GaLore
      - False
    * - dataset_dir
      - Union[str, Dict[str, Any]]
-     - 存储数据集的文件夹路径，可以是字符串或字典。  
-       类型：str 或 dict（需符合 `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_ 的格式）
-        - 当为字符串时，表示数据集目录的路径，例如：`data <https://github.com/hiyouga/LLaMA-Factory/tree/main/data>`_ 。
-        - 当为字典时，将覆盖默认从本地 `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_ 加载的行为。应具有以下结构：
-
-         .. code-block:: json
-
-            {
-              "dataset_name": {
-                "file_name": "your_file_name"
-              }
-            }
-     - "data"
+     - 存储数据集的文件夹路径，可以是字符串或字典。当为字符串时，表示数据集目录的路径，例如 `data <https://github.com/hiyouga/LLaMA-Factory/tree/main/data>`_ ；当为字典时，将覆盖默认从本地 `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_ 加载的行为。
+     - data
    * - media_dir
      - Optional[str]
      - 存储图像、视频或音频的文件夹路径。如果未指定，默认为 dataset_dir。

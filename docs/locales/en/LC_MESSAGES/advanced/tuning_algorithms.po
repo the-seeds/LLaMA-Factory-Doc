@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, LlamaFactory team.
+# Copyright (C) 2025, LlamaFactory team.
 # This file is distributed under the same license as the LLaMA Factory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -7,14 +7,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory \n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-03-05 01:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,7 +20,7 @@ msgstr ""
 
 #: ../../source/advanced/adapters.rst:4 4f81154f5df146e892b2c66db469770b
 msgid "调优算法"
-msgstr "Adapters"
+msgstr "Tuning algorithms"
 
 #: ../../source/advanced/adapters.rst:6 dbdce8a639e94307af3ff627763ab812
 msgid ""
@@ -30,40 +28,45 @@ msgid ""
 ":ref:`Freeze <Freeze>` 、 :ref:`LoRA <LoRA>` 、 :ref:`Galore <Galore>` 、 "
 ":ref:`BAdam <BAdam>` 。"
 msgstr ""
+"LLaMA-Factory supports multiple fine-tuning algorithms, including: :ref:`Full Parameter Fine-tuning <full>`, "
+":ref:`Freeze <Freeze>`, :ref:`LoRA <LoRA>`, :ref:`Galore <Galore>`, "
+":ref:`BAdam <BAdam>`."
 
 #: ../../source/advanced/adapters.rst:11 d759ed5cc31441a4b968bad14f467a29
 msgid "Full Parameter Fine-tuning"
-msgstr ""
+msgstr "Full Parameter Fine-tuning"
 
 #: ../../source/advanced/adapters.rst:12 b404c1ee72e54e728cd9ba0c75d43522
 msgid "全参微调指的是在训练过程中对于预训练模型的所有权重都进行更新，但其对显存的要求是巨大的。"
-msgstr ""
+msgstr "Full parameter fine-tuning refers to updating all weights of the pre-trained model during training, but it requires a huge amount of memory."
 
 #: ../../source/advanced/adapters.rst:16 fcef6bbf27a1438bad407ece4656930a
 msgid "如果您需要进行全参微调，请将 ``finetuning_type`` 设置为 ``full`` 。 下面是一个例子："
-msgstr ""
+msgstr "If you need to perform full parameter fine-tuning, please set ``finetuning_type`` to ``full``. Here is an example:"
 
 #: ../../source/advanced/adapters.rst:31 723cc3447cb84291b4672d007920e852
 msgid "Freeze"
-msgstr ""
+msgstr "Freeze"
 
 #: ../../source/advanced/adapters.rst:33 330d5772d432415398fd2aef5e3bac1c
 msgid "Freeze(冻结微调)指的是在训练过程中只对模型的小部分权重进行更新，这样可以降低对显存的要求。"
-msgstr ""
+msgstr "Freeze (Freeze Fine-tuning) refers to updating only a small portion of the model's weights during training, which can reduce memory requirements."
 
 #: ../../source/advanced/adapters.rst:37 40b56f81a26a40c5bd23ab2352cb3bd3
 msgid ""
 "如果您需要进行冻结微调，请将 ``finetuning_type`` 设置为 ``freeze`` 并且设置相关参数, 例如冻结的层数 "
 "``freeze_trainable_layers`` 、可训练的模块名称 ``freeze_trainable_modules`` 等。"
 msgstr ""
+"If you need to perform freeze fine-tuning, please set ``finetuning_type`` to ``freeze`` and set related parameters, such as the number of frozen layers "
+"``freeze_trainable_layers``, trainable module names ``freeze_trainable_modules``, etc."
 
 #: ../../source/advanced/adapters.rst:42 ec3cefb951944222bb0f0343f86c87f6
 msgid "以下是一个例子："
-msgstr ""
+msgstr "Here is an example:"
 
 #: ../../source/advanced/adapters.rst:55 6eb37c5083cc4c8db90e12f8794cd434
 msgid "FreezeArguments"
-msgstr ""
+msgstr "FreezeArguments"
 
 #: ../../source/advanced/adapters.rst:59 ../../source/advanced/adapters.rst:97
 #: ../../source/advanced/adapters.rst:205
@@ -71,7 +74,7 @@ msgstr ""
 #: 8a7d98d5f74240df835924f5b99805e2 dde513580574466389bdc9ed34aaf377
 #: eff62efb90dd4360894816f3be8371d7
 msgid "参数名称"
-msgstr ""
+msgstr "Parameter Name"
 
 #: ../../source/advanced/adapters.rst:60 ../../source/advanced/adapters.rst:98
 #: ../../source/advanced/adapters.rst:206
@@ -79,7 +82,7 @@ msgstr ""
 #: 608977b2088b47178fac15d6ec2538c5 d2145e40b2c34e01a462cc680f2a0d96
 #: f2edd958d3cf455dba4a2162485f6ae9
 msgid "类型"
-msgstr ""
+msgstr "Type"
 
 #: ../../source/advanced/adapters.rst:61 ../../source/advanced/adapters.rst:99
 #: ../../source/advanced/adapters.rst:207
@@ -87,11 +90,11 @@ msgstr ""
 #: 7325d70276da45febf941b81cdd98203 b72ca35d03874ccaa1169288fdab2ea0
 #: fdb5ffbc6403429d89450a2b513cb85a
 msgid "介绍"
-msgstr ""
+msgstr "Description"
 
 #: ../../source/advanced/adapters.rst:62 f9395f9ea8cd418cbd308b484df3a8a5
 msgid "freeze_trainable_layers"
-msgstr ""
+msgstr "freeze_trainable_layers"
 
 #: ../../source/advanced/adapters.rst:63 ../../source/advanced/adapters.rst:104
 #: ../../source/advanced/adapters.rst:110
@@ -103,15 +106,15 @@ msgstr ""
 #: 80c5351f70934793b0badb5182b84bc7 941c385d83b948b58342bd09da35d946
 #: b9694f2c1db648e5b06a6263fa5becb5 e8a1459d7f8d4df288077192e4a1431c
 msgid "int"
-msgstr ""
+msgstr "int"
 
 #: ../../source/advanced/adapters.rst:64 d1207ee5f7174979881807cb35725f5a
 msgid "可训练层的数量。正数表示最后 n 层被设置为可训练的，负数表示前 n 层被设置为可训练的。默认值为 ``2``"
-msgstr ""
+msgstr "The number of trainable layers. A positive number indicates the last n layers are set as trainable, a negative number indicates the first n layers are set as trainable. Default value is ``2``"
 
 #: ../../source/advanced/adapters.rst:65 634afa715bff4ec49860bb4020374687
 msgid "freeze_trainable_modules"
-msgstr ""
+msgstr "freeze_trainable_modules"
 
 #: ../../source/advanced/adapters.rst:66 ../../source/advanced/adapters.rst:69
 #: ../../source/advanced/adapters.rst:113
@@ -119,55 +122,55 @@ msgstr ""
 #: 32e91bda85ef4b8ea6cb4aaa7f7ddb9b b39492b09fea4cbdbe0ce75f7853c23a
 #: f3c71a0f6189402795b2b41fbe19c85a
 msgid "str"
-msgstr ""
+msgstr "str"
 
 #: ../../source/advanced/adapters.rst:67 1f0e6bbd780e469fb9cf934c833e04a8
 msgid "可训练层的名称。使用 ``all`` 来指定所有模块。默认值为 ``all``"
-msgstr ""
+msgstr "The names of trainable layers. Use ``all`` to specify all modules. Default value is ``all``"
 
 #: ../../source/advanced/adapters.rst:68 3cf550a1cd0841418f459a1e91f5c1b9
 msgid "freeze_extra_modules[非必须]"
-msgstr ""
+msgstr "freeze_extra_modules[Optional]"
 
 #: ../../source/advanced/adapters.rst:70 da3646ce07c3483c98fd43616b26c04d
 msgid "除了隐藏层外可以被训练的模块名称，被指定的模块将会被设置为可训练的。使用逗号分隔多个模块。默认值为 ``None``"
-msgstr ""
+msgstr "Names of modules that can be trained besides hidden layers; the specified modules will be set as trainable. Use commas to separate multiple modules. Default value is ``None``"
 
 #: ../../source/advanced/adapters.rst:75 d39d47f18625440ba55de2265f957b9d
 msgid "LoRA"
-msgstr ""
+msgstr "LoRA"
 
 #: ../../source/advanced/adapters.rst:76 38c74044262b46a3b9759426ebc332e7
 msgid "如果您需要进行 LoRA 微调，请将 ``finetuning_type`` 设置为 ``lora`` 并且设置相关参数。 下面是一个例子："
-msgstr ""
+msgstr "If you need to perform LoRA fine-tuning, please set ``finetuning_type`` to ``lora`` and set related parameters. Here is an example:"
 
 #: ../../source/advanced/adapters.rst:93 a5632891c40640318dfbe69a6949ac8b
 msgid "LoraArguments"
-msgstr ""
+msgstr "LoraArguments"
 
 #: ../../source/advanced/adapters.rst:100 43b6bf242302472eb1c5eb92647ae3cd
 msgid "additional_target[非必须]"
-msgstr ""
+msgstr "additional_target[Optional]"
 
 #: ../../source/advanced/adapters.rst:101 b4031b42b7754dd3aaebff8bbc14c415
 msgid "[str,]"
-msgstr ""
+msgstr "[str,]"
 
 #: ../../source/advanced/adapters.rst:102 292d3d09d5634042aae02476884bbf87
 msgid "除 LoRA 层之外设置为可训练并保存在最终检查点中的模块名称。使用逗号分隔多个模块。默认值为 ``None``"
-msgstr ""
+msgstr "Names of modules besides LoRA layers that are set as trainable and saved in the final checkpoint. Use commas to separate multiple modules. Default value is ``None``"
 
 #: ../../source/advanced/adapters.rst:103 2fb8746bc3494a5dae1ed9d769c7ef76
 msgid "lora_alpha[非必须]"
-msgstr ""
+msgstr "lora_alpha[Optional]"
 
 #: ../../source/advanced/adapters.rst:105 149ee67b9bfd462ab3d09d279c304977
 msgid "LoRA 缩放系数。一般情况下为 lora_rank * 2, 默认值为 ``None``"
-msgstr ""
+msgstr "LoRA scaling factor. Generally lora_rank * 2, default value is ``None``"
 
 #: ../../source/advanced/adapters.rst:106 f56736b1cceb4af6b63df8992593de9a
 msgid "lora_dropout"
-msgstr ""
+msgstr "lora_dropout"
 
 #: ../../source/advanced/adapters.rst:107
 #: ../../source/advanced/adapters.rst:116
@@ -177,49 +180,51 @@ msgstr ""
 #: 8e5bf07a493c470e9a24c651eb2676c9 9d348a64203747aa8c868f6326f72eb5
 #: cc5ec7752cac4d159dd629ecd8518f04 f0c257c949bf4c6eafbba813b08d1899
 msgid "float"
-msgstr ""
+msgstr "float"
 
 #: ../../source/advanced/adapters.rst:108 6cec0725f47d428d8ed5a45569fc980f
 msgid "LoRA 微调中的 dropout 率。默认值为 ``0``"
-msgstr ""
+msgstr "Dropout rate in LoRA fine-tuning. Default value is ``0``"
 
 #: ../../source/advanced/adapters.rst:109 cf7f105e11274f35a387fa8fefea34ad
 msgid "lora_rank"
-msgstr ""
+msgstr "lora_rank"
 
 #: ../../source/advanced/adapters.rst:111 70db4eef0d33428fa58d594bcb649a88
 msgid "LoRA 微调的本征维数 ``r``， ``r`` 越大可训练的参数越多。默认值为 ``8``"
-msgstr ""
+msgstr "The intrinsic dimensionality ``r`` of LoRA fine-tuning. The larger ``r``, the more trainable parameters. Default value is ``8``"
 
 #: ../../source/advanced/adapters.rst:112 89faf11f933743939f0e4ccd8a905beb
 msgid "lora_target"
-msgstr ""
+msgstr "lora_target"
 
 #: ../../source/advanced/adapters.rst:114 d7a1685227554eed950e71c8b3a09c3e
 msgid "应用 LoRA 方法的模块名称。使用逗号分隔多个模块，使用 ``all`` 指定所有模块。默认值为 ``all``"
-msgstr ""
+msgstr "Names of modules to apply LoRA method to. Use commas to separate multiple modules, use ``all`` to specify all modules. Default value is ``all``"
 
 #: ../../source/advanced/adapters.rst:115 403d657933ee42a69383df8daa37ad98
 msgid "loraplus_lr_ratio[非必须]"
-msgstr ""
+msgstr "loraplus_lr_ratio[Optional]"
 
 #: ../../source/advanced/adapters.rst:117 cbaa1bdf676540e890e026942721bc2c
 msgid ""
 "LoRA+ 学习率比例(``λ = ηB/ηA``)。 ``ηA, ηB`` 分别是 adapter matrices A 与 B "
 "的学习率。LoRA+ 的理想取值与所选择的模型和任务有关。默认值为 ``None``"
 msgstr ""
+"LoRA+ learning rate ratio (``λ = ηB/ηA``). ``ηA, ηB`` are the learning rates of adapter matrices A and B "
+"respectively. The ideal value for LoRA+ depends on the model and task chosen. Default value is ``None``"
 
 #: ../../source/advanced/adapters.rst:118 d881da010e5745e1b9af73a0a1c1c73a
 msgid "loraplus_lr_embedding[非必须]"
-msgstr ""
+msgstr "loraplus_lr_embedding[Optional]"
 
 #: ../../source/advanced/adapters.rst:120 bbb878c8e4a94d959a76589387f719a3
 msgid "LoRA+ 嵌入层的学习率, 默认值为 ``1e-6``"
-msgstr ""
+msgstr "Learning rate for LoRA+ embedding layer, default value is ``1e-6``"
 
 #: ../../source/advanced/adapters.rst:121 dc3fc697dca64336a5d301455baeeb3c
 msgid "use_rslora"
-msgstr ""
+msgstr "use_rslora"
 
 #: ../../source/advanced/adapters.rst:122
 #: ../../source/advanced/adapters.rst:125
@@ -234,55 +239,55 @@ msgstr ""
 #: a26ee260716a47b9ad173456b7dec46b abdcab551f44420ca65580dbc6b86248
 #: b47a54705db84b189a822c2459a9c4ca
 msgid "bool"
-msgstr ""
+msgstr "bool"
 
 #: ../../source/advanced/adapters.rst:123 bf7d61b1cc0c45b8b17641f3cf80bfdf
 msgid "是否使用秩稳定 LoRA(Rank-Stabilized LoRA)，默认值为 ``False``。"
-msgstr ""
+msgstr "Whether to use Rank-Stabilized LoRA, default value is ``False``."
 
 #: ../../source/advanced/adapters.rst:124 6c3f7dc3dec84f8098d70a7b27a69406
 msgid "use_dora"
-msgstr ""
+msgstr "use_dora"
 
 #: ../../source/advanced/adapters.rst:126 43bf60bd31694ab9af5cfa57098a46c5
 msgid "是否使用权重分解 LoRA（Weight-Decomposed LoRA），默认值为 ``False``"
-msgstr ""
+msgstr "Whether to use Weight-Decomposed LoRA, default value is ``False``"
 
 #: ../../source/advanced/adapters.rst:127 df650415a26d415c9cac15a3bc945130
 msgid "pissa_init"
-msgstr ""
+msgstr "pissa_init"
 
 #: ../../source/advanced/adapters.rst:129 dabfd5bccc8f464daec88d268eb9e60e
 msgid "是否初始化 PiSSA 适配器，默认值为 ``False``"
-msgstr ""
+msgstr "Whether to initialize PiSSA adapter, default value is ``False``"
 
 #: ../../source/advanced/adapters.rst:130 45ecec34fef24df0a4a84a9bec622d79
 msgid "pissa_iter"
-msgstr ""
+msgstr "pissa_iter"
 
 #: ../../source/advanced/adapters.rst:132 3cf0e11121a2486f90eda41a5da7da8e
 msgid "PiSSA 中 FSVD 执行的迭代步数。使用 ``-1`` 将其禁用，默认值为 ``16``"
-msgstr ""
+msgstr "Number of iteration steps for FSVD execution in PiSSA. Use ``-1`` to disable it, default value is ``16``"
 
 #: ../../source/advanced/adapters.rst:133 799da8a2de4f49d7a9be5fa3d8553198
 msgid "pissa_convert"
-msgstr ""
+msgstr "pissa_convert"
 
 #: ../../source/advanced/adapters.rst:135 86a201c5d51e418faee806fd6fb6863e
 msgid "是否将 PiSSA 适配器转换为正常的 LoRA 适配器，默认值为 ``False``"
-msgstr ""
+msgstr "Whether to convert PiSSA adapter to normal LoRA adapter, default value is ``False``"
 
 #: ../../source/advanced/adapters.rst:136 9d52b02e72b64c60b6238b7afa9b4fe9
 msgid "create_new_adapter"
-msgstr ""
+msgstr "create_new_adapter"
 
 #: ../../source/advanced/adapters.rst:138 479ba69e20e8488c973bfa15e0952384
 msgid "是否创建一个具有随机初始化权重的新适配器，默认值为 ``False``"
-msgstr ""
+msgstr "Whether to create a new adapter with randomly initialized weights, default value is ``False``"
 
 #: ../../source/advanced/adapters.rst:141 f125e8e134714e2d8e4f5c710e2ec7df
 msgid "LoRA+"
-msgstr ""
+msgstr "LoRA+"
 
 #: ../../source/advanced/adapters.rst:142 04ca393564274d72b61baf23dca114ae
 msgid ""
@@ -290,10 +295,13 @@ msgid ""
 "中，适配器矩阵 A 的学习率 ``ηA`` 即为优化器学习率。适配器矩阵 B 的学习率 ``ηB`` 为 ``λ * ηA``。 其中 ``λ``"
 " 为 ``loraplus_lr_ratio`` 的值。"
 msgstr ""
+"In LoRA, adapter matrices A and B have the same learning rate. You can adjust the learning rate ratio by setting ``loraplus_lr_ratio``. In LoRA+, "
+"the learning rate ``ηA`` of adapter matrix A is the optimizer learning rate. The learning rate ``ηB`` of adapter matrix B is ``λ * ηA``. Where ``λ`` "
+"is the value of ``loraplus_lr_ratio``."
 
 #: ../../source/advanced/adapters.rst:148 e4278067c436448d8f98df9335273cc8
 msgid "rsLoRA"
-msgstr ""
+msgstr "rsLoRA"
 
 #: ../../source/advanced/adapters.rst:150 12093f089a60440883ca552fd22dff13
 msgid ""
@@ -302,30 +310,38 @@ msgid ""
 "通过修改缩放因子使得模型训练更加稳定。 使用 rsLoRA 时， 您只需要将 ``use_rslora`` 设置为 ``True`` 并设置所需的"
 " ``lora_rank``。"
 msgstr ""
+"LoRA fine-tunes by adding low-rank adapters, however increasing ``lora_rank`` often leads to gradient collapse, making training unstable. This makes it difficult to achieve satisfactory results when using larger "
+"``lora_rank`` for LoRA fine-tuning. rsLoRA (Rank-Stabilized LoRA) "
+"makes model training more stable by modifying the scaling factor. When using rsLoRA, you only need to set ``use_rslora`` to ``True`` and set the desired "
+"``lora_rank``."
 
 #: ../../source/advanced/adapters.rst:154 55426c351d4c47eebf1b7d094359e3ee
 msgid "DoRA"
-msgstr ""
+msgstr "DoRA"
 
 #: ../../source/advanced/adapters.rst:156 8823fc0222d449339e44b4d1434cb876
 msgid ""
 "DoRA （Weight-Decomposed Low-Rank Adaptation）提出尽管 LoRA "
 "大幅降低了推理成本，但这种方式取得的性能与全量微调之间仍有差距。"
 msgstr ""
+"DoRA (Weight-Decomposed Low-Rank Adaptation) proposes that although LoRA "
+"significantly reduces inference costs, there is still a gap between the performance achieved by this method and full fine-tuning."
 
 #: ../../source/advanced/adapters.rst:158 36101cba2e564ea2963a9eeddcb9861b
 msgid ""
 "DoRA 将权重矩阵分解为大小与单位方向矩阵的乘积，并进一步微调二者（对方向矩阵则进一步使用 LoRA 分解），从而实现 LoRA 与 Full "
 "Fine-tuning 之间的平衡。"
 msgstr ""
+"DoRA decomposes the weight matrix into the product of a magnitude and a unit direction matrix, and further fine-tunes both (the direction matrix is further decomposed using LoRA), thereby achieving a balance between LoRA and Full "
+"Fine-tuning."
 
 #: ../../source/advanced/adapters.rst:160 3bd7d5474580460d9a49c98fed2fb660
 msgid "如果您需要使用 DoRA，请将 ``use_dora`` 设置为 ``True`` 。"
-msgstr ""
+msgstr "If you need to use DoRA, please set ``use_dora`` to ``True``."
 
 #: ../../source/advanced/adapters.rst:163 1bab170fd41b4af784d3c703c7ec44df
 msgid "PiSSA"
-msgstr ""
+msgstr "PiSSA"
 
 #: ../../source/advanced/adapters.rst:165 e6624abf398c405585901ceb10062d6c
 msgid ""
@@ -333,201 +349,210 @@ msgid ""
 "则全初始化为0。这导致一开始的输入并不会改变模型输出并且使得梯度较小，收敛较慢。 PiSSA "
 "通过奇异值分解直接分解原权重矩阵进行初始化，其优势在于它可以更快更好地收敛。"
 msgstr ""
+"In LoRA, adapter matrix A is initialized by kaiming_uniform, while adapter matrix B "
+"is initialized to 0. This causes initial inputs not to change model outputs and results in smaller gradients and slower convergence. PiSSA "
+"initializes by directly decomposing the original weight matrix through singular value decomposition, with the advantage that it can converge faster and better."
 
 #: ../../source/advanced/adapters.rst:168 1af9910059004ae9a4a49546e43a9711
 msgid "如果您需要使用 PiSSA，请将 ``pissa_init`` 设置为 ``True`` 。"
-msgstr ""
+msgstr "If you need to use PiSSA, please set ``pissa_init`` to ``True``."
 
 #: ../../source/advanced/adapters.rst:174 84053dc66c5544a782c41e86470f50a4
 msgid "Galore"
-msgstr ""
+msgstr "Galore"
 
 #: ../../source/advanced/adapters.rst:176 bf744c2498204711905192a72e7ba4af
 msgid ""
 "当您需要在训练中使用 GaLore（Gradient Low-Rank Projection）算法时，可以通过设置 "
 "``GaloreArguments`` 中的参数进行配置。"
 msgstr ""
+"When you need to use the GaLore (Gradient Low-Rank Projection) algorithm in training, you can configure it by setting "
+"parameters in ``GaloreArguments``."
 
 #: ../../source/advanced/adapters.rst:179 e05d8e6603e940d88164010084af5f8d
 msgid "下面是一个例子："
-msgstr ""
+msgstr "Here is an example:"
 
 #: ../../source/advanced/adapters.rst:198
 #: ../../source/advanced/adapters.rst:261 023ecf0573cc4f70a22e978b92277384
 #: 50f001ee1b8440878db5010abe50b707
 msgid "不要将 LoRA 和 GaLore/BAdam 一起使用。"
-msgstr ""
+msgstr "Do not use LoRA together with GaLore/BAdam."
 
 #: ../../source/advanced/adapters.rst:199 de0aa7e22b5841039a213f2b9168a267
-msgid "``galore_layerwise``为 ``true``时请不要设置 ``gradient_accumulation``参数。"
-msgstr ""
+msgid "``galore_layerwise`` 为 ``true`` 时请不要设置 ``gradient_accumulation`` 参数。"
+msgstr "When ``galore_layerwise`` is ``true``, please do not set the ``gradient_accumulation`` parameter."
 
 #: ../../source/advanced/adapters.rst:201 047453dd5490412299951eb23d9b95db
 msgid "GaLoreArguments"
-msgstr ""
+msgstr "GaLoreArguments"
 
 #: ../../source/advanced/adapters.rst:208 0524ef2b6f944bec9c139227f434f883
 msgid "use_galore"
-msgstr ""
+msgstr "use_galore"
 
 #: ../../source/advanced/adapters.rst:210 d62e7b83f6034010b6843df9dc57fe29
 msgid "是否使用 GaLore 算法，默认值为 ``False``。"
-msgstr ""
+msgstr "Whether to use the GaLore algorithm, default value is ``False``."
 
 #: ../../source/advanced/adapters.rst:211 5566bee584e34703a60edc985202b329
 msgid "galore_target"
-msgstr ""
+msgstr "galore_target"
 
 #: ../../source/advanced/adapters.rst:213 7116a9dcf9e2406690db85f1ff361fa9
 msgid "应用 GaLore 的模块名称。使用逗号分隔多个模块，使用 ``all`` 指定所有线性模块。默认值为 ``all``。"
-msgstr ""
+msgstr "Names of modules to apply GaLore to. Use commas to separate multiple modules, use ``all`` to specify all linear modules. Default value is ``all``."
 
 #: ../../source/advanced/adapters.rst:214 b71151de7aa941609b8eccbb701bd1f1
 msgid "galore_rank"
-msgstr ""
+msgstr "galore_rank"
 
 #: ../../source/advanced/adapters.rst:216 c0540943a7a5483eb69eefb240765a5e
 msgid "GaLore 梯度的秩，默认值为 ``16``。"
-msgstr ""
+msgstr "Rank of GaLore gradient, default value is ``16``."
 
 #: ../../source/advanced/adapters.rst:217 f4233acc455c47b38bdab89ec9fbeef4
 msgid "galore_update_interval"
-msgstr ""
+msgstr "galore_update_interval"
 
 #: ../../source/advanced/adapters.rst:219 845a0af42dcb42cda95532c1fafe168f
 msgid "更新 GaLore 投影的步数间隔，默认值为 ``200``。"
-msgstr ""
+msgstr "Step interval for updating GaLore projection, default value is ``200``."
 
 #: ../../source/advanced/adapters.rst:220 528519bdb3724e6192fb59eb7dbb0b55
 msgid "galore_scale"
-msgstr ""
+msgstr "galore_scale"
 
 #: ../../source/advanced/adapters.rst:222 7b0c854fbf0946eea23646798f13f672
 msgid "GaLore 的缩放系数，默认值为 ``0.25``。"
-msgstr ""
+msgstr "Scaling factor for GaLore, default value is ``0.25``."
 
 #: ../../source/advanced/adapters.rst:223 c973123b1f6c4134a9eb844b95571678
 msgid "galore_proj_type"
-msgstr ""
+msgstr "galore_proj_type"
 
 #: ../../source/advanced/adapters.rst:224
 #: ../../source/advanced/adapters.rst:278
 #: ../../source/advanced/adapters.rst:293 1a5c7d42e72d442e8f9b68485fb75a91
 #: 7887eaa190214276818900f4968ef2b8 cf19628c35ad4bd0a9700bd05b1e7c44
 msgid "Literal"
-msgstr ""
+msgstr "Literal"
 
 #: ../../source/advanced/adapters.rst:225 3f189f881e9446af91d6adda1df4e20e
 msgid ""
 "GaLore 投影的类型，可选值有： ``std`` , ``reverse_std``, ``right``, ``left``, "
 "``full``。默认值为 ``std``。"
 msgstr ""
+"Type of GaLore projection, available values are: ``std``, ``reverse_std``, ``right``, ``left``, "
+"``full``. Default value is ``std``."
 
 #: ../../source/advanced/adapters.rst:226 c32e20a61cfd4f3b803854167742f3c6
 msgid "galore_layerwise"
-msgstr ""
+msgstr "galore_layerwise"
 
 #: ../../source/advanced/adapters.rst:228 5f9b640c51104137b8e722ddf09c3dd6
 msgid "是否启用逐层更新以进一步节省内存，默认值为 ``False``。"
-msgstr ""
+msgstr "Whether to enable layer-wise updates to further save memory, default value is ``False``."
 
 #: ../../source/advanced/adapters.rst:235 ce3bd4d066c84c79bd0271f1040bfc65
 msgid "BAdam"
-msgstr ""
+msgstr "BAdam"
 
 #: ../../source/advanced/adapters.rst:240 d2473fbc981c4c2887781cf1382bdf02
 msgid "BAdam 是一种内存高效的全参优化方法，您通过配置 ``BAdamArgument`` 中的参数可以对其进行详细设置。 下面是一个例子："
-msgstr ""
+msgstr "BAdam is a memory-efficient full parameter optimization method. You can configure it in detail by setting parameters in ``BAdamArgument``. Here is an example:"
 
 #: ../../source/advanced/adapters.rst:262 a604b8c6b4244b739f618d2658902c81
 msgid "使用 BAdam 时请设置 ``finetuning_type`` 为 ``full`` 且 ``pure_bf16`` 为 ``True`` 。"
-msgstr ""
+msgstr "When using BAdam, please set ``finetuning_type`` to ``full`` and ``pure_bf16`` to ``True``."
 
 #: ../../source/advanced/adapters.rst:263 53b40e9ef06e49e2b1fbf9310bd3ef3c
 msgid "``badam_mode = layer`` 时仅支持使用 DeepSpeed ZeRO3 进行 **单卡** 或 **多卡** 训练。"
-msgstr ""
+msgstr "When ``badam_mode = layer``, only **single-card** or **multi-card** training using DeepSpeed ZeRO3 is supported."
 
 #: ../../source/advanced/adapters.rst:264 139668e915044f1188534e0818de650f
 msgid "``badam_mode = ratio`` 时仅支持 **单卡** 训练。"
-msgstr ""
+msgstr "When ``badam_mode = ratio``, only **single-card** training is supported."
 
 #: ../../source/advanced/adapters.rst:267 cf270b299c774eaba30cee80831eaf46
 msgid "BAdamArgument"
-msgstr ""
+msgstr "BAdamArgument"
 
 #: ../../source/advanced/adapters.rst:274 2770abf4461b485ca62aadce06f5f122
 msgid "use_badam"
-msgstr ""
+msgstr "use_badam"
 
 #: ../../source/advanced/adapters.rst:276 fb0a926ecaa24f8ba9c9e0f0dd9832db
 msgid "是否使用 BAdam 优化器，默认值为 ``False``。"
-msgstr ""
+msgstr "Whether to use the BAdam optimizer, default value is ``False``."
 
 #: ../../source/advanced/adapters.rst:277 435fd3604d194aec87c8dac41f0ec4fa
 msgid "badam_mode"
-msgstr ""
+msgstr "badam_mode"
 
 #: ../../source/advanced/adapters.rst:279 e6a23c62843b4a719b5b56d9a207d266
 msgid "BAdam 的使用模式，可选值为 ``layer`` 或 ``ratio``，默认值为 ``layer``。"
-msgstr ""
+msgstr "Mode of BAdam usage, available values are ``layer`` or ``ratio``, default value is ``layer``."
 
 #: ../../source/advanced/adapters.rst:280 f3138ee70b4c42b287885106e7f4e731
 msgid "badam_start_block"
-msgstr ""
+msgstr "badam_start_block"
 
 #: ../../source/advanced/adapters.rst:281
 #: ../../source/advanced/adapters.rst:287 9ffb858cae034e1f94f4ecbffef68df8
 #: bcdd37aac6cf4ec486397e89dfff1ff2
 msgid "Optional[int]"
-msgstr ""
+msgstr "Optional[int]"
 
 #: ../../source/advanced/adapters.rst:282 b009d1e1b1d242ea8392465e07967269
 msgid "layer-wise BAdam 的起始块索引，默认值为 ``None``。"
-msgstr ""
+msgstr "Starting block index for layer-wise BAdam, default value is ``None``."
 
 #: ../../source/advanced/adapters.rst:283 57e31bbf436f461c9c2b84dcc0e556ca
 msgid "badam_switch_mode"
-msgstr ""
+msgstr "badam_switch_mode"
 
 #: ../../source/advanced/adapters.rst:284 6d6e34faabdc47bcb07a9a41248fa391
 msgid "Optional[Literal]"
-msgstr ""
+msgstr "Optional[Literal]"
 
 #: ../../source/advanced/adapters.rst:285 b067eab170304baa9c6d384a6935e60b
 msgid ""
 "layer-wise BAdam 中块更新策略，可选值有： ``ascending``, ``descending``, ``random``, "
 "``fixed``。默认值为 ``ascending``。"
 msgstr ""
+"Block update strategy in layer-wise BAdam, available values are: ``ascending``, ``descending``, ``random``, "
+"``fixed``. Default value is ``ascending``."
 
 #: ../../source/advanced/adapters.rst:286 6d0d3c1ce62f4a8998b6d85d60a561b9
 msgid "badam_switch_interval"
-msgstr ""
+msgstr "badam_switch_interval"
 
 #: ../../source/advanced/adapters.rst:288 6de46b42025c42e685dcba22c580d0c6
 msgid "layer-wise BAdam 中块更新步数间隔。使用 ``-1`` 禁用块更新，默认值为 ``50``。"
-msgstr ""
+msgstr "Step interval for block updates in layer-wise BAdam. Use ``-1`` to disable block updates, default value is ``50``."
 
 #: ../../source/advanced/adapters.rst:289 b1d1c6200e634bd69e86ea1f956f07a3
 msgid "badam_update_ratio"
-msgstr ""
+msgstr "badam_update_ratio"
 
 #: ../../source/advanced/adapters.rst:291 faae8b4121844825a9beb6229918c4d3
 msgid "ratio-wise BAdam 中的更新比例，默认值为 ``0.05``。"
-msgstr ""
+msgstr "Update ratio in ratio-wise BAdam, default value is ``0.05``."
 
 #: ../../source/advanced/adapters.rst:292 d6de7e1813254aaca7f0be20c2e42ec4
 msgid "badam_mask_mode"
-msgstr ""
+msgstr "badam_mask_mode"
 
 #: ../../source/advanced/adapters.rst:294 2d90cb304b7e4e11a01cd1e06fb70cbe
 msgid "BAdam 优化器的掩码模式，可选值为 ``adjacent`` 或 ``scatter``，默认值为 ``adjacent``。"
-msgstr ""
+msgstr "Mask mode for BAdam optimizer, available values are ``adjacent`` or ``scatter``, default value is ``adjacent``."
 
 #: ../../source/advanced/adapters.rst:295 e3c3f0ab172c45468c37b52c983766b2
 msgid "badam_verbose"
-msgstr ""
+msgstr "badam_verbose"
 
 #: ../../source/advanced/adapters.rst:297 7e752da3eec74dfcb0d5da3a7e55a523
 msgid "BAdam 优化器的详细输出级别，0 表示无输出，1 表示输出块前缀，2 表示输出可训练参数。默认值为 ``0``。"
-msgstr ""
+msgstr "Verbose output level for BAdam optimizer, 0 means no output, 1 means output block prefix, 2 means output trainable parameters. Default value is ``0``."
 

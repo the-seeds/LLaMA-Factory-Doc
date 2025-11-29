@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, LlamaFactory team.
+# Copyright (C) 2025, LlamaFactory team.
 # This file is distributed under the same license as the LLaMA Factory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -7,14 +7,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory \n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-03-05 01:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,18 +26,18 @@ msgstr "Installation"
 #: ../../source/getting_started/installation.rst:8
 #: 87d54e39a219433c9f05ab0219597172
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../source/getting_started/installation.rst:12
 #: ../../source/getting_started/installation.rst:65
 #: 498ebf7e727148aea5ebc58298c4167c c4724bb1a73546ba9a72d8222a3a4449
 msgid "CUDA 安装"
-msgstr ""
+msgstr "CUDA Installation"
 
 #: ../../source/getting_started/installation.rst:15
 #: ec06ea3d858848b3888105efb84a4bf1
 msgid "CUDA 是由 NVIDIA 创建的一个并行计算平台和编程模型，它让开发者可以使用 NVIDIA 的 GPU 进行高性能的并行计算。"
-msgstr ""
+msgstr "CUDA is a parallel computing platform and programming model created by NVIDIA that allows developers to use NVIDIA GPUs for high-performance parallel computing."
 
 #: ../../source/getting_started/installation.rst:17
 #: 827698e4f5ac4fdcb3202eb86e4f8dfc
@@ -47,24 +45,25 @@ msgid ""
 "首先，在 `https://developer.nvidia.com/cuda-gpus "
 "<https://developer.nvidia.com/cuda-gpus/>`_ 查看您的 GPU 是否支持CUDA"
 msgstr ""
+"First, check if your GPU supports CUDA at `https://developer.nvidia.com/cuda-gpus "
+"<https://developer.nvidia.com/cuda-gpus/>`_"
 
 #: ../../source/getting_started/installation.rst:21
 #: e3f34be697a647349a636b10997cea32
 msgid "保证当前 Linux 版本支持CUDA. 在命令行中输入 ``uname -m && cat /etc/*release``，应当看到类似的输出"
-msgstr ""
+msgstr "Ensure your current Linux version supports CUDA. Enter ``uname -m && cat /etc/*release`` in the command line, you should see similar output"
 
 #: ../../source/getting_started/installation.rst:29
 #: 9dfcac0ee98c4161a6e9ec8024642a6a
 msgid "检查是否安装了 ``gcc`` . 在命令行中输入 ``gcc --version`` ，应当看到类似的输出"
-msgstr ""
+msgstr "Check if ``gcc`` is installed. Enter ``gcc --version`` in the command line, you should see similar output"
 
 #: ../../source/getting_started/installation.rst:35
 #: 182650a91a874372ae25417e430053c4
 msgid ""
-"在以下网址下载所需的 CUDA，这里推荐12.2版本。 `https://developer.nvidia.com/cuda-gpus "
-"<https://developer.nvidia.com/cuda-12-2-0-download-archive/>`_ "
-"注意需要根据上述输出选择正确版本"
+"在以下网址（`https://developer.nvidia.com/cuda-gpus <https://developer.nvidia.com/cuda-12-2-0-download-archive/>`__）下载所需的 CUDA，这里推荐12.2版本，注意需要根据上述输出选择正确版本。"
 msgstr ""
+"Download the required CUDA from the following link(`https://developer.nvidia.com/cuda-gpus <https://developer.nvidia.com/cuda-12-2-0-download-archive/>`__), version 12.2 is recommended，please select the correct version according to the above output."
 
 #: ../../source/getting_started/installation.rst:39
 #: 9ab7f38cb1244db483aa112216af94fc
@@ -72,127 +71,129 @@ msgid ""
 "如果您之前安装过 CUDA(例如为12.1版本)，需要先使用 ``sudo /usr/local/cuda-12.1/bin/cuda-"
 "uninstaller`` 卸载。如果该命令无法运行，可以直接："
 msgstr ""
+"If you have previously installed CUDA (e.g., version 12.1), you need to uninstall it first using ``sudo /usr/local/cuda-12.1/bin/cuda-"
+"uninstaller``. If this command cannot run, you can directly:"
 
 #: ../../source/getting_started/installation.rst:46
 #: b9b88b9530b1463a84f9a35aa0ce6097
 msgid "卸载完成后运行以下命令并根据提示继续安装："
-msgstr ""
+msgstr "After uninstalling, run the following command and continue installation according to the prompts:"
 
 #: ../../source/getting_started/installation.rst:53
 #: 9c93c8a28ee6494eae86421e67a3b879
 msgid "**注意**:在确定 CUDA 自带驱动版本与 GPU 是否兼容之前,建议取消 Driver 的安装。"
-msgstr ""
+msgstr "**Note**: It is recommended to cancel the Driver installation before confirming whether the CUDA built-in driver version is compatible with the GPU."
 
 #: ../../source/getting_started/installation.rst:57
 #: 9388c87f1366446ea0dc615e9a0f49f6
 msgid "完成后输入 ``nvcc -V`` 检查是否出现对应的版本号，若出现则安装完成。"
-msgstr ""
+msgstr "After completion, enter ``nvcc -V`` to check if the corresponding version number appears. If it appears, the installation is complete."
 
 #: ../../source/getting_started/installation.rst:62
 #: ../../source/getting_started/installation.rst:122
 #: 26772027eb084d6f86dbe994d9b497b2 9a9abe03642740d4a0196825a01228b0
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../source/getting_started/installation.rst:66
 #: 9270b889c3db4642bc76edf1f17c9d4b
 msgid "打开 **设置** ，在 **关于** 中找到 **Windows 规格** 保证系统版本在以下列表中："
-msgstr ""
+msgstr "Open **Settings**, find **Windows Specifications** in **About** and ensure the system version is in the following list:"
 
 #: ../../source/getting_started/installation.rst:72
 #: f5db9da698db4731a1d88b849e3e9cf5
 msgid "支持版本号"
-msgstr ""
+msgstr "Supported Versions"
 
 #: ../../source/getting_started/installation.rst:73
 #: f422a3094a6841d59d27e01040cbcbbf
 msgid "Microsoft Windows 11 21H2"
-msgstr ""
+msgstr "Microsoft Windows 11 21H2"
 
 #: ../../source/getting_started/installation.rst:74
 #: 8d9a23cac37c46478983c7426326b128
 msgid "Microsoft Windows 11 22H2-SV2"
-msgstr ""
+msgstr "Microsoft Windows 11 22H2-SV2"
 
 #: ../../source/getting_started/installation.rst:75
 #: 92dfb302b318460f925376259c980d8c
 msgid "Microsoft Windows 11 23H2"
-msgstr ""
+msgstr "Microsoft Windows 11 23H2"
 
 #: ../../source/getting_started/installation.rst:76
 #: 63adff504e81492f9642ccb0ca87f5ae
 msgid "Microsoft Windows 10 21H2"
-msgstr ""
+msgstr "Microsoft Windows 10 21H2"
 
 #: ../../source/getting_started/installation.rst:77
 #: 8a88f9cd8e8c4bf4b7bf8e5970f5c0ef
 msgid "Microsoft Windows 10 22H2"
-msgstr ""
+msgstr "Microsoft Windows 10 22H2"
 
 #: ../../source/getting_started/installation.rst:78
 #: 73e3309ca791462d94fcbebf3b8d578d
 msgid "Microsoft Windows Server 2022"
-msgstr ""
+msgstr "Microsoft Windows Server 2022"
 
 #: ../../source/getting_started/installation.rst:81
 #: 297634d5633a4ef4a18ab309fa3335d4
 msgid "选择对应的版本下载并根据提示安装。"
-msgstr ""
+msgstr "Select the corresponding version to download and install according to the prompts."
 
 #: ../../source/getting_started/installation.rst:85
 #: 42c4a8de9c2c4ec8ba0b34e8292cdfdb
 msgid "打开 cmd 输入 ``nvcc -V`` ，若出现类似内容则安装成功。"
-msgstr ""
+msgstr "Open cmd and enter ``nvcc -V``. If similar content appears, the installation is successful."
 
 #: ../../source/getting_started/installation.rst:89
 #: cd9c77c6a0674b299c8414d5849d8f3f
 msgid "否则，检查系统环境变量，保证 CUDA 被正确导入。"
-msgstr ""
+msgstr "Otherwise, check the system environment variables to ensure CUDA is correctly imported."
 
 #: ../../source/getting_started/installation.rst:95
 #: a1bb186efe7e4b1eb80d1f9c14c19266
 msgid "LLaMA-Factory 安装"
-msgstr ""
+msgstr "LLaMA-Factory Installation"
 
 #: ../../source/getting_started/installation.rst:97
 #: 29ca2cbd15524915947729355e5cd09b
 msgid "在安装 LLaMA-Factory 之前，请确保您安装了下列依赖:"
-msgstr ""
+msgstr "Before installing LLaMA-Factory, please make sure you have installed the following dependencies:"
 
 #: ../../source/getting_started/installation.rst:99
 #: 019b4f629f0a42f684b10aea2112f263
 msgid "运行以下指令以安装 LLaMA-Factory 及其依赖:"
-msgstr ""
+msgstr "Run the following commands to install LLaMA-Factory and its dependencies:"
 
 #: ../../source/getting_started/installation.rst:107
 #: 57f730650c70479badf55b3961a4dbd7
 msgid "如果出现环境冲突，请尝试使用 ``pip install --no-deps -e .`` 解决"
-msgstr ""
+msgstr "If there are environment conflicts, try to resolve them using ``pip install --no-deps -e .``"
 
 #: ../../source/getting_started/installation.rst:110
 #: 0bfc3771dce04b9eb53c73ceb8029930
 msgid "LLaMA-Factory 校验"
-msgstr ""
+msgstr "LLaMA-Factory Verification"
 
 #: ../../source/getting_started/installation.rst:112
 #: ad775080fd04493cbfcf7092facef952
 msgid "完成安装后，可以通过使用 ``llamafactory-cli version`` 来快速校验安装是否成功"
-msgstr ""
+msgstr "After installation, you can quickly verify if the installation was successful by using ``llamafactory-cli version``"
 
 #: ../../source/getting_started/installation.rst:114
 #: 5f110c97997b49528685bb47e8c46a42
 msgid "如果您能成功看到类似下面的界面，就说明安装成功了。"
-msgstr ""
+msgstr "If you can successfully see an interface similar to the one below, it means the installation was successful."
 
 #: ../../source/getting_started/installation.rst:119
 #: 3a4c2c7fbcc6408c917a9064c4e16004
 msgid "LLaMA-Factory 高级选项"
-msgstr ""
+msgstr "LLaMA-Factory Advanced Options"
 
 #: ../../source/getting_started/installation.rst:126
 #: 9bf2ddb733b1437196d45a3aef5879ce
 msgid "QLoRA"
-msgstr ""
+msgstr "QLoRA"
 
 #: ../../source/getting_started/installation.rst:128
 #: e00d805860e843a5b0f99c6b08183be9
@@ -201,11 +202,14 @@ msgid ""
 "<https://github.com/jllllll/bitsandbytes-windows-"
 "webui/releases/tag/wheels/>`_ 发行版本。"
 msgstr ""
+"If you want to enable Quantized LoRA (QLoRA) on Windows, please select the appropriate `bitsandbytes "
+"<https://github.com/jllllll/bitsandbytes-windows-"
+"webui/releases/tag/wheels/>`_ release according to your CUDA version."
 
 #: ../../source/getting_started/installation.rst:135
 #: 73c3ba021d414f85986c9c7c7aa4b583
 msgid "FlashAttention-2"
-msgstr ""
+msgstr "FlashAttention-2"
 
 #: ../../source/getting_started/installation.rst:137
 #: 1cb7d973f9d04f5ab4b1c46112d160dc
@@ -213,71 +217,73 @@ msgid ""
 "如果您要在 Windows 平台上启用 FlashAttention-2，请根据您的 CUDA 版本选择适当的 `flash-attention "
 "<https://github.com/bdashore3/flash-attention/releases/>`_ 发行版本。"
 msgstr ""
+"If you want to enable FlashAttention-2 on Windows platform, please select the appropriate `flash-attention "
+"<https://github.com/bdashore3/flash-attention/releases/>`_ release according to your CUDA version."
 
 #: ../../source/getting_started/installation.rst:141
 #: 6344694d47c844d6aff1443e6bbad399
 msgid "Extra Dependency"
-msgstr ""
+msgstr "Extra Dependency"
 
 #: ../../source/getting_started/installation.rst:143
 #: 47f9219d01094800bbcc4c6cdc9dba60
 msgid "如果您有更多需求，请安装对应依赖。"
-msgstr ""
+msgstr "If you have additional requirements, please install the corresponding dependencies."
 
 #: ../../source/getting_started/installation.rst:149
 #: 0eb1e059196d4206a848110b23f5040e
 msgid "名称"
-msgstr ""
+msgstr "Name"
 
 #: ../../source/getting_started/installation.rst:150
 #: cd45275e6c224a2bbde0832f024a52f0
 msgid "描述"
-msgstr ""
+msgstr "Description"
 
 #: ../../source/getting_started/installation.rst:151
 #: 91f1fec48b6c40f194d298eab83cd00d
 msgid "torch"
-msgstr ""
+msgstr "torch"
 
 #: ../../source/getting_started/installation.rst:152
 #: 6bb62c90ccf84066b498b6dc378ddf30
 msgid "开源深度学习框架 PyTorch，广泛用于机器学习和人工智能研究中。"
-msgstr ""
+msgstr "Open-source deep learning framework PyTorch, widely used in machine learning and AI research."
 
 #: ../../source/getting_started/installation.rst:153
 #: 638b480dba4a45b4803017fbf8b77750
 msgid "torch-npu"
-msgstr ""
+msgstr "torch-npu"
 
 #: ../../source/getting_started/installation.rst:154
 #: ea6a951141c44881b735b8185d7e87f2
 msgid "PyTorch 的昇腾设备兼容包。"
-msgstr ""
+msgstr "PyTorch compatibility package for Ascend devices."
 
 #: ../../source/getting_started/installation.rst:155
 #: 3570742c6b9946d4abd236d3b8fee10b
 msgid "metrics"
-msgstr ""
+msgstr "metrics"
 
 #: ../../source/getting_started/installation.rst:156
 #: c7029b395077447eb637806f16946cfa
 msgid "用于评估和监控机器学习模型性能。"
-msgstr ""
+msgstr "For evaluating and monitoring machine learning model performance."
 
 #: ../../source/getting_started/installation.rst:157
 #: 367b8760602d4ce3ba061049c67bad6e
 msgid "deepspeed"
-msgstr ""
+msgstr "deepspeed"
 
 #: ../../source/getting_started/installation.rst:158
 #: 73e1d7c241534a9bad4b0b75ddaee0f5
 msgid "提供了分布式训练所需的零冗余优化器。"
-msgstr ""
+msgstr "Provides Zero Redundancy Optimizer required for distributed training."
 
 #: ../../source/getting_started/installation.rst:159
 #: 6a2d52e919e340c690cd08a5664427df
 msgid "bitsandbytes"
-msgstr ""
+msgstr "bitsandbytes"
 
 #: ../../source/getting_started/installation.rst:160
 #: ../../source/getting_started/installation.rst:162
@@ -285,111 +291,111 @@ msgstr ""
 #: 4598242802e44e18905765db5b6ece0f 511da120bdaf480395fe0b1db220a459
 #: 6c89cc75e60c44c7914a003edc1cdaad
 msgid "用于大型语言模型量化。"
-msgstr ""
+msgstr "For large language model quantization."
 
 #: ../../source/getting_started/installation.rst:161
 #: 41a2d02fdc8a45afa151b6647134e77d
 msgid "hqq"
-msgstr ""
+msgstr "hqq"
 
 #: ../../source/getting_started/installation.rst:163
 #: 3112f2cec0d94ccab72c9b4c06ea8dba
 msgid "eetq"
-msgstr ""
+msgstr "eetq"
 
 #: ../../source/getting_started/installation.rst:165
 #: 203ba18ed1884bdc9087ef3762bf50d0
 msgid "gptq"
-msgstr ""
+msgstr "gptq"
 
 #: ../../source/getting_started/installation.rst:166
 #: f99eea6b2073431b9d585cd35b93ac63
 msgid "用于加载 GPTQ 量化模型。"
-msgstr ""
+msgstr "For loading GPTQ quantized models."
 
 #: ../../source/getting_started/installation.rst:167
 #: 972a8e97ef27461bbbe4d9e1d6991ae4
 msgid "awq"
-msgstr ""
+msgstr "awq"
 
 #: ../../source/getting_started/installation.rst:168
 #: 785d939e1ecb4dadbfed638973c73384
 msgid "用于加载 AWQ 量化模型。"
-msgstr ""
+msgstr "For loading AWQ quantized models."
 
 #: ../../source/getting_started/installation.rst:169
 #: 06d5dd436cab41c3bb0957a4518acdc0
 msgid "aqlm"
-msgstr ""
+msgstr "aqlm"
 
 #: ../../source/getting_started/installation.rst:170
 #: f1f4a930678e4408b185437f08b280c1
 msgid "用于加载 AQLM 量化模型。"
-msgstr ""
+msgstr "For loading AQLM quantized models."
 
 #: ../../source/getting_started/installation.rst:171
 #: 39693a6d32f74a9bb25d0f012256c420
 msgid "vllm"
-msgstr ""
+msgstr "vllm"
 
 #: ../../source/getting_started/installation.rst:172
 #: 6512d6d4888e44efa7a27e8bbab91870
 msgid "提供了高速并发的模型推理服务。"
-msgstr ""
+msgstr "Provides high-speed concurrent model inference service."
 
 #: ../../source/getting_started/installation.rst:173
 #: 5abf29bd60a54e64b9b66a2bb921253b
 msgid "galore"
-msgstr ""
+msgstr "galore"
 
 #: ../../source/getting_started/installation.rst:174
 #: ../../source/getting_started/installation.rst:176
 #: 75111162f6b94603bc23de1787ad1f46 cb0b3a765fcb409e9ab39d0ac89952dd
 msgid "提供了高效全参微调算法。"
-msgstr ""
+msgstr "Provides efficient full-parameter fine-tuning algorithms."
 
 #: ../../source/getting_started/installation.rst:175
 #: fe29a624b87f49a8b2a5d804abe27cfc
 msgid "badam"
-msgstr ""
+msgstr "badam"
 
 #: ../../source/getting_started/installation.rst:177
 #: 0934cd22682d4885acd7df35f53f360c
 msgid "qwen"
-msgstr ""
+msgstr "qwen"
 
 #: ../../source/getting_started/installation.rst:178
 #: f348d573b35347078adc0e63e15f293b
 msgid "提供了加载 Qwen v1 模型所需的包。"
-msgstr ""
+msgstr "Provides packages required for loading Qwen v1 models."
 
 #: ../../source/getting_started/installation.rst:179
 #: 5aae5784664041b0bb82a21590ac8ec9
 msgid "modelscope"
-msgstr ""
+msgstr "modelscope"
 
 #: ../../source/getting_started/installation.rst:180
 #: d345d4c0fe434cb5bff418dd47a325f4
 msgid "魔搭社区，提供了预训练模型和数据集的下载途径。"
-msgstr ""
+msgstr "ModelScope community, provides download channels for pre-trained models and datasets."
 
 #: ../../source/getting_started/installation.rst:181
 #: e6bbb25d20944a51a9ea50ac6e970fb7
 msgid "swanlab"
-msgstr ""
+msgstr "swanlab"
 
 #: ../../source/getting_started/installation.rst:182
 #: 2e591fee3c2149619f00bd1a9e5d58d2
 msgid "开源训练跟踪工具 SwanLab，用于记录与可视化训练过程"
-msgstr ""
+msgstr "Open-source training tracking tool SwanLab, for recording and visualizing the training process"
 
 #: ../../source/getting_started/installation.rst:183
 #: 57b149dd5aab4629bce759f888f7aca1
 msgid "dev"
-msgstr ""
+msgstr "dev"
 
 #: ../../source/getting_started/installation.rst:184
 #: 820c7cccfc5e4f08b1ff2e844b205d26
 msgid "用于 LLaMA Factory 开发维护。"
-msgstr ""
+msgstr "For LLaMA Factory development and maintenance."
 

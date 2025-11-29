@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, LlamaFactory team.
+# Copyright (C) 2025, LlamaFactory team.
 # This file is distributed under the same license as the LLaMA Factory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -7,306 +7,246 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory \n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-03-05 01:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: ../../source/getting_started/data_preparation.rst:4
-#: 999007bf03c04f0ba9686e409c3957ee
+#: data_preparation.rst
 msgid "数据处理"
 msgstr "Data Preparation"
 
-#: ../../source/getting_started/data_preparation.rst:6
-#: 51a0518ed70040afb952fa738fdc96da
-msgid ""
-"`dataset_info.json <https://github.com/hiyouga/LLaMA-"
-"Factory/blob/main/data/dataset_info.json/>`_ 包含了所有经过预处理的 **本地数据集** 以及 "
-"**在线数据集**。如果您希望使用自定义数据集，请 **务必** 在 ``dataset_info.json`` "
-"文件中添加对数据集及其内容的定义。"
-msgstr ""
+#: data_preparation.rst
+msgid "`dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json/>`_ 包含了所有经过预处理的 **本地数据集** 以及 **在线数据集**。如果您希望使用自定义数据集，请 **务必** 在 ``dataset_info.json`` 文件中添加对数据集及其内容的定义。"
+msgstr "`dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json/>`_ contains all pre-processed **local datasets** and **online datasets**. If you wish to use a custom dataset, you **must** add the definition of the dataset and its content to the ``dataset_info.json`` file."
 
-#: ../../source/getting_started/data_preparation.rst:8
-#: e682a1a2f5304ec594425ddb6676beea
+#: data_preparation.rst
 msgid "目前我们支持 :ref:`Alpaca<alpaca>` 格式和  :ref:`ShareGPT<Sharegpt>` 格式的数据集。"
-msgstr ""
+msgstr "Currently, we support datasets in :ref:`Alpaca<alpaca>` format and :ref:`ShareGPT<Sharegpt>` format."
 
-#: ../../source/getting_started/data_preparation.rst:15
-#: 4372690e828c41c994a24e4cb8950022
+#: data_preparation.rst
 msgid "Alpaca"
-msgstr ""
+msgstr "Alpaca"
 
-#: ../../source/getting_started/data_preparation.rst:17
-#: ../../source/getting_started/data_preparation.rst:266
-#: 4598110a0b6144c3ba2ed5d7e1e447d2 f1247a57e59344c09efae8845afddb14
+#: data_preparation.rst
 msgid "针对不同任务，数据集格式要求如下："
-msgstr ""
+msgstr "The dataset format requirements for different tasks are as follows:"
 
-#: ../../source/getting_started/data_preparation.rst:19
-#: ce30322cefc24887a2498c0834230c74
+#: data_preparation.rst
 msgid ":ref:`指令监督微调 <指令监督微调数据集>`"
-msgstr ""
+msgstr ":ref:`Supervised Fine-Tuning <指令监督微调数据集>`"
 
-#: ../../source/getting_started/data_preparation.rst:20
-#: c9065d3263874079bb1811a8a17a5b95
+#: data_preparation.rst
 msgid ":ref:`预训练 <预训练数据集>`"
-msgstr ""
+msgstr ":ref:`Pre-training <预训练数据集>`"
 
-#: ../../source/getting_started/data_preparation.rst:21
-#: b13da88f2152454c88f6e2e0118eecdb
+#: data_preparation.rst
 msgid ":ref:`偏好训练 <偏好数据集-1>`"
-msgstr ""
+msgstr ":ref:`Preference Training <偏好数据集-1>`"
 
-#: ../../source/getting_started/data_preparation.rst:22
-#: 8541a3a93ee04603a6996d65a2446b29
+#: data_preparation.rst
 msgid ":ref:`KTO <KTO数据集>`"
-msgstr ""
+msgstr ":ref:`KTO <KTO数据集>`"
 
-#: ../../source/getting_started/data_preparation.rst:23
-#: 01c1718dd73b4e1983c9709743d5bfbc
+#: data_preparation.rst
 msgid ":ref:`多模态 <多模态数据集>`"
-msgstr ""
+msgstr ":ref:`Multimodal <多模态数据集>`"
 
-#: ../../source/getting_started/data_preparation.rst:28
-#: ../../source/getting_started/data_preparation.rst:280
-#: 12c4fa426de24285a6b71214026a0e42 30797c2173f3425792c1cff7d03f46bc
+#: data_preparation.rst
 msgid "指令监督微调数据集"
-msgstr ""
+msgstr "Supervised Fine-Tuning Datasets"
 
-#: ../../source/getting_started/data_preparation.rst:30
-#: 8846bb51761144a8bb3349c88e31e5a3
-msgid ""
-"**样例数据集**： `指令监督微调样例数据集 <https://github.com/hiyouga/LLaMA-"
-"Factory/blob/main/data/alpaca_zh_demo.json/>`_"
-msgstr ""
+#: data_preparation.rst
+msgid "**样例数据集**： `指令监督微调样例数据集 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/alpaca_zh_demo.json/>`__"
+msgstr "**Sample Dataset**: `SFT Sample Dataset <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/alpaca_zh_demo.json/>`__"
 
-#: ../../source/getting_started/data_preparation.rst:32
-#: fb403a34fe3b40be8f65434558eef236
+#: data_preparation.rst
 msgid "指令监督微调(Instruct Tuning)通过让模型学习详细的指令以及对应的回答来优化模型在特定指令下的表现。"
-msgstr ""
+msgstr "Instruct Tuning optimizes the model's performance on specific instructions by enabling it to learn from detailed instructions and their corresponding responses."
 
-#: ../../source/getting_started/data_preparation.rst:35
-#: 38507f8e055244368f35b521708c8dae
-msgid ""
-"``instruction`` 列对应的内容为人类指令， ``input`` 列对应的内容为人类输入， ``output`` "
-"列对应的内容为模型回答。下面是一个例子"
-msgstr ""
+#: data_preparation.rst
+msgid "``instruction`` 列对应的内容为人类指令， ``input`` 列对应的内容为人类输入， ``output`` 列对应的内容为模型回答。下面是一个例子"
+msgstr "The content of the ``instruction`` column corresponds to human instructions, the ``input`` column corresponds to human input, and the ``output`` column corresponds to the model's response. Below is an example:"
 
-#: ../../source/getting_started/data_preparation.rst:47
-#: dd078aec76004442b9e2fdd1cf9c3773
-msgid ""
-"在进行指令监督微调时， ``instruction`` 列对应的内容会与 ``input`` 列对应的内容拼接后作为最终的人类输入，即人类输入为 "
-"``instruction\\ninput``。而 ``output`` 列对应的内容为模型回答。 在上面的例子中，人类的最终输入是："
-msgstr ""
+#: data_preparation.rst
+msgid "在进行指令监督微调时，``instruction`` 列对应的内容会与 ``input`` 列对应的内容拼接后作为最终的人类输入，即人类输入为``instruction\\ninput``。而 ``output`` 列对应的内容为模型回答。在上面的例子中，人类的最终输入是："
+msgstr "During supervised fine-tuning, the content of the ``instruction`` column is concatenated with the content of the ``input`` column to form the final human input, i.e., ``instruction\ninput``. The content of the ``output`` column serves as the model's response. In the example above, the final human input is:"
 
-#: ../../source/getting_started/data_preparation.rst:55
-#: 334e256a71b846db835efa9a9bcbd0c8
+#: data_preparation.rst
 msgid "模型的回答是："
-msgstr ""
+msgstr "The model's response is:"
 
-#: ../../source/getting_started/data_preparation.rst:63
-#: e13f7e56b85f46a4a964694928ba935d
+#: data_preparation.rst
 msgid "如果指定， ``system`` 列对应的内容将被作为系统提示词。"
-msgstr ""
+msgstr "If specified, the content of the ``system`` column will be used as the system prompt."
 
-#: ../../source/getting_started/data_preparation.rst:65
-#: 63dd42ba88574729808ce3ff6bec4388
-msgid ""
-"``history`` "
-"列是由多个字符串二元组构成的列表，分别代表历史消息中每轮对话的指令和回答。注意在指令监督微调时，历史消息中的回答内容也会被用于模型学习。"
-msgstr ""
+#: data_preparation.rst
+msgid "``history`` 列是由多个字符串二元组构成的列表，分别代表历史消息中每轮对话的指令和回答。注意在指令监督微调时，历史消息中的回答内容也会被用于模型学习。"
+msgstr "The ``history`` column is a list consisting of multiple string tuples, representing the instruction and response for each turn in the history. Note that during supervised fine-tuning, the responses in the history messages are also used for model learning."
 
-#: ../../source/getting_started/data_preparation.rst:67
-#: e050e930fe3b4fa8ac430666b447268c
+#: data_preparation.rst
 msgid "指令监督微调数据集 **格式要求** 如下："
-msgstr ""
+msgstr "The **format requirements** for Supervised Fine-Tuning datasets are as follows:"
 
-#: ../../source/getting_started/data_preparation.rst:84
-#: 0bb637c0cf834899a4bdb2153f235d30
+#: data_preparation.rst
 msgid "下面提供一个 alpaca 格式 **多轮** 对话的例子，对于单轮对话只需省略 ``history`` 列即可。"
-msgstr ""
+msgstr "Below is an example of multi-turn conversation in Alpaca format. For single-turn conversations, simply omit the ``history`` column."
 
-#: ../../source/getting_started/data_preparation.rst:107
-#: ../../source/getting_started/data_preparation.rst:142
-#: ../../source/getting_started/data_preparation.rst:212
-#: ../../source/getting_started/data_preparation.rst:247
-#: ../../source/getting_started/data_preparation.rst:341
-#: ../../source/getting_started/data_preparation.rst:460
-#: 10f4267fd29341b9b553a744b5ea1a88 3d25806c7bb544ee8a2941e8a97d38e5
-#: 571bc09dae694f44a685a3a881424ceb 6ca5501b84fb44fbaab49f466d3f883d
-#: 7b3304dacdc64bccac228fdecfd337df 9f4f5f18af084361834deb2a962e0d07
+#: data_preparation.rst
 msgid "对于上述格式的数据， ``dataset_info.json`` 中的 **数据集描述** 应为："
-msgstr ""
+msgstr "For data in the above format, the **dataset description** in ``dataset_info.json`` should be:"
 
-#: ../../source/getting_started/data_preparation.rst:125
-#: fa6ead275eef45fba57712c031667ce4
+#: data_preparation.rst
 msgid "预训练数据集"
-msgstr ""
+msgstr "Pre-training Datasets"
 
-#: ../../source/getting_started/data_preparation.rst:127
-#: 3cef54e12e11466fa9e5b83ee96c717f
-msgid ""
-"**样例数据集**： `预训练样例数据集 <https://github.com/hiyouga/LLaMA-"
-"Factory/blob/main/data/c4_demo.json/>`_"
-msgstr ""
+#: data_preparation.rst
+msgid "**样例数据集**： `预训练样例数据集 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/c4_demo.json/>`_"
+msgstr "**Sample Dataset**: `Pre-training Sample Dataset <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/c4_demo.json/>`_"
 
-#: ../../source/getting_started/data_preparation.rst:130
-#: 4ece8fc0cae44f10b08c27d23df172ea
-msgid ""
-"大语言模型通过学习未被标记的文本进行预训练，从而学习语言的表征。通常，预训练数据集从互联网上获得，因为互联网上提供了大量的不同领域的文本信息，有助于提升模型的泛化能力。"
-" 预训练数据集文本描述格式如下："
-msgstr ""
+#: data_preparation.rst
+msgid "大语言模型通过学习未被标记的文本进行预训练，从而学习语言的表征。通常，预训练数据集从互联网上获得，因为互联网上提供了大量的不同领域的文本信息，有助于提升模型的泛化能力。"
+msgstr "Large Language Models (LLMs) are pre-trained by learning from unlabeled text to acquire language representations. Typically, pre-training datasets are obtained from the internet, as it provides a vast amount of text information from different domains, which helps improve the model's generalization ability."
 
-#: ../../source/getting_started/data_preparation.rst:140
-#: 458eb19db8764b9d9802ea0e4e29d315
+#: data_preparation.rst
+msgid "预训练数据集文本描述格式如下："
+msgstr "The text description format for pre-training datasets is as follows:"
+
+#: data_preparation.rst
 msgid "在预训练时，只有 ``text`` 列中的 **内容** （即document）会用于模型学习。"
-msgstr ""
+msgstr "During pre-training, only the **content** in the ``text`` column (i.e., the document) is used for model learning."
 
-#: ../../source/getting_started/data_preparation.rst:156
-#: ../../source/getting_started/data_preparation.rst:359
-#: 4dc28984d067415093d7024acd0fe086 781022ba18b4408ca069f139765cde2a
+#: data_preparation.rst
 msgid "偏好数据集"
-msgstr ""
+msgstr "Preference Datasets"
 
-#: ../../source/getting_started/data_preparation.rst:159
-#: dd1846eaabcf44ed9f712a9520a2c68e
+#: data_preparation.rst
 msgid "偏好数据集用于奖励模型训练、DPO 训练和 ORPO 训练。对于系统指令和人类输入，偏好数据集给出了一个更优的回答和一个更差的回答。"
-msgstr ""
+msgstr "Preference datasets are used for Reward Model training, DPO training, and ORPO training. For a given system instruction and human input, the preference dataset provides a better response and a worse response."
 
-#: ../../source/getting_started/data_preparation.rst:161
-#: 450cd13caae54a97905cc14c12572de1
-msgid ""
-"`一些研究 <https://openai.com/index/instruction-following/>`_ "
-"表明通过让模型学习“什么更好”可以使得模型更加迎合人类的需求。 甚至可以使得参数相对较少的模型的表现优于参数更多的模型。"
-msgstr ""
+#: data_preparation.rst
+msgid "`一些研究 <https://openai.com/index/instruction-following/>`_ 表明通过让模型学习“什么更好”可以使得模型更加迎合人类的需求。甚至可以使得参数相对较少的模型的表现优于参数更多的模型。"
+msgstr "`Some research <https://openai.com/index/instruction-following/>`_ suggests that teaching models \"what is better\" can make them more aligned with human needs. It can even enable models with fewer parameters to outperform those with more parameters."
 
-#: ../../source/getting_started/data_preparation.rst:165
-#: 0d122e6d6c43445691be8c6d4865d3d5
+#: data_prepa'ration.rst
 msgid "偏好数据集需要在 ``chosen`` 列中提供更优的回答，并在 ``rejected`` 列中提供更差的回答，在一轮问答中其格式如下："
-msgstr ""
+msgstr "Preference datasets need to provide the better response in the ``chosen`` column and the worse response in the ``rejected`` column. The format for a single turn is as follows:"
 
-#: ../../source/getting_started/data_preparation.rst:178
-#: ../../source/getting_started/data_preparation.rst:416
-#: 9eb8b5de519e411fa19fef075cc534d4 cd60c5ccd6b04dec978bb5420a9f4e9c
+#: data_preparation.rst
 msgid "对于上述格式的数据，``dataset_info.json`` 中的 **数据集描述** 应为："
-msgstr ""
+msgstr "For data in the above format, the **dataset description** in ``dataset_info.json`` should be:"
 
-#: ../../source/getting_started/data_preparation.rst:195
-#: 7947fcb1408b43f493f03e68e11dbea1
+#: data_preparation.rst
 msgid "KTO 数据集"
-msgstr ""
+msgstr "KTO Datasets"
 
-#: ../../source/getting_started/data_preparation.rst:197
-#: de9c288e1d564fe898c3c0cee5250647
-msgid ""
-"KTO数据集与偏好数据集类似，但不同于给出一个更优的回答和一个更差的回答，KTO数据集对每一轮问答只给出一个 true/false 的 "
-"``label``。 除了 ``instruction`` 以及 ``input`` 组成的人类最终输入和模型回答 ``output`` ，KTO"
-" 数据集还需要额外添加一个 ``kto_tag`` 列（true/false）来表示人类的反馈。"
-msgstr ""
+#: data_preparation.rst
+msgid "KTO数据集与偏好数据集类似，但不同于给出一个更优的回答和一个更差的回答，KTO数据集对每一轮问答只给出一个 true/false 的 ``label``。"
+msgstr "KTO datasets are similar to preference datasets, but instead of providing a better and a worse response, KTO datasets only provide a true/false ``label`` for each turn."
 
-#: ../../source/getting_started/data_preparation.rst:200
-#: 468099b9c90f4c368505002a77e4b7ac
+#: data_preparation.rst
+msgid "除了 ``instruction`` 以及 ``input`` 组成的人类最终输入和模型回答 ``output`` ，KTO 数据集还需要额外添加一个 ``kto_tag`` 列（true/false）来表示人类的反馈。"
+msgstr "In addition to the final human input (formed by ``instruction`` and ``input``) and the model response ``output``, KTO datasets require an additional ``kto_tag`` column (true/false) to represent human feedback."
+
+#: data_preparation.rst
 msgid "在一轮问答中其格式如下："
-msgstr ""
+msgstr "The format for a single turn is as follows:"
 
-#: ../../source/getting_started/data_preparation.rst:230
-#: bd8b2ddc311542cca7ecaff58b2fa05f
+#: data_preparation.rst
 msgid "多模态数据集"
-msgstr ""
+msgstr "Multimodal Datasets"
 
-#: ../../source/getting_started/data_preparation.rst:232
-#: 99afe9382071475096b078a6506a5151
-msgid "多模态数据集需要额外添加一个 ``images`` 列，包含输入图像的路径。目前我们仅支持单张图像输入。"
-msgstr ""
+#: data_preparation.rst
+msgid "目前我们支持 :ref:`多模态图像数据集 <多模态图像数据集>`、 :ref:`视频数据集 <多模态视频数据集>` 以及 :ref:`音频数据集 <多模态音频数据集>` 的输入。"
+msgstr "Currently, we support :ref:`multimodal image datasets <多模态图像数据集>`, :ref:`video datasets <多模态视频数据集>`, and :ref:`audio datasets <多模态音频数据集>`."
 
-#: ../../source/getting_started/data_preparation.rst:264
-#: 04816a6eada34365853f5b1250f567ae
+#: data_preparation.rst
+msgid "图像数据集"
+msgstr "Image Datasets"
+
+#: data_preparation.rst
+msgid "多模态图像数据集需要额外添加一个 ``images`` 列，包含输入图像的路径。注意图片的数量必须与文本中所有 <image> 标记的数量严格一致。"
+msgstr "Multimodal image datasets require an additional ``images`` column containing the paths to the input images. Note that the number of images must strictly match the number of <image> tags in the text."
+
+
+#: data_preparation.rst
+msgid "视频数据集"
+msgstr "Video Datasets"
+
+#: data_preparation.rst
+msgid "多模态视频数据集需要额外添加一个 ``videos`` 列，包含输入视频的路径。注意视频的数量必须与文本中所有 <video> 标记的数量严格一致。"
+msgstr "Multimodal video datasets require an additional ``videos`` column containing the paths to the input videos. Note that the number of videos must strictly match the number of <video> tags in the text."
+
+#: data_preparation.rst
+msgid "音频数据集"
+msgstr "Audio Datasets"
+
+#: data_preparation.rst
+msgid "多模态音频数据集需要额外添加一个 ``audio`` 列，包含输入图像的路径。注意音频的数量必须与文本中所有 <audio> 标记的数量严格一致。"
+msgstr "Multimodal audio datasets require an additional ``audio`` column containing the paths to the input audios. Note that the number of audios must strictly match the number of <audio> tags in the text."
+
+#: data_preparation.rst
 msgid "ShareGPT"
-msgstr ""
+msgstr "ShareGPT"
 
-#: ../../source/getting_started/data_preparation.rst:268
-#: bff508cd11b7449fb0cffefcfcddd41e
+#: data_preparation.rst
 msgid ":ref:`指令监督微调 <指令监督微调数据集-2>`"
-msgstr ""
+msgstr ":ref:`Supervised Fine-Tuning <指令监督微调数据集-2>`"
 
-#: ../../source/getting_started/data_preparation.rst:269
-#: 59ac1430e46d41b98ed64ff9a0270dc1
+#: data_preparation.rst
 msgid ":ref:`偏好训练 <偏好数据集-2>`"
-msgstr ""
+msgstr ":ref:`Preference Training <偏好数据集-2>`"
 
-#: ../../source/getting_started/data_preparation.rst:270
-#: 6030121e93054736bfd522978bf02e4d
+#: data_preparation.rst
 msgid ":ref:`OpenAI格式 <OpenAI格式>`"
-msgstr ""
+msgstr ":ref:`OpenAI Format <OpenAI格式>`"
 
-#: ../../source/getting_started/data_preparation.rst:273
-#: 23b539c3fe2847f09e5c78d48858ad16
-msgid ""
-"ShareGPT 格式中的 KTO数据集(`样例 <https://github.com/hiyouga/LLaMA-"
-"Factory/blob/main/data/kto_en_demo.json/>`_)和多模态数据集(`样例 "
-"<https://github.com/hiyouga/LLaMA-"
-"Factory/blob/main/data/mllm_demo.json/>`_) 与 Alpaca 格式的类似。"
-msgstr ""
+#: data_preparation.rst
+msgid "ShareGPT 格式中的 KTO 数据集（`样例 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/kto_en_demo.json/>`__）和多模态数据集（`样例 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/mllm_demo.json/>`__）与 Alpaca 格式的类似。"
+msgstr "KTO datasets (`sample <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/kto_en_demo.json/>`__) and multimodal datasets (`sample <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/mllm_demo.json/>`__) in ShareGPT format are similar to those in Alpaca format."
 
-#: ../../source/getting_started/data_preparation.rst:274
-#: af52b8eb5d9a47e3925e332d6ddc48ca
+#: data_preparation.rst
 msgid "预训练数据集不支持 ShareGPT 格式。"
-msgstr ""
+msgstr "Pre-training datasets do not support ShareGPT format."
 
-#: ../../source/getting_started/data_preparation.rst:283
-#: fa30e8ceaf4543caa63fc7bb2362ab51
-msgid ""
-"**样例数据集**： `指令监督微调样例数据集 <https://github.com/hiyouga/LLaMA-"
-"Factory/blob/main/data/glaive_toolcall_zh_demo.json/>`_"
-msgstr ""
+#: data_preparation.rst
+msgid "**样例数据集**： `指令监督微调样例数据集 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/glaive_toolcall_zh_demo.json/>`__"
+msgstr "**Sample Dataset**: `SFT Sample Dataset <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/glaive_toolcall_zh_demo.json/>`__"
 
-#: ../../source/getting_started/data_preparation.rst:285
-#: d1ef8f92402d471695aa3b93b4ac152c
-msgid ""
-"相比 ``alpaca`` 格式的数据集， ``sharegpt`` 格式支持 **更多** 的角色种类，例如 "
-"human、gpt、observation、function 等等。它们构成一个对象列表呈现在 ``conversations`` 列中。 下面是"
-" ``sharegpt`` 格式的一个例子："
-msgstr ""
+#: data_preparation.rst
+msgid "相比 ``alpaca`` 格式的数据集， ``sharegpt`` 格式支持 **更多** 的角色种类，例如 human、gpt、observation、function 等等。它们构成一个对象列表呈现在 ``conversations`` 列中。下面是 ``sharegpt`` 格式的一个例子："
+msgstr "Compared to ``alpaca`` format datasets, ``sharegpt`` format supports **more** role types, such as human, gpt, observation, function, etc. They form a list of objects presented in the ``conversations`` column. Below is an example of ``sharegpt`` format:"
 
-#: ../../source/getting_started/data_preparation.rst:312
-#: 1775eea449a149e580af08e279db4a21
+#: data_preparation.rst
 msgid "注意其中 human 和 observation 必须出现在奇数位置，gpt 和 function 必须出现在偶数位置。"
-msgstr ""
+msgstr "Note that human and observation must appear at odd positions, while gpt and function must appear at even positions."
 
-#: ../../source/getting_started/data_preparation.rst:361
-#: ff6a2a4302674adabfbea0b1a78d9222
-msgid ""
-"**样例数据集**： `偏好数据样例数据集 <https://github.com/hiyouga/LLaMA-"
-"Factory/blob/main/data/dpo_zh_demo.json/>`_"
-msgstr ""
+#: data_preparation.rst
+msgid "**样例数据集**： `偏好数据样例数据集 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dpo_zh_demo.json/>`_"
+msgstr "**Sample Dataset**: `Preference Sample Dataset <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dpo_zh_demo.json/>`_"
 
-#: ../../source/getting_started/data_preparation.rst:363
-#: b1c681f2d426413ebd9ee12e0b6d2abf
-msgid ""
-"Sharegpt 格式的偏好数据集同样需要在 ``chosen`` 列中提供更优的消息，并在 ``rejected`` 列中提供更差的消息。 "
-"下面是一个例子："
-msgstr ""
+#: data_preparation.rst
+msgid "Sharegpt 格式的偏好数据集同样需要在 ``chosen`` 列中提供更优的消息，并在 ``rejected`` 列中提供更差的消息。下面是一个例子："
+msgstr "Preference datasets in ShareGPT format also need to provide the better message in the ``chosen`` column and the worse message in the ``rejected`` column. Below is an example:"
 
-#: ../../source/getting_started/data_preparation.rst:385
-#: 42d53ec4ccac4b3f99ba154fc5582176
+#: data_preparation.rst
 msgid "其格式为："
-msgstr ""
+msgstr "The format is as follows:"
 
-#: ../../source/getting_started/data_preparation.rst:433
-#: f5da99529ee844dfac416589b3f69de1
+#: data_preparation.rst
+msgid "对于上述格式的数据，``dataset_info.json`` 中的 **数据集描述** 应为："
+msgstr "For data in the above format, the **dataset description** in ``dataset_info.json`` should be:"
+
+#: data_preparation.rst
 msgid "OpenAI格式"
-msgstr ""
+msgstr "OpenAI Format"
 
-#: ../../source/getting_started/data_preparation.rst:435
-#: ed5df85a5cca4af7b26a5f2597da64dd
+#: data_preparation.rst
 msgid "OpenAI 格式仅仅是 ``sharegpt`` 格式的一种特殊情况，其中第一条消息可能是系统提示词。"
-msgstr ""
-
+msgstr "OpenAI format is essentially a special case of the ``sharegpt`` format, where the first message may be a system prompt."

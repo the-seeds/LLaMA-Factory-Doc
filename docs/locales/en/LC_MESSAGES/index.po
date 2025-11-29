@@ -1,6 +1,7 @@
-# Translations template for PROJECT.
-# Copyright (C) 2025 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, LlamaFactory team.
+# This file is distributed under the same license as the LLaMA Factory
+# package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 #, fuzzy

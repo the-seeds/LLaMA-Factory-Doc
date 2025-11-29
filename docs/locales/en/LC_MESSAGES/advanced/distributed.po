@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, LlamaFactory team.
+# Copyright (C) 2025, LlamaFactory team.
 # This file is distributed under the same license as the LLaMA Factory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -7,14 +7,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory \n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-03-05 01:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,56 +24,68 @@ msgstr "Distributed Training"
 
 #: ../../source/advanced/distributed.rst:5 37afc57f02104e8e90049be26b758138
 msgid ""
-"LLaMA-Factory 支持单机多卡和多机多卡分布式训练。同时也支持 :ref:`DDP<NativeDD>` ,  "
-":ref:`DeepSpeed <deepspeed>` 和 FSDP 三种分布式引擎。"
+"LLaMA-Factory 支持单机多卡和多机多卡分布式训练。同时也支持 :ref:`DDP <NativeDDP>`、:ref:`DeepSpeed <deepspeed_ref>` 和 :ref:`FSDP <fsdp_ref>` 三种分布式引擎。"
 msgstr ""
+"LLaMA-Factory supports single-node multi-card and Multi-node Multi-card distributed training. It also supports three distributed engines: :ref:`DDP <NativeDDP>`, "
+":ref:`DeepSpeed <deepspeed_ref>`, and :ref:`FSDP <fsdp_ref>`."
 
 #: ../../source/advanced/distributed.rst:8 6f41c1bfbe2f4d8797e9fcfaa9f71419
 msgid ""
-"`DDP <https://pytorch.org/docs/stable/notes/ddp.html>`_ "
+"`DDP <https://pytorch.org/docs/stable/notes/ddp.html>`__ "
 "(DistributedDataParallel) 通过实现模型并行和数据并行实现训练加速。 使用 DDP "
 "的程序需要生成多个进程并且为每个进程创建一个 DDP 实例，他们之间通过 ``torch.distributed`` 库同步。"
 msgstr ""
+"`DDP <https://pytorch.org/docs/stable/notes/ddp.html>`__ "
+"(DistributedDataParallel) achieves training acceleration through model parallelism and data parallelism. Programs using DDP "
+"need to spawn multiple processes and create a DDP instance for each process, which synchronize through the ``torch.distributed`` library."
 
 #: ../../source/advanced/distributed.rst:11 410d7c197dcd43e4b9f8a3ed63685307
 msgid ""
 "`DeepSpeed <https://www.microsoft.com/en-us/research/blog/deepspeed-"
-"extreme-scale-model-training-for-everyone/>`_ 是微软开发的分布式训练引擎，并提供ZeRO（Zero "
+"extreme-scale-model-training-for-everyone/>`__ 是微软开发的分布式训练引擎，并提供ZeRO（Zero "
 "Redundancy Optimizer）、offload、Sparse Attention、1 bit Adam、流水线并行等优化技术。 "
 "您可以根据任务需求与设备选择使用。"
 msgstr ""
+"`DeepSpeed <https://www.microsoft.com/en-us/research/blog/deepspeed-"
+"extreme-scale-model-training-for-everyone/>`__ is a distributed training engine developed by Microsoft, offering optimization techniques such as ZeRO (Zero "
+"Redundancy Optimizer), offload, Sparse Attention, 1 bit Adam, and pipeline parallelism. "
+"You can choose to use it based on task requirements and device availability."
 
 #: ../../source/advanced/distributed.rst:14 b703d5d63e8b40f495305a6b2285d93d
 msgid ""
-"`FSDP <https://pytorch.org/tutorials/intermediate/FSDP_tutorial.html>`_ "
+"`FSDP <https://pytorch.org/tutorials/intermediate/FSDP_tutorial.html>`__ "
 "通过全切片数据并行技术（Fully Sharded Data Parallel）来处理更多更大的模型。在 DDP 中，每张 GPU "
 "都各自保留了一份完整的模型参数和优化器参数。而 FSDP 切分了模型参数、梯度与优化器参数，使得每张 GPU 只保留这些参数的一部分。 "
 "除了并行技术之外，FSDP 还支持将模型参数卸载至CPU，从而进一步降低显存需求。"
 msgstr ""
+"`FSDP <https://pytorch.org/tutorials/intermediate/FSDP_tutorial.html>`__ "
+"processes more and larger models through Fully Sharded Data Parallel technology. In DDP, each GPU "
+"maintains a complete copy of model parameters and optimizer parameters. FSDP shards model parameters, gradients, and optimizer parameters, allowing each GPU to only retain a portion of these parameters. "
+"Beyond parallelism techniques, FSDP also supports offloading model parameters to CPU, further reducing memory requirements."
 
 #: ../../source/advanced/distributed.rst:22 ec8879bb6b1b4c68ba13491619b54420
 msgid "引擎"
-msgstr ""
+msgstr "Engine"
 
 #: ../../source/advanced/distributed.rst:23 dbcb66b0d9864d13830e95d8737dfb2f
 msgid "数据切分"
-msgstr ""
+msgstr "Data Sharding"
 
 #: ../../source/advanced/distributed.rst:24 807d9dfcfc4944938adc0a5c2d2bd736
 msgid "模型切分"
-msgstr ""
+msgstr "Model Sharding"
 
 #: ../../source/advanced/distributed.rst:25 46a904e365cb42b7bfbfc07e33fb7957
 msgid "优化器切分"
-msgstr ""
+msgstr "Optimizer Sharding"
 
 #: ../../source/advanced/distributed.rst:26 f8590d65ba0d4b48ae693a128feed3c9
 msgid "参数卸载"
-msgstr ""
+msgstr "Parameter Offload"
 
 #: ../../source/advanced/distributed.rst:27 fbd17fc8605e41e2973e6177ea7c740b
 msgid "DDP"
-msgstr ""
+msgstr "DDP"
 
 #: ../../source/advanced/distributed.rst:28
 #: ../../source/advanced/distributed.rst:33
@@ -91,40 +101,40 @@ msgstr ""
 #: ac8f283bf84141a8b6b6262147bdfd00 c1ea50ac5bb4480a9c70f50830999f5b
 #: f79957e5ed484c748a59998fcbacec46 fbac2703e61a42dd9635f26de311760f
 msgid "支持"
-msgstr ""
+msgstr "Supported"
 
 #: ../../source/advanced/distributed.rst:29
 #: ../../source/advanced/distributed.rst:30
 #: ../../source/advanced/distributed.rst:31 175d8db1221a4f0f93a13631ba58eadd
 #: 2997c2f680244712ab3102474cd37881 ad2362a49fab46058b58ae217aa30ca8
 msgid "不支持"
-msgstr ""
+msgstr "Not Supported"
 
 #: ../../source/advanced/distributed.rst:32
 #: ../../source/advanced/distributed.rst:265 12929839b01c46b4aee70ac93c513f21
 #: 2e982b6d2e56453b9300949df731be35
 msgid "DeepSpeed"
-msgstr ""
+msgstr "DeepSpeed"
 
 #: ../../source/advanced/distributed.rst:37
 #: ../../source/advanced/distributed.rst:605 45369cc7a7b4418ab1e02532c9bed7f1
 #: abfbea6f9e824fbb9dd4fbbc0e569ae4
 msgid "FSDP"
-msgstr ""
+msgstr "FSDP"
 
 #: ../../source/advanced/distributed.rst:65 d1c5e2d1762e4807902973c7c95cf4da
 msgid "NativeDDP"
-msgstr ""
+msgstr "NativeDDP"
 
 #: ../../source/advanced/distributed.rst:67 bc5ae92596864bc7adae36f840771ef6
 msgid "NativeDDP 是 PyTorch 提供的一种分布式训练方式，您可以通过以下命令启动训练："
-msgstr ""
+msgstr "NativeDDP is a distributed training method provided by PyTorch. You can start training with the following command:"
 
 #: ../../source/advanced/distributed.rst:77
 #: ../../source/advanced/distributed.rst:293 27faebe9f8784dc0906dcb7e84a7a43b
 #: 902a7fc272d74ef299e5016fa6ee696d
 msgid "单机多卡"
-msgstr ""
+msgstr "Single-node Multi-GPU"
 
 #: ../../source/advanced/distributed.rst:80
 #: ../../source/advanced/distributed.rst:174
@@ -133,25 +143,25 @@ msgstr ""
 #: 3cdc0bd981574553989f20ec7bed98ca 56f3acb1312e4af496ba969ac82672c1
 #: 9fd4a7ebbb8e45fbb6339c613c16326d
 msgid "llamafactory-cli"
-msgstr ""
+msgstr "llamafactory-cli"
 
 #: ../../source/advanced/distributed.rst:82 b385d655bd3f42a4afa57640a736441e
 msgid "您可以使用 llamafactory-cli 启动 NativeDDP 引擎。"
-msgstr ""
+msgstr "You can use llamafactory-cli to start the NativeDDP engine."
 
 #: ../../source/advanced/distributed.rst:88 1962f5cefb2949dd9e8011b608586c80
 msgid "如果 ``CUDA_VISIBLE_DEVICES`` 没有指定，则默认使用所有GPU。如果需要指定GPU，例如第0、1个GPU，可以使用："
-msgstr ""
+msgstr "If ``CUDA_VISIBLE_DEVICES`` is not specified, all GPUs will be used by default. If you need to specify GPUs, for example GPUs 0 and 1, you can use:"
 
 #: ../../source/advanced/distributed.rst:97
 #: ../../source/advanced/distributed.rst:203 c26f3355be0946308084ab8da6997730
 #: f879c1bbc46e442bb46f3f0ad5c8c95c
 msgid "torchrun"
-msgstr ""
+msgstr "torchrun"
 
 #: ../../source/advanced/distributed.rst:98 264e5651a08c43cb9108983c39151720
 msgid "您也可以使用 ``torchrun`` 指令启动 NativeDDP 引擎进行单机多卡训练。下面提供一个示例："
-msgstr ""
+msgstr "You can also use the ``torchrun`` command to start the NativeDDP engine for single-node multi-card training. Here is an example:"
 
 #: ../../source/advanced/distributed.rst:124
 #: ../../source/advanced/distributed.rst:215
@@ -160,109 +170,111 @@ msgstr ""
 #: 5267b9f18b5c4f09a94946beb5198d1b 88a7465af212409883f214dc468db024
 #: d8f8a8807dfa43269961718c3535fb07
 msgid "accelerate"
-msgstr ""
+msgstr "accelerate"
 
 #: ../../source/advanced/distributed.rst:125 ede108465bde4d8bb4568c4805bc148b
 msgid "您还可以使用 ``accelerate`` 指令启动进行单机多卡训练。"
-msgstr ""
+msgstr "You can also use the ``accelerate`` command to start single-node multi-card training."
 
 #: ../../source/advanced/distributed.rst:127
 #: ../../source/advanced/distributed.rst:218 0cf85cd116a446b2abe13a7b13980e61
 #: 9421dc555c174d61a052177388c4f97b
 msgid "首先运行以下命令，根据需求回答一系列问题后生成配置文件："
-msgstr ""
+msgstr "First run the following command, answer a series of questions based on your needs, and generate a configuration file:"
 
 #: ../../source/advanced/distributed.rst:136
 #: ../../source/advanced/distributed.rst:224 a178252f671241d79c40c457ea6de554
 #: a6bfdf60063a4c84b81568d0bf3d432e
 msgid "下面提供一个示例配置文件："
-msgstr ""
+msgstr "Here is an example configuration file:"
 
 #: ../../source/advanced/distributed.rst:160
 #: ../../source/advanced/distributed.rst:250 2927bba03d1b4564a800d926a3e624e0
 #: 4b358d6476d5498bbc47971657169c80
 msgid "您可以通过运行以下指令开始训练:"
-msgstr ""
+msgstr "You can start training by running the following command:"
 
 #: ../../source/advanced/distributed.rst:171
 #: ../../source/advanced/distributed.rst:360 3e2b8d414e484fb6b41ac64b2e225221
 #: 83e8459fe3e54e16913cd3a989531301
 msgid "多机多卡"
-msgstr ""
+msgstr "Multi-node Multi-card"
 
 #: ../../source/advanced/distributed.rst:189 0a51e133fb0f4b6f8bee3182fda1fc22
 msgid "变量名"
-msgstr ""
+msgstr "Variable Name"
 
 #: ../../source/advanced/distributed.rst:190 631e10b003db44f5b32fa653aa2be47d
 msgid "介绍"
-msgstr ""
+msgstr "Description"
 
 #: ../../source/advanced/distributed.rst:191 c4464cd511a2431cacda14edb0a4b9bc
 msgid "FORCE_TORCHRUN"
-msgstr ""
+msgstr "FORCE_TORCHRUN"
 
 #: ../../source/advanced/distributed.rst:192 8442d9cea1714e3a9e74665a68295658
 msgid "是否强制使用torchrun"
-msgstr ""
+msgstr "Whether to force the use of torchrun"
 
 #: ../../source/advanced/distributed.rst:193 9f306d335f3c4578bb5e26f0ab5d4d7a
 msgid "NNODES"
-msgstr ""
+msgstr "NNODES"
 
 #: ../../source/advanced/distributed.rst:194 03529bcdb1ee4a27a605d4c3514b15ba
 msgid "节点数量"
-msgstr ""
+msgstr "Number of nodes"
 
 #: ../../source/advanced/distributed.rst:195 de0864f4c4ad4cb7bfa74ff2f046c1d7
 msgid "NODE_RANK"
-msgstr ""
+msgstr "NODE_RANK"
 
 #: ../../source/advanced/distributed.rst:196 9302d9f8741649b0ab9931d8c674e035
 msgid "各个节点的rank。"
-msgstr ""
+msgstr "Rank of each node."
 
 #: ../../source/advanced/distributed.rst:197 83643e2ee5a14674aab719c1434f9ba1
 msgid "MASTER_ADDR"
-msgstr ""
+msgstr "MASTER_ADDR"
 
 #: ../../source/advanced/distributed.rst:198 563f2cd95b47410880cc97a06dc0f0d5
 msgid "主节点的地址。"
-msgstr ""
+msgstr "Address of the master node."
 
 #: ../../source/advanced/distributed.rst:199 dbad3828a7824f5881974d69f6625117
 msgid "MASTER_PORT"
-msgstr ""
+msgstr "MASTER_PORT"
 
 #: ../../source/advanced/distributed.rst:200 47b0c3fc2536488e96ed8bb57bc3a04e
 msgid "主节点的端口。"
-msgstr ""
+msgstr "Port of the master node."
 
 #: ../../source/advanced/distributed.rst:205 dade3d3fab544e64861d17777f4de6b2
 msgid "您也可以使用 ``torchrun`` 指令启动 NativeDDP 引擎进行多机多卡训练。"
-msgstr ""
+msgstr "You can also use the ``torchrun`` command to start the NativeDDP engine for Multi-node Multi-card training."
 
 #: ../../source/advanced/distributed.rst:216 7f4aea00fb4844fdac36b06a8ba54030
 msgid "您还可以使用 ``accelerate`` 指令启动进行多机多卡训练。"
-msgstr ""
+msgstr "You can also use the ``accelerate`` command to start Multi-node Multi-card training."
 
 #: ../../source/advanced/distributed.rst:266 84ecfbcfcb2a40118b7d0a9342108f54
 msgid ""
 "DeepSpeed 是由微软开发的一个开源深度学习优化库，旨在提高大模型训练的效率和速度。在使用 DeepSpeed "
 "之前，您需要先估计训练任务的显存大小，再根据任务需求与资源情况选择合适的 ZeRO 阶段。"
 msgstr ""
+"DeepSpeed is an open-source deep learning optimization library developed by Microsoft, aimed at improving the efficiency and speed of large model training. Before using DeepSpeed, "
+"you need to first estimate the memory size of the training task, then select an appropriate ZeRO stage based on task requirements and resource availability."
 
 #: ../../source/advanced/distributed.rst:268 5e0e590fb9f64a3cb0a86002127b14d1
 msgid "ZeRO-1: 仅划分优化器参数，每个GPU各有一份完整的模型参数与梯度。"
-msgstr ""
+msgstr "ZeRO-1: Only shards optimizer parameters, each GPU has a complete copy of model parameters and gradients."
 
 #: ../../source/advanced/distributed.rst:269 aed3ca6113b54abbaab2a2c724521b6c
 msgid "ZeRO-2: 划分优化器参数与梯度，每个GPU各有一份完整的模型参数。"
-msgstr ""
+msgstr "ZeRO-2: Shards optimizer parameters and gradients, each GPU has a complete copy of model parameters."
 
 #: ../../source/advanced/distributed.rst:270 de43239016c74ef8bb8e7de8138082ab
 msgid "ZeRO-3: 划分优化器参数、梯度与模型参数。"
-msgstr ""
+msgstr "ZeRO-3: Shards optimizer parameters, gradients, and model parameters."
 
 #: ../../source/advanced/distributed.rst:274 67f9c8e702ad4a1fad321422657d6d2f
 msgid ""
@@ -270,80 +282,87 @@ msgid ""
 "``offload_param=cpu`` 参数会大幅减小显存需求，但会极大地使训练速度减慢。因此，如果您有足够的显存， 应当使用 "
 "ZeRO-1，并且确保 ``offload_param=none``。"
 msgstr ""
+"Simply summarize: from ZeRO-1 to ZeRO-3, the higher the stage number, the smaller the memory requirement, but training speed also decreases accordingly. Additionally, setting the "
+"``offload_param=cpu`` parameter will significantly reduce memory requirements, but will greatly slow down training speed. Therefore, if you have sufficient memory, you should use "
+"ZeRO-1 and ensure ``offload_param=none``."
 
 #: ../../source/advanced/distributed.rst:277 833679101b7349ffa7a04e48e8cb61ae
 msgid "LLaMA-Factory提供了使用不同阶段的 DeepSpeed 配置文件的示例。包括："
-msgstr ""
+msgstr "LLaMA-Factory provides examples of DeepSpeed configuration files using different stages. Including:"
 
 #: ../../source/advanced/distributed.rst:279 2f07eff88b6f42fabc3abaaf00949917
 msgid ":ref:`ZeRO-0` (不开启)"
-msgstr ""
+msgstr ":ref:`ZeRO-0` (disabled)"
 
 #: ../../source/advanced/distributed.rst:280 29e66ecb84ce44918d24b5b1b69d7896
 msgid ":ref:`ZeRO-2`"
-msgstr ""
+msgstr ":ref:`ZeRO-2`"
 
 #: ../../source/advanced/distributed.rst:281 af294c60616e407b9878e1c1af0520d4
 msgid ":ref:`ZeRO-2+offload <zero2O>`"
-msgstr ""
+msgstr ":ref:`ZeRO-2+offload <zero2O>`"
 
 #: ../../source/advanced/distributed.rst:282 7c8ad1ef3fdf4a9e8c28e4053c878d84
 msgid ":ref:`ZeRO-3`"
-msgstr ""
+msgstr ":ref:`ZeRO-3`"
 
 #: ../../source/advanced/distributed.rst:283 9fb0aa3a17704dc5a8654fb5febf072e
 msgid ":ref:`ZeRO-3+offload <zero3O>`"
-msgstr ""
+msgstr ":ref:`ZeRO-3+offload <zero3O>`"
 
 #: ../../source/advanced/distributed.rst:286 099e3b681a6c4c1cb06ec966d041b552
 msgid ""
 "`https://huggingface.co/docs/transformers/deepspeed "
 "<https://huggingface.co/docs/transformers/deepspeed/>`_ 提供了更为详细的介绍。"
 msgstr ""
+"`https://huggingface.co/docs/transformers/deepspeed "
+"<https://huggingface.co/docs/transformers/deepspeed/>`_ provides a more detailed introduction."
 
 #: ../../source/advanced/distributed.rst:298 65b8dfd75994432895cac0a700878fe5
 msgid "您可以使用 llamafactory-cli 启动 DeepSpeed 引擎进行单机多卡训练。"
-msgstr ""
+msgstr "You can use llamafactory-cli to start the DeepSpeed engine for single-node multi-card training."
 
 #: ../../source/advanced/distributed.rst:304 93de16603fb34e5e847ca4df6dcdd4a4
 msgid "为了启动 DeepSpeed 引擎，配置文件中 ``deepspeed`` 参数指定了 DeepSpeed 配置文件的路径:"
-msgstr ""
+msgstr "To start the DeepSpeed engine, the ``deepspeed`` parameter in the configuration file specifies the path to the DeepSpeed configuration file:"
 
 #: ../../source/advanced/distributed.rst:314
 #: ../../source/advanced/distributed.rst:372 a5b5d620f5ac41e496689843482e9346
 #: ae89a7afd41b4ab5aec9017577db98f3
 msgid "deepspeed"
-msgstr ""
+msgstr "deepspeed"
 
 #: ../../source/advanced/distributed.rst:316 3b8410e623a44a359c091d5acecad479
 msgid "您也可以使用 ``deepspeed`` 指令启动 DeepSpeed 引擎进行单机多卡训练。"
-msgstr ""
+msgstr "You can also use the ``deepspeed`` command to start the DeepSpeed engine for single-node multi-card training."
 
 #: ../../source/advanced/distributed.rst:322 5ef15bcd660743ec8708602ec9b3a0c8
 msgid "下面是一个例子："
-msgstr ""
+msgstr "Here is an example:"
 
 #: ../../source/advanced/distributed.rst:349 3e0c3c31469d48fab56b516213f96007
 msgid ""
 "使用 ``deepspeed`` 指令启动 DeepSpeed 引擎时您无法使用 ``CUDA_VISIBLE_DEVICES`` "
 "指定GPU。而需要："
 msgstr ""
+"When starting the DeepSpeed engine using the ``deepspeed`` command, you cannot use ``CUDA_VISIBLE_DEVICES`` "
+"to specify GPUs. Instead, you need to:"
 
 #: ../../source/advanced/distributed.rst:355 4e4758982daa495c84ba92c977500b67
 msgid "``--include localhost:1`` 表示只是用本节点的gpu1。"
-msgstr ""
+msgstr "``--include localhost:1`` means only use gpu1 on this node."
 
 #: ../../source/advanced/distributed.rst:363 41a8feca563246f0b38f0313623bb645
 msgid "LLaMA-Factory 支持使用 DeepSpeed 的多机多卡训练，您可以通过以下命令启动："
-msgstr ""
+msgstr "LLaMA-Factory supports multi-node multi-card training using DeepSpeed. You can start it with the following command:"
 
 #: ../../source/advanced/distributed.rst:374 474171b5bcda4c838cab1098e8a6af78
 msgid "您也可以使用 ``deepspeed`` 指令来启动多机多卡训练。"
-msgstr ""
+msgstr "You can also use the ``deepspeed`` command to start multi-node multi-card training."
 
 #: ../../source/advanced/distributed.rst:387 67edb5bf4d2e4eceaecf58dbfd2872c0
 msgid "关于hostfile:"
-msgstr ""
+msgstr "About hostfile:"
 
 #: ../../source/advanced/distributed.rst:388 182d60dcf563465ab561fd1df1c9ef8b
 msgid ""
@@ -351,80 +370,91 @@ msgid ""
 "``<hostname>`` 是节点的主机名， ``<num_slots>`` 是该节点上的GPU数量。下面是一个例子： .. code-"
 "block::"
 msgstr ""
+"Each line of the hostfile specifies a node, with the format ``<hostname> slots=<num_slots>``, where "
+"``<hostname>`` is the hostname of the node, and ``<num_slots>`` is the number of GPUs on that node. Here is an example: .. code-"
+"block::"
 
 #: ../../source/advanced/distributed.rst:395 cf86a79633ad4a35bf68896347452384
 msgid ""
 "请在 `https://www.deepspeed.ai/getting-started/ <https://www.deepspeed.ai"
 "/getting-started/>`_ 了解更多。"
 msgstr ""
+"Please visit `https://www.deepspeed.ai/getting-started/ <https://www.deepspeed.ai"
+"/getting-started/>`_ to learn more."
 
 #: ../../source/advanced/distributed.rst:397 506a4533cdb64601b0cde93269fbc10e
 msgid ""
 "如果没有指定 ``hostfile`` 变量, DeepSpeed 会搜索 ``/job/hostfile`` 文件。如果仍未找到，那么 "
 "DeepSpeed 会使用本机上所有可用的GPU。"
 msgstr ""
+"If the ``hostfile`` variable is not specified, DeepSpeed will search for the ``/job/hostfile`` file. If still not found, then "
+"DeepSpeed will use all available GPUs on the local machine."
 
 #: ../../source/advanced/distributed.rst:402 5c01f6f8f5484f51958429059331b160
 msgid "您还可以使用 ``accelerate`` 指令启动 DeepSpeed 引擎。 首先通过以下命令生成 DeepSpeed 配置文件："
-msgstr ""
+msgstr "You can also use the ``accelerate`` command to start the DeepSpeed engine. First generate the DeepSpeed configuration file with the following command:"
 
 #: ../../source/advanced/distributed.rst:409 91fec269f14949b9bbd85f98c36a09d4
 msgid "下面提供一个配置文件示例："
-msgstr ""
+msgstr "Here is an example configuration file:"
 
 #: ../../source/advanced/distributed.rst:440
 #: ../../source/advanced/distributed.rst:683 480d9de5c19148df9310f5e888fe4e54
 #: d8b9451f026441c2ae2f82d34b4dfa33
 msgid "随后，您可以使用以下命令启动训练："
-msgstr ""
+msgstr "Then, you can start training with the following command:"
 
 #: ../../source/advanced/distributed.rst:451 d1a04bf35ad44195b27892e06edc7a2c
 msgid "DeepSpeed 配置文件"
-msgstr ""
+msgstr "DeepSpeed Configuration File"
 
 #: ../../source/advanced/distributed.rst:456 0f33dff4578e4553a6180b42ed255c02
 msgid "ZeRO-0"
-msgstr ""
+msgstr "ZeRO-0"
 
 #: ../../source/advanced/distributed.rst:496 28cdfe467bac4cea8810ab234d116005
 msgid "ZeRO-2"
-msgstr ""
+msgstr "ZeRO-2"
 
 #: ../../source/advanced/distributed.rst:498 c712afb313a042779059a9bcd146eb05
 msgid "只需在 ZeRO-0 的基础上修改 ``zero_optimization`` 中的 ``stage`` 参数即可。"
-msgstr ""
+msgstr "Simply modify the ``stage`` parameter in ``zero_optimization`` based on ZeRO-0."
 
 #: ../../source/advanced/distributed.rst:517 70cfc6cbbea1435f87dceeb7439642c9
 msgid "ZeRO-2+offload"
-msgstr ""
+msgstr "ZeRO-2+offload"
 
 #: ../../source/advanced/distributed.rst:520 e4f3a6a9320145a1a77a6a06ddbec8cb
 msgid "只需在 ZeRO-0 的基础上在 ``zero_optimization`` 中添加 ``offload_optimizer`` 参数即可。"
-msgstr ""
+msgstr "Simply add the ``offload_optimizer`` parameter in ``zero_optimization`` based on ZeRO-0."
 
 #: ../../source/advanced/distributed.rst:543 7017a8e200c84679a0211eec3ee227b6
 msgid "ZeRO-3"
-msgstr ""
+msgstr "ZeRO-3"
 
 #: ../../source/advanced/distributed.rst:545 d09ed6db6d764f7da90d1fecd4ddfd5c
 msgid "只需在 ZeRO-0 的基础上修改 ``zero_optimization`` 中的参数。"
-msgstr ""
+msgstr "Simply modify the parameters in ``zero_optimization`` based on ZeRO-0."
 
 #: ../../source/advanced/distributed.rst:570 f967d0ab2c584db2a76d762e94e590c2
 msgid "ZeRO-3+offload"
-msgstr ""
+msgstr "ZeRO-3+offload"
 
 #: ../../source/advanced/distributed.rst:572 9f196595e82749f8bc08889f70f09b5d
 msgid ""
 "只需在 ZeRO-3 的基础上添加 ``zero_optimization`` 中的 ``offload_optimizer`` 和 "
 "``offload_param`` 参数即可。"
 msgstr ""
+"Simply add the ``offload_optimizer`` and "
+"``offload_param`` parameters in ``zero_optimization`` based on ZeRO-3."
 
 #: ../../source/advanced/distributed.rst:598 b0cd598dc68b49a5af7a8d34b468a1a5
 msgid ""
 "`https://www.deepspeed.ai/docs/config-json/ "
 "<https://www.deepspeed.ai/docs/config-json/>`_ 提供了关于deepspeed配置文件的更详细的介绍。"
 msgstr ""
+"`https://www.deepspeed.ai/docs/config-json/ "
+"<https://www.deepspeed.ai/docs/config-json/>`_ provides a more detailed introduction to DeepSpeed configuration files."
 
 #: ../../source/advanced/distributed.rst:613 a930d6492c1b4d02bc7c0d47957e48ad
 msgid ""
@@ -432,22 +462,25 @@ msgid ""
 "（Fully Sharded Data Parallel）能让我们处理更多更大的模型。LLaMA-Factory支持使用 FSDP "
 "引擎进行分布式训练。"
 msgstr ""
+"PyTorch's Fully Sharded Data Parallel technique `FSDP <https://pytorch.org/docs/stable/fsdp.html>`_ "
+"allows us to handle more and larger models. LLaMA-Factory supports distributed training using the FSDP "
+"engine."
 
 #: ../../source/advanced/distributed.rst:615 2162ed257620493682b2343fb7d45bdd
 msgid "FSDP 的参数 ``ShardingStrategy`` 的不同取值决定了模型的划分方式："
-msgstr ""
+msgstr "Different values of the FSDP parameter ``ShardingStrategy`` determine how the model is sharded:"
 
 #: ../../source/advanced/distributed.rst:617 f45e07099fb9466285f75d62132304bd
 msgid "``FULL_SHARD``: 将模型参数、梯度和优化器状态都切分到不同的GPU上，类似ZeRO-3。"
-msgstr ""
+msgstr "``FULL_SHARD``: Shards model parameters, gradients, and optimizer states across different GPUs, similar to ZeRO-3."
 
 #: ../../source/advanced/distributed.rst:618 a0cd91393a584573963a8cfbf468bf08
 msgid "``SHARD_GRAD_OP``: 将梯度、优化器状态切分到不同的GPU上，每个GPU仍各自保留一份完整的模型参数。类似ZeRO-2。"
-msgstr ""
+msgstr "``SHARD_GRAD_OP``: Shards gradients and optimizer states across different GPUs, while each GPU still maintains a complete copy of model parameters. Similar to ZeRO-2."
 
 #: ../../source/advanced/distributed.rst:619 af550be0d5bf4671a4673c3c165f8542
 msgid "``NO_SHARD``: 不切分任何参数。类似ZeRO-0。"
-msgstr ""
+msgstr "``NO_SHARD``: Does not shard any parameters. Similar to ZeRO-0."
 
 #: ../../source/advanced/distributed.rst:625 5dc2da95a1be4a0a83f6a5eea33b0022
 msgid ""
@@ -455,26 +488,31 @@ msgid ""
 "``examples/extras/fsdp_qlora/llama3_lora_sft.yaml`` ，文件然后运行以下命令即可启动 "
 "FSDP+QLoRA 微调："
 msgstr ""
+"You just need to modify ``examples/accelerate/fsdp_config.yaml`` and "
+"``examples/extras/fsdp_qlora/llama3_lora_sft.yaml`` as needed, then run the following command to start "
+"FSDP+QLoRA fine-tuning:"
 
 #: ../../source/advanced/distributed.rst:638 9c5d52b3214a43e2876d936dfd4a7468
 msgid ""
 "此外，您也可以使用 accelerate 启动 FSDP 引擎， **节点数与 GPU 数可以通过 num_machines 和  "
 "num_processes 指定**。对此，Huggingface 提供了便捷的配置功能。 只需运行："
 msgstr ""
+"Additionally, you can also use accelerate to start the FSDP engine. **The number of nodes and GPUs can be specified through num_machines and "
+"num_processes**. For this, Huggingface provides convenient configuration functionality. Just run:"
 
 #: ../../source/advanced/distributed.rst:646 ed2d323830b14f6a8411cba9e6c4e201
 msgid "根据提示回答一系列问题后，我们就可以生成 FSDP 所需的配置文件。"
-msgstr ""
+msgstr "After answering a series of questions according to the prompts, we can generate the configuration file required by FSDP."
 
 #: ../../source/advanced/distributed.rst:648 ca72ea0d1d954a108d49ad82beff0d24
 msgid "当然您也可以根据需求自行配置 ``fsdp_config.yaml`` 。"
-msgstr ""
+msgstr "Of course, you can also configure ``fsdp_config.yaml`` yourself according to your needs."
 
 #: ../../source/advanced/distributed.rst:680 cbfe13167a554f7f82c42cb8d66f783a
 msgid "请确保 ``num_processes`` 和实际使用的总GPU数量一致"
-msgstr ""
+msgstr "Please ensure that ``num_processes`` matches the total number of GPUs actually used"
 
 #: ../../source/advanced/distributed.rst:693 1551b7cb151041eba84cdcd477903aa5
 msgid "不要在 FSDP+QLoRA 中使用 GPTQ/AWQ 模型"
-msgstr ""
+msgstr "Do not use GPTQ/AWQ models with FSDP+QLoRA"
 

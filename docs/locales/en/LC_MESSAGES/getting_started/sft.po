@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, LlamaFactory team.
+# Copyright (C) 2025, LlamaFactory team.
 # This file is distributed under the same license as the LLaMA Factory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -7,14 +7,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory \n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-03-05 01:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,201 +24,213 @@ msgstr "Supervised Fine-tuning"
 
 #: ../../source/getting_started/sft.rst:9 f93e19fece78458e9d7b93e07e576d52
 msgid "命令行"
-msgstr ""
+msgstr "Command Line"
 
-#: ../../source/getting_started/sft.rst:11 f7ea582168584ca68885119694a00371
-msgid "您可以使用以下命令进行微调："
-msgstr ""
+#: ../../source/getting_started/train.rst:10
+msgid "您可以使用以下命令使用 ``examples/train_lora/llama3_lora_sft.yaml`` 中的参数进行微调："
+msgstr "You can fine-tune using the parameters in ``examples/train_lora/llama3_lora_sft.yaml`` with the following command:"
+
+#: ../../source/getting_started/train.rst:14
+msgid "也可以通过追加参数更新 yaml 文件中的参数:"
+msgstr "You can also update the YAML parameters by appending them:"
+
+#: ../../source/getting_started/train.rst:18
+msgid "LLaMA-Factory 默认使用所有可见的计算设备。根据需求可通过 ``CUDA_VISIBLE_DEVICES`` 或 ``ASCEND_RT_VISIBLE_DEVICES`` 指定计算设备。"
+msgstr "By default, LLaMA-Factory uses all visible computing devices. You can specify which devices to use via ``CUDA_VISIBLE_DEVICES`` or ``ASCEND_RT_VISIBLE_DEVICES`` if needed."
 
 #: ../../source/getting_started/sft.rst:19 9bb225e0f4024c1d836eadba17cfa492
 msgid ""
 "``examples/train_lora/llama3_lora_sft.yaml`` "
 "提供了微调时的配置示例。该配置指定了模型参数、微调方法参数、数据集参数以及评估参数等。您需要根据自身需求自行配置。"
 msgstr ""
+"``examples/train_lora/llama3_lora_sft.yaml`` "
+"provides a configuration example for fine-tuning. This configuration specifies model parameters, fine-tuning method parameters, dataset parameters, evaluation parameters, etc. You need to configure them according to your own needs."
 
 #: ../../source/getting_started/sft.rst:60 f6a9f7b242024cee97999596f7fd6454
-msgid "模型 ``model_name_or_path`` 、数据集 ``dateset`` 需要存在且与 ``template`` 相对应。"
-msgstr ""
+msgid "模型 ``model_name_or_path`` 、数据集 ``dataset`` 需要存在且与 ``template`` 相对应。"
+msgstr "The model ``model_name_or_path`` and dataset ``dataset`` must exist and correspond to the ``template``."
 
 #: ../../source/getting_started/sft.rst:63 f40947ed0ef747568ab343a7b29bc3f6
 msgid "重要训练参数"
-msgstr ""
+msgstr "Important Training Parameters"
 
 #: ../../source/getting_started/sft.rst:67 e6509a87be5c4804a62cf3dc90d47272
 msgid "名称"
-msgstr ""
+msgstr "Name"
 
 #: ../../source/getting_started/sft.rst:68 dde87a72c0494aafb31b846dee41158d
 msgid "描述"
-msgstr ""
+msgstr "Description"
 
 #: ../../source/getting_started/sft.rst:69 8264220ee3b24273847ce49ffc0495c7
 msgid "model_name_or_path"
-msgstr ""
+msgstr "model_name_or_path"
 
 #: ../../source/getting_started/sft.rst:70 fce5dfc95d3f4fc1ad43e28653d3cb26
 msgid "模型名称或路径"
-msgstr ""
+msgstr "Model name or path"
 
 #: ../../source/getting_started/sft.rst:71 10ff9b06e5cf4641aefc60346a560c6a
 msgid "stage"
-msgstr ""
+msgstr "stage"
 
 #: ../../source/getting_started/sft.rst:72 b48f3a1f388346c1a658a93df0235afb
 msgid ""
 "训练阶段，可选: rm(reward modeling), pt(pretrain), sft(Supervised Fine-Tuning), "
 "PPO, DPO, KTO, ORPO"
 msgstr ""
+"Training stage. Options: rm(reward modeling), pt(pretrain), sft(Supervised Fine-Tuning), "
+"PPO, DPO, KTO, ORPO"
 
 #: ../../source/getting_started/sft.rst:73 749b017cb09645b792685ce23ecc6cde
 msgid "do_train"
-msgstr ""
+msgstr "do_train"
 
 #: ../../source/getting_started/sft.rst:74 38ac9fdc9fb647f195e847e7cfcd510b
 msgid "true用于训练, false用于评估"
-msgstr ""
+msgstr "true for training, false for evaluation"
 
 #: ../../source/getting_started/sft.rst:75 f5ebfc6d61e14c3dbf2ab6476b868404
 msgid "finetuning_type"
-msgstr ""
+msgstr "finetuning_type"
 
 #: ../../source/getting_started/sft.rst:76 44d819de798140c8a7f5570e08ae6d78
 msgid "微调方式。可选: freeze, lora, full"
-msgstr ""
+msgstr "Fine-tuning method. Options: freeze, lora, full"
 
 #: ../../source/getting_started/sft.rst:77 01ae02b1636f408cb770c45613fc94e6
 msgid "lora_target"
-msgstr ""
+msgstr "lora_target"
 
 #: ../../source/getting_started/sft.rst:78 0f588ee6b13546199081f816e820565a
 msgid "采取LoRA方法的目标模块，默认值为 ``all``。"
-msgstr ""
+msgstr "Target modules for LoRA method. Default: ``all``."
 
 #: ../../source/getting_started/sft.rst:79 f02fc3bbac6548009a978b4583103bd8
 msgid "dataset"
-msgstr ""
+msgstr "dataset"
 
 #: ../../source/getting_started/sft.rst:80 561e8b4e374d4db7b512c935ab51a954
 msgid "使用的数据集，使用\",\"分隔多个数据集"
-msgstr ""
+msgstr "Dataset(s) to use. Use \",\" to separate multiple datasets"
 
 #: ../../source/getting_started/sft.rst:81 4d64067cfb1d47cda67afb1e396778fa
 msgid "template"
-msgstr ""
+msgstr "template"
 
 #: ../../source/getting_started/sft.rst:82 74f6c6510e8b493fa73a4b33c43bfb25
 msgid "数据集模板，请保证数据集模板与模型相对应。"
-msgstr ""
+msgstr "Dataset template. Ensure the dataset template corresponds to the model."
 
 #: ../../source/getting_started/sft.rst:83 a01fe9f8b9064bcd8b1c9af39ef5633f
 msgid "output_dir"
-msgstr ""
+msgstr "output_dir"
 
 #: ../../source/getting_started/sft.rst:84 218ffa92c1e14c80bb76ba34e28cb0e6
 msgid "输出路径"
-msgstr ""
+msgstr "Output path"
 
 #: ../../source/getting_started/sft.rst:85 0aab9082ceb44e32a053c824d30e1523
 msgid "logging_steps"
-msgstr ""
+msgstr "logging_steps"
 
 #: ../../source/getting_started/sft.rst:86 ca8152bf65cb445ab12a4b1abb5a2dd7
 msgid "日志输出步数间隔"
-msgstr ""
+msgstr "Logging interval in steps"
 
 #: ../../source/getting_started/sft.rst:87 da0c55649b0a415496416b658ae90d57
 msgid "save_steps"
-msgstr ""
+msgstr "save_steps"
 
 #: ../../source/getting_started/sft.rst:88 5d957a4933d946329985036566db4c0a
 msgid "模型断点保存间隔"
-msgstr ""
+msgstr "Model checkpoint saving interval"
 
 #: ../../source/getting_started/sft.rst:89 22c80c7fd7f644ecbf1296600ffdf936
 msgid "overwrite_output_dir"
-msgstr ""
+msgstr "overwrite_output_dir"
 
 #: ../../source/getting_started/sft.rst:90 250dae49d9564d73a027991e82eedcc9
 msgid "是否允许覆盖输出目录"
-msgstr ""
+msgstr "Whether to allow overwriting the output directory"
 
 #: ../../source/getting_started/sft.rst:91 0d021a55f72548a9b0b8a76f079e8bdd
 msgid "per_device_train_batch_size"
-msgstr ""
+msgstr "per_device_train_batch_size"
 
 #: ../../source/getting_started/sft.rst:92 d863ba1abd554005895ac211c37a2c57
 msgid "每个设备上训练的批次大小"
-msgstr ""
+msgstr "Training batch size per device"
 
 #: ../../source/getting_started/sft.rst:93 4388aa4d6a0e4d66b3aeb62304a28ec5
 msgid "gradient_accumulation_steps"
-msgstr ""
+msgstr "gradient_accumulation_steps"
 
 #: ../../source/getting_started/sft.rst:94 252e11cd8332415583581c4b3403080d
 msgid "梯度积累步数"
-msgstr ""
+msgstr "Number of gradient accumulation steps"
 
 #: ../../source/getting_started/sft.rst:95 85dbf59c822f403ba7f5374c7940929c
 msgid "max_grad_norm"
-msgstr ""
+msgstr "max_grad_norm"
 
 #: ../../source/getting_started/sft.rst:96 9e0ec23b316a43eeace71835f39e4a6b
 msgid "梯度裁剪阈值"
-msgstr ""
+msgstr "Gradient clipping threshold"
 
 #: ../../source/getting_started/sft.rst:97 65c3c9beb5f845c391d096b3ac23db9e
 msgid "learning_rate"
-msgstr ""
+msgstr "learning_rate"
 
 #: ../../source/getting_started/sft.rst:98 a1a5b4bb27f04044a25f649f0cd07e9c
 msgid "学习率"
-msgstr ""
+msgstr "Learning rate"
 
 #: ../../source/getting_started/sft.rst:99 ddb704620061452cb00b0f95bf27ad07
 msgid "lr_scheduler_type"
-msgstr ""
+msgstr "lr_scheduler_type"
 
 #: ../../source/getting_started/sft.rst:100 f98f466558bb441a88fe5a332389475b
 msgid "学习率曲线，可选 ``linear``, ``cosine``, ``polynomial``, ``constant`` 等。"
-msgstr ""
+msgstr "Learning rate schedule. Options: ``linear``, ``cosine``, ``polynomial``, ``constant``, etc."
 
 #: ../../source/getting_started/sft.rst:101 ab194f1214134771962386570d26e631
 msgid "num_train_epochs"
-msgstr ""
+msgstr "num_train_epochs"
 
 #: ../../source/getting_started/sft.rst:102 52cc9b035a45490abc93d1bdb5ffd51c
 msgid "训练周期数"
-msgstr ""
+msgstr "Number of training epochs"
 
 #: ../../source/getting_started/sft.rst:103 3e4ab9ee59a04d3d88bcb1f1346f777f
 msgid "bf16"
-msgstr ""
+msgstr "bf16"
 
 #: ../../source/getting_started/sft.rst:104 f6af1ca96c3a4a8aa453cbb138516e60
 msgid "是否使用 bf16 格式"
-msgstr ""
+msgstr "Whether to use bf16 format"
 
 #: ../../source/getting_started/sft.rst:105 57cba3715eca4b7ebe547475fd0ac779
 msgid "warmup_ratio"
-msgstr ""
+msgstr "warmup_ratio"
 
 #: ../../source/getting_started/sft.rst:106 5dd0d23fb9ea44dd8ebf39bedc77c05d
 msgid "学习率预热比例"
-msgstr ""
+msgstr "Learning rate warmup ratio"
 
 #: ../../source/getting_started/sft.rst:107 81344e1a020843439dc65822876a3cb6
 msgid "warmup_steps"
-msgstr ""
+msgstr "warmup_steps"
 
 #: ../../source/getting_started/sft.rst:108 952f52a0a18e4ced923e63f69785d24e
 msgid "学习率预热步数"
-msgstr ""
+msgstr "Learning rate warmup steps"
 
 #: ../../source/getting_started/sft.rst:109 a0fedc50170d49f3aa151006d7ce4205
 msgid "push_to_hub"
-msgstr ""
+msgstr "push_to_hub"
 
 #: ../../source/getting_started/sft.rst:110 ebc9628c5a08486c8d3926b6a78f594e
 msgid "是否推送模型到 Huggingface"
-msgstr ""
+msgstr "Whether to push the model to Huggingface"
 

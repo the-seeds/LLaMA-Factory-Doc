@@ -32,7 +32,7 @@ CUDA 是由 NVIDIA 创建的一个并行计算平台和编程模型，它让开�
 
     gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
 
-3. 在以下网址下载所需的 CUDA，这里推荐12.2版本。 `https://developer.nvidia.com/cuda-gpus <https://developer.nvidia.com/cuda-12-2-0-download-archive/>`_ 注意需要根据上述输出选择正确版本
+3. 在以下网址（`https://developer.nvidia.com/cuda-gpus <https://developer.nvidia.com/cuda-12-2-0-download-archive/>`__）下载所需的 CUDA，这里推荐12.2版本，注意需要根据上述输出选择正确版本。
 
   .. image:: ../assets/image-20240610221819901.png
 

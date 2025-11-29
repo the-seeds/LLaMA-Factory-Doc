@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, LlamaFactory team.
+# Copyright (C) 2025, LlamaFactory team.
 # This file is distributed under the same license as the LLaMA Factory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -7,14 +7,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory \n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-03-05 01:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,80 +27,86 @@ msgid ""
 "LLaMA-Factory 支持通过 WebUI 零代码微调大语言模型。 在完成 :ref:`安装 <installation>` "
 "后，您可以通过以下指令进入 WebUI:"
 msgstr ""
+"LLaMA-Factory supports zero-code fine-tuning of large language models through WebUI. After completing :ref:`installation <installation>`, "
+"you can enter the WebUI with the following command:"
 
 #: ../../source/getting_started/webui.rst:11 b02c090728734be0bae90dd2d79ea769
 msgid "WebUI 主要分为四个界面：训练、评估与预测、对话、导出。"
-msgstr ""
+msgstr "The WebUI is mainly divided into four interfaces: Training, Evaluation & Prediction, Chat, and Export."
 
 #: ../../source/getting_started/webui.rst:15 727254dbe6fa4001a63e4791cadcbf40
 msgid "训练"
-msgstr ""
+msgstr "Training"
 
 #: ../../source/getting_started/webui.rst:23 ece866c5b8df4e45ba8c56c20fa8f242
 msgid "在开始训练模型之前，您需要指定的参数有："
-msgstr ""
+msgstr "Before starting to train the model, the parameters you need to specify include:"
 
 #: ../../source/getting_started/webui.rst:25 b63f9659e4e643e0ba6769d6ef9c2ec6
 msgid "模型名称及路径"
-msgstr ""
+msgstr "Model name and path"
 
 #: ../../source/getting_started/webui.rst:26 bb946cf83e2342368e72559340663d9f
 msgid "训练阶段"
-msgstr ""
+msgstr "Training stage"
 
 #: ../../source/getting_started/webui.rst:27 b364bb708667420b926d4a11f1e1a9e8
 msgid "微调方法"
-msgstr ""
+msgstr "Fine-tuning method"
 
 #: ../../source/getting_started/webui.rst:28 6c752744d81547b3a02a1c373ac9ef62
 msgid "训练数据集"
-msgstr ""
+msgstr "Training dataset"
 
 #: ../../source/getting_started/webui.rst:29 5e5f93f6c8654a8eb98716067ba42fa8
 msgid "学习率、训练轮数等训练参数"
-msgstr ""
+msgstr "Training parameters such as learning rate, number of training epochs"
 
 #: ../../source/getting_started/webui.rst:30 9bc4dd5876864bbbb6495b6237e9ed8f
 msgid "微调参数等其他参数"
-msgstr ""
+msgstr "Fine-tuning parameters and other parameters"
 
 #: ../../source/getting_started/webui.rst:31 43c66fc8cdbe42ea9d04d963d3e5773f
 msgid "输出目录及配置路径"
-msgstr ""
+msgstr "Output directory and configuration path"
 
 #: ../../source/getting_started/webui.rst:33 c16dcb671bf64731967b0c3fe90362fc
 msgid "随后，您可以点击 ``开始`` 按钮开始训练模型。"
-msgstr ""
+msgstr "Then, you can click the ``Start`` button to begin training the model."
 
 #: ../../source/getting_started/webui.rst:39 4775401501c842b4abc55a9e80faff7c
 msgid "关于断点重连:适配器断点保存于 ``output_dir`` 目录下，请指定 **适配器路径** 以加载断点继续训练。"
-msgstr ""
+msgstr "About checkpoint resumption: Adapter checkpoints are saved in the ``output_dir`` directory. Please specify the **adapter path** to load the checkpoint and continue training."
 
 #: ../../source/getting_started/webui.rst:41 5270903e026b496f806b7f47bc63ad8c
 msgid ""
 "如果您需要使用自定义数据集，请在 ``data/data_info.json`` 中添加自定义数据集描述并确保 "
 ":ref:`数据集格式<数据处理>` 正确，否则可能会导致训练失败。"
 msgstr ""
+"If you need to use a custom dataset, please add the custom dataset description in ``data/data_info.json`` and ensure the "
+":ref:`dataset format<数据处理>` is correct, otherwise training may fail."
 
 #: ../../source/getting_started/webui.rst:46 9c271d719ebf414ba61852672a721c37
 msgid "评估预测与对话"
-msgstr ""
+msgstr "Evaluation, Prediction, and Chat"
 
 #: ../../source/getting_started/webui.rst:48 74649e33a498442e83083e31cd8c9252
 msgid "模型训练完毕后，您可以通过在评估与预测界面通过指定 **模型** 及 **适配器** 的路径在指定数据集上进行评估。"
-msgstr ""
+msgstr "After model training is complete, you can evaluate on a specified dataset by specifying the paths of the **model** and **adapter** in the Evaluation & Prediction interface."
 
 #: ../../source/getting_started/webui.rst:50 5e56483d6d3a41c39e490c14c67e0b61
 msgid "您也可以通过在对话界面指定 **模型**、 **适配器** 及 **推理引擎** 后输入对话内容与模型进行对话观察效果。"
-msgstr ""
+msgstr "You can also observe the effect by specifying the **model**, **adapter**, and **inference engine** in the Chat interface, then entering dialogue content to chat with the model."
 
 #: ../../source/getting_started/webui.rst:53 b1d21cb651914a49a1120043ae1444c4
 msgid "导出"
-msgstr ""
+msgstr "Export"
 
 #: ../../source/getting_started/webui.rst:55 5a0f5ad3079742aebc1a08d90563a6ef
 msgid ""
 "如果您对模型效果满意并需要导出模型，您可以在导出界面通过指定 **模型**、 **适配器**、 **分块大小**、 "
 "**导出量化等级及校准数据集**、 **导出设备**、 **导出目录** 等参数后点击 ``导出`` 按钮导出模型。"
 msgstr ""
+"If you are satisfied with the model's performance and need to export the model, you can export it by clicking the ``Export`` button after specifying parameters such as **model**, **adapter**, **chunk size**, "
+"**export quantization level and calibration dataset**, **export device**, **export directory** in the Export interface."
 

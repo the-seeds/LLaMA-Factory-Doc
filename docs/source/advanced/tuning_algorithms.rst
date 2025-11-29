@@ -22,7 +22,7 @@ Full Parameter Fine-tuning
     # ...
     finetuning_type: full
     # ...
-    # 如果需要使用deepspeed:
+    #deepspeed:
     deepspeed: examples/deepspeed/ds_z3_config.json
 
 .. _freeze:
@@ -196,7 +196,7 @@ Galore
 .. warning:: 
 
    * 不要将 LoRA 和 GaLore/BAdam 一起使用。
-   * ``galore_layerwise``为 ``true``时请不要设置 ``gradient_accumulation``参数。
+   * ``galore_layerwise`` 为 ``true`` 时请不要设置 ``gradient_accumulation`` 参数。
 
 .. list-table:: GaLoreArguments
    :widths: 30 10 60
@@ -233,9 +233,6 @@ Galore
 
 BAdam
 -------------------------
-
-.. warning:: 
-
 
 BAdam 是一种内存高效的全参优化方法，您通过配置 ``BAdamArgument`` 中的参数可以对其进行详细设置。
 下面是一个例子：

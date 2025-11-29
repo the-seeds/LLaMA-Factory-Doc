@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2024, LlamaFactory team.
+# Copyright (C) 2025, LlamaFactory team.
 # This file is distributed under the same license as the LLaMA Factory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -7,14 +7,12 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory \n"
-"Report-Msgid-Bugs-To: \n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2025-03-05 01:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,40 +27,48 @@ msgid ""
 "随着语言模型规模的不断增大，其训练的难度和成本已成为共识。 而随着用户数量的增加，模型推理的成本也在不断攀升，甚至可能成为限制模型部署的首要因素。"
 " 因此，我们需要对模型进行压缩以加速推理过程，而模型量化是其中一种有效的方法。"
 msgstr ""
+"As language model sizes continue to grow, the difficulty and cost of training have become well recognized. As the number of users increases, the cost of model inference is also rising, and may even become the primary factor limiting model deployment. "
+"Therefore, we need to compress models to accelerate the inference process, and model quantization is one effective method."
 
 #: ../../source/advanced/quantization.rst:8 7950b7693dfd4c3792194962a4fed7a8
 msgid ""
 "大语言模型的参数通常以高精度浮点数存储，这导致模型推理需要大量计算资源。 量化技术通过将高精度数据类型存储的参数转换为低精度数据类型存储， "
 "可以在不改变模型参数量和架构的前提下加速推理过程。这种方法使得模型的部署更加经济高效，也更具可行性。"
 msgstr ""
+"Parameters of large language models are typically stored as high-precision floating-point numbers, which requires substantial computational resources for model inference. Quantization techniques convert parameters stored in high-precision data types to low-precision data types, "
+"which can accelerate the inference process without changing the model's parameter count and architecture. This method makes model deployment more cost-effective and feasible."
 
 #: ../../source/advanced/quantization.rst:16 481109cd1b4640a48dc088bde2d4ef55
 msgid ""
 "`source <https://www.cerebras.net/machine-learning/to-bfloat-or-not-to-"
 "bfloat-that-is-the-question/>`_"
 msgstr ""
+"`source <https://www.cerebras.net/machine-learning/to-bfloat-or-not-to-"
+"bfloat-that-is-the-question/>`_"
 
 #: ../../source/advanced/quantization.rst:18 df9dbc5b04b2465088ffcbf81355bfb7
 msgid "浮点数一般由3部分组成：符号位、指数位和尾数位。指数位越大，可表示的数字范围越大。尾数位越大、数字的精度越高。"
-msgstr ""
+msgstr "Floating-point numbers generally consist of 3 parts: sign bit, exponent bits, and mantissa bits. The larger the exponent bits, the larger the range of representable numbers. The larger the mantissa bits, the higher the precision of the number."
 
 #: ../../source/advanced/quantization.rst:21 5c1b9eefc3d045e38164f39c555c3e84
 msgid "量化可以根据何时量化分为：后训练量化和训练感知量化，也可以根据量化参数的确定方式分为：静态量化和动态量化。"
-msgstr ""
+msgstr "Quantization can be divided based on when quantization occurs into: post-training quantization and quantization-aware training, or based on how quantization parameters are determined into: static quantization and dynamic quantization."
 
 #: ../../source/advanced/quantization.rst:24 95dc90f593da4f569ec6374a3addcfd9
 msgid "PTQ"
-msgstr ""
+msgstr "PTQ"
 
 #: ../../source/advanced/quantization.rst:25 738040aac10d449698c4aa7ae3605d61
 msgid ""
 "后训练量化（PTQ, Post-Training Quantization）一般是指在模型预训练完成后，基于校准数据集（calibration "
 "dataset）确定量化参数进而对模型进行量化。"
 msgstr ""
+"Post-Training Quantization (PTQ) generally refers to quantizing a model after pre-training is complete, determining quantization parameters based on a calibration "
+"dataset and then quantizing the model."
 
 #: ../../source/advanced/quantization.rst:28 c52ae5de455c4b7ca1c566048a4622b7
 msgid "GPTQ"
-msgstr ""
+msgstr "GPTQ"
 
 #: ../../source/advanced/quantization.rst:29 3cdccf9166784e99b4345bb08c3643ad
 msgid ""
@@ -72,20 +78,26 @@ msgid ""
 "为了使用GPTQ量化模型，您需要指定量化模型名称或路径，例如 ``model_name_or_path: TechxGenus/Meta-"
 "Llama-3-8B-Instruct-GPTQ``"
 msgstr ""
+"GPTQ (Group-wise Precision Tuning "
+"Quantization) is a static post-training quantization technique. \"Static\" means that once the pre-trained model is determined, the quantization parameters do not change after quantization. GPTQ quantization quantizes "
+"fp16 precision models to 4-bit, saving about 75% of memory while significantly improving inference speed. "
+"To use GPTQ quantized models, you need to specify the quantized model name or path, for example ``model_name_or_path: TechxGenus/Meta-"
+"Llama-3-8B-Instruct-GPTQ``"
 
 #: ../../source/advanced/quantization.rst:34 340b2fc0151949b1bb16e6e9b1b6da1a
 msgid "QAT"
-msgstr ""
+msgstr "QAT"
 
 #: ../../source/advanced/quantization.rst:36 71890ed6c13e4a7eb5e46644668991e7
 msgid ""
 "在训练感知量化（QAT, Quantization-Aware "
 "Training）中，模型一般在预训练过程中被量化，然后又在训练数据上再次微调，得到最后的量化模型。"
 msgstr ""
+"In Quantization-Aware Training (QAT), the model is typically quantized during the pre-training process, then fine-tuned again on training data to obtain the final quantized model."
 
 #: ../../source/advanced/quantization.rst:40 a139f9aa561144429509d3732508ce01
 msgid "AWQ"
-msgstr ""
+msgstr "AWQ"
 
 #: ../../source/advanced/quantization.rst:41 52a59c5950804169a4e7f9bc36894ded
 msgid ""
@@ -94,10 +106,14 @@ msgid ""
 "的优势在于其需要的校准数据集更小，且在指令微调和多模态模型上表现良好。 为了使用 AWQ 量化模型,您需要指定量化模型名称或路径，例如 "
 "``model_name_or_path: TechxGenus/Meta-Llama-3-8B-Instruct-AWQ``"
 msgstr ""
+"AWQ (Activation-Aware Layer "
+"Quantization) is a static post-training quantization technique. Its idea is based on: a very small portion of weights are extremely important, and these weights will not be quantized to maintain performance. AWQ "
+"has the advantage of requiring a smaller calibration dataset and performs well on instruction-tuned and multi-modal models. To use AWQ quantized models, you need to specify the quantized model name or path, for example "
+"``model_name_or_path: TechxGenus/Meta-Llama-3-8B-Instruct-AWQ``"
 
 #: ../../source/advanced/quantization.rst:47 5a184dbeb14246d890fdfd6aee1a0dc8
 msgid "AQLM"
-msgstr ""
+msgstr "AQLM"
 
 #: ../../source/advanced/quantization.rst:48 05501e7b3dc94162b786dab2e19b7ab1
 msgid ""
@@ -105,10 +121,13 @@ msgid ""
 "2-bit 量化下达到了当时的最佳表现，并且在 3-bit 和 4-bit 量化下也展示了性能的提升。 尽管 AQLM "
 "在模型推理速度方面的提升并不是最显著的，但其在 2-bit 量化下的优异表现意味着您可以以极低的显存占用来部署大模型。"
 msgstr ""
+"AQLM (Additive Quantization of Language Models), as a PTQ method that only quantizes model weights, achieved the best performance at the time under "
+"2-bit quantization, and also demonstrated performance improvements under 3-bit and 4-bit quantization. Although AQLM "
+"does not show the most significant improvement in model inference speed, its excellent performance under 2-bit quantization means you can deploy large models with extremely low memory usage."
 
 #: ../../source/advanced/quantization.rst:54 3ae90175d6d04305a76138eaaaec870c
 msgid "OFTQ"
-msgstr ""
+msgstr "OFTQ"
 
 #: ../../source/advanced/quantization.rst:55 c4df39f0b82c41ffbbaaf65f224381de
 msgid ""
@@ -116,20 +135,25 @@ msgid ""
 "OFTQ在保持性能的同时。 因此，在使用OFTQ量化方法时，您需要指定预训练模型、指定量化方法 ``quantization_method`` "
 "和指定量化位数 ``quantization_bit`` 下面提供了一个使用bitsandbytes量化方法的配置示例："
 msgstr ""
+"OFTQ (On-the-fly Quantization) refers to quantizing the model directly during the inference stage without requiring a calibration dataset. OFTQ is a dynamic post-training quantization technique. "
+"OFTQ maintains performance while reducing memory usage. Therefore, when using the OFTQ quantization method, you need to specify the pre-trained model, specify the quantization method ``quantization_method``, "
+"and specify the quantization bit ``quantization_bit``. Below is an example configuration using the bitsandbytes quantization method:"
 
 #: ../../source/advanced/quantization.rst:67 7940ee89bf2047aab979c37b8d8d43c7
 msgid "bitsandbytes"
-msgstr ""
+msgstr "bitsandbytes"
 
 #: ../../source/advanced/quantization.rst:68 6d3fce5d3d634455949a1f206347b17e
 msgid ""
 "区别于 GPTQ, bitsandbytes 是一种动态的后训练量化技术。bitsandbytes 使得大于 1B 的语言模型也能在 8-bit "
 "量化后不过多地损失性能。 经过bitsandbytes 8-bit 量化的模型能够在保持性能的情况下节省约50%的显存。"
 msgstr ""
+"Unlike GPTQ, bitsandbytes is a dynamic post-training quantization technique. bitsandbytes enables language models larger than 1B to maintain performance after 8-bit "
+"quantization without excessive performance loss. Models quantized with bitsandbytes 8-bit can save about 50% of memory while maintaining performance."
 
 #: ../../source/advanced/quantization.rst:72 1e0c54a564ef4c23a40e994e6977e293
 msgid "HQQ"
-msgstr ""
+msgstr "HQQ"
 
 #: ../../source/advanced/quantization.rst:73 00a0cb889f7b4d06b526e4c4b9953228
 msgid ""
@@ -137,14 +161,19 @@ msgid ""
 "Quantization）希望能在准确度和速度之间取得较好的平衡。作为一种动态的后训练量化方法，HQQ无需校准阶段， "
 "但能够取得与需要校准数据集的方法相当的准确度，并且有着极快的推理速度。"
 msgstr ""
+"Methods that rely on calibration datasets tend to have higher accuracy, while methods that do not rely on calibration datasets tend to be faster. HQQ (Half-Quadratic "
+"Quantization) aims to achieve a good balance between accuracy and speed. As a dynamic post-training quantization method, HQQ does not require a calibration phase, "
+"but can achieve accuracy comparable to methods that require calibration datasets, with extremely fast inference speed."
 
 #: ../../source/advanced/quantization.rst:77 cd20b69798454492b3cb76695933020e
 msgid "EETQ"
-msgstr ""
+msgstr "EETQ"
 
 #: ../../source/advanced/quantization.rst:78 7278a543d23843ba8bf24d31ced9ac8d
 msgid ""
 "EETQ(Easy and Efficient Quantization for "
 "Transformers)是一种只对模型权重进行量化的PTQ方法。具有较快的速度和简单易用的特性。"
 msgstr ""
+"EETQ (Easy and Efficient Quantization for "
+"Transformers) is a PTQ method that only quantizes model weights. It features fast speed and ease of use."
 

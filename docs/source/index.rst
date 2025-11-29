@@ -37,7 +37,7 @@ Documentation
   :caption: 高级选项
 
   advanced/acceleration
-  advanced/adapters
+  advanced/tuning_algorithms
   advanced/distributed
   advanced/quantization
   advanced/trainers
