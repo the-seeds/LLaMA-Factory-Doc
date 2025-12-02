@@ -8,7 +8,7 @@ Kernels 系统采用基于注册表的自动发现机制，能够根据当前运
 
 ## 核心特性
 
-- **自动注册机制**：基于元类实现自动注册系统，简化 kernel 的添加和管理。当 kernel 类按照 `MetaKernel` 定义的协议定义了 `type` 和 `device` 属性时，会自动注册到全局注册表中，无需手动注册。
+- **自动注册机制**：基于元类实现自动注册系统，简化 kernel 的添加和管理。当 kernel 类按照 `MetaKernel` 定义的协议声明 `type` 和 `device` 属性时，会自动注册到全局注册表中，无需手动注册。
 
 - **设备感知**：自动检测当前硬件设备（NPU、CUDA、XPU 等）并应用相应的优化。系统会跳过不支持的设备，确保在不同环境下都能正常工作。
 
@@ -62,6 +62,7 @@ from llamafactory.v1.plugins.model_plugins.kernels.rope.npu_rope import NpuRoPEK
 model = AutoModelForCausalLM.from_pretrained("qwen/qwen2.5-0.5B")
 
 # 手动应用各个 kernels
+# 在LLaMA-Factory中，加载模型的位置通常位于/src/llamafactory/model/loader.py
 model = apply_kernel(model, NpuRoPEKernel)
 model = apply_kernel(model, NpuRMSNormKernel)
 model = apply_kernel(model, NpuSwiGluKernel)
@@ -69,7 +70,7 @@ model = apply_kernel(model, NpuSwiGluKernel)
 
 ### 3. 发现可用 kernels
 
-`discover_kernels` 函数可以查询当前设备上所有可用的 kernels，通常而言，这个接口无需用户手动调用，但是在故障检查的时候，如果发现某个 kernel 未被成功使能，可以检查一下这个函数的返回值是否符合预期。
+`discover_kernels` 接口可以查询当前设备上所有可用的 kernels，通常而言，这个接口无需用户手动调用，但是在故障检查的时候，如果发现某个 kernel 未被成功使能，可以检查一下这个函数的返回值是否符合预期。
 
 ```python
 from llamafactory.v1.plugins.model_plugins.kernels.registry import discover_kernels
@@ -85,10 +86,10 @@ for kernel in available_kernels:
 
 | kernel | kernel 类型 | 支持的设备 | 备注 |
 |--------|------------|-----------|------|
-| NpuRMSNormKernel | RMSNORM | NPU | NPU 设备的高性能 RMSNorm 实现 |
-| NpuSwiGluKernel | SWIGLU | NPU | NPU 设备的高性能 SwiGLU 实现，部分模型的 MLP 层不支持 |
-| NpuRoPEKernel | ROPE | NPU | NPU 设备的高性能 RoPE 实现，适用于大多数模型 |
-| NpuQwen2VLRoPEKernel | ROPE | NPU | 多模态 RoPE 实现，单独适配 Qwen2-VL 模型，`auto_register = False`，需要手动应用 |
+| [NpuRMSNormKernel](./fused-operators.md/#npufusedrmsnorm) | RMSNORM | NPU | NPU 设备的高性能 RMSNorm 实现 |
+| [NpuSwiGluKernel](./fused-operators.md/#npufusedswiglu) | SWIGLU | NPU | NPU 设备的高性能 SwiGLU 实现，部分模型的 MLP 层不支持 |
+| [NpuRoPEKernel](./fused-operators.md/#npufusedrope) | ROPE | NPU | NPU 设备的高性能 RoPE 实现，适用于大多数模型 |
+| [NpuQwen2VLRoPEKernel](./fused-operators.md/#npufusedrope) | ROPE | NPU | 多模态 RoPE 实现，单独适配 Qwen2-VL 模型，`auto_register = False`，需要手动应用 |
 | NpuQwen3VLMoEFusedMoEKernel | MOE | NPU | MoE 融合算子，当前仅适配 Qwen3VLMoE 模型 |
 
-我们会持续适配更多的 kernels，如果您需要自己开发新的 kernel，请参考我们的 [Kernel 开发文档](../../dev-guide/plugins/model-plugins/kernels.md)，欢迎您向 LLaMA-Factory 贡献代码。
+我们会持续适配更多的 kernels，如果您需要自己开发新的 kernels，请参考我们的 [Kernel 开发文档](../../dev-guide/plugins/model-plugins/kernels.md)，欢迎您向 LLaMA-Factory 贡献代码。
