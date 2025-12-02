@@ -2,7 +2,7 @@
 
 ## 概述
 
-LLaMA-Factory Kernels 系统用于为不同硬件设备提供高性能计算内核（kernel）实现，该系统通过替换模型中的关键模块（如 RMSNorm、SwiGLU、RoPE、MoE 等）为硬件优化的版本，从而显著提升模型训练和推理的性能。
+LLaMA-Factory Kernels 系统用于管理不同硬件设备提供的高性能计算内核（kernel）实现，该系统通过替换模型中的关键模块（如 RMSNorm、SwiGLU、RoPE、MoE 等）为硬件优化的版本，从而显著提升模型训练和推理的性能。
 
 Kernels 系统采用基于注册表的自动发现机制，能够根据当前运行环境自动检测可用的硬件设备（NPU、CUDA、XPU 等），并使能相应的高性能 kernels。这种设计使得用户无需关心底层实现细节，只需简单调用接口即可获得性能提升。
 
@@ -10,7 +10,7 @@ Kernels 系统采用基于注册表的自动发现机制，能够根据当前运
 
 - **自动注册机制**：基于元类实现自动注册系统，简化 kernel 的添加和管理。当 kernel 类按照 `MetaKernel` 定义的协议声明 `type` 和 `device` 属性时，会自动注册到全局注册表中，无需手动注册。
 
-- **设备感知**：自动检测当前硬件设备（NPU、CUDA、XPU 等）并应用相应的优化。系统会跳过不支持的设备，确保在不同环境下都能正常工作。
+- **设备适配感知**：自动检测当前硬件设备（NPU、CUDA、XPU 等）并应用相应的优化。系统会跳过不支持的设备，确保在不同环境下都能正常工作。
 
 - **模块化设计**：每个 kernel 独立实现，互不干扰。可以单独应用某个 kernel，也可以批量应用所有可用的 kernels。
 
@@ -90,6 +90,6 @@ for kernel in available_kernels:
 | [NpuSwiGluKernel](./fused-operators.md/#npufusedswiglu) | SWIGLU | NPU | NPU 设备的高性能 SwiGLU 实现，部分模型的 MLP 层不支持 |
 | [NpuRoPEKernel](./fused-operators.md/#npufusedrope) | ROPE | NPU | NPU 设备的高性能 RoPE 实现，适用于大多数模型 |
 | [NpuQwen2VLRoPEKernel](./fused-operators.md/#npufusedrope) | ROPE | NPU | 多模态 RoPE 实现，单独适配 Qwen2-VL 模型，`auto_register = False`，需要手动应用 |
-| NpuQwen3VLMoEFusedMoEKernel | MOE | NPU | MoE 融合算子，当前仅适配 Qwen3VLMoE 模型 |
+| [NpuMoEFusedMoEKernel](./fused-operators.md/#npufusedmoe) | MOE | NPU | MoE 融合算子，当前仅适配 Qwen3VLMoE 以及 Qwen3-MoE 模型 |
 
 我们会持续适配更多的 kernels，如果您需要自己开发新的 kernels，请参考我们的 [Kernel 开发文档](../../dev-guide/plugins/model-plugins/kernels.md)，欢迎您向 LLaMA-Factory 贡献代码。
