@@ -42,7 +42,7 @@ def _npu_swiglu_forward(self, hidden_state):
     )
 ```
 
- 在 LLaMA-Factory 中，通过 `NpuSwiGluKernel` 提供使能该融合算子的入口，只需要调用 `apply_kernel(model, NpuSwiGluKernel)` 即可针对已适配的模型使能 npu SwiGLU 融合算子。对于未适配度模型，如有需要，您可根据示例以及[开发者文档](../../dev-guide/plugins/model-plugins/kernels.md)自行适配。
+ 在 LLaMA-Factory 中，通过 `NpuSwiGluKernel` 提供使能该融合算子的入口，只需要调用 `apply_kernel(model, NpuSwiGluKernel)` 即可针对已适配的模型使能 npu SwiGLU 融合算子。对于未适配的模型，如有需要，您可根据示例以及[开发者文档](../../dev-guide/plugins/model-plugins/kernels.md)自行适配。
 
 
 ### NpuFusedRoPE
@@ -68,7 +68,7 @@ def _apply_rotary_pos_emb(q, k, cos, sin, position_ids=None, unsqueeze_dim=1):
     return q_embed, k_embed
 ```
 
- 在 LLaMA-Factory 中，通过 `NpuRoPEKernel` 或 `NpuQwen2VLRoPEKernel` 提供使能该融合算子的入口，只需要调用 `apply_kernel(model, NpuRoPEKernel)` 即可针对已适配的模型使能 npu RoPE 融合算子。对于未适配度模型，如有需要，您可根据示例以及[开发者文档](../../dev-guide/plugins/model-plugins/kernels.md)自行适配。
+ 在 LLaMA-Factory 中，通过 `NpuRoPEKernel` 或 `NpuQwen2VLRoPEKernel` 提供使能该融合算子的入口，只需要调用 `apply_kernel(model, NpuRoPEKernel)` 即可针对已适配的模型使能 npu RoPE 融合算子。对于未适配的模型，如有需要，您可根据示例以及[开发者文档](../../dev-guide/plugins/model-plugins/kernels.md)自行适配。
 
 
 ### NpuFusedMoE

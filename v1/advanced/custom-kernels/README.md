@@ -47,7 +47,7 @@ model = AutoModelForCausalLM.from_pretrained("qwen/qwen2.5-0.5B")
 model = apply_available_kernels(model)
 ```
 
-#### 2.2 手动使能特定 kernel
+#### 2.2 apply_kernel 使能特定 kernel
 
 如果需要更精细的控制，例如在某些场合单独应用某个 kernel，可以手动调用 `apply_kernel` 函数来使能特定的 kernel：
 
@@ -68,9 +68,9 @@ model = apply_kernel(model, NpuRMSNormKernel)
 model = apply_kernel(model, NpuSwiGluKernel)
 ```
 
-### 3. 发现可用 kernels
+### 3. 查询已注册的可用 kernels
 
-`discover_kernels` 接口可以查询当前设备上所有可用的 kernels，通常而言，这个接口无需用户手动调用，但是在故障检查的时候，如果发现某个 kernel 未被成功使能，可以检查一下这个函数的返回值是否符合预期。
+`discover_kernels` 接口可以查询当前设备上所有已注册的可用 kernels，通常而言，这个接口无需用户手动调用，但是在故障检查的时候，如果发现某个 kernel 未被成功使能，可以检查一下这个函数的返回值是否符合预期。
 
 ```python
 from llamafactory.v1.plugins.model_plugins.kernels.registry import discover_kernels
