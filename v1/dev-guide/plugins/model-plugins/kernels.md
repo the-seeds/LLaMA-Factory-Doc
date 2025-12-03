@@ -315,59 +315,6 @@ def apply_available_kernels(model: HFModel, **kwargs) -> "HFModel":
 - 性能提升取决于硬件设备和模型架构
 - 某些情况下，kernel 优化可能不会带来明显的性能提升
 
-## 异常处理
-
-### 依赖不可用
-
-当 kernel 所需的依赖不可用时，`apply()` 方法应该直接返回原模型，而不是抛出异常：
-
-```python
-@classmethod
-def apply(cls, model: HFModel, **kwargs) -> HFModel:
-    if not is_torch_npu_available():
-        return model  # 依赖不可用时直接返回，不抛出异常
-    
-    # 应用 kernel
-    # ...
-```
-
-### 设备类型不匹配
-
-当尝试应用不匹配当前设备的 kernel 时，`apply_kernel()` 会抛出 `ValueError`：
-
-```python
-try:
-    model = apply_kernel(model, NpuRMSNormKernel)
-except ValueError as e:
-    print(f"设备类型不匹配: {e}")
-```
-
-### 注册冲突
-
-如果同一个 `(kernel_type, device_type)` 组合被注册多次，会发出警告但不会抛出异常：
-
-```python
-if device_type in self._registry[kernel_type]:
-    print(f"Warning: Overwriting kernel for {kernel_type.name} on {device_type.name}.")
-```
-
-### 常见错误处理
-
-**Kernel 未应用**：
-- 检查设备类型：`discover_kernels(model)` 返回的列表是否为空
-- 检查依赖：确认所需的库已安装（如 `torch_npu`）
-- 检查模块匹配：确认模型中的模块类名符合 kernel 的匹配规则
-
-**Loss 数值不一致**：
-- 检查 kernel 实现是否正确进行了等价替换，模型本身是否有特殊处理
-- 验证参数传递：确认 epsilon 值、归一化参数等是否正确传递
-- 对比测试：对比原始实现和优化实现的中间结果
-
-**导入错误**：
-- 确认 kernel 模块路径已添加到 `_ensure_kernels_loaded()` 中
-- 检查模块的 `__init__.py` 是否正确配置
-- 确认所有依赖都已安装
-
 ## 扩展 Kernels
 
 当前 LLaMA-Factory 内置的 kernel 有限，如果用户有针对特定模型或者设备的 kernel，可以按照下述步骤去实现并接入 LLaMA-Factory。
@@ -484,4 +431,57 @@ class ExperimentalKernel(MetaKernel):
 
 禁用自动注册后，需要手动调用 `KERNEL_REGISTRY.register()` 或直接使用 `apply_kernel()`。
 
+## 异常处理
 
+### 依赖不可用
+
+当 kernel 所需的依赖不可用时，`apply()` 方法应该直接返回原模型，而不是抛出异常：
+
+```python
+@classmethod
+def apply(cls, model: HFModel, **kwargs) -> HFModel:
+    if not is_torch_npu_available():
+        return model  # 依赖不可用时直接返回，不抛出异常
+    
+    # 应用 kernel
+    # ...
+```
+
+### 设备类型不匹配
+
+当尝试应用不匹配当前设备的 kernel 时，`apply_kernel()` 会抛出 `ValueError`：
+
+```python
+try:
+    model = apply_kernel(model, NpuRMSNormKernel)
+except ValueError as e:
+    print(f"设备类型不匹配: {e}")
+```
+
+### 注册冲突
+
+如果同一个 `(kernel_type, device_type)` 组合被注册多次，会发出警告但不会抛出异常：
+
+```python
+if device_type in self._registry[kernel_type]:
+    print(f"Warning: Overwriting kernel for {kernel_type.name} on {device_type.name}.")
+```
+
+### 常见错误处理
+
+**Kernel 未应用**：
+- 检查设备类型：`discover_kernels(model)` 返回的列表是否为空
+- 检查依赖：确认所需的库已安装（如 `torch_npu`）
+- 检查模块匹配：确认模型中的模块类名符合 kernel 的匹配规则
+
+**Loss 数值不一致**：
+- 检查 kernel 实现是否正确进行了等价替换，模型本身是否有特殊处理
+- 验证参数传递：确认 epsilon 值、归一化参数等是否正确传递
+- 对比测试：对比原始实现和优化实现的中间结果
+
+**导入错误**：
+- 确认 kernel 模块路径已添加到 `_ensure_kernels_loaded()` 中
+- 检查模块的 `__init__.py` 是否正确配置
+- 确认所有依赖都已安装
+
+在发现任何预期外的异常时，欢迎您向社区提交 issue 协助改进 LLaMA-Factory。
