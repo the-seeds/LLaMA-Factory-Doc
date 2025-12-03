@@ -16,7 +16,6 @@ def _npu_rms_forward(self, hidden_states):
     Returns:
         Normalized tensor consistent with the baseline RMSNorm behavior.
     """
-    import torch_npu
 
     return torch_npu.npu_rms_norm(hidden_states, self.weight, epsilon=self.variance_epsilon)[0]
 
