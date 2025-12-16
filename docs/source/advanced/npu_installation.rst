@@ -1,170 +1,219 @@
 NPU安装及配置
-================
+=================
 
-目前LLaMA-Factory 通过 torch-npu 库完成了对华为昇腾 910b 系列芯片的支持, 包含 32GB 和 64GB 两个版本。跟其他使用相比，会需要额外3个前置条件
+LLaMA-Factory 支持华为昇腾 NPU (A2/A3) 设备。您可以选择以下三种方式之一进行环境配置及使用：
 
-1. 加速卡本身的驱动正常安装
-#. CANN Toolkit 和 Kernels库正常安装
-#. torch-npu 库正常安装
-
-为方便昇腾用户使用，LLaMA-Factory 提供已预装昇腾环境的 :ref:`install_form_docker` 及自行安装昇腾环境，:ref:`install_form_pip` 两种方式，可按需自行选择：
-
-.. _install_form_docker:
-
-Docker 安装
----------------------
-
-.. note::
-  请确保宿主机已根据昇腾卡型号成功安装对应的固件和驱动，可参考 `快速安装昇腾环境 <https://ascend.github.io/docs/sources/ascend/quick_install.html>`_ 指引。
-
-LLaMA-Factory 提供 :ref:`docker_compose` 和 :ref:`docker_build` 两种构建方式，请根据需求选择其一。
+- :ref:`install_form_pip`
+- :ref:`use_form_docker`
+- :ref:`install_form_docker`
 
 
-.. _docker_compose:
+核心依赖说明
+----------------
 
-使用 docker-compose 构建并启动 docker 容器
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+所有安装方式均依赖以下组件：
 
-进入 LLaMA-Factory 项目中存放 Dockerfile 及 docker-compose.yaml 的 docker-npu 目录：
+- **HDK**：固件及驱动
+- **CANN**：异构计算架构
+- **torch_npu**：PyTorch 的昇腾适配插件
 
-.. code-block:: shell
+根据安装方式不同，所需操作有所区别：
 
-  cd docker/docker-npu
-
-
-构建 docker 镜像并启动 docker 容器：
-
-.. code-block:: shell
-
-  docker-compose up -d
-
-进入 docker 容器：
-
-.. code-block:: shell
-
-  docker exec -it llamafactory bash
-
-
-
-.. _docker_build:
-
-不使用 docker-compose
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-使用 docker build 直接构建 docker 镜像：
-
-.. code-block:: shell
-
-  docker build -f ./docker/docker-npu/Dockerfile --build-arg INSTALL_DEEPSPEED=false --build-arg PIP_INDEX=https://pypi.org/simple -t llamafactory:latest .
-
-
-启动 docker 容器：
-
-.. code-block:: shell
-
-  docker run -dit \
-  -v ./hf_cache:/root/.cache/huggingface \
-  -v ./ms_cache:/root/.cache/modelscope \
-  -v ./data:/app/data \
-  -v ./output:/app/output \
-  -v /usr/local/dcmi:/usr/local/dcmi \
-  -v /usr/local/bin/npu-smi:/usr/local/bin/npu-smi \
-  -v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
-  -v /etc/ascend_install.info:/etc/ascend_install.info \
-  -p 7860:7860 \
-  -p 8000:8000 \
-  --device /dev/davinci0 \
-  --device /dev/davinci_manager \
-  --device /dev/devmm_svm \
-  --device /dev/hisi_hdc \
-  --shm-size 16G \
-  --name llamafactory \
-  llamafactory:latest
-
-
-进入 docker 容器：
-
-.. code:: shell
-
-  docker exec -it llamafactory bash
+- **手动安装**：需手动安装 HDK、CANN 和 torch_npu。
+- **Docker 镜像/构建**：宿主机仅需安装 HDK (驱动/固件)，CANN 和 torch_npu 已集成在镜像中。
 
 
 .. _install_form_pip:
 
-自行 pip 安装
--------------------
+方式一：手动安装环境
+----------------------
 
-自行 pip 安装时， python 版本建议使用3.10， 目前该版本对于 NPU 的使用情况会相对稳定，其他版本可能会遇到一些未知的情况
+本方式需要您手动安装 HDK、CANN 和 torch_npu。
 
-依赖1: NPU 驱动
+
+1. 版本及下载链接
 ~~~~~~~~~~~~~~~~~~~~
 
-根据昇腾卡型号安装对应的固件和驱动，可参考 `快速安装昇腾环境 <https://ascend.github.io/docs/sources/ascend/quick_install.html>`_ 指引，使用 ``npu-smi info`` 验证如下
+本文档列举了最新的依赖版本及下载链接，请根据设备型号选择：
 
-.. image:: ../assets/advanced/npu-smi.png
-
-依赖2: NPU 开发包
-~~~~~~~~~~~~~~~~~~~~~
-
-.. list-table:: 相关包建议版本
-   :widths: 30 10 60
+.. list-table::
+   :align: left
+   :widths: 5 10 50
    :header-rows: 1
 
-   * - Requirement
-     - Minimum
-     - Recommend
-   * - CANN
-     - 8.3.RC1
-     - 8.3.RC1
-   * - torch
-     - 2.5.1
-     - 2.7.1
-   * - torch-npu
-     - 2.5.1
-     - 2.7.1
-   * - deepspeed
-     - 0.16.9
-     - 0.16.9
+   * - 设备
+     - 依赖
+     - 链接
+   * - A3
+     - HDK
+     - https://www.hiascend.com/hardware/firmware-drivers/community?product=7&model=34&cann=8.3.RC1&driver=Ascend+HDK+25.0.RC1.3
+   * -
+     - CANN
+     - https://www.hiascend.com/developer/download/community/result?module=pt+cann&product=7&model=34
+   * -
+     - torch_npu
+     - https://www.hiascend.com/developer/download/community/result?module=pt+cann&product=7&model=34
+   * - A2
+     - HDK
+     - https://www.hiascend.com/hardware/firmware-drivers/community?product=4&model=26&cann=8.3.RC1&driver=Ascend+HDK+25.3.RC1
+   * -
+     - CANN
+     - https://www.hiascend.com/developer/download/community/result?module=pt+cann&pt=7.2.0&cann=8.3.RC1
+   * -
+     - torch_npu
+     - https://www.hiascend.com/developer/download/community/result?module=pt+cann&pt=7.2.0&cann=8.3.RC1
 
-可以按照 `快速安装昇腾环境 <https://ascend.github.io/docs/sources/ascend/quick_install.html>`_ 指引，或者使用以下命令完成快速安装：
+.. note::
 
+  - 具体需要安装的包可查看下文实际安装指南。
+  - ``torch_npu`` 下载链接跳转页面，请点击所需的 PyTorch 版本的“获取源码”，链接将自动跳转至 `torch_npu 发行版本 <https://gitcode.com/Ascend/pytorch/releases>`__ 指定界面。
+  - 推荐使用 ``torch 2.7.1`` + ``python 3.11``，该组合作为 ``torch_npu`` 的稳定版本长期演进
 
-.. code-block:: bash
-
-    # Atlas A2 Training Series*
-    # https://www.hiascend.com/developer/download/community/result
-    # 1. Ascend-cann-toolkit_8.3.RC1_linux-aarch64.run
-    # 2. Ascend-cann-kernels-910b_8.3.RC1_linux-aarch64.run
-    # 3. Ascend-cann-nnal_8.3.RC1_linux-aarch64.run
-    # CANN Toolkit
-    bash Ascend-cann-toolkit_8.3.RC1_linux-aarch64.run --install
-
-    # CANN Kernels
-    bash Ascend-cann-kernels-910b_8.3.RC1_linux-aarch64.run --install
-
-    # nnal
-    source /usr/local/Ascend/ascend-toolkit/set_env.sh
-    bash Ascend-cann-nnal_8.3.RC1_linux-aarch64.run --install
-
-
-    # set env variables
-    source /usr/local/Ascend/ascend-toolkit/set_env.sh
-    source /usr/local/Ascend/nnal/atb/set_env.sh
-
-
-
-依赖3: torch-npu
+2. 驱动及固件
 ~~~~~~~~~~~~~~~~~~~~
 
-依赖3建议在安装 LLaMA-Factory 的时候一起选配安装， 把 ``torch-npu`` 一起加入安装目标，命令如下
+请根据实际情况选择 ``.run`` 或 ``.deb`` 的 HDK 安装包，并请注意安装包对 ``aarch64`` 和 ``x86`` 做了区分。
+
+以下以 A2 系列为例。A3 系列包 ``firmware`` 和 ``driver`` 包名有所变化，可以根据链接内实际情况选择。
+
+A3 内部包名类似于 ``Atlas-A3-hdk-npu-driver_25.0.rc1.3_linux-aarch64.run`` 和 ``Atlas-A3-hdk-npu-firmware_7.7.0.3.228.run``，实际安装方式没有变化。
+
+(1) 上传安装包，以 root 用户登录，将驱动和固件包上传至服务器（如 ``/home``）。
+
+(2) 增加执行权限，进入安装包目录，执行以下命令。
+
+    .. code-block:: shell
+
+        chmod +x Ascend-hdk-<chip_type>-npu-driver_<version>_linux-<arch>.run
+        chmod +x Ascend-hdk-<chip_type>-npu-firmware_<version>.run
+
+(3) 安装驱动与固件，默认安装路径为 ``/usr/local/Ascend``。
+
+    **安装驱动**：
+
+    .. code-block:: shell
+
+        ./Ascend-hdk-<chip_type>-npu-driver_<version>_linux-<arch>.run --full --install-for-all
+
+    出现 ``Driver package installed successfully!`` 表示成功。
+
+    **安装固件**：
+
+    .. code-block:: shell
+
+        ./Ascend-hdk-<chip_type>-npu-firmware_<version>.run --full
+
+    出现 ``Firmware package installed successfully!`` 表示成功。
+
+    .. note::
+
+        若未创建默认用户 ``HwHiAiUser``，需在安装命令中指定用户和组： ``./Ascend-hdk-*.run --full --install-username=<username> --install-usergroup=<usergroup>``
+
+(4) 重启系统，根据提示决定是否重启。如需重启：
+
+    .. code-block:: shell
+
+        reboot
+
+(5) 验证安装，执行以下命令查看驱动加载状态：
+
+    .. code-block:: shell
+
+        npu-smi info
+
+    .. image:: ../assets/advanced/npu-smi.png
+
+3. CANN
+~~~~~~~~~~~~~~~~~~~~~
+
+请根据实际情况选择 ``.run`` 或 ``.deb`` 的 CANN 安装包，并请注意安装包对 ``aarch64`` 和 ``x86`` 做了区分。
+
+以下以 A2 系列为例。A3 系列唯一区别是 ``kernels`` 包名字有所变化，可以根据链接内实际情况选择。A3 内部包名类似于 ``Atlas-A3-cann-kernels_8.3.RC1_linux-aarch64.run``，实际安装方式没有变化。
+
+
+(1) 安装 Toolkit 开发套件
+"""""""""""""""""""""""""
+
+Toolkit 用于训练、推理及开发。
+
+.. note::
+    请确保安装目录可用空间大于 10G。
+
+1. **授权与安装**：以 root 用户安装，默认安装路径为 ``/usr/local/Ascend``；以普通用户安装，默认安装路径为 ``${HOME}/Ascend``。
+
+   .. code-block:: shell
+
+       chmod +x Ascend-cann-toolkit_<version>_linux-aarch64.run
+       ./Ascend-cann-toolkit_<version>_linux-aarch64.run --install
+
+2. **配置环境变量**：以 root 用户为例，建议写入 ``~/.bashrc``。
+
+   .. code-block:: shell
+
+       source /usr/local/Ascend/ascend-toolkit/set_env.sh
+
+
+(2) 安装 Kernels 算子包
+"""""""""""""""""""""""""
+
+需在安装 Toolkit 后执行。如需安装静态库，请将 ``--install`` 改为 ``--devel``。
+
+.. code-block:: shell
+
+    chmod +x Ascend-cann-kernels-<chip_type>_<version>_linux-aarch64.run
+    ./Ascend-cann-kernels-<chip_type>_<version>_linux-aarch64.run --install
+
+
+(3) 安装 NNAL 神经网络加速库（可选）
+""""""""""""""""""""""""""""""""""""""""""""
+
+包含 ATB 和 SiP 加速库。需在安装 Toolkit 后执行。
+
+1. **授权与安装**：
+
+   .. code-block:: shell
+
+       chmod +x Ascend-cann-nnal_8.3.RC1_linux-aarch64.run
+       ./Ascend-cann-nnal_8.3.RC1_linux-aarch64.run --install
+
+2. **配置环境变量**：
+
+   （二选一，不可同时配置）
+
+   .. code-block:: shell
+
+       # ATB
+       source ${HOME}/Ascend/nnal/atb/set_env.sh
+
+       # SiP
+       source ${HOME}/Ascend/nnal/asdsip/set_env.sh
+
+
+
+4. torch-npu
+~~~~~~~~~~~~~~~~~~~~
+
+建议在安装 LLaMA-Factory 时一并安装 ``torch-npu`` 插件，LLaMA-Factory 依赖内会持续更新稳定版本的 ``torch-npu`` 插件。
 
 .. code-block:: bash
 
-    pip install -e ".[torch-npu,metrics]"
+    pip install -e ".[torch-npu]"
 
-依赖校验
+当然您也可以手动下载后安装 ``torch-npu`` 插件，例如：
+
+.. code-block:: bash
+
+    pip install torch_npu-2.1.0.post1-cp39-cp39-manylinux_2_17_aarch64.whl
+
+安装 ``torch-npu`` 插件需要注意：
+
+- 下载的 ``torch_npu`` 会对支持的 Python 版本做区分，请根据实际环境情况选择对应安装包，``pip install torch_npu`` 时，也会一并安装对应版本的 ``torch``。
+- 环境里安装的 ``torch-npu`` 和 ``torch`` 版本需要对齐。例如 ``torch-npu`` 版本为 ``2.7.1`` 时，``torch`` 的版本也需要为 ``2.7.1``。有时依赖互斥，安装不用依赖的过程会导致 ``torch`` 版本被更新，从而导致报错。
+
+5. 验证安装
 ~~~~~~~~~~~~~~~~
-3个依赖都安装后，可以通过如下的 python 脚本对 ``torch_npu`` 的可用情况做一下校验
+
+执行以下 Python 脚本：
 
 .. code-block:: python
 
@@ -172,152 +221,196 @@ LLaMA-Factory 提供 :ref:`docker_compose` 和 :ref:`docker_build` 两种构建�
     import torch_npu
     print(torch.npu.is_available())
 
-预期结果是打印true
+预期输出：``True``
 
 .. image:: ../assets/advanced/npu-torch.png
 
-安装校验
-----------------------
+该情况说明 ``HDK``、``CANN`` 和 ``torch_npu`` 都正常安装且生效。
 
-使用以下指令对 LLaMA-Factory × 昇腾的安装进行校验：
+
+
+.. _use_form_docker:
+
+方式二：Docker 预安装镜像
+---------------------------------
+
+.. note::
+  请确保宿主机已安装固件和驱动，可参考前文进行安装。
+
+LLaMA-Factory 的官方镜像托管于 `Docker Hub <https://hub.docker.com/r/hiyouga/llamafactory/tags>`__ 和 `quay.io <https://quay.io/repository/ascend/llamafactory?tab=tags>`__，二者镜像无区别。
+
+1. 拉取镜像
+~~~~~~~~~~~~~~~~~~~~
+
+下载 main 分支最新镜像（请根据设备选择 A2 或 A3）。如需特定版本镜像，请访问镜像仓库查看 Tag。
 
 .. code-block:: shell
-  
-  llamafactory-cli env
 
-如下所示，正确显示 LLaMA-Factory、PyTorch NPU 和 CANN 版本号及 NPU 型号等信息即说明安装成功。
+    # Docker Hub
+    docker pull hiyouga/llamafactory:latest-npu-a2
+    docker pull hiyouga/llamafactory:latest-npu-a3
 
-.. code-block:: shell
-  
-    - `llamafactory` version: 0.9.4.dev0
-    - Platform: Linux-5.10.0-60.18.0.50.r865_35.hce2.aarch64-aarch64-with-glibc2.35
-    - Python version: 3.11.13
-    - PyTorch version: 2.7.1+cpu (NPU)
-    - Transformers version: 4.57.1
-    - Datasets version: 4.0.0
-    - Accelerate version: 1.11.0
-    - PEFT version: 0.17.1
-    - NPU type: Ascend910B1
-    - CANN version: 8.3.RC1
-    - TRL version: 0.9.6
-    - Default data directory: detected
+    # quay.io
+    docker pull quay.io/ascend/llamafactory:latest-npu-a2
+    docker pull quay.io/ascend/llamafactory:latest-npu-a3
 
 
-在 LLaMA-Factory 中使用 NPU 
-----------------------------------
+2. 启动容器
+~~~~~~~~~~~~~~~~~~~~
 
-前面依赖安装完毕和完成校验后，即可像文档的其他部分一样正常使用 ``llamafactory-cli`` 的相关功能， NPU 的使用是无侵入的。主要的区别是需要修改一下命令行中 设备变量使用
-将原来的 Nvidia 卡的变量 ``CUDA_VISIBLE_DEVICES`` 替换为 ``ASCEND_RT_VISIBLE_DEVICES``， 类似如下命令
+使用以下命令启动容器（请根据实际情况修改 ``DOCKER_IMAGE`` 和 ``device``）：
 
 .. code-block:: bash
 
-    ASCEND_RT_VISIBLE_DEVICES=0,1 llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
+  CONTAINER_NAME=llama_factory_npu
+  DOCKER_IMAGE=hiyouga/llamafactory:latest-npu-a2
 
-FAQ
-~~~~~~~~~~~~~
+  docker run -itd \
+      --cap-add=SYS_PTRACE \
+      --net=host \
+      --device=/dev/davinci0 \
+      --device=/dev/davinci1 \
+      --device=/dev/davinci2 \
+      --device=/dev/davinci3 \
+      --device=/dev/davinci4 \
+      --device=/dev/davinci5 \
+      --device=/dev/davinci6 \
+      --device=/dev/davinci7 \
+      --device=/dev/davinci_manager \
+      --device=/dev/devmm_svm \
+      --device=/dev/hisi_hdc \
+      --shm-size=1200g \
+      -v /usr/local/sbin/npu-smi:/usr/local/sbin/npu-smi \
+      -v /usr/local/dcmi:/usr/local/dcmi \
+      -v /etc/ascend_install.info:/etc/ascend_install.info \
+      -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+      -v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
+      -v /data:/data \
+      --name "$CONTAINER_NAME" \
+      "$DOCKER_IMAGE" \
+      /bin/bash
 
-1. 设备指定
-^^^^^^^^^^^^^^^
+.. note::
 
-**Q：NPU 调用失败**
+    配置 ``--privileged=true`` 可开启特权模式，赋予容器对底层硬件管理设备（如 ``/dev/davinci_manager``）的完整访问权限。这能解决多容器并行场景下，因权限限制导致的驱动初始化失败问题，确保 NPU 资源能被多个容器正常复用。
 
-A: 通过以下两种方法排查解决：
-
-1. 通过 ``ASCEND_RT_VISIBLE_DEVICES`` 环境变量指定昇腾 NPU 卡，如 ``ASCEND_RT_VISIBLE_DEVICES=0,1,2,3`` 指定使用 0，1，2，3四张 NPU 卡进行微调/推理。
-2. 检查是否安装 torch-npu，建议通过 ``pip install -e '.[torch-npu,metrics]'`` 安装 LLaMA-Factory。
+    **注意**：若未配置该参数，可能会出现首个容器占用后，后续容器因无权限而无法读取设备的情况。鉴于特权模式的权限过大，生产环境中请务必评估安全风险后慎重使用。
 
 
-2. 推理报错
-^^^^^^^^^^^^^^^
-
-**Q：使用昇腾 NPU 推理报错 RuntimeError: ACL stream synchronize failed, error code:507018**
-
-A: 设置 do_sample: false，取消随机抽样策略。
-
-比如在 yaml 中修改
-
-.. code-block:: yaml
-
-    model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
-    template: llama3
-    do_sample: false
-
-比如在 api 请求中指定
+3. 进入容器
+~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-    curl http://localhost:8000/v1/chat/completions \
-    -H "Content-Type: application/json" \
-    -d '{
-        "model": "meta-llama/Meta-Llama-3-8B-Instruct",
-        "messages": [
-            {"role": "user", "content": "Hello"}
-        ],
-        "do_sample": false
-    }'
+   docker exec -it llama_factory_npu bash
+
+.. note::
+   
+   通过 ``--device /dev/davinci<N>`` 挂载指定 NPU 卡（支持 0-7）。容器内设备编号会自动重新映射（例如物理机 davinci6 代表容器内设备 0）。
+
+进入容器后，可直接使用 ``llamafactory-cli train`` 启动训练，无需额外配置。
+
+.. _install_form_docker:
+
+方式三：Docker 本地构建
+-----------------------------
+
+.. note::
+  请确保宿主机已安装固件和驱动。
+
+LLaMA-Factory 提供 :ref:`docker_build` 和 :ref:`docker_compose` 两种构建方式。
 
 
-关联 issues：
+.. _docker_build:
 
-- https://github.com/hiyouga/LLaMA-Factory/issues/3840
+1. 使用 Docker Build 构建
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(1) 构建镜像，在项目根目录下执行：
+
+    .. code-block:: shell
+
+      # Ascend-A2
+      docker build -f ./docker/docker-npu/Dockerfile --build-arg INSTALL_DEEPSPEED=false --build-arg PIP_INDEX=https://pypi.org/simple -t llamafactory:latest .
+
+      # Ascend-A3
+      docker build -f ./docker/docker-npu/Dockerfile --build-arg BASE_IMAGE=quay.io/ascend/cann:8.3.rc2-a3-ubuntu22.04-py3.11 --build-arg INSTALL_DEEPSPEED=false --build-arg PIP_INDEX=https://pypi.org/simple -t llamafactory:latest .
+
+.. note::
+
+    可修改 ``BASE_IMAGE`` 参数指定其他 CANN 版本（参考 `ascend/cann <https://quay.io/repository/ascend/cann?tab=tags&tag=latest>`__ ）。
+
+(2) 启动容器
+
+    .. code-block:: shell
+
+      CONTAINER_NAME=llama_factory_npu
+      DOCKER_IMAGE=llamafactory:latest
+      docker run -itd \
+          --cap-add=SYS_PTRACE \
+          --net=host \
+          --device=/dev/davinci0 \
+          --device=/dev/davinci1 \
+          --device=/dev/davinci2 \
+          --device=/dev/davinci3 \
+          --device=/dev/davinci4 \
+          --device=/dev/davinci5 \
+          --device=/dev/davinci6 \
+          --device=/dev/davinci7 \
+          --device=/dev/davinci_manager \
+          --device=/dev/devmm_svm \
+          --device=/dev/hisi_hdc \
+          --shm-size=1200g \
+          -v /usr/local/sbin/npu-smi:/usr/local/sbin/npu-smi \
+          -v /usr/local/dcmi:/usr/local/dcmi \
+          -v /etc/ascend_install.info:/etc/ascend_install.info \
+          -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
+          -v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
+          -v /data:/data \
+          --name "$CONTAINER_NAME" \
+          "$DOCKER_IMAGE" \
+          /bin/bash
+
+.. note::
+
+    配置 ``--privileged=true`` 可开启特权模式，赋予容器对底层硬件管理设备（如 ``/dev/davinci_manager``）的完整访问权限。这能解决多容器并行场景下，因权限限制导致的驱动初始化失败问题，确保 NPU 资源能被多个容器正常复用。
+
+    **注意**：若未配置该参数，可能会出现首个容器占用后，后续容器因无权限而无法读取设备的情况。鉴于特权模式的权限过大，生产环境中请务必评估安全风险后慎重使用。
+
+(3) 进入容器
+
+    .. code-block:: shell
+
+      docker exec -it llama_factory_npu bash
 
 
-3. 微调/训练报错
-^^^^^^^^^^^^^^^^^^^
+.. _docker_compose:
 
-**Q：使用 ChatGLM 系列模型微调/训练模型时，报错 NotImplementedError: Unknown device for graph fuser**
+2. 使用 Docker Compose 构建
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A: 在 modelscope 或 huggingface 下载的 repo 里修改 ``modeling_chatglm.py`` 代码，取消 torch.jit 装饰器注释
+(1) 进入目录
 
-关联 issues：
+.. code-block:: shell
+  
+  cd docker/docker-npu
 
-- https://github.com/hiyouga/LLaMA-Factory/issues/3788
-- https://github.com/hiyouga/LLaMA-Factory/issues/4228
-
-
-**Q：微调/训练启动后，HCCL 报错，包含如下关键信息：**
+(2) 构建镜像并直接启动容器，请根据设备型号选择命令：
 
 .. code-block:: shell
 
-        RuntimeError: [ERROR] HCCL error in: torch_npu/csrc/distributed/ProcessGroupHCCL.cpp:64
-    [ERROR] 2024-05-21-11:57:54 (PID:927000, Device:3, RankID:3) ERR02200 DIST call hccl api failed.
-    EJ0001: 2024-05-21-11:57:54.167.645 Failed to initialize the HCCP process. Reason: Maybe the last training process is running.
-            Solution: Wait for 10s after killing the last training process and try again.
-            TraceBack (most recent call last):
-            tsd client wait response fail, device response code[1]. unknown device error.[FUNC:WaitRsp][FILE:process_mode_manager.cpp][LINE:290]
-            Fail to get sq reg virtual addr, deviceId=3, sqId=40.[FUNC:Setup][FILE:stream.cc][LINE:1102]
-            stream setup failed, retCode=0x7020010.[FUNC:SyncGetDevMsg][FILE:api_impl.cc][LINE:4643]
-            Sync get device msg failed, retCode=0x7020010.[FUNC:GetDevErrMsg][FILE:api_impl.cc][LINE:4704]
-            rtGetDevMsg execute failed, reason=[driver error:internal error][FUNC:FuncErrorReason][FILE:error_message_manage.cc][LINE:53]
+  # Ascend-A2
+  docker-compose up -d
 
-A: 杀掉 device 侧所有进程，等待 10s 后重新启动训练。
+  # Ascend-A3
+  docker-compose --profile a3 up -d llamafactory-a3
 
-关联 issues：
-
-- https://github.com/hiyouga/LLaMA-Factory/issues/3839
-
-.. **Q：微调 ChatGLM3 使用 fp16 报错 Gradient overflow. Skipping step Loss scaler reducing loss scale to ...；使用 bf16 时 'loss': 0.0, 'grad_norm': nan**
-.. https://github.com/hiyouga/LLaMA-Factory/issues/3308
-
-
-**Q：使用 TeleChat 模型在昇腾 NPU 推理时，报错 AssertionError： Torch not compiled with CUDA enabled**
-
-A: 此问题一般由代码中包含 cuda 相关硬编码造成，根据报错信息，找到 cuda 硬编码所在位置，对应修改为 NPU 代码。如 ``.cuda()`` 替换为 ``.npu()`` ； ``.to("cuda")`` 替换为  ``.to("npu")`` 
-
-**Q：模型微调遇到报错 DeviceType must be NPU. Actual DeviceType is: cpu，例如下列报错信息**
+(3) 进入容器
 
 .. code-block:: shell
 
-    File "/usr/local/pyenv/versions/3.10.13/envs/x/lib/python3.10/site-packages/transformers-4.41.1-py3.10.egg/transformers/generation/utils.py", line 1842, in generate
-        result = self._sample(
-    File "/usr/local/pyenv/versions/3.10.13/envs/x/lib/python3.10/site-packages/transformers-4.41.1-py3.10.egg/transformers/generation/utils.py", line 2568, in _sample
-        next_tokens = next_tokens * unfinished_sequences + \
-    RuntimeError: t == c10::DeviceType::PrivateUse1 INTERNAL ASSERT FAILED at "third_party/op-plugin/op_plugin/ops/base_ops/opapi/MulKernelNpuOpApi.cpp":26, please report a bug to PyTorch. DeviceType must be NPU. Actual DeviceType is: cpu
-    [ERROR] 2024-05-29-17:04:48 (PID:70209, Device:0, RankID:-1) ERR00001 PTA invalid parameter
+    docker exec -it llamafactory-a2 bash
 
-A: 此类报错通常为部分 Tensor 未放到 NPU 上，请确保报错中算子所涉及的操作数均在 NPU 上。如上面的报错中，MulKernelNpuOpApi 算子为乘法算子，应确保 next_tokens 和 unfinished_sequences 均已放在 NPU 上。
-
-昇腾实践参考
------------------
-
-如需更多 LLaMA-Factory × 昇腾实践指引，可参考 `全流程昇腾实践 <https://ascend.github.io/docs/sources/llamafactory/example.html>`_ 。
+.. note::
+  
+  构建前，请检查 `docker-compose.yml` 中的 `devices` 列表，当前构建时只会挂卡 0，请根据需要做修改。
