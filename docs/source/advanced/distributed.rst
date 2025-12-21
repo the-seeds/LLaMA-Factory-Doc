@@ -15,6 +15,8 @@ LLaMA-Factory 支持单机多卡和多机多卡分布式训练。同时也支持
 `FSDP <https://pytorch.org/tutorials/intermediate/FSDP_tutorial.html>`__ 通过全切片数据并行技术（Fully Sharded Data Parallel）来处理更多更大的模型。在 DDP 中，每张 GPU 都各自保留了一份完整的模型参数和优化器参数。而 FSDP 切分了模型参数、梯度与优化器参数，使得每张 GPU 只保留这些参数的一部分。
 除了并行技术之外，FSDP 还支持将模型参数卸载至CPU，从而进一步降低显存需求。
 
+`FSDP2 <https://pytorch.org/tutorials/intermediate/FSDP_tutorial.html>`__ 在集成FSDP1基础功能的前提下，摒弃了 FSDP1 将参数压扁拼接的做法，转而基于 DTensor 实现逐参数切分，这一架构升级在完整保留模型原始结构的同时，显著提升了计算与通信的重叠效率，进而增强训练性能。
+
 
 .. list-table::
     :widths: 30 30 30 30 30
@@ -36,6 +38,11 @@ LLaMA-Factory 支持单机多卡和多机多卡分布式训练。同时也支持
       - 支持
       - 支持
     * - FSDP
+      - 支持
+      - 支持
+      - 支持
+      - 支持
+    * - FSDP2
       - 支持
       - 支持
       - 支持
@@ -606,12 +613,6 @@ ZeRO-3+offload
 FSDP
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-.. _fsdp单机多卡:
-
-.. _fsdp多机多卡:
-
-
 PyTorch 的全切片数据并行技术 `FSDP <https://pytorch.org/docs/stable/fsdp.html>`_ （Fully Sharded Data Parallel）能让我们处理更多更大的模型。LLaMA-Factory支持使用 FSDP 引擎进行分布式训练。
 
 FSDP 的参数 ``ShardingStrategy`` 的不同取值决定了模型的划分方式：
@@ -621,8 +622,13 @@ FSDP 的参数 ``ShardingStrategy`` 的不同取值决定了模型的划分方�
 * ``NO_SHARD``: 不切分任何参数。类似ZeRO-0。
 
 
+.. _fsdp单机多卡:
+
+单机多卡
+++++++++++++++++++++++
+
 llamafactory-cli
-+++++++++++++++++++++++++
+******************
 
 您只需根据需要修改 ``examples/accelerate/fsdp_config.yaml`` 以及 ``examples/extras/fsdp_qlora/llama3_lora_sft.yaml`` ，文件然后运行以下命令即可启动 FSDP+QLoRA 微调：
 
@@ -633,8 +639,7 @@ llamafactory-cli
 
 
 accelerate
-++++++++++++++++++++++
-
+******************
 
 
 此外，您也可以使用 accelerate 启动 FSDP 引擎， **节点数与 GPU 数可以通过 num_machines 和  num_processes 指定**。对此，Huggingface 提供了便捷的配置功能。
@@ -693,6 +698,111 @@ accelerate
 .. warning:: 
 
     不要在 FSDP+QLoRA 中使用 GPTQ/AWQ 模型
+
+
+.. _fsdp多机多卡:
+
+多机多卡
+++++++++++++++++++++++
+
+accelerate
+******************
+
+您可以通过 `accelerate config` 根据提示回答一系列问题后，生成 多机 FSDP 所需的配置文件。
+
+当然您也可以根据需求自行配置 fsdp_config.yaml 。
+
+.. code-block:: yaml
+
+    #examples/accelerate/fsdp_config_multiple_nodes.yaml
+    compute_environment: LOCAL_MACHINE
+    debug: false
+    distributed_type: FSDP
+    downcast_bf16: 'no'
+    fsdp_config:
+      fsdp_auto_wrap_policy: TRANSFORMER_BASED_WRAP
+      fsdp_backward_prefetch: BACKWARD_PRE
+      fsdp_forward_prefetch: false
+      fsdp_cpu_ram_efficient_loading: true
+      fsdp_offload_params: false
+      fsdp_sharding_strategy: FULL_SHARD
+      fsdp_state_dict_type: FULL_STATE_DICT
+      fsdp_sync_module_states: true
+      fsdp_use_orig_params: true
+    machine_rank: 0
+    main_training_function: main
+    mixed_precision: bf16  # or fp16
+    main_process_ip: 192.168.0.1
+    main_process_port: 29500
+    num_machines: 2
+    num_processes: 16
+    rdzv_backend: static
+    same_network: true
+    tpu_env: []
+    tpu_use_cluster: false
+    tpu_use_sudo: false
+    use_cpu: false
+
+这份yaml文件里，您主要需要注意配置的参数是以下四个：
+
+- num_machines: 节点（机器）的数量。
+- num_processes: 所有节点上的 GPU 总数，即 num_machines * num_processes_per_machine。
+- main_process_ip: 主进程所在节点的 IP 地址；请确保所有节点使用相同的 IP。
+- main_process_port: 主进程的端口号；请确保所有节点使用相同的端口。
+- machine_rank: 当前节点（机器）的编号，从 0 开始；并且主节点（main_process_ip）的 machine_rank 必须为 0。
+
+当配置完成后，在所有机器上运行如下命令即可启动FSDP的多机多卡训练：
+
+.. code-block:: shell
+
+    accelerate launch \
+    --config_file fsdp_config_multiple_nodes.yaml \
+    train.py llm_config.yaml
+
+
+.. _fsdp2_ref:
+
+FSDP2
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+当前LLamafactory基于Accelerate集成使用FSDP2的分布式训练，与FSDP的差异主要在于参数配置的不同。您可以采用FSDP相同的方式运行单机多卡和多机多卡。我们也为您提供了通用的入参配置：
+
+.. code-block:: shell
+
+    #examples/accelerate/fsdp2_config.yaml
+    compute_environment: LOCAL_MACHINE
+    debug: false
+    distributed_type: FSDP
+    downcast_bf16: 'no'
+    fsdp_config:
+      fsdp_auto_wrap_policy: TRANSFORMER_BASED_WRAP
+      fsdp_cpu_ram_efficient_loading: true
+      fsdp_offload_params: false
+      fsdp_reshard_after_forward: true
+      fsdp_state_dict_type: FULL_STATE_DICT
+      fsdp_version: 2
+    machine_rank: 0
+    main_training_function: main
+    mixed_precision: bf16  # or fp16
+    num_machines: 1  # the number of nodes
+    num_processes: 2  # the number of GPUs in all nodes
+    rdzv_backend: static
+    same_network: true
+    tpu_env: []
+    tpu_use_cluster: false
+    tpu_use_sudo: false
+    use_cpu: false
+
+您可以通过以下命令快速拉起训练脚本：
+
+.. code-block:: shell
+
+    accelerate launch \
+    --config_file fsdp2_config.yaml \
+    train.py llm_config.yaml
+
+
+更多的入参配置差异，您可以参考 `Accelerate FSDP1 vs FSDP2 <chttps://huggingface.co/docs/accelerate/main/en/concept_guides/fsdp1_vs_fsdp2>`__ 。
 
 
 .. _显存估计:

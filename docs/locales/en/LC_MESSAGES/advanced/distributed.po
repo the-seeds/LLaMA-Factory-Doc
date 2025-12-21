@@ -516,3 +516,59 @@ msgstr "Please ensure that ``num_processes`` matches the total number of GPUs ac
 msgid "不要在 FSDP+QLoRA 中使用 GPTQ/AWQ 模型"
 msgstr "Do not use GPTQ/AWQ models with FSDP+QLoRA"
 
+#: ../../source/advanced/distributed.rst:711
+msgid "您可以通过 `accelerate config` 根据提示回答一系列问题后，生成 多机 FSDP 所需的配置文件。"
+msgstr "You can use `accelerate config` to answer a series of questions and generate the configuration file required for multi-node FSDP."
+
+#: ../../source/advanced/distributed.rst:713
+msgid "当然您也可以根据需求自行配置 fsdp_config.yaml 。"
+msgstr "Of course, you can also configure fsdp_config.yaml yourself according to your needs."
+
+#: ../../source/advanced/distributed.rst:746
+msgid "这份yaml文件里，您主要需要注意配置的参数是以下四个："
+msgstr "In this YAML file, the key parameters you need to configure are the following four:"
+
+#: ../../source/advanced/distributed.rst:748
+msgid "num_machines: 节点（机器）的数量。"
+msgstr "num_machines: Number of nodes (machines)."
+
+#: ../../source/advanced/distributed.rst:749
+msgid "num_processes: 所有节点上的 GPU 总数，即 num_machines * num_processes_per_machine。"
+msgstr "num_processes: Total number of GPUs across all nodes, i.e., num_machines * num_processes_per_machine."
+
+#: ../../source/advanced/distributed.rst:750
+msgid "main_process_ip: 主进程所在节点的 IP 地址；请确保所有节点使用相同的 IP。"
+msgstr "main_process_ip: IP address of the node where the main process runs; ensure all nodes use the same IP."
+
+#: ../../source/advanced/distributed.rst:751
+msgid "main_process_port: 主进程的端口号；请确保所有节点使用相同的端口。"
+msgstr "main_process_port: Port of the main process; ensure all nodes use the same port."
+
+#: ../../source/advanced/distributed.rst:752
+msgid "machine_rank: 当前节点（机器）的编号，从 0 开始；并且主节点（main_process_ip）的 machine_rank 必须为 0。"
+msgstr "machine_rank: Index of the current node (machine), starting from 0; the main node (main_process_ip) must have machine_rank 0."
+
+#: ../../source/advanced/distributed.rst:754
+msgid "当配置完成后，在所有机器上运行如下命令即可启动FSDP的多机多卡训练："
+msgstr "After the configuration is complete, run the following command on all machines to start multi-node multi-card FSDP training:"
+
+#: ../../source/advanced/distributed.rst:18
+msgid "`FSDP2 <https://pytorch.org/tutorials/intermediate/FSDP_tutorial.html>`__ 在集成FSDP1基础功能的前提下，摒弃了 FSDP1 将参数压扁拼接的做法，转而基于 DTensor 实现逐参数切分，这一架构升级在完整保留模型原始结构的同时，显著提升了计算与通信的重叠效率，进而增强训练性能。"
+msgstr "`FSDP2 <https://pytorch.org/tutorials/intermediate/FSDP_tutorial.html>`__, while integrating the basic functionality of FSDP1, abandons FSDP1's approach of flattening and concatenating parameters and instead implements per-parameter sharding based on DTensor. This architectural upgrade, while fully preserving the original model structure, significantly improves the overlap efficiency of computation and communication, thereby enhancing training performance."
+
+#: ../../source/advanced/distributed.rst:45
+#: ../../source/advanced/distributed.rst:765
+msgid "FSDP2"
+msgstr "FSDP2"
+
+#: ../../source/advanced/distributed.rst:768
+msgid "当前LLamafactory基于Accelerate集成使用FSDP2的分布式训练，与FSDP的差异主要在于参数配置的不同。您可以采用FSDP相同的方式运行单机多卡和多机多卡。我们也为您提供了通用的入参配置："
+msgstr "Currently, LLaMA-Factory uses FSDP2 for distributed training based on Accelerate integration. The main difference from FSDP lies in parameter configuration. You can run single-node multi-card and multi-node multi-card in the same way as FSDP. We also provide general input parameter configurations:"
+
+#: ../../source/advanced/distributed.rst:796
+msgid "您可以通过以下命令快速拉起训练脚本："
+msgstr "You can quickly start the training script with the following command:"
+
+#: ../../source/advanced/distributed.rst:805
+msgid "更多的入参配置差异，您可以参考 `Accelerate FSDP1 vs FSDP2 <chttps://huggingface.co/docs/accelerate/main/en/concept_guides/fsdp1_vs_fsdp2>`__ 。"
+msgstr "For more differences in input parameter configurations, refer to `Accelerate FSDP1 vs FSDP2 <chttps://huggingface.co/docs/accelerate/main/en/concept_guides/fsdp1_vs_fsdp2>`__."
