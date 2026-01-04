@@ -310,6 +310,9 @@ msgstr ":ref:`ZeRO-3`"
 msgid ":ref:`ZeRO-3+offload <zero3O>`"
 msgstr ":ref:`ZeRO-3+offload <zero3O>`"
 
+msgid ":ref:`ZeRO-1/2+AutoTP`"
+msgstr ":ref:`ZeRO-1/2+AutoTP`"
+
 #: ../../source/advanced/distributed.rst:286 099e3b681a6c4c1cb06ec966d041b552
 msgid ""
 "`https://huggingface.co/docs/transformers/deepspeed "
@@ -447,6 +450,52 @@ msgid ""
 msgstr ""
 "Simply add the ``offload_optimizer`` and "
 "``offload_param`` parameters in ``zero_optimization`` based on ZeRO-3."
+
+#: ../../source/advanced/distributed.rst:XXX
+msgid "ZeRO-1/2+autotp"
+msgstr "ZeRO-1/2+AutoTP"
+
+#: ../../source/advanced/distributed.rst:XXX
+msgid ""
+"TP是一种重要的大模型训练内存优化技术。以往在 Hugging Face Trainer 中，模型扩展主要依赖 ZeRO/FSDP 的分片数据并行，其中 ZeRO3 虽然节省显存，但通信开销较大；ZeRO1/2 通信开销较低，却在超大模型场景下受限于显存容量。"
+msgstr ""
+"Tensor Parallelism (TP) is an important memory optimization technique for training large-scale models. Previously, model scaling in Hugging Face Trainer mainly relied on sharded data parallelism via ZeRO/FSDP. While ZeRO-3 provides excellent memory efficiency, it introduces significant communication overhead. ZeRO-1/2 have lower communication costs, but are limited by memory capacity when training very large models."
+
+#: ../../source/advanced/distributed.rst:XXX
+msgid ""
+"为此，DeepSpeed 引入了 **原生自动张量并行（AutoTP）训练**，并正式支持 Hugging Face Transformers。该能力可与 ZeRO 结合，在训练阶段实现更优的性能与内存平衡，带来以下优势："
+msgstr ""
+"To address this, DeepSpeed introduces native Automatic Tensor Parallel (AutoTP) training with official support for Hugging Face Transformers. AutoTP can be combined with ZeRO to achieve a better balance between performance and memory efficiency during training, providing the following benefits:"
+
+#: ../../source/advanced/distributed.rst:XXX
+msgid ""
+"在比 FSDP / ZeRO3 更低通信开销的情况下实现大模型扩展（如 AutoTP + ZeRO1 达到接近 ZeRO3 的显存节省效果）"
+msgstr ""
+"Model scaling with lower communication overhead than FSDP / ZeRO-3 (e.g., AutoTP + ZeRO-1 can achieve memory savings comparable to ZeRO-3)."
+
+#: ../../source/advanced/distributed.rst:XXX
+msgid "支持更大的 batch size，提高训练吞吐"
+msgstr "Support for larger batch sizes to improve training throughput."
+
+#: ../../source/advanced/distributed.rst:XXX
+msgid "支持更长上下文长度，拓展应用场景"
+msgstr "Support for longer context lengths, enabling new application scenarios."
+
+#: ../../source/advanced/distributed.rst:XXX
+msgid ""
+"目前 AutoTP 训练已支持 **ZeRO1 和 ZeRO2**。该功能已在 **DeepSpeed ≥ 0.16.4** 中提供。"
+msgstr ""
+"AutoTP training currently supports **ZeRO-1** and **ZeRO-2**. This feature is available in **DeepSpeed version 0.16.4 and later**."
+
+#: ../../source/advanced/distributed.rst:XXX
+msgid "具体的参数配置如下："
+msgstr "The configuration parameters are as follows:"
+
+#: ../../source/advanced/distributed.rst:XXX
+msgid ""
+"当前模型支持受限，具体支持列表请查看 `AutoTP支持模型列表 <https://www.deepspeed.ai/tutorials/automatic-tensor-parallelism/#supported-models>`__ 。"
+msgstr ""
+"Model support is currently limited. Please refer to the `AutoTP supported model list <https://www.deepspeed.ai/tutorials/automatic-tensor-parallelism/#supported-models>`__ for details."
 
 #: ../../source/advanced/distributed.rst:598 b0cd598dc68b49a5af7a8d34b468a1a5
 msgid ""

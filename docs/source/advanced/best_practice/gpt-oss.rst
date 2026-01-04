@@ -10,7 +10,8 @@ GPT-OSS
 
    git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
    cd LLaMA-Factory
-   pip install -e ".[torch,metrics]" --no-build-isolation
+   pip install -e .
+   pip install -r requirements/metrics.txt --no-build-isolation
    pip install "transformers==4.55.0"
 
 2. 在单张 GPU 上训练 GPT-OSS（要求显存 > 44 GB, 支持多 GPU）

@@ -197,13 +197,13 @@ Toolkit 用于训练、推理及开发。
 
 .. code-block:: bash
 
-    pip install -e ".[torch-npu]"
+    pip install -r requirements/npu.txt
 
 当然您也可以手动下载后安装 ``torch-npu`` 插件，例如：
 
 .. code-block:: bash
 
-    pip install torch_npu-2.1.0.post1-cp39-cp39-manylinux_2_17_aarch64.whl
+    pip install torch_npu-2.7.1-cp311-cp311-manylinux_2_17_aarch64.whl
 
 安装 ``torch-npu`` 插件需要注意：
 

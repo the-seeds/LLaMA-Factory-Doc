@@ -289,6 +289,7 @@ LLaMA-Factory提供了使用不同阶段的 DeepSpeed 配置文件的示例。�
 * :ref:`ZeRO-2+offload <zero2O>`
 * :ref:`ZeRO-3`
 * :ref:`ZeRO-3+offload <zero3O>`
+* :ref:`ZeRO-1/2+AutoTP <zero1_2_autotp>`
 
 .. note::
     `https://huggingface.co/docs/transformers/deepspeed <https://huggingface.co/docs/transformers/deepspeed/>`_ 提供了更为详细的介绍。
@@ -599,6 +600,38 @@ ZeRO-3+offload
         }
     }
 
+
+.. _zero1_2_autotp:
+
+ZeRO-1/2+AutoTP
+*************************
+
+TP是一种重要的大模型训练内存优化技术。以往在 Hugging Face Trainer 中，模型扩展主要依赖 ZeRO/FSDP 的分片数据并行，其中 ZeRO3 虽然节省显存，但通信开销较大；ZeRO1/2 通信开销较低，却在超大模型场景下受限于显存容量。
+
+为此，DeepSpeed 引入了 **原生自动张量并行（AutoTP）训练**，并正式支持 Hugging Face Transformers。该能力可与 ZeRO 结合，在训练阶段实现更优的性能与内存平衡，带来以下优势：
+
+* 在比 FSDP / ZeRO3 更低通信开销的情况下实现大模型扩展（如 AutoTP + ZeRO1 达到接近 ZeRO3 的显存节省效果）
+* 支持更大的 batch size，提高训练吞吐
+* 支持更长上下文长度，拓展应用场景
+
+目前 AutoTP 训练已支持 **ZeRO1 和 ZeRO2**。该功能已在 **DeepSpeed ≥ 0.16.4** 中提供。
+
+具体的参数配置如下：
+
+.. code-block:: yaml
+
+    ### ds2_autotp.json
+    {
+        "ZeRO_optimization": {
+            "stage": 2,
+            ...
+        },
+        "tensor_parallel":{
+            "autotp_size": 4
+        },
+    }
+
+当前模型支持受限，具体支持列表请查看 `AutoTP支持模型列表 <https://www.deepspeed.ai/tutorials/automatic-tensor-parallelism/#supported-models>`__ 。
 
 
 .. note:: 

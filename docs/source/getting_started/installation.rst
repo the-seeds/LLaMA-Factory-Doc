@@ -102,7 +102,8 @@ LLaMA-Factory 安装
 
   git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
   cd LLaMA-Factory
-  pip install -e ".[torch,metrics]"
+  pip install -e .
+  pip install -r requirements/metrics.txt
 
 如果出现环境冲突，请尝试使用 ``pip install --no-deps -e .`` 解决
 

@@ -23,7 +23,9 @@ LLaMA-Factory安装
 
    git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
    cd LLaMA-Factory
-   pip install -e ".[torch,metrics]" --no-build-isolation
+   pip install -e .
+   pip install -r requirements/npu.txt --no-build-isolation
+   pip install -r requirements/metrics.txt --no-build-isolation
 
 推理测试
 --------
