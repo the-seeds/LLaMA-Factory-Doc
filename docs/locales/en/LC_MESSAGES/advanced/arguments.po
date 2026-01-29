@@ -2555,26 +2555,6 @@ msgstr "RAY"
 msgid "RayArguments"
 msgstr "RayArguments"
 
-#: ../../source/advanced/arguments.rst:952 58ece0e02c3f4443b5ead390bf57c563
-msgid "ray_run_name"
-msgstr "ray_run_name"
-
-#: ../../source/advanced/arguments.rst:954 7464819fbbae43d2a2054c423fd060ee
-msgid "训练结果将保存在 <ray_storage_path>/ray_run_name 路径下。"
-msgstr "Training results will be saved in <ray_storage_path>/ray_run_name path."
-
-#: ../../source/advanced/arguments.rst:956 dc7a260291554266935646b7db2dc192
-msgid "ray_storage_path"
-msgstr "ray_storage_path"
-
-#: ../../source/advanced/arguments.rst:958 bfddf83ac7ad436487b2c94ac407e72a
-msgid "保存训练结果的存储路径。"
-msgstr "Storage path for saving training results."
-
-#: ../../source/advanced/arguments.rst:959 30866b67132349ed9fca53f8ab0b0a71
-msgid "./saves"
-msgstr "./saves"
-
 #: ../../source/advanced/arguments.rst:960 8787670919814852b46be75c03ed2b12
 msgid "ray_num_workers"
 msgstr "ray_num_workers"
@@ -2583,38 +2563,29 @@ msgstr "ray_num_workers"
 msgid "Ray 训练所使用的工作进程数量。"
 msgstr "Number of worker processes used by Ray training."
 
-#: ../../source/advanced/arguments.rst:964 6375337fcf304ddb80307163aea0c757
-msgid "resources_per_worker"
-msgstr "resources_per_worker"
+#: ../../source/advanced/arguments.rst
+msgid "ray_init_kwargs"
+msgstr "ray_init_kwargs"
 
-#: ../../source/advanced/arguments.rst:965 2a46c9c4a3f54602b0b4a17be7c546ba
-msgid "Union[dict, str]"
-msgstr "Union[dict, str]"
+#: ../../source/advanced/arguments.rst
+msgid "Ray 初始化参数。"
+msgstr "Ray initialization parameters."
 
-#: ../../source/advanced/arguments.rst:966 1ba750504bea4e44a5be1cfc35fe8253
-msgid "每个工作进程分配的资源。默认使用 1 GPU。"
-msgstr "Resources allocated per worker process. Uses 1 GPU by default."
+#: ../../source/advanced/arguments.rst
+msgid "master_addr"
+msgstr "master_addr"
 
-#: ../../source/advanced/arguments.rst:967 4070ab761dbb40b295b44ef5c3603d8e
-msgid "{\"GPU\": 1}"
-msgstr "{\"GPU\": 1}"
+#: ../../source/advanced/arguments.rst
+msgid "分布式通信的主节点ip地址。默认使用ray集群主节点ip地址。"
+msgstr "The IP address of the master node for distributed communication. Defaults to the IP address of the Ray cluster's master node."
 
-#: ../../source/advanced/arguments.rst:968 57200939e21540d7a4acc1482f6d50f9
-msgid "placement_strategy"
-msgstr "placement_strategy"
+#: ../../source/advanced/arguments.rst
+msgid "master_port"
+msgstr "master_port"
 
-#: ../../source/advanced/arguments.rst:969 9b34870e792e49198f1bc45cbac0d80a
-msgid "Literal[\"SPREAD\", \"PACK\", \"STRICT_SPREAD\", \"STRICT_PACK\"]"
-msgstr "Literal[\"SPREAD\", \"PACK\", \"STRICT_SPREAD\", \"STRICT_PACK\"]"
-
-#: ../../source/advanced/arguments.rst:970 27e908618b444d92923c42a8b6a14167
-msgid "Ray 训练的资源调度策略。可选值包括 SPREAD、PACK、STRICT_SPREAD 和 STRICT_PACK。"
-msgstr "Resource scheduling strategy for Ray training. Available values include SPREAD, PACK, STRICT_SPREAD and STRICT_PACK."
-
-#: ../../source/advanced/arguments.rst:971 8d677dde4b2d45068672a9e93e31bb48
-msgid "PACK"
-msgstr "PACK"
-
+#: ../../source/advanced/arguments.rst
+msgid "主节点上用于监听连接的端口。默认使用随机可用端口。"
+msgstr "The port used for listening to connections on the master node. Defaults to a random available port."
 
 msgid "环境变量"
 msgstr "Environment Variables"

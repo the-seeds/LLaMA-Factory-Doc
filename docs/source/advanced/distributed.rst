@@ -838,6 +838,100 @@ FSDP2
 更多的入参配置差异，您可以参考 `Accelerate FSDP1 vs FSDP2 <chttps://huggingface.co/docs/accelerate/main/en/concept_guides/fsdp1_vs_fsdp2>`__ 。
 
 
+.. _ray_ref:
+
+Ray
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+当前 LlamaFactory 还支持通过设置环境变量 ``USE_RAY=1`` 来启用 Ray 进行分布式训练。您可以参考 `Ray官方文档 <https://docs.ray.io/en/latest/>`_ 了解更多信息。
+
+单机多卡
++++++++++++++++++++
+
+您可以通过设置 ``num_workers`` 参数来指定使用的GPU数量。
+
+NativeDDP, DeepSpeed
+***************************
+
+您可以使用 llamafactory-cli 指令启动 NativeDDP 引擎及 DeepSpeed 引擎。
+
+.. code-block:: shell
+
+    USE_RAY=1 llamafactory-cli train training_config.yaml
+
+
+FSDP
+***************************
+
+您可以使用 accelerate 指令启动 FSDP 引擎。使用 accelerate 启动时，需要设置 fsdp_config.yaml 文件中 ``num_processes`` 参数为 1。
+
+.. code-block:: shell
+
+    USE_RAY=1 accelerate launch \
+    --config_file fsdp_config.yaml \
+    src/train.py training_config.yaml
+
+
+多机多卡
++++++++++++++++++++
+
+使用 Ray 进行多机多卡训练时，您首先需要分别在各个节点上运行以下命令。
+
+主节点：
+
+.. code-block:: shell
+
+    ray start --head --port=6379
+
+
+从节点：
+
+.. code-block:: shell
+
+    ray start --address='master node IP:6379'
+
+
+然后，您可以在主节点使用与单机相同的指令启动训练，或者使用 ray job submit 命令提交训练任务。
+
+NativeDDP, DeepSpeed
+***************************
+
+.. code-block:: shell
+
+    USE_RAY=1 llamafactory-cli train training_config.yaml
+
+
+使用 ray job submit 命令提交训练任务。
+
+.. code-block:: shell
+
+    RAY_API_SERVER_ADDRESS=''http://dashboard-host:dashboard-port \
+    ray job submit -- llamafactory-cli train training_config.yaml
+
+
+FSDP
+***************************
+
+这里同样需要设置 fsdp_config.yaml 文件中 ``num_processes`` 参数为 1，并且无需设置多机相关参数。
+
+.. code-block:: shell
+
+    USE_RAY=1 accelerate launch \
+    --config_file fsdp_config.yaml \
+    src/train.py training_config.yaml
+
+
+使用 ray job submit 命令提交训练任务。
+
+.. code-block:: shell
+
+    RAY_API_SERVER_ADDRESS=''http://dashboard-host:dashboard-port \
+    ray job submit -- \
+    USE_RAY=1 accelerate launch \
+    --config_file fsdp_config.yaml \
+    src/train.py training_config.yaml
+
+
 .. _显存估计:
 
 .. 显存估计

@@ -621,3 +621,43 @@ msgstr "You can quickly start the training script with the following command:"
 #: ../../source/advanced/distributed.rst:805
 msgid "更多的入参配置差异，您可以参考 `Accelerate FSDP1 vs FSDP2 <chttps://huggingface.co/docs/accelerate/main/en/concept_guides/fsdp1_vs_fsdp2>`__ 。"
 msgstr "For more differences in input parameter configurations, refer to `Accelerate FSDP1 vs FSDP2 <chttps://huggingface.co/docs/accelerate/main/en/concept_guides/fsdp1_vs_fsdp2>`__."
+
+#: ../../source/advanced/distributed.rst
+msgid "当前 LlamaFactory 还支持通过设置环境变量 ``USE_RAY=1`` 来启用 Ray 进行分布式训练。您可以参考 `Ray官方文档 <https://docs.ray.io/en/latest/>`_ 了解更多信息。"
+msgstr "Currently, LlamaFactory also supports enabling Ray for distributed training by setting the environment variable ``USE_RAY=1``. You can refer to the `Ray official documentation <https://docs.ray.io/en/latest/>`_ for more information."
+
+#: ../../source/advanced/distributed.rst
+msgid "您可以通过设置 ``num_workers`` 参数来指定使用的GPU数量。"
+msgstr "You can specify the number of GPUs to use by setting the ``num_workers`` parameter."
+
+#: ../../source/advanced/distributed.rst
+msgid "您可以使用 llamafactory-cli 指令启动 NativeDDP 引擎及 DeepSpeed 引擎。"
+msgstr "You can use the llamafactory-cli command to start the NativeDDP engine and DeepSpeed engine."
+
+#: ../../source/advanced/distributed.rst
+msgid "您可以使用 accelerate 指令启动 FSDP 引擎。使用 accelerate 启动时，需要设置 fsdp_config.yaml 文件中 ``num_processes`` 参数为 1。"
+msgstr "You can use the accelerate command to start the FSDP engine. When starting with accelerate, you need to set the ``num_processes`` parameter in the fsdp_config.yaml file to 1."
+
+#: ../../source/advanced/distributed.rst
+msgid "使用 Ray 进行多机多卡训练时，您首先需要分别在各个节点上运行以下命令。"
+msgstr "When using Ray for multi-machine multi-GPU training, you first need to run the following commands on each node separately."
+
+#: ../../source/advanced/distributed.rst
+msgid "主节点："
+msgstr "Master node:"
+
+#: ../../source/advanced/distributed.rst
+msgid "从节点："
+msgstr "Worker node:"
+
+#: ../../source/advanced/distributed.rst
+msgid "然后，您可以在主节点使用与单机相同的指令启动训练，或者使用 ray job submit 命令提交训练任务。"
+msgstr "Then, you can use the same commands as single-machine training on the master node to start training, or use the ray job submit command to submit training tasks."
+
+#: ../../source/advanced/distributed.rst
+msgid "使用 ray job submit 命令提交训练任务。"
+msgstr "Submit training tasks using the ray job submit command."
+
+#: ../../source/advanced/distributed.rst
+msgid "这里同样需要设置 fsdp_config.yaml 文件中 ``num_processes`` 参数为 1，并且无需设置多机相关参数。"
+msgstr "Similarly, you need to set the ``num_processes`` parameter in the fsdp_config.yaml file to 1, and you do not need to set any multi-machine related parameters."

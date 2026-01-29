@@ -957,26 +957,22 @@ RAY
      - 类型
      - 介绍
      - 默认值
-   * - ray_run_name
-     - Optional[str]
-     - 训练结果将保存在 <ray_storage_path>/ray_run_name 路径下。
-     - None
-   * - ray_storage_path
-     - str
-     - 保存训练结果的存储路径。
-     - ./saves
    * - ray_num_workers
      - int
      - Ray 训练所使用的工作进程数量。
      - 1
-   * - resources_per_worker
-     - Union[dict, str]
-     - 每个工作进程分配的资源。默认使用 1 GPU。
-     - {"GPU": 1}
-   * - placement_strategy
-     - Literal["SPREAD", "PACK", "STRICT_SPREAD", "STRICT_PACK"]
-     - Ray 训练的资源调度策略。可选值包括 SPREAD、PACK、STRICT_SPREAD 和 STRICT_PACK。
-     - PACK
+   * - ray_init_kwargs
+     - Optional[dict, str]
+     - Ray 初始化参数。
+     - None
+   * - master_addr
+     - Optional[str]
+     - 分布式通信的主节点ip地址。默认使用ray集群主节点ip地址。
+     - None
+   * - master_port
+     - Optional[str]
+     - 主节点上用于监听连接的端口。默认使用随机可用端口。
+     - None
 
 
 环境变量
