@@ -134,6 +134,19 @@ NPU 的分布式训练配置与 :doc:`分布式训练 <distributed>` 文档描�
 
            export HCCL_SOCKET_IFNAME=eth0
 
+*   **HCCL_CONNECT_TIMEOUT** (FSDP/FSDP2 训练建议关注)
+
+    对于 ``Ascend NPU + transformers 5.x 及以上 + FSDP/FSDP2`` 训练，建议在启动前手动增大 HCCL 集合通信超时时间，以降低初始化阶段因启动长尾导致的超时风险。
+
+    *   **建议值**：可先设置为 ``1800``。
+    *   **设置示例**：
+
+        .. code-block:: bash
+
+           export HCCL_CONNECT_TIMEOUT=1800
+
+    这是一项运行环境建议，不会由 LLaMA-Factory 自动修改。
+
 单机训练
 ~~~~~~~~
 
