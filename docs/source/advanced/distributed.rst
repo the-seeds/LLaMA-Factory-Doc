@@ -719,6 +719,10 @@ accelerate
 .. note:: 
     * 请确保 ``num_processes`` 和实际使用的总GPU数量一致 
 
+.. note::
+
+    对于 ``Ascend NPU + transformers 5.x 及以上`` 的 ``FSDP/FSDP2`` 训练，建议在启动前手动设置 ``HCCL_CONNECT_TIMEOUT=1800``。更多 NPU 环境变量说明请参考 :doc:`NPU训练 <npu_training>` 。
+
 
 随后，您可以使用以下命令启动训练：
 
