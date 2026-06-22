@@ -1,7 +1,46 @@
 NPU安装及配置
 =================
 
-LLaMA-Factory 支持华为昇腾 NPU (A2/A3) 设备。您可以选择以下三种方式之一进行环境配置及使用：
+本文档介绍 LLaMA-Factory 在华为昇腾 NPU 上的环境准备方式。当前主要面向 Atlas A2/A3 训练系列设备；开始安装前，请先确认硬件型号和操作系统兼容性，再根据部署方式选择后续步骤。
+
+硬件配套和支持的操作系统
+------------------------
+
+**表 1**  产品硬件支持列表
+
+.. list-table::
+   :class: npu-hardware-support-table
+   :align: left
+   :widths: 40 20
+   :header-rows: 1
+
+   * - 产品
+     - 是否支持
+   * - Ascend 950 系列产品
+     - √
+   * - Atlas A3 训练系列产品
+     - √
+   * - Atlas A3 推理系列产品
+     - x
+   * - Atlas A2 训练系列产品
+     - √
+   * - Atlas A2 推理系列产品
+     - x
+   * - Atlas 200I/500 A2 推理产品
+     - x
+   * - Atlas 推理系列产品
+     - x
+   * - Atlas 训练系列产品
+     - x
+
+.. note::
+
+   本节表格中“√”代表支持，“x”代表不支持。
+
+- 各硬件产品对应物理机部署场景支持的操作系统请参考 `兼容性查询助手 <https://www.hiascend.com/hardware/compatibility>`_。
+- 各硬件产品对应虚拟机及容器部署场景支持的操作系统请参考《CANN 软件安装》的“`操作系统兼容性说明 <https://www.hiascend.com/document/detail/zh/canncommercial/900/softwareinst/instg/instg_0101.html?OS=openEuler&InstallType=netyum>`__”章节（商用版）或“`操作系统兼容性说明 <https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/900/softwareinst/instg/instg_0101.html?OS=openEuler&InstallType=netyum>`__”章节（社区版）。
+
+确认硬件和操作系统满足上述要求后，可以选择以下三种方式之一进行环境配置及使用：
 
 - :ref:`install_form_pip`
 - :ref:`use_form_docker`
