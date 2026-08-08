@@ -1,7 +1,7 @@
 推理
 ==========================
 
-LLaMA-Factory 支持多种推理方式。
+LlamaFactory 支持多种推理方式。
 
 您可以使用 ``llamafactory-cli chat inference_config.yaml`` 或 ``llamafactory-cli webchat inference_config.yaml`` 进行推理与模型对话。对话时配置文件只需指定原始模型 ``model_name_or_path`` 和 ``template`` ，并根据是否是微调模型指定 ``adapter_name_or_path`` 和 ``finetuning_type``。
 

@@ -409,7 +409,7 @@ GaLore
      - False
    * - dataset_dir
      - Union[str, Dict[str, Any]]
-     - 存储数据集的文件夹路径，可以是字符串或字典。当为字符串时，表示数据集目录的路径，例如 `data <https://github.com/hiyouga/LLaMA-Factory/tree/main/data>`_ ；当为字典时，将覆盖默认从本地 `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_ 加载的行为。
+     - 存储数据集的文件夹路径，可以是字符串或字典。当为字符串时，表示数据集目录的路径，例如 `data <https://github.com/hiyouga/LlamaFactory/tree/main/data>`_ ；当为字典时，将覆盖默认从本地 `dataset_info.json <https://github.com/hiyouga/LlamaFactory/blob/main/data/dataset_info.json>`_ 加载的行为。
      - data
    * - media_dir
      - Optional[str]
@@ -1017,7 +1017,7 @@ RAY
      - 允许在命令行中传递额外参数
    * - ``LLAMAFACTORY_VERBOSITY``
      - General
-     - 设置 LLaMA-Factory 的日志级别("DEBUG","INFO","WARN")
+     - 设置 LlamaFactory 的日志级别("DEBUG","INFO","WARN")
    * - ``USE_MODELSCOPE_HUB``
      - General
      - 优先使用 ModelScope 下载模型/数据集或使用缓存路径中的模型/数据集

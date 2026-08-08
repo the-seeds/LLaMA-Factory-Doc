@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, LlamaFactory team.
-# This file is distributed under the same license as the LLaMA Factory
+# This file is distributed under the same license as the LlamaFactory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
@@ -24,10 +24,10 @@ msgstr "WebUI"
 
 #: ../../source/getting_started/webui.rst:4 5e1dd58e4664493ab89abe2d9b03370a
 msgid ""
-"LLaMA-Factory 支持通过 WebUI 零代码微调大语言模型。 在完成 :ref:`安装 <installation>` "
+"LlamaFactory 支持通过 WebUI 零代码微调大语言模型。 在完成 :ref:`安装 <installation>` "
 "后，您可以通过以下指令进入 WebUI:"
 msgstr ""
-"LLaMA-Factory supports zero-code fine-tuning of large language models through WebUI. After completing :ref:`installation <installation>`, "
+"LlamaFactory supports zero-code fine-tuning of large language models through WebUI. After completing :ref:`installation <installation>`, "
 "you can enter the WebUI with the following command:"
 
 #: ../../source/getting_started/webui.rst:11 b02c090728734be0bae90dd2d79ea769

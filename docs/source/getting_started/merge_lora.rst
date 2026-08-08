@@ -18,7 +18,7 @@
 Checkpoint 保存策略
 ^^^^^^^^^^^^^^^^^^^^^
 
-LLaMA-Factory 的 checkpoint 保存行为主要由以下参数控制：
+LlamaFactory 的 checkpoint 保存行为主要由以下参数控制：
 
 - ``save_strategy``：控制保存策略，通常可设为 ``steps``、``epoch`` 或 ``no``。
 - ``save_steps``：当 ``save_strategy: steps`` 时，每训练多少个 step 保存一次 checkpoint。
@@ -110,7 +110,7 @@ LoRA 合并
 
 在完成模型合并并获得完整模型后，为了优化部署效果，人们通常会基于显存占用、使用成本和推理速度等因素，选择通过量化技术对模型进行压缩，从而实现更高效的部署。
 
-量化（Quantization）通过数据精度压缩有效地减少了显存使用并加速推理。LLaMA-Factory 支持多种量化方法，包括:
+量化（Quantization）通过数据精度压缩有效地减少了显存使用并加速推理。LlamaFactory 支持多种量化方法，包括:
 
 * AQLM
 * AWQ
@@ -172,4 +172,3 @@ QLoRA 是一种在 4-bit 量化模型基础上使用 LoRA 方法进行训练的�
     export_size: 5
     export_device: cpu
     export_legacy_format: false
-

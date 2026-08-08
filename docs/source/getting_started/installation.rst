@@ -91,23 +91,23 @@ CUDA 安装
 .. image:: ../assets/image-20240610222021868.png
 
 
-LLaMA-Factory 安装
+LlamaFactory 安装
 -------------------------------------
 
-在安装 LLaMA-Factory 之前，请确保您安装了下列依赖:
+在安装 LlamaFactory 之前，请确保您安装了下列依赖:
 
-运行以下指令以安装 LLaMA-Factory 及其依赖:
+运行以下指令以安装 LlamaFactory 及其依赖:
 
 .. code-block:: bash
 
-  git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
-  cd LLaMA-Factory
+  git clone --depth 1 https://github.com/hiyouga/LlamaFactory.git
+  cd LlamaFactory
   pip install -e .
   pip install -r requirements/metrics.txt
 
 如果出现环境冲突，请尝试使用 ``pip install --no-deps -e .`` 解决
 
-LLaMA-Factory 校验
+LlamaFactory 校验
 -------------------------------
 
 完成安装后，可以通过使用 ``llamafactory-cli version`` 来快速校验安装是否成功
@@ -116,7 +116,7 @@ LLaMA-Factory 校验
 
 .. image:: ../assets/image-20240611002529453.png
 
-LLaMA-Factory 高级选项
+LlamaFactory 高级选项
 ---------------------------------
 
 Windows
@@ -151,7 +151,7 @@ Extra Dependency
     - 描述
   * - torch
     - 开源深度学习框架 PyTorch，广泛用于机器学习和人工智能研究中。
-  * - torch-npu
+  * - TorchNPU
     - PyTorch 的昇腾设备兼容包。
   * - metrics
     - 用于评估和监控机器学习模型性能。
@@ -182,4 +182,4 @@ Extra Dependency
   * - swanlab
     - 开源训练跟踪工具 SwanLab，用于记录与可视化训练过程
   * - dev
-    - 用于 LLaMA Factory 开发维护。
+    - 用于 LlamaFactory 开发维护。

@@ -1,4 +1,4 @@
-Welcome to LLaMA Factory!
+Welcome to LlamaFactory!
 =========================
 
 .. figure:: ./assets/logo.png
@@ -7,7 +7,7 @@ Welcome to LLaMA Factory!
   :alt: logo
 
 
-LLaMA Factory 是一个简单易用且高效的大型语言模型（Large Language Model）训练与微调平台。通过 LLaMA Factory，可以在无需编写任何代码的前提下，在本地完成上百种预训练模型的微调，框架特性包括：
+LlamaFactory 是一个简单易用且高效的大型语言模型（Large Language Model）训练与微调平台。通过 LlamaFactory，可以在无需编写任何代码的前提下，在本地完成上百种预训练模型的微调，框架特性包括：
 
 * 模型种类：LLaMA、LLaVA、Mistral、Mixtral-MoE、Qwen、Yi、Gemma、Baichuan、ChatGLM、Phi 等等。
 * 训练算法：（增量）预训练、（多模态）指令监督微调、奖励模型训练、PPO 训练、DPO 训练、KTO 训练、ORPO 训练等等。
@@ -31,7 +31,7 @@ Documentation
   getting_started/merge_lora
   getting_started/inference
   getting_started/eval
-  常见问题 <https://github.com/hiyouga/LLaMA-Factory/issues/4614>
+  常见问题 <https://github.com/hiyouga/LlamaFactory/issues/4614>
 
 .. toctree::
   :maxdepth: 3

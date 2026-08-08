@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, LlamaFactory team.
-# This file is distributed under the same license as the LLaMA Factory
+# This file is distributed under the same license as the LlamaFactory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
@@ -24,9 +24,9 @@ msgstr "Distributed Training"
 
 #: ../../source/advanced/distributed.rst:5 37afc57f02104e8e90049be26b758138
 msgid ""
-"LLaMA-Factory 支持单机多卡和多机多卡分布式训练。同时也支持 :ref:`DDP <NativeDDP>`、:ref:`DeepSpeed <deepspeed_ref>` 和 :ref:`FSDP <fsdp_ref>` 三种分布式引擎。"
+"LlamaFactory 支持单机多卡和多机多卡分布式训练。同时也支持 :ref:`DDP <NativeDDP>`、:ref:`DeepSpeed <deepspeed_ref>` 和 :ref:`FSDP <fsdp_ref>` 三种分布式引擎。"
 msgstr ""
-"LLaMA-Factory supports single-node multi-card and Multi-node Multi-card distributed training. It also supports three distributed engines: :ref:`DDP <NativeDDP>`, "
+"LlamaFactory supports single-node multi-card and Multi-node Multi-card distributed training. It also supports three distributed engines: :ref:`DDP <NativeDDP>`, "
 ":ref:`DeepSpeed <deepspeed_ref>`, and :ref:`FSDP <fsdp_ref>`."
 
 #: ../../source/advanced/distributed.rst:8 6f41c1bfbe2f4d8797e9fcfaa9f71419
@@ -287,8 +287,8 @@ msgstr ""
 "ZeRO-1 and ensure ``offload_param=none``."
 
 #: ../../source/advanced/distributed.rst:277 833679101b7349ffa7a04e48e8cb61ae
-msgid "LLaMA-Factory提供了使用不同阶段的 DeepSpeed 配置文件的示例。包括："
-msgstr "LLaMA-Factory provides examples of DeepSpeed configuration files using different stages. Including:"
+msgid "LlamaFactory提供了使用不同阶段的 DeepSpeed 配置文件的示例。包括："
+msgstr "LlamaFactory provides examples of DeepSpeed configuration files using different stages. Including:"
 
 #: ../../source/advanced/distributed.rst:279 2f07eff88b6f42fabc3abaaf00949917
 msgid ":ref:`ZeRO-0` (不开启)"
@@ -356,8 +356,8 @@ msgid "``--include localhost:1`` 表示只是用本节点的gpu1。"
 msgstr "``--include localhost:1`` means only use gpu1 on this node."
 
 #: ../../source/advanced/distributed.rst:363 41a8feca563246f0b38f0313623bb645
-msgid "LLaMA-Factory 支持使用 DeepSpeed 的多机多卡训练，您可以通过以下命令启动："
-msgstr "LLaMA-Factory supports multi-node multi-card training using DeepSpeed. You can start it with the following command:"
+msgid "LlamaFactory 支持使用 DeepSpeed 的多机多卡训练，您可以通过以下命令启动："
+msgstr "LlamaFactory supports multi-node multi-card training using DeepSpeed. You can start it with the following command:"
 
 #: ../../source/advanced/distributed.rst:374 474171b5bcda4c838cab1098e8a6af78
 msgid "您也可以使用 ``deepspeed`` 指令来启动多机多卡训练。"
@@ -508,11 +508,11 @@ msgstr ""
 #: ../../source/advanced/distributed.rst:613 a930d6492c1b4d02bc7c0d47957e48ad
 msgid ""
 "PyTorch 的全切片数据并行技术 `FSDP <https://pytorch.org/docs/stable/fsdp.html>`_ "
-"（Fully Sharded Data Parallel）能让我们处理更多更大的模型。LLaMA-Factory支持使用 FSDP "
+"（Fully Sharded Data Parallel）能让我们处理更多更大的模型。LlamaFactory支持使用 FSDP "
 "引擎进行分布式训练。"
 msgstr ""
 "PyTorch's Fully Sharded Data Parallel technique `FSDP <https://pytorch.org/docs/stable/fsdp.html>`_ "
-"allows us to handle more and larger models. LLaMA-Factory supports distributed training using the FSDP "
+"allows us to handle more and larger models. LlamaFactory supports distributed training using the FSDP "
 "engine."
 
 #: ../../source/advanced/distributed.rst:615 2162ed257620493682b2343fb7d45bdd
@@ -612,7 +612,7 @@ msgstr "FSDP2"
 
 #: ../../source/advanced/distributed.rst:768
 msgid "当前LLamafactory基于Accelerate集成使用FSDP2的分布式训练，与FSDP的差异主要在于参数配置的不同。您可以采用FSDP相同的方式运行单机多卡和多机多卡。我们也为您提供了通用的入参配置："
-msgstr "Currently, LLaMA-Factory uses FSDP2 for distributed training based on Accelerate integration. The main difference from FSDP lies in parameter configuration. You can run single-node multi-card and multi-node multi-card in the same way as FSDP. We also provide general input parameter configurations:"
+msgstr "Currently, LlamaFactory uses FSDP2 for distributed training based on Accelerate integration. The main difference from FSDP lies in parameter configuration. You can run single-node multi-card and multi-node multi-card in the same way as FSDP. We also provide general input parameter configurations:"
 
 #: ../../source/advanced/distributed.rst:796
 msgid "您可以通过以下命令快速拉起训练脚本："

@@ -4,12 +4,12 @@ GPT-OSS
 3步实现 GPT-OSS 的 LoRA 微调
 -------------------------------------------------------
 
-1. 安装 LLaMA-Factory 和 transformers
+1. 安装 LlamaFactory 和 transformers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. code-block:: bash
 
-   git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
-   cd LLaMA-Factory
+   git clone --depth 1 https://github.com/hiyouga/LlamaFactory.git
+   cd LlamaFactory
    pip install -e .
    pip install -r requirements/metrics.txt --no-build-isolation
    pip install "transformers==4.55.0"

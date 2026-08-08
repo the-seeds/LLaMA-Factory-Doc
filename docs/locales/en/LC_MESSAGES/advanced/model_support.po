@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, LlamaFactory team.
-# This file is distributed under the same license as the LLaMA Factory
+# This file is distributed under the same license as the LlamaFactory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
@@ -23,8 +23,8 @@ msgid "模型支持"
 msgstr "Model Support"
 
 #: model_support.rst
-msgid "LLaMA-Factory 允许用户添加自定义模型支持。我们将以 LLaMA-4 多模态模型为例，详细介绍如何为新模型添加支持。对于多模态模型，我们需要完成两个主要任务："
-msgstr "LLaMA-Factory allows users to add support for custom models. We will take the LLaMA-4 multimodal model as an example to introduce how to add support for a new model. For multimodal models, we need to complete two main tasks:"
+msgid "LlamaFactory 允许用户添加自定义模型支持。我们将以 LLaMA-4 多模态模型为例，详细介绍如何为新模型添加支持。对于多模态模型，我们需要完成两个主要任务："
+msgstr "LlamaFactory allows users to add support for custom models. We will take the LLaMA-4 multimodal model as an example to introduce how to add support for a new model. For multimodal models, we need to complete two main tasks:"
 
 #: model_support.rst
 msgid "注册模型的template"
@@ -121,8 +121,8 @@ msgid "多模态数据构建"
 msgstr "Multimodal Data Construction"
 
 #: model_support.rst
-msgid "对于多模态模型，我们参照原始模型在 LLaMA-Factory 中实现多模态数据的解析。"
-msgstr "For multimodal models, we refer to the original model to implement multimodal data parsing in LLaMA-Factory."
+msgid "对于多模态模型，我们参照原始模型在 LlamaFactory 中实现多模态数据的解析。"
+msgstr "For multimodal models, we refer to the original model to implement multimodal data parsing in LlamaFactory."
 
 #: model_support.rst
 msgid "我们可以在 ``src/llamafactory/data/mm_plugin.py`` 中实现 ``Llama4Plugin`` 类来解析多模态数据。"
@@ -133,17 +133,17 @@ msgid "``Llama4Plugin`` 类继承自 ``BasePlugin`` 类，并实现了 ``get_mm_
 msgstr "The ``Llama4Plugin`` class inherits from the ``BasePlugin`` class and implements the ``get_mm_inputs`` and ``process_messages`` methods to parse multimodal data."
 
 #: model_support.rst
-msgid "``get_mm_inputs`` 的作用是将图像、视频等多模态数据转化为模型可以接收的输入，如 ``pixel_values``。为实现 ``get_mm_inputs``，首先我们需要检查 llama4 的 processor 是否可以与 `已有实现 <https://github.com/hiyouga/LLaMA-Factory/blob/da971c37640de20f97b4d774e77e6f8d5c00b40a/src/llamafactory/data/mm_plugin.py#L264>`_ 兼容。模型官方仓库中的 `processing_llama4.py <https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama4/processing_llama4.py#L157>`_ 表明 llama4 的 processor 返回数据包含字段 ``pixel_values``，这与 LLaMA-Factory 中的已有实现兼容。因此，我们只需要参照已有的 ``get_mm_inputs`` 方法实现即可。"
-msgstr "The function of ``get_mm_inputs`` is to convert multimodal data such as images and videos into inputs that the model can accept, such as ``pixel_values``. To implement ``get_mm_inputs``, we first need to check if the llama4 processor is compatible with the `existing implementation <https://github.com/hiyouga/LLaMA-Factory/blob/da971c37640de20f97b4d774e77e6f8d5c00b40a/src/llamafactory/data/mm_plugin.py#L264>`_. The `processing_llama4.py <https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama4/processing_llama4.py#L157>`_ in the official model repository indicates that the data returned by the llama4 processor contains the field ``pixel_values``, which is compatible with the existing implementation in LLaMA-Factory. Therefore, we only need to implement it by referring to the existing ``get_mm_inputs`` method."
+msgid "``get_mm_inputs`` 的作用是将图像、视频等多模态数据转化为模型可以接收的输入，如 ``pixel_values``。为实现 ``get_mm_inputs``，首先我们需要检查 llama4 的 processor 是否可以与 `已有实现 <https://github.com/hiyouga/LlamaFactory/blob/da971c37640de20f97b4d774e77e6f8d5c00b40a/src/llamafactory/data/mm_plugin.py#L264>`_ 兼容。模型官方仓库中的 `processing_llama4.py <https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama4/processing_llama4.py#L157>`_ 表明 llama4 的 processor 返回数据包含字段 ``pixel_values``，这与 LlamaFactory 中的已有实现兼容。因此，我们只需要参照已有的 ``get_mm_inputs`` 方法实现即可。"
+msgstr "The function of ``get_mm_inputs`` is to convert multimodal data such as images and videos into inputs that the model can accept, such as ``pixel_values``. To implement ``get_mm_inputs``, we first need to check if the llama4 processor is compatible with the `existing implementation <https://github.com/hiyouga/LlamaFactory/blob/da971c37640de20f97b4d774e77e6f8d5c00b40a/src/llamafactory/data/mm_plugin.py#L264>`_. The `processing_llama4.py <https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama4/processing_llama4.py#L157>`_ in the official model repository indicates that the data returned by the llama4 processor contains the field ``pixel_values``, which is compatible with the existing implementation in LlamaFactory. Therefore, we only need to implement it by referring to the existing ``get_mm_inputs`` method."
 
 #: model_support.rst
-msgid "``process_messages`` 的作用是根据输入图片/视频的大小，数量等信息在 messages 中插入相应数量的占位符，以便模型可以正确解析多模态数据。 我们需要参考 `原仓库实现 <https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama4/processing_llama4.py#L157>`_ 以及 LLaMA-Factory 中的规范返回 ``list[dict[str, str]]`` 类型的 messages。"
-msgstr "The function of ``process_messages`` is to insert a corresponding number of placeholders in the messages based on the size, quantity, etc., of the input images/videos so that the model can correctly parse the multimodal data. We need to refer to the `original repository implementation <https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama4/processing_llama4.py#L157>`_ and the specifications in LLaMA-Factory to return messages of type ``list[dict[str, str]]``."
+msgid "``process_messages`` 的作用是根据输入图片/视频的大小，数量等信息在 messages 中插入相应数量的占位符，以便模型可以正确解析多模态数据。 我们需要参考 `原仓库实现 <https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama4/processing_llama4.py#L157>`_ 以及 LlamaFactory 中的规范返回 ``list[dict[str, str]]`` 类型的 messages。"
+msgstr "The function of ``process_messages`` is to insert a corresponding number of placeholders in the messages based on the size, quantity, etc., of the input images/videos so that the model can correctly parse the multimodal data. We need to refer to the `original repository implementation <https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama4/processing_llama4.py#L157>`_ and the specifications in LlamaFactory to return messages of type ``list[dict[str, str]]``."
 
 #: model_support.rst
 msgid "提供模型路径"
 msgstr "Provide Model Path"
 
 #: model_support.rst
-msgid "最后, 在 `src/llamafactory/extras/constants.py <https://github.com/hiyouga/LLaMA-Factory/blob/main/src/llamafactory/extras/constants.py>`_ 中提供模型的下载路径。例如："
-msgstr "Finally, provide the model download path in `src/llamafactory/extras/constants.py <https://github.com/hiyouga/LLaMA-Factory/blob/main/src/llamafactory/extras/constants.py>`_. For example:"
+msgid "最后, 在 `src/llamafactory/extras/constants.py <https://github.com/hiyouga/LlamaFactory/blob/main/src/llamafactory/extras/constants.py>`_ 中提供模型的下载路径。例如："
+msgstr "Finally, provide the model download path in `src/llamafactory/extras/constants.py <https://github.com/hiyouga/LlamaFactory/blob/main/src/llamafactory/extras/constants.py>`_. For example:"

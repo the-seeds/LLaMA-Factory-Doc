@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, LlamaFactory team.
-# This file is distributed under the same license as the LLaMA Factory
+# This file is distributed under the same license as the LlamaFactory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
@@ -24,11 +24,11 @@ msgstr "Monitors"
 
 #: ../../source/advanced/monitor.rst:4 84a533f055934d13a7ba576233a7b26d
 msgid ""
-"LLaMA-Factory 支持多种训练可视化工具，包括：:ref:`LlamaBoard <LlamaBoard>` 、 "
+"LlamaFactory 支持多种训练可视化工具，包括：:ref:`LlamaBoard <LlamaBoard>` 、 "
 ":ref:`SwanLab <SwanLab>`、:ref:`TensorBoard <TensorBoard>` 、 :ref:`Wandb "
 "<Wandb>` 、 :ref:`MLflow <MLflow>` 。"
 msgstr ""
-"LLaMA-Factory supports multiple training visualization tools, including: :ref:`LlamaBoard <LlamaBoard>`, "
+"LlamaFactory supports multiple training visualization tools, including: :ref:`LlamaBoard <LlamaBoard>`, "
 ":ref:`SwanLab <SwanLab>`, :ref:`TensorBoard <TensorBoard>`, :ref:`Wandb "
 "<Wandb>`, :ref:`MLflow <MLflow>`."
 

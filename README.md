@@ -1,6 +1,6 @@
-# LLaMA-Factory Document
+# LlamaFactory Document
 
-Document for https://github.com/hiyouga/LLaMA-Factory
+Document for https://github.com/hiyouga/LlamaFactory
 
 Visit https://llamafactory.readthedocs.io/ for the document.
 

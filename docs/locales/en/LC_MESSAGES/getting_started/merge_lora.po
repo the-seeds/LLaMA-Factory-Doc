@@ -1,11 +1,11 @@
-# English translations for LLaMA Factory.
+# English translations for LlamaFactory.
 # Copyright (C) 2026 ORGANIZATION
-# This file is distributed under the same license as the LLaMA Factory project.
+# This file is distributed under the same license as the LlamaFactory project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory VERSION\n"
+"Project-Id-Version: LlamaFactory VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-04-29 14:59+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -49,8 +49,8 @@ msgid "Checkpoint 保存策略"
 msgstr "Checkpoint Saving Strategy"
 
 #: ../../source/getting_started/merge_lora.rst:21 3c21f993eadb46b39d7e23ee6cb71eeb
-msgid "LLaMA-Factory 的 checkpoint 保存行为主要由以下参数控制："
-msgstr "Checkpoint saving behavior in LLaMA-Factory is mainly controlled by the following parameters:"
+msgid "LlamaFactory 的 checkpoint 保存行为主要由以下参数控制："
+msgstr "Checkpoint saving behavior in LlamaFactory is mainly controlled by the following parameters:"
 
 #: ../../source/getting_started/merge_lora.rst:23 2ea4ede6d6b446288a4aa85c2894f622
 msgid "``save_strategy``：控制保存策略，通常可设为 ``steps``、``epoch`` 或 ``no``。"
@@ -185,10 +185,10 @@ msgstr ""
 "speed."
 
 #: ../../source/getting_started/merge_lora.rst:113 c4a1513d0e604481821d1719ed791df0
-msgid "量化（Quantization）通过数据精度压缩有效地减少了显存使用并加速推理。LLaMA-Factory 支持多种量化方法，包括:"
+msgid "量化（Quantization）通过数据精度压缩有效地减少了显存使用并加速推理。LlamaFactory 支持多种量化方法，包括:"
 msgstr ""
 "Quantization effectively reduces memory usage and speeds up inference by compressing numerical "
-"precision. LLaMA-Factory supports multiple quantization methods, including:"
+"precision. LlamaFactory supports multiple quantization methods, including:"
 
 #: ../../source/getting_started/merge_lora.rst:115 adcc21df7f934521a6c2fa3b5dd3b745
 msgid "AQLM"

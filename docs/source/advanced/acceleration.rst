@@ -1,7 +1,7 @@
 加速
 =====================
 
-LLaMA-Factory 支持多种加速技术，包括：:ref:`FlashAttention <flashattn>` 、 :ref:`Unsloth <sloth>` 、 :ref:`Liger Kernel <ligerkernel>`  。
+LlamaFactory 支持多种加速技术，包括：:ref:`FlashAttention <flashattn>` 、 :ref:`Unsloth <sloth>` 、 :ref:`Liger Kernel <ligerkernel>`  。
 
 
 

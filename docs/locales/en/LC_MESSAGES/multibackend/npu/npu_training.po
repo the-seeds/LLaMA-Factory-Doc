@@ -1,498 +1,533 @@
-# English translations for LLaMA Factory.
-# Copyright (C) 2026 ORGANIZATION
-# This file is distributed under the same license as the LLaMA Factory project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, LlamaFactory team.
+# This file is distributed under the same license as the LlamaFactory
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-09 17:34+0800\n"
+"Project-Id-Version: LlamaFactory \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-07 18:08+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: OpenAI <support@openai.com>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
 "Language: en\n"
-"Language-Team: English\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.11.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.16.0\n"
 
-#: ../../source/multibackend/npu/npu_training.rst:2 1da3d9ca6ffb41c487f5ba4f39c84e1a
+#: ../../source/multibackend/npu/npu_training.rst:2
+#: 773f1b6651f74fde95cc3067fe1d9d1d
 msgid "NPU训练"
 msgstr "NPU Training"
 
-#: ../../source/multibackend/npu/npu_training.rst:4 aafed391eac84edf9a23677020ae1105
-msgid "本文档介绍如何在华为昇腾 NPU 上进行 LLaMA-Factory 模型训练。"
-msgstr "This document describes how to perform LLaMA-Factory model training on Huawei Ascend NPU."
+#: ../../source/multibackend/npu/npu_training.rst:4
+#: d2274cbcacd945469a743199cacc492e
+msgid "本文档介绍如何在华为昇腾 NPU 上进行 LlamaFactory 模型训练。"
+msgstr "This document describes how to perform LlamaFactory model training on Huawei Ascend NPU."
 
-#: ../../source/multibackend/npu/npu_training.rst:7 11fcfa7b6b0d4d0ca8139669a2a7ffcc
+#: ../../source/multibackend/npu/npu_training.rst:7
+#: a14a253ead0c4421b8086aff98852b1f
 msgid "支持设备"
 msgstr "Supported Devices"
 
-#: ../../source/multibackend/npu/npu_training.rst:9 00fe6b58e9614db19732925d7fab162a
-msgid "LLaMA-Factory 当前已适配以下昇腾 NPU 设备："
-msgstr "LLaMA-Factory currently supports the following Ascend NPU devices:"
+#: ../../source/multibackend/npu/npu_training.rst:9
+#: 4656604e347443f4b412d711d2feb620
+msgid "LlamaFactory 当前已适配以下昇腾 NPU 设备："
+msgstr "LlamaFactory currently supports the following Ascend NPU devices:"
 
-#: ../../source/multibackend/npu/npu_training.rst:11 a3b479b674984d629878fe19de92cb18
+#: ../../source/multibackend/npu/npu_training.rst:11
+#: 0fe7c55ce8bc448c8a3be15f03eb2053
 msgid "**Atlas A2 训练系列**"
 msgstr "**Atlas A2 Training Series**"
 
-#: ../../source/multibackend/npu/npu_training.rst:12 86ef64b396be40d69c7097f315e66b47
+#: ../../source/multibackend/npu/npu_training.rst:12
+#: d219909822bd425186c43f9d3ca2f35c
 msgid "**Atlas A3 训练系列**"
 msgstr "**Atlas A3 Training Series**"
 
-#: ../../source/multibackend/npu/npu_training.rst:15 390270a6db69437f87ab70593a08aab5
+#: ../../source/multibackend/npu/npu_training.rst:15
+#: f3954b9817034da694d3a10d6d8808d3
 msgid "支持功能"
 msgstr "Supported Features"
 
-#: ../../source/multibackend/npu/npu_training.rst:23 6f3c9a72232440b3a42e6f17a07f6119
+#: ../../source/multibackend/npu/npu_training.rst:23
+#: 67bfdd62b5b14fe895795326499ef199
 msgid "功能"
 msgstr "Feature"
 
-#: ../../source/multibackend/npu/npu_training.rst:24 48876c89203547a39f2bd9df16a6c85e
+#: ../../source/multibackend/npu/npu_training.rst:24
+#: c624ca3122324d569a3a751ce5a0ec8e
 msgid "支持情况"
 msgstr "Support Status"
 
-#: ../../source/multibackend/npu/npu_training.rst:25 84079f448600445d8f7c1cc4e7832280
+#: ../../source/multibackend/npu/npu_training.rst:25
+#: 2a72843fdf0043859f678e90822ee2b6
 msgid "**训练范式**"
 msgstr "**Training Paradigm**"
 
-#: ../../source/multibackend/npu/npu_training.rst:26 33e84e4f5d5946598160f79980e12b51
+#: ../../source/multibackend/npu/npu_training.rst:26
+#: 0b600dc7ccec4dc686fcd8ac5b964332
 msgid "PT"
 msgstr "PT"
 
-#: ../../source/multibackend/npu/npu_training.rst:27 ../../source/multibackend/npu/npu_training.rst:30
-#: ../../source/multibackend/npu/npu_training.rst:33 ../../source/multibackend/npu/npu_training.rst:36
-#: ../../source/multibackend/npu/npu_training.rst:39 ../../source/multibackend/npu/npu_training.rst:42
-#: ../../source/multibackend/npu/npu_training.rst:45 ../../source/multibackend/npu/npu_training.rst:48
-#: ../../source/multibackend/npu/npu_training.rst:51 ../../source/multibackend/npu/npu_training.rst:54
-#: ../../source/multibackend/npu/npu_training.rst:57 ../../source/multibackend/npu/npu_training.rst:60
-#: 02820aa7d56e4d81b4e6432d6a1dd78f 42c95f32bb7a45e2892ebc5dea3da504 4b7318cab7414db8adb95896066ae153
-#: 5829734a75dd453da5f1e823b7112217 921805fd58d248318d65b5514e949517 9ecaa953d02e4ce6807d0ca510953129
-#: b03e12a3088942448cddc76b7333db22 cb92ffe50c974658b42c29cbdbd3dd2e cc81bbc78719498482d504d3af2e1952
-#: d3ef863a2c2c49f5a3081a38eaa39246 d5e41833c09b49398be2d8687cab83bd feb04dee92654e6fbc6ad833cac6c45e
+#: ../../source/multibackend/npu/npu_training.rst:27
+#: ../../source/multibackend/npu/npu_training.rst:30
+#: ../../source/multibackend/npu/npu_training.rst:33
+#: ../../source/multibackend/npu/npu_training.rst:36
+#: ../../source/multibackend/npu/npu_training.rst:39
+#: ../../source/multibackend/npu/npu_training.rst:42
+#: ../../source/multibackend/npu/npu_training.rst:45
+#: ../../source/multibackend/npu/npu_training.rst:48
+#: ../../source/multibackend/npu/npu_training.rst:51
+#: ../../source/multibackend/npu/npu_training.rst:54
+#: ../../source/multibackend/npu/npu_training.rst:57
+#: ../../source/multibackend/npu/npu_training.rst:60
+#: cff7477264d64aca93f1f8cd71400a77 d2fe870c1ab848f8b3d34e308838af44
+#: dab292c9075f4d66a74722920df36d8b 7f4b58f012664327b630392a905e2687
+#: 35f747d16032499fb0e80a0b3f7bbcb4 db47d1d69c9946e4a2f8c5c134bef17b
+#: a3a4a696ed9546479624a064ba0681d5 6f36721e8f434d13b4eacbe1d78c4989
+#: 9593cbe6eab5498daf441d39941c4cb4 90c14343e9124c5b96b9cb0d439c2815
+#: 11a737be94e14674bef55bae20d027c4 3e4f1e3c08b1441e9d51ce3511a728e0
 msgid "已支持"
 msgstr "Supported"
 
-#: ../../source/multibackend/npu/npu_training.rst:29 93b4d0bf2b844a279345df5c2e08d85d
+#: ../../source/multibackend/npu/npu_training.rst:29
+#: 66ab39f1fabd490bb7b71a618a4813e9
 msgid "SFT"
 msgstr "SFT"
 
-#: ../../source/multibackend/npu/npu_training.rst:32 f9d9fc2cab604718a34ba4c1b738ddf6
+#: ../../source/multibackend/npu/npu_training.rst:32
+#: ebba33ff9db44a24ba2bdd1cdfcb13f1
 msgid "RM"
 msgstr "RM"
 
-#: ../../source/multibackend/npu/npu_training.rst:35 c4bdd0f46953484eae08d6ed1576c953
+#: ../../source/multibackend/npu/npu_training.rst:35
+#: edc4e8b2bdc047ff8924f75ceef344f0
 msgid "DPO"
 msgstr "DPO"
 
-#: ../../source/multibackend/npu/npu_training.rst:37 5e5b569a3ab140d5acaa6134aafc745c
+#: ../../source/multibackend/npu/npu_training.rst:37
+#: d7b48c5b0b5c4b639c167853f5e16fdc
 msgid "**参数范式**"
 msgstr "**Parameter Paradigm**"
 
-#: ../../source/multibackend/npu/npu_training.rst:38 a18f10c54dfe461d8caf6b63004e02c8
+#: ../../source/multibackend/npu/npu_training.rst:38
+#: e159a577eff548aea63a000dd2a88da9
 msgid "Full"
 msgstr "Full"
 
-#: ../../source/multibackend/npu/npu_training.rst:41 f5443206fed44b0ebbe398f79bb6f23f
+#: ../../source/multibackend/npu/npu_training.rst:41
+#: 51bfc967a24546fb83380198ac969ef5
 msgid "Freeze"
 msgstr "Freeze"
 
-#: ../../source/multibackend/npu/npu_training.rst:44 5fcb9537dc8d486c960ed16cea4d6abf
+#: ../../source/multibackend/npu/npu_training.rst:44
+#: a4156a9459934003872e889ab34f12a0
 msgid "LoRA"
 msgstr "LoRA"
 
-#: ../../source/multibackend/npu/npu_training.rst:46 4486adcc4d0d4237be369bead6347a70
+#: ../../source/multibackend/npu/npu_training.rst:46
+#: 80590d9b527f4b03bc99304ce21561f0
 msgid "**模型合并**"
 msgstr "**Model Merging**"
 
-#: ../../source/multibackend/npu/npu_training.rst:47 4fdd79f89c7b4b46ad533a4a7c9f03d2
+#: ../../source/multibackend/npu/npu_training.rst:47
+#: 3a2e747f5efe4f09a30d4c7a66017cd9
 msgid "LoRA权重合并"
 msgstr "LoRA Weight Merging"
 
-#: ../../source/multibackend/npu/npu_training.rst:49 3a03bed801f74c358923ed322d83bdff
+#: ../../source/multibackend/npu/npu_training.rst:49
+#: fff67a835efb408baeeea92aaed971f0
 msgid "**分布式**"
 msgstr "**Distributed**"
 
-#: ../../source/multibackend/npu/npu_training.rst:50 2cb4aadbbccc4f16902acffb86bd9318
+#: ../../source/multibackend/npu/npu_training.rst:50
+#: 6976080b9a6e4369bcd5a10544b3d207
 msgid "DDP"
 msgstr "DDP"
 
-#: ../../source/multibackend/npu/npu_training.rst:53 b76cfc1438844c9c9ab3eb97ffb3ac07
+#: ../../source/multibackend/npu/npu_training.rst:53
+#: af86deb51c6c43878ef913bab0f8bd1f
 msgid "FSDP"
 msgstr "FSDP"
 
-#: ../../source/multibackend/npu/npu_training.rst:56 f6bcbbfa4190419aa1b4a6c8ea9f434c
+#: ../../source/multibackend/npu/npu_training.rst:56
+#: c6ca7aae2939410e893177e07bcc1416
 msgid "FSDP2"
 msgstr "FSDP2"
 
-#: ../../source/multibackend/npu/npu_training.rst:59 66f16ddc336646c3a62c6e2f6b4de71e
+#: ../../source/multibackend/npu/npu_training.rst:59
+#: 653a492340d64cc7aa79fc1d818fbd24
 msgid "DeepSpeed"
 msgstr "DeepSpeed"
 
-#: ../../source/multibackend/npu/npu_training.rst:61 068e921d0afe40418dea39ce88818660
+#: ../../source/multibackend/npu/npu_training.rst:61
+#: c5dcd47e2a8f4b0c935fcc5853dd2ea5
 msgid "**加速**"
 msgstr "**Acceleration**"
 
-#: ../../source/multibackend/npu/npu_training.rst:62 ../../source/multibackend/npu/npu_training.rst:271
-#: ../../source/multibackend/npu/npu_training.rst:295 a46bfd6f7177415892fd5352e62470d9
-#: ed8e41aad7764ee1b0be94bd861baca9
+#: ../../source/multibackend/npu/npu_training.rst:62
+#: ../../source/multibackend/npu/npu_training.rst:291
+#: ../../source/multibackend/npu/npu_training.rst:315
+#: 4094328be4fd446e82820140527cf004 cbaa69da9a264c01afbc61fbdb3c8d4c
+#: c685f22aac8747bd8f399eff70892bee
 msgid "融合算子"
 msgstr "Fused Operators"
 
-#: ../../source/multibackend/npu/npu_training.rst:63 8fd591f6bcdc48fd943cec014d5cc798
-msgid "当前已支持NpuFusedRMSNorm，NpuFusedSwiGlu，NpuFusedRoPE，NpuFusedMoE"
-msgstr "Currently supports NpuFusedRMSNorm, NpuFusedSwiGlu, NpuFusedRoPE, NpuFusedMoE"
+#: ../../source/multibackend/npu/npu_training.rst:63
+#: d0e16c4f90c54dbb9a29741fc6a157d5
+msgid "当前已支持 FA、NpuFusedRMSNorm、NpuFusedSwiGlu、NpuFusedRoPE、NpuFusedMoE"
+msgstr "Currently supports FA, NpuFusedRMSNorm, NpuFusedSwiGlu, NpuFusedRoPE, and NpuFusedMoE"
 
-#: ../../source/multibackend/npu/npu_training.rst:66 548b7b4da30349f0b333b14e40490586
-msgid ""
-"NPU 的大部分使用方式与 GPU 保持一致。关于通用的安装步骤，请参考 :doc:`NPU 安装及配置 <npu_installation>`；关于通用的分布式训练（如 "
-"FSDP、FSDP2，DeepSpeed）配置，请参考 :doc:`分布式训练 <../../advanced/distributed>`。"
-msgstr ""
-"Most NPU usage is consistent with GPU usage. For general installation steps, refer to :doc:`NPU "
-"Installation and Configuration <npu_installation>`; for general distributed training configurations"
-" (such as FSDP, FSDP2, DeepSpeed), refer to :doc:`Distributed Training "
-"<../../advanced/distributed>`."
+#: ../../source/multibackend/npu/npu_training.rst:66
+#: 4c485280060f4474ab2160e29336f773
+msgid "NPU 的大部分使用方式与 GPU 保持一致。关于通用的安装步骤，请参考 :doc:`NPU 安装及配置 <npu_installation>`；关于通用的分布式训练（如 FSDP、FSDP2，DeepSpeed）配置，请参考 :doc:`分布式训练 <../../advanced/distributed>`。"
+msgstr "Most NPU usage is consistent with GPU usage. For general installation steps, refer to :doc:`NPU Installation and Configuration <npu_installation>`; for general distributed training configurations (such as FSDP, FSDP2, DeepSpeed), refer to :doc:`Distributed Training <../../advanced/distributed>`."
 
-#: ../../source/multibackend/npu/npu_training.rst:69 022e4b47e24f4b43958842de626ae839
+#: ../../source/multibackend/npu/npu_training.rst:69
+#: 0deb6a3de68d4bd1818efcdc91e29491
 msgid "快速开始"
 msgstr "Quick Start"
 
-#: ../../source/multibackend/npu/npu_training.rst:71 d14b4602727f44418fdd259a217c149f
-msgid "为了快速上手，建议直接使用 LLaMA-Factory 提供的 Docker 镜像。"
-msgstr "To get started quickly, it is recommended to use the Docker image provided by LLaMA-Factory."
+#: ../../source/multibackend/npu/npu_training.rst:71
+#: a148380aaed84c10babfa530b57fca56
+msgid "为了快速上手，建议直接使用 LlamaFactory 提供的 Docker 镜像。以下示例使用 A2 Ubuntu 镜像 ``latest-910b-ubuntu``；其他硬件和容器操作系统组合请参考 :doc:`NPU 安装及配置 <npu_installation>`。"
+msgstr "To get started quickly, we recommend using a Docker image provided by LlamaFactory. The following example uses the A2 Ubuntu image ``latest-910b-ubuntu``; for other hardware and container operating system combinations, see :doc:`NPU Installation and Configuration <npu_installation>`."
 
-#: ../../source/multibackend/npu/npu_training.rst:73 c52284fdf1dc4711a9051b43d70cd981
+#: ../../source/multibackend/npu/npu_training.rst:73
+#: aab1269846214bb5b888754a131c5ad6
 msgid "**启动容器** (请根据实际情况修改 ``device`` 映射)："
 msgstr "**Start the container** (modify the ``device`` mapping as needed):"
 
-#: ../../source/multibackend/npu/npu_training.rst:90 51cf626f1ce543ab90930440129d2b20
-msgid "**配置环境变量**："
-msgstr "**Configure environment variables**:"
+#: ../../source/multibackend/npu/npu_training.rst:94
+#: cd41dc8c0f62467999f83b6cfecb2187
+msgid "**进入容器并配置环境变量**："
+msgstr "**Enter the container and configure environment variables**:"
 
-#: ../../source/multibackend/npu/npu_training.rst:92 d1aed85b2ce6411f84d49de627f4fb87
+#: ../../source/multibackend/npu/npu_training.rst:100
+#: 0a333534e775481bac1710f9d615da98
 msgid "进入容器后，**务必** 先加载 Ascend 环境配置，否则无法识别 NPU 设备："
-msgstr ""
-"After entering the container, **be sure** to load the Ascend environment configuration first; "
-"otherwise, NPU devices will not be recognized."
+msgstr "After entering the container, **be sure** to load the Ascend environment configuration first; otherwise, NPU devices will not be recognized."
 
-#: ../../source/multibackend/npu/npu_training.rst:99 9b9605d784db4486bfb8723fe8e0fe67
+#: ../../source/multibackend/npu/npu_training.rst:106
+#: e18d29af5a15440a9bad43f82c422a64
 msgid "**开始训练**："
 msgstr "**Start training**:"
 
-#: ../../source/multibackend/npu/npu_training.rst:101 11b7b975b66644bcb39dfc554ba56b56
+#: ../../source/multibackend/npu/npu_training.rst:109
+#: 621288c596e0476b89db9490dcd7e78d
 msgid "下载模型时，如果无法顺利访问 Hugging Face 社区资源下载，推荐前往 ModelScope 下载，或按需配置以下参数："
-msgstr ""
-"When downloading models, if you cannot access Hugging Face community resources smoothly, we "
-"recommend downloading them from ModelScope or configuring the following parameters as needed:"
+msgstr "When downloading models, if you cannot access Hugging Face community resources smoothly, we recommend downloading them from ModelScope or configuring the following parameters as needed:"
 
-#: ../../source/multibackend/npu/npu_training.rst:103 3f2daff9f9564772a5c71d3af1553461
+#: ../../source/multibackend/npu/npu_training.rst:111
+#: 9e874b763476411e805c8e2559938365
 msgid "设置 ``USE_MODELSCOPE_HUB`` 环境变量，优先使用 ModelScope 下载模型/数据集或使用缓存路径中的模型/数据集："
-msgstr ""
-"Set the ``USE_MODELSCOPE_HUB`` environment variable to prioritize downloading models/datasets "
-"from ModelScope or using models/datasets from the cache path:"
+msgstr "Set the ``USE_MODELSCOPE_HUB`` environment variable to prioritize downloading models/datasets from ModelScope or using models/datasets from the cache path:"
 
-#: ../../source/multibackend/npu/npu_training.rst:109 a82950bcbd53423b863bfa0850cf4e12
+#: ../../source/multibackend/npu/npu_training.rst:117
+#: 41dc24e6cebc4f0aa7315396c0e4316a
 msgid "如需访问受限或私有的 ModelScope Hub 资源，可配置 ``ms_hub_token``。"
 msgstr "To access restricted or private ModelScope Hub resources, configure ``ms_hub_token``."
 
-#: ../../source/multibackend/npu/npu_training.rst:111 115619b93b0148088bde78c0e5eb61aa
+#: ../../source/multibackend/npu/npu_training.rst:119
+#: cb134e997c2146058a113d873d68bbae
 msgid "更多参数说明请参考 :doc:`参数介绍 <../../advanced/arguments>`。下载前需关注待下载文件的正确性与安全性。"
-msgstr ""
-"For more parameter details, refer to :doc:`Arguments <../../advanced/arguments>`. Before "
-"downloading, pay attention to the correctness and security of the files to be downloaded."
+msgstr "For more parameter details, refer to :doc:`Arguments <../../advanced/arguments>`. Before downloading, pay attention to the correctness and security of the files to be downloaded."
 
-#: ../../source/multibackend/npu/npu_training.rst:106 6002060779a34fb2895a072077698b6a
+#: ../../source/multibackend/npu/npu_training.rst:126
+#: 1feed703cc8243debe77af0d00595589
 msgid "常用调参建议"
 msgstr "Common Tuning Tips"
 
-#: ../../source/multibackend/npu/npu_training.rst:108 cfa5ade8d57a465ab9c5f9ce284892c7
+#: ../../source/multibackend/npu/npu_training.rst:128
+#: f6023222c3f6483b9141fa079bfb0f7e
 msgid "如果希望在显存占用和训练吞吐之间做简单取舍，建议优先关注以下参数："
-msgstr ""
-"If you want a simple trade-off between memory usage and training throughput, start by focusing on"
-" the following parameters:"
+msgstr "If you want a simple trade-off between memory usage and training throughput, start by focusing on the following parameters:"
 
-#: ../../source/multibackend/npu/npu_training.rst:110 9ff0328fe91442f19d2ef70b9ee73d15
+#: ../../source/multibackend/npu/npu_training.rst:130
+#: b1510a38cd684e4ba6858f6707a5738c
 msgid "``per_device_train_batch_size``：单卡 batch size。调大通常可以提升吞吐，但会直接增加显存占用；如果出现 OOM，优先先把它调小。"
-msgstr ""
-"``per_device_train_batch_size``: per-device batch size. Increasing it usually improves throughput, "
-"but directly increases memory usage. If OOM occurs, reduce it first."
+msgstr "``per_device_train_batch_size``: per-device batch size. Increasing it usually improves throughput, but directly increases memory usage. If OOM occurs, reduce it first."
 
-#: ../../source/multibackend/npu/npu_training.rst:111 d21038d6525e4fae8cd947fa9e290373
-msgid ""
-"``gradient_accumulation_steps``：梯度累积步数。在减小 ``per_device_train_batch_size`` 后，可以适当调大该参数，以尽量保持原本的有效"
-" batch size；但累积步数越大，单次参数更新越慢。"
-msgstr ""
-"``gradient_accumulation_steps``: number of gradient accumulation steps. After reducing "
-"``per_device_train_batch_size``, you can increase this parameter to keep the original effective "
-"batch size as much as possible. However, the larger the accumulation steps, the slower each "
-"parameter update becomes."
+#: ../../source/multibackend/npu/npu_training.rst:131
+#: 95c61bf75b5249bb8a82191b3d01e0fa
+msgid "``gradient_accumulation_steps``：梯度累积步数。在减小 ``per_device_train_batch_size`` 后，可以适当调大该参数，以尽量保持原本的有效 batch size；但累积步数越大，单次参数更新越慢。"
+msgstr "``gradient_accumulation_steps``: number of gradient accumulation steps. After reducing ``per_device_train_batch_size``, you can increase this parameter to keep the original effective batch size as much as possible. However, the larger the accumulation steps, the slower each parameter update becomes."
 
-#: ../../source/multibackend/npu/npu_training.rst:112 06e9acd4d43a43fb9b2fd710377fdcce
+#: ../../source/multibackend/npu/npu_training.rst:132
+#: 8bec49565aa24279a1955e8711d60244
 msgid "``cutoff_len``：样本截断长度。它通常是影响显存占用最明显的参数之一，尤其在长上下文训练时；如果当前任务不依赖超长输入，建议先适当减小。"
-msgstr ""
-"``cutoff_len``: sample truncation length. This is usually one of the most important parameters "
-"affecting memory usage, especially for long-context training. If the current task does not depend "
-"on very long inputs, reduce it first."
+msgstr "``cutoff_len``: sample truncation length. This is usually one of the most important parameters affecting memory usage, especially for long-context training. If the current task does not depend on very long inputs, reduce it first."
 
-#: ../../source/multibackend/npu/npu_training.rst:113 6772d1986dc549328d8a1c9647b96a4d
+#: ../../source/multibackend/npu/npu_training.rst:133
+#: 1fe9bcb46fb9452290c328eacbd24409
 msgid "``gradient_checkpointing``：梯度检查点。开启后通常可以明显降低显存占用，但会带来一定的速度损失，适合显存较紧张的场景。"
-msgstr ""
-"``gradient_checkpointing``: gradient checkpointing. Enabling it usually significantly reduces "
-"memory usage, but introduces some speed loss. It is suitable for memory-constrained scenarios."
+msgstr "``gradient_checkpointing``: gradient checkpointing. Enabling it usually significantly reduces memory usage, but introduces some speed loss. It is suitable for memory-constrained scenarios."
 
-#: ../../source/multibackend/npu/npu_training.rst:115 47e4f75cb8b84c10a7350ac6dda4828d
+#: ../../source/multibackend/npu/npu_training.rst:135
+#: 3b1b422e4b2e4015897e28acf0c381e0
 msgid "下面给出一个更偏向“先跑通、少占显存”的示例配置："
-msgstr ""
-"The following example is a more conservative starting point that prioritizes getting the run "
-"working while using less memory:"
+msgstr "The following example is a more conservative starting point that prioritizes getting the run working while using less memory:"
 
-#: ../../source/multibackend/npu/npu_training.rst:125 5fdb8448b60243cb8afebe4614808c39
+#: ../../source/multibackend/npu/npu_training.rst:145
+#: 51211ec68f694d698ecb16ec4ef041de
 msgid "分布式训练"
 msgstr "Distributed Training"
 
-#: ../../source/multibackend/npu/npu_training.rst:127 2cfc5ebdb6d04d5bac919188fe73b384
-msgid ""
-"NPU 的分布式训练配置与 :doc:`分布式训练 <../../advanced/distributed>` 文档描述的基本一致。本节主要介绍 NPU "
-"环境下的特定配置，包括设备指定和多机通信设置。"
-msgstr ""
-"NPU distributed training configuration is generally consistent with the :doc:`Distributed Training "
-"<../../advanced/distributed>` document. This section introduces NPU-specific configurations, "
-"including device selection and multi-node communication settings."
+#: ../../source/multibackend/npu/npu_training.rst:147
+#: 4ec3ca97df534669a1aeefcd70063341
+msgid "NPU 的分布式训练配置与 :doc:`分布式训练 <../../advanced/distributed>` 文档描述的基本一致。本节主要介绍 NPU 环境下的特定配置，包括设备指定和多机通信设置。"
+msgstr "NPU distributed training configuration is generally consistent with the :doc:`Distributed Training <../../advanced/distributed>` document. This section introduces NPU-specific configurations, including device selection and multi-node communication settings."
 
-#: ../../source/multibackend/npu/npu_training.rst:130 dff1da64f75049f9b8d3b188cfedc3ad
+#: ../../source/multibackend/npu/npu_training.rst:150
+#: eea86bb7fadb4a6ab4f7e976aeafe349
 msgid "关键环境变量"
 msgstr "Key Environment Variables"
 
-#: ../../source/multibackend/npu/npu_training.rst:132 ed2f0f44d75546259f34941e0a8db0f5
+#: ../../source/multibackend/npu/npu_training.rst:152
+#: 3516a2c8a4284faa9d089f58fe90ae1f
 msgid "在启动训练前，请注意以下环境变量的设置："
 msgstr "Before starting training, pay attention to the following environment variable settings:"
 
-#: ../../source/multibackend/npu/npu_training.rst:134 14d3d8b5489a417189bd7501ddda36bb
+#: ../../source/multibackend/npu/npu_training.rst:154
+#: 47ef452a31e04a3f946e4a0ecd9d0b5f
 msgid "**ASCEND_RT_VISIBLE_DEVICES** (单机/多机均需关注)"
 msgstr "**ASCEND_RT_VISIBLE_DEVICES** (required for single-node and multi-node)"
 
-#: ../../source/multibackend/npu/npu_training.rst:136 948333b0e6e14d59a63d5b755e06c82d
+#: ../../source/multibackend/npu/npu_training.rst:156
+#: e364b7586b0a48038408becd168ac6ae
 msgid "用于指定参与训练的 NPU 设备。"
 msgstr "Used to specify NPU devices participating in training."
 
-#: ../../source/multibackend/npu/npu_training.rst:138 7be25e8f29724d1d91485708f35aca28
+#: ../../source/multibackend/npu/npu_training.rst:158
+#: 7839588ba62a49aaa6eadd81a85cfda0
 msgid "**默认行为**：如果不设置此变量，程序将尝试使用当前节点上的**所有** NPU 设备。"
-msgstr ""
-"**Default behavior**: If this variable is not set, the program will attempt to use **all** NPU "
-"devices on the current node."
+msgstr "**Default behavior**: If this variable is not set, the program will attempt to use **all** NPU devices on the current node."
 
-#: ../../source/multibackend/npu/npu_training.rst:139 fb1141427944412485abedd9869ecef2
+#: ../../source/multibackend/npu/npu_training.rst:159
+#: 37f3cc87582340419e56fe7bef2beea1
 msgid "**指定设备**：如果需要限定特定的 NPU 卡（例如仅使用卡 0 和卡 1），则**必须**显式设置此变量："
-msgstr ""
-"**Specify devices**: If you need to limit training to specific NPU cards (e.g., only card 0 and "
-"card 1), you **must** explicitly set this variable:"
+msgstr "**Specify devices**: If you need to limit training to specific NPU cards (e.g., only card 0 and card 1), you **must** explicitly set this variable:"
 
-#: ../../source/multibackend/npu/npu_training.rst:145 f6ff2e067d0247eeb915ed88a9d2f007
+#: ../../source/multibackend/npu/npu_training.rst:165
+#: f0cb26b4ccdf4d09a7920df6aafaf5e2
 msgid "**HCCL_SOCKET_IFNAME** (仅多机训练必需)"
 msgstr "**HCCL_SOCKET_IFNAME** (required for multi-node training only)"
 
-#: ../../source/multibackend/npu/npu_training.rst:147 3c90a0201d1449c8a92436a8227d6703
+#: ../../source/multibackend/npu/npu_training.rst:167
+#: bf05cf41f96e4bfd836ccd9992ef7968
 msgid "指定 HCCL 集合通信使用的网卡接口名称。"
 msgstr "Specifies the network interface name used for HCCL collective communication."
 
-#: ../../source/multibackend/npu/npu_training.rst:149 df742a91976844d39f3dc0785be06578
+#: ../../source/multibackend/npu/npu_training.rst:169
+#: 1ad70f4842354b5c9a6b7425829a931b
 msgid "**获取方式**：在终端运行 ``ifconfig`` 命令查看网卡列表，选择用于通信的网卡名称（如 ``eth0``, ``enp1s0`` 等）。"
-msgstr ""
-"**How to obtain**: Run ``ifconfig`` in the terminal to view the network interface list, and "
-"choose the interface used for communication (e.g., ``eth0``, ``enp1s0``)."
+msgstr "**How to obtain**: Run ``ifconfig`` in the terminal to view the network interface list, and choose the interface used for communication (e.g., ``eth0``, ``enp1s0``)."
 
-#: ../../source/multibackend/npu/npu_training.rst:150 a07ef45f73f34dc4a1f87ca10ebfc5cc
+#: ../../source/multibackend/npu/npu_training.rst:170
+#: ec4c5944151a462aaf75a9ca090c7266
 msgid "**设置示例**："
 msgstr "**Example setting**:"
 
-#: ../../source/multibackend/npu/npu_training.rst:157 b9ddb1de8e9e4174831e7405f80342e9
+#: ../../source/multibackend/npu/npu_training.rst:177
+#: d477ef5aa7f84f5089f588aa6838cf92
 msgid "单机训练"
 msgstr "Single-Node Training"
 
-#: ../../source/multibackend/npu/npu_training.rst:159 10af9c756fe3414d93f3f64f173b66fd
+#: ../../source/multibackend/npu/npu_training.rst:179
+#: c69b5a99ef7746b6b00a9180ddcf4c45
 msgid "单机训练（单卡或多卡）的启动方式与标准流程一致。"
 msgstr "Single-node training (single card or multiple cards) follows the standard procedure."
 
-#: ../../source/multibackend/npu/npu_training.rst:161 6345cd6e0beb408bac7114edfc4e0e12
+#: ../../source/multibackend/npu/npu_training.rst:181
+#: 9894bb94773a46818892ff248ac7522b
 msgid "**单机多卡示例**："
 msgstr "**Single-node multi-card example**:"
 
-#: ../../source/multibackend/npu/npu_training.rst:168 33554b400853495e99dc0dcc836bef13
+#: ../../source/multibackend/npu/npu_training.rst:188
+#: 74b6818244064c34b620b161ca0bdfaf
 msgid "多机训练"
 msgstr "Multi-node Training"
 
-#: ../../source/multibackend/npu/npu_training.rst:170 70b52990c40341379fbbcffd32e0fb68
+#: ../../source/multibackend/npu/npu_training.rst:190
+#: 3477bbc4d25d407a803096d4d9029549
 msgid "在 NPU 环境下，推荐使用 ``accelerate launch`` 配合 FSDP 1/2 进行多机训练，这种方式在 NPU 上通信和计算效率更优。"
-msgstr ""
-"In NPU environments, it is recommended to use ``accelerate launch`` with FSDP 1/2 for multi-node "
-"training; this approach provides better communication and computation efficiency on NPU."
+msgstr "In NPU environments, it is recommended to use ``accelerate launch`` with FSDP 1/2 for multi-node training; this approach provides better communication and computation efficiency on NPU."
 
-#: ../../source/multibackend/npu/npu_training.rst:173 433980ddfb5c410896f729000873990e
+#: ../../source/multibackend/npu/npu_training.rst:193
+#: f816e94e5bb0406ca815747c47473335
 msgid "其他启动方式（如 ``torchrun/deepspeed``）及更多详细配置请参考 :doc:`分布式训练 <../../advanced/distributed>` 文档。"
-msgstr ""
-"For other launch methods (such as ``torchrun/deepspeed``) and more detailed configurations, refer "
-"to the :doc:`Distributed Training <../../advanced/distributed>` document."
+msgstr "For other launch methods (such as ``torchrun/deepspeed``) and more detailed configurations, refer to the :doc:`Distributed Training <../../advanced/distributed>` document."
 
-#: ../../source/multibackend/npu/npu_training.rst:175 6944959a992e427280369d6fd42dbf84
+#: ../../source/multibackend/npu/npu_training.rst:195
+#: 5284abc57f7a4953827f7d469164f0b0
 msgid "**1. 准备 Accelerate 配置文件**"
 msgstr "**1. Prepare Accelerate configuration file**"
 
-#: ../../source/multibackend/npu/npu_training.rst:177 bb48647b5d6a49aebf5b27d48ba4203b
+#: ../../source/multibackend/npu/npu_training.rst:197
+#: 3092225f87fe48eca0751d0b741f5e28
 msgid "创建或修改 ``examples/accelerate/fsdp_config.yaml``，关键参数如下（请根据实际节点数和 IP 修改）："
-msgstr ""
-"Create or modify ``examples/accelerate/fsdp_config.yaml``; key parameters are as follows (please "
-"modify according to the actual number of nodes and IP):"
+msgstr "Create or modify ``examples/accelerate/fsdp_config.yaml``; key parameters are as follows (please modify according to the actual number of nodes and IP):"
 
-#: ../../source/multibackend/npu/npu_training.rst:208 fb3dad4b60384989896952e143e050d3
+#: ../../source/multibackend/npu/npu_training.rst:228
+#: e69ac63f32ee40d281587f2dbe8c53a9
 msgid "关键多机参数说明："
 msgstr "Explanation of key multi-node parameters:"
 
-#: ../../source/multibackend/npu/npu_training.rst:210 e5a6f9431ac74a9090d5893c17be113b
+#: ../../source/multibackend/npu/npu_training.rst:230
+#: de543c1fa21849f5b23b212b987d7baa
 msgid "num_machines: 节点总数"
 msgstr "num_machines: Total number of nodes"
 
-#: ../../source/multibackend/npu/npu_training.rst:211 4e536e0b915444a0aa02d2aa085cc359
+#: ../../source/multibackend/npu/npu_training.rst:231
+#: 61b0dd7580474aafb8e11eab0d20a6b5
 msgid "num_processes: 总进程数（总卡数） = num_machines * 每台机器卡数"
-msgstr ""
-"num_processes: Total number of processes (total number of cards) = num_machines * number of cards"
-" per machine"
+msgstr "num_processes: Total number of processes (total number of cards) = num_machines * number of cards per machine"
 
-#: ../../source/multibackend/npu/npu_training.rst:212 6bc1b6c0fd9a4075975d4d436a558c86
+#: ../../source/multibackend/npu/npu_training.rst:232
+#: 07ffcbc8fc2649f786c0a5e75ce4d845
 msgid "main_process_ip: 主节点 IP 地址（所有节点需保持一致）"
 msgstr "main_process_ip: IP address of the main node (must be consistent across all nodes)"
 
-#: ../../source/multibackend/npu/npu_training.rst:213 e4bb0a5b41af4e46b3b8612dba5777e6
+#: ../../source/multibackend/npu/npu_training.rst:233
+#: 71cae942dae24923b50192a91a65a73f
 msgid "main_process_port: 主节点端口（所有节点需保持一致）"
 msgstr "main_process_port: Port of the main node (must be consistent across all nodes)"
 
-#: ../../source/multibackend/npu/npu_training.rst:214 390e5c404aac4869ac0de7631f1d18be
+#: ../../source/multibackend/npu/npu_training.rst:234
+#: c1fc8de6cb784c1f9cb588a1db235223
 msgid "machine_rank: 当前节点编号（主节点为0，从节点依次递增）"
 msgstr "machine_rank: Current node index (main node is 0, and the subsequent nodes increase in order)"
 
-#: ../../source/multibackend/npu/npu_training.rst:216 92c25a620bf3417ba5e95dd5950df2eb
+#: ../../source/multibackend/npu/npu_training.rst:236
+#: 259b77346cf6438bba377ac99551a7f9
 msgid "**2. 启动训练**"
 msgstr "**2. Launch training**"
 
-#: ../../source/multibackend/npu/npu_training.rst:218 3bef56824c9240499e006c7e520144ee
+#: ../../source/multibackend/npu/npu_training.rst:238
+#: 8d8ae36334fd4242b27cdc5c89aa5d4e
 msgid "在所有节点上执行相同的启动命令（确保 ``machine_rank`` 在 yaml 中已正确配置）："
-msgstr ""
-"Execute the same launch command on all nodes (ensure ``machine_rank`` is correctly configured in "
-"the YAML):"
+msgstr "Execute the same launch command on all nodes (ensure ``machine_rank`` is correctly configured in the YAML):"
 
-#: ../../source/multibackend/npu/npu_training.rst:228 eceb657c65f8422f8cd2dd034b4f3e33
+#: ../../source/multibackend/npu/npu_training.rst:248
+#: 7c4a757cb6874373b987cd9b0a4542bd
 msgid "训练方式"
 msgstr "Training Modes"
 
-#: ../../source/multibackend/npu/npu_training.rst:230 00a3c7bfa7844e2488c354ffcb6c109a
+#: ../../source/multibackend/npu/npu_training.rst:250
+#: 9fc7933155874a87aad1401e795958ca
 msgid "以下是常见训练场景的启动命令参考，具体参数配置文件请根据实际需求调整。"
-msgstr ""
-"The following are reference launch commands for common training scenarios; adjust the "
-"configuration files according to your needs."
+msgstr "The following are reference launch commands for common training scenarios; adjust the configuration files according to your needs."
 
-#: ../../source/multibackend/npu/npu_training.rst:233 09629affda4a434ba2e0e07193a9873a
+#: ../../source/multibackend/npu/npu_training.rst:253
+#: becc8d07e41c44b0b14bd82fa8ddaad4
 msgid "预训练 (PT)"
 msgstr "Pretraining (PT)"
 
-#: ../../source/multibackend/npu/npu_training.rst:240 9eb0eb7c818b41dba6e53337f575607b
+#: ../../source/multibackend/npu/npu_training.rst:260
+#: b427c6dbc82f4a03a24ac294876885aa
 msgid "监督微调 (SFT)"
 msgstr "Supervised Fine-tuning (SFT)"
 
-#: ../../source/multibackend/npu/npu_training.rst:247 22a448ef58294a1a8e20add993b13f3a
+#: ../../source/multibackend/npu/npu_training.rst:267
+#: 5c82f888768d4326b90669f39502fb0e
 msgid "奖励模型 (RM)"
 msgstr "Reward Model (RM)"
 
-#: ../../source/multibackend/npu/npu_training.rst:254 4b7b43f069944316988fe58e6fc4183a
+#: ../../source/multibackend/npu/npu_training.rst:274
+#: 799d48560ad7427aaa2ff68e3cf169b3
 msgid "DPO 训练"
 msgstr "DPO Training"
 
-#: ../../source/multibackend/npu/npu_training.rst:261 8a394f11861e45b58c2ef318937b5385
+#: ../../source/multibackend/npu/npu_training.rst:281
+#: 4af82cdd709744ad934b68ac69e0058d
 msgid "全参数微调 (Full)"
 msgstr "Full-parameter Fine-tuning (Full)"
 
-#: ../../source/multibackend/npu/npu_training.rst:268 7e0e65918a0748788aa4efdd04d23383
+#: ../../source/multibackend/npu/npu_training.rst:288
+#: 56be9354624d4966b0a632e4be091872
 msgid "性能优化"
 msgstr "Performance Optimization"
 
-#: ../../source/multibackend/npu/npu_training.rst:273 eaf82280ac6147ea856ec5ec217f11dc
-msgid "LLaMA-Factory 支持FA，NpuFusedRMSNorm，NpuFusedSwiGlu，NpuFusedRoPE和NpuFusedMoE融合算子。"
-msgstr ""
-"LLaMA-Factory supports FA, NpuFusedRMSNorm, NpuFusedSwiGlu, NpuFusedRoPE, and NpuFusedMoE fused "
-"operators."
+#: ../../source/multibackend/npu/npu_training.rst:293
+#: 5d4a0c2942124ed081768a16bd2cd1e5
+msgid "LlamaFactory 支持 FA、NpuFusedRMSNorm、NpuFusedSwiGlu、NpuFusedRoPE 和 NpuFusedMoE 融合算子。"
+msgstr "LlamaFactory supports FA, NpuFusedRMSNorm, NpuFusedSwiGlu, NpuFusedRoPE, and NpuFusedMoE fused operators."
 
-#: ../../source/multibackend/npu/npu_training.rst:275 bb19a40b6a30453cbb464f9a4c622e42
-msgid "可在训练脚本中配置如下参数，模型加载后替换对应模型结构，使能NpuFusedRMSNorm，NpuFusedSwiGlu，NpuFusedRoPE和NpuFusedMoE融合算子，提升训练效率。该接口使能后，代码内部自动识别是否满足模型结构替换的要求，满足的情况对应模型结构会被替换为融合算子形式。"
-msgstr ""
-"Configure the following parameter in the training script to enable NpuFusedRMSNorm, "
-"NpuFusedSwiGlu, NpuFusedRoPE, and NpuFusedMoE fused operators, replacing the corresponding model "
-"structures after loading to improve training efficiency. After enabling this interface, the code "
-"automatically determines whether the model structure meets the replacement requirements. If "
-"satisfied, the corresponding model structure will be replaced with the fused operator form."
+#: ../../source/multibackend/npu/npu_training.rst:295
+#: 0ee8e1b3b1ce47749b256e421c825f2c
+msgid "可在训练脚本中配置如下参数，模型加载后替换对应模型结构，使能NpuFusedRMSNorm、NpuFusedSwiGlu、NpuFusedRoPE和NpuFusedMoE融合算子，提升训练效率。该接口使能后，代码内部自动识别是否满足模型结构替换的要求，满足的情况对应模型结构会被替换为融合算子形式。"
+msgstr "Configure the following parameter in the training script to enable NpuFusedRMSNorm, NpuFusedSwiGlu, NpuFusedRoPE, and NpuFusedMoE fused operators, replacing the corresponding model structures after loading to improve training efficiency. After enabling this interface, the code automatically determines whether the model structure meets the replacement requirements. If satisfied, the corresponding model structure will be replaced with the fused operator form."
 
-#: ../../source/multibackend/npu/npu_training.rst:282 c3249224612145cb84b92d9369502dfe
-msgid ""
-"同时LLaMA-Factory 支持昇腾 NPU 的 FA "
-"融合算子，代码内部自动识别是否满足模型结构替换的要求，满足的情况对应模型结构会被替换为融合算子形式。在训练配置文件中设置如下参数即可使能："
-msgstr ""
-"LLaMA-Factory also supports FA fused operators on Ascend NPU. The code automatically determines "
-"whether the model structure meets the replacement requirements, and will replace the structure "
-"with the fused operator form if satisfied. Enable it by setting the following parameter in the "
-"training configuration file:"
+#: ../../source/multibackend/npu/npu_training.rst:302
+#: db27013170514e83bc1928af9d71f59a
+msgid "同时 LlamaFactory 支持昇腾 NPU 的 FA 融合算子。启用后，Transformers 会为支持的模型选择 FA Attention 后端；对于混合注意力架构，FA 仅作用于其中的 Full Attention 层。在训练配置文件中设置如下参数即可使能："
+msgstr "LlamaFactory also supports the FA fused operator on Ascend NPUs. Once enabled, Transformers selects the FA attention backend for supported models. For hybrid attention architectures, FA applies only to their Full Attention layers. Enable it by setting the following parameter in the training configuration file:"
 
-#: ../../source/multibackend/npu/npu_training.rst:288 0ec582e9450742559c822c8601c4bfea
-msgid "当前融合算子对模型的支持程度受限，该功能正在持续迭代开发中，以提升泛化性和适用性。"
-msgstr ""
-"Currently, the range of model support for fused operators is limited. This feature is under "
-"continuous development to improve generality and applicability."
+#: ../../source/multibackend/npu/npu_training.rst:308
+#: cc6c9c1026ed4fe7a8c0d02c75a80c51
+msgid "当前融合算子对模型的支持程度受限，该功能正在持续迭代开发中，以提升泛化性和适用性。当前各融合算子支持的模型系列如下："
+msgstr "Fused operator support is currently limited to certain models. This feature is under continuous development to improve generality and applicability. The model families supported by each fused operator are listed below:"
 
-#: ../../source/multibackend/npu/npu_training.rst:296 2068234000a8427da723166107bffb08
+#: ../../source/multibackend/npu/npu_training.rst:316
+#: 5eb9ce5eff1e40ee8d4ea37fbc0128a2
 msgid "支持模型系列"
 msgstr "Supported Model Series"
 
-#: ../../source/multibackend/npu/npu_training.rst:297 a4470f4f88f246aaaaa6f19e4913da25
+#: ../../source/multibackend/npu/npu_training.rst:317
+#: 7624f771fb024fac86873a94906e0a48
 msgid "FA"
 msgstr "FA"
 
-#: ../../source/multibackend/npu/npu_training.rst:298
-#: ../../source/multibackend/npu/npu_training.rst:300
-#: ../../source/multibackend/npu/npu_training.rst:302
-#: ../../source/multibackend/npu/npu_training.rst:304 821f7c4ce5da4f44ae0a09f0e7f9b7d0
-msgid "Qwen3, Qwen3-MOE, Qwen3-VL, Qwen3-VL-MOE"
-msgstr "Qwen3, Qwen3-MOE, Qwen3-VL, Qwen3-VL-MOE"
+#: ../../source/multibackend/npu/npu_training.rst:318
+#: ../../source/multibackend/npu/npu_training.rst:320
+#: ../../source/multibackend/npu/npu_training.rst:322
+#: ../../source/multibackend/npu/npu_training.rst:324
+#: 12a514455f9e4a06ad226152ece6767b 276d7dac4d794fd8bab0f11b55d6b5a9
+#: c12770bbae8c4f6c909c214ae6918930 a41b652239d2445c83e79106b5166034
+msgid "Qwen3, Qwen3-MoE, Qwen3-Next, Qwen3-Omni-MoE, Qwen3-Omni-MoE-Thinker, Qwen3-VL, Qwen3-VL-MoE, Qwen3.5, Qwen3.5-MoE"
+msgstr "Qwen3, Qwen3-MoE, Qwen3-Next, Qwen3-Omni-MoE, Qwen3-Omni-MoE-Thinker, Qwen3-VL, Qwen3-VL-MoE, Qwen3.5, Qwen3.5-MoE"
 
-#: ../../source/multibackend/npu/npu_training.rst:299 d09af4843ac44bb8b61c5494adf9e8aa
+#: ../../source/multibackend/npu/npu_training.rst:319
+#: b5d5b12e6933444895bfc33294e8ae69
 msgid "NpuFusedRMSNorm"
 msgstr "NpuFusedRMSNorm"
 
-#: ../../source/multibackend/npu/npu_training.rst:301 93a830e73c1c447e8cdd49c71c8e7fa7
+#: ../../source/multibackend/npu/npu_training.rst:321
+#: 9306fb66b5c84cd58522d9fd11d7acc4
 msgid "NpuFusedSwiGlu"
 msgstr "NpuFusedSwiGlu"
 
-#: ../../source/multibackend/npu/npu_training.rst:303 4a223b34c64d446390b4f101c63eb55d
+#: ../../source/multibackend/npu/npu_training.rst:323
+#: 52a9230a845742baaef735bb102b8879
 msgid "NpuFusedRoPE"
 msgstr "NpuFusedRoPE"
 
-#: ../../source/multibackend/npu/npu_training.rst:305 88edee9c1d0649b395600bce3ce12d5f
+#: ../../source/multibackend/npu/npu_training.rst:325
+#: 4ca5ba9fe096400a9d55432a8183629a
 msgid "NpuFusedMoE"
 msgstr "NpuFusedMoE"
 
-#: ../../source/multibackend/npu/npu_training.rst:306 54a2e405dc0647fdb7e81f9df63d2d15
-msgid "Qwen3-MOE，Qwen3-VL-MOE"
-msgstr "Qwen3-MOE, Qwen3-VL-MOE"
+#: ../../source/multibackend/npu/npu_training.rst:326
+#: 5901bdf0cb994fcbb1c0871c88a5c4cc
+msgid "Qwen3-MoE, Qwen3-Next, Qwen3-Omni-MoE, Qwen3-Omni-MoE-Thinker, Qwen3-VL-MoE, Qwen3.5-MoE"
+msgstr "Qwen3-MoE, Qwen3-Next, Qwen3-Omni-MoE, Qwen3-Omni-MoE-Thinker, Qwen3-VL-MoE, Qwen3.5-MoE"
 
-#: ../../source/multibackend/npu/npu_training.rst:310 aad62122be4a4096a31c629aebfa2851
+#: ../../source/multibackend/npu/npu_training.rst:330
+#: cfd2f1271e0641be9bfbaff70de182c6
 msgid "算子下发优化"
 msgstr "Operator Dispatch Optimization"
 
-#: ../../source/multibackend/npu/npu_training.rst:312 68e137ec3ef548129f44e1b75380602c
+#: ../../source/multibackend/npu/npu_training.rst:332
+#: 4b1b23021b9f4451ae7b3edd3a045740
 msgid "通过设置 ``TASK_QUEUE_ENABLE`` 环境变量优化算子下发性能（推荐 Level 2）："
-msgstr ""
-"Optimize operator dispatch performance by setting the ``TASK_QUEUE_ENABLE`` environment variable "
-"(Level 2 recommended):"
+msgstr "Optimize operator dispatch performance by setting the ``TASK_QUEUE_ENABLE`` environment variable (Level 2 recommended):"
 
-#: ../../source/multibackend/npu/npu_training.rst:319 636a4d6a2a3d4e86bdbcdb57ef5869a5
+#: ../../source/multibackend/npu/npu_training.rst:339
+#: c9950f169fa646febef41057f889056d
 msgid "模型保存、断点续训以及 LoRA 适配器后续合并导出，请参考 :doc:`模型保存、LoRA 合并与量化 <../../getting_started/merge_lora>`。"
-msgstr ""
-"For model saving, checkpoint resumption, and subsequent merging and export of LoRA adapters, "
-"refer to :doc:`Model Saving, LoRA Merging, and Quantization <../../getting_started/merge_lora>`."
+msgstr "For model saving, checkpoint resumption, and subsequent merging and export of LoRA adapters, refer to :doc:`Model Saving, LoRA Merging, and Quantization <../../getting_started/merge_lora>`."

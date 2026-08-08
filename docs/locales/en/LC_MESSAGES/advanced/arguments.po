@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, LlamaFactory team.
-# This file is distributed under the same license as the LLaMA Factory
+# This file is distributed under the same license as the LlamaFactory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
@@ -1418,9 +1418,9 @@ msgstr "dataset_dir"
 
 #: ../../source/advanced/arguments.rst:406 231f08bfaf0a4e138f72cc949f1b1a8a
 msgid ""
-"存储数据集的文件夹路径，可以是字符串或字典。当为字符串时，表示数据集目录的路径，例如 `data <https://github.com/hiyouga/LLaMA-Factory/tree/main/data>`_ ；当为字典时，将覆盖默认从本地 `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_ 加载的行为。"
+"存储数据集的文件夹路径，可以是字符串或字典。当为字符串时，表示数据集目录的路径，例如 `data <https://github.com/hiyouga/LlamaFactory/tree/main/data>`_ ；当为字典时，将覆盖默认从本地 `dataset_info.json <https://github.com/hiyouga/LlamaFactory/blob/main/data/dataset_info.json>`_ 加载的行为。"
 msgstr ""
-"The path to the folder storing the dataset, which can be a string or a dictionary. If a string, it represents the dataset directory path, for example `data <https://github.com/hiyouga/LLaMA-Factory/tree/main/data>`_ ; if a dictionary, it overrides the default behavior of loading from the local `dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json>`_."
+"The path to the folder storing the dataset, which can be a string or a dictionary. If a string, it represents the dataset directory path, for example `data <https://github.com/hiyouga/LlamaFactory/tree/main/data>`_ ; if a dictionary, it overrides the default behavior of loading from the local `dataset_info.json <https://github.com/hiyouga/LlamaFactory/blob/main/data/dataset_info.json>`_."
 
 #: ../../source/advanced/arguments.rst:410 2acd56ebb48b4d9ebf4e23c5ee547c8a
 msgid "media_dir"
@@ -2638,8 +2638,8 @@ msgstr "Forces checking of optional imports"
 msgid "允许在命令行中传递额外参数"
 msgstr "Allows passing extra arguments in the command line"
 
-msgid "设置 LLaMA-Factory 的日志级别(\"DEBUG\",\"INFO\",\"WARN\")"
-msgstr "Sets the log level of LLaMA-Factory (\"DEBUG\", \"INFO\", \"WARN\")"
+msgid "设置 LlamaFactory 的日志级别(\"DEBUG\",\"INFO\",\"WARN\")"
+msgstr "Sets the log level of LlamaFactory (\"DEBUG\", \"INFO\", \"WARN\")"
 
 msgid "优先使用 ModelScope 下载模型/数据集或使用缓存路径中的模型/数据集"
 msgstr "Prioritizes using ModelScope to download models/datasets or uses them from the cache path"

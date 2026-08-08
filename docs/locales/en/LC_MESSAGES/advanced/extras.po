@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, LlamaFactory team.
-# This file is distributed under the same license as the LLaMA Factory
+# This file is distributed under the same license as the LlamaFactory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
@@ -20,7 +20,7 @@ msgstr ""
 
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory \n"
+"Project-Id-Version: LlamaFactory \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-05 01:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -44,11 +44,11 @@ msgstr "LLaMA Pro"
 #: ../../source/advanced/extras.rst:8 a1b665e091ba4f0ea6477621b560e2a4
 msgid ""
 "为了解决大语言模型的遗忘问题， LLaMA Pro 通过在原有模型上增加新模块以适应新的任务，使其在多个新任务上的表现均优于原始模型。 "
-"LLaMA-Factory 支持 LLaMA Pro 的使用。 您可以使用运行 ``expand.sh`` 将 ``Meta-Llama-3"
+"LlamaFactory 支持 LLaMA Pro 的使用。 您可以使用运行 ``expand.sh`` 将 ``Meta-Llama-3"
 "-8B-Instruct`` 扩展为 ``llama3-8b-instruct-pro``。"
 msgstr ""
 "To address the forgetting problem in large language models, LLaMA Pro adds new modules to the original model to adapt to new tasks, enabling it to perform better than the original model on multiple new tasks. "
-"LLaMA-Factory supports the use of LLaMA Pro. You can run ``expand.sh`` to expand ``Meta-Llama-3"
+"LlamaFactory supports the use of LLaMA Pro. You can run ``expand.sh`` to expand ``Meta-Llama-3"
 "-8B-Instruct`` to ``llama3-8b-instruct-pro``."
 
 #: ../../source/advanced/extras.rst:12 116528b1860a4e75af83bf813af8f34b

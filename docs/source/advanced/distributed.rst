@@ -3,7 +3,7 @@
 分布训练
 ==================
 
-LLaMA-Factory 支持单机多卡和多机多卡分布式训练。同时也支持 :ref:`DDP <NativeDDP>`、:ref:`DeepSpeed <deepspeed_ref>` 和 :ref:`FSDP <fsdp_ref>` 三种分布式引擎。
+LlamaFactory 支持单机多卡和多机多卡分布式训练。同时也支持 :ref:`DDP <NativeDDP>`、:ref:`DeepSpeed <deepspeed_ref>` 和 :ref:`FSDP <fsdp_ref>` 三种分布式引擎。
 
 
 `DDP <https://pytorch.org/docs/stable/notes/ddp.html>`__ (DistributedDataParallel) 通过实现模型并行和数据并行实现训练加速。
@@ -282,7 +282,7 @@ DeepSpeed 是由微软开发的一个开源深度学习优化库，旨在提高�
 简单来说：从 ZeRO-1 到 ZeRO-3，阶段数越高，显存需求越小，但是训练速度也依次变慢。此外，设置 ``offload_param=cpu`` 参数会大幅减小显存需求，但会极大地使训练速度减慢。因此，如果您有足够的显存，
 应当使用 ZeRO-1，并且确保 ``offload_param=none``。
 
-LLaMA-Factory提供了使用不同阶段的 DeepSpeed 配置文件的示例。包括：
+LlamaFactory提供了使用不同阶段的 DeepSpeed 配置文件的示例。包括：
 
 * :ref:`ZeRO-0` (不开启)
 * :ref:`ZeRO-2`
@@ -369,7 +369,7 @@ deepspeed
 +++++++++++++++++++++
 
 
-LLaMA-Factory 支持使用 DeepSpeed 的多机多卡训练，您可以通过以下命令启动：
+LlamaFactory 支持使用 DeepSpeed 的多机多卡训练，您可以通过以下命令启动：
 
 .. code-block:: bash
 
@@ -646,7 +646,7 @@ TP是一种重要的大模型训练内存优化技术。以往在 Hugging Face T
 FSDP
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-PyTorch 的全切片数据并行技术 `FSDP <https://pytorch.org/docs/stable/fsdp.html>`_ （Fully Sharded Data Parallel）能让我们处理更多更大的模型。LLaMA-Factory支持使用 FSDP 引擎进行分布式训练。
+PyTorch 的全切片数据并行技术 `FSDP <https://pytorch.org/docs/stable/fsdp.html>`_ （Fully Sharded Data Parallel）能让我们处理更多更大的模型。LlamaFactory支持使用 FSDP 引擎进行分布式训练。
 
 FSDP 的参数 ``ShardingStrategy`` 的不同取值决定了模型的划分方式：
 

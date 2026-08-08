@@ -3,7 +3,7 @@
 数据处理
 ============================
 
-`dataset_info.json <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dataset_info.json/>`_ 包含了所有经过预处理的 **本地数据集** 以及 **在线数据集**。如果您希望使用自定义数据集，请 **务必** 在 ``dataset_info.json`` 文件中添加对数据集及其内容的定义。
+`dataset_info.json <https://github.com/hiyouga/LlamaFactory/blob/main/data/dataset_info.json/>`_ 包含了所有经过预处理的 **本地数据集** 以及 **在线数据集**。如果您希望使用自定义数据集，请 **务必** 在 ``dataset_info.json`` 文件中添加对数据集及其内容的定义。
 
 目前我们支持 :ref:`Alpaca<alpaca>` 格式和  :ref:`ShareGPT<Sharegpt>` 格式的数据集。
 
@@ -27,7 +27,7 @@ Alpaca
 指令监督微调数据集
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**样例数据集**： `指令监督微调样例数据集 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/alpaca_zh_demo.json/>`__
+**样例数据集**： `指令监督微调样例数据集 <https://github.com/hiyouga/LlamaFactory/blob/main/data/alpaca_zh_demo.json/>`__
 
 指令监督微调(Instruct Tuning)通过让模型学习详细的指令以及对应的回答来优化模型在特定指令下的表现。
 
@@ -123,7 +123,7 @@ Alpaca
 预训练数据集
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**样例数据集**： `预训练样例数据集 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/c4_demo.json/>`_
+**样例数据集**： `预训练样例数据集 <https://github.com/hiyouga/LlamaFactory/blob/main/data/c4_demo.json/>`_
 
 大语言模型通过学习未被标记的文本进行预训练，从而学习语言的表征。通常，预训练数据集从互联网上获得，因为互联网上提供了大量的不同领域的文本信息，有助于提升模型的泛化能力。
 
@@ -351,7 +351,7 @@ ShareGPT
 
 .. note::
 
-  * ShareGPT 格式中的 KTO 数据集（`样例 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/kto_en_demo.json/>`__）和多模态数据集（`样例 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/mllm_demo.json/>`__）与 Alpaca 格式的类似。
+  * ShareGPT 格式中的 KTO 数据集（`样例 <https://github.com/hiyouga/LlamaFactory/blob/main/data/kto_en_demo.json/>`__）和多模态数据集（`样例 <https://github.com/hiyouga/LlamaFactory/blob/main/data/mllm_demo.json/>`__）与 Alpaca 格式的类似。
   * 预训练数据集不支持 ShareGPT 格式。
 
 .. _指令监督微调数据集-2:
@@ -360,7 +360,7 @@ ShareGPT
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-**样例数据集**： `指令监督微调样例数据集 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/glaive_toolcall_zh_demo.json/>`__
+**样例数据集**： `指令监督微调样例数据集 <https://github.com/hiyouga/LlamaFactory/blob/main/data/glaive_toolcall_zh_demo.json/>`__
 
 相比 ``alpaca`` 格式的数据集， ``sharegpt`` 格式支持 **更多** 的角色种类，例如 human、gpt、observation、function 等等。它们构成一个对象列表呈现在 ``conversations`` 列中。下面是 ``sharegpt`` 格式的一个例子：
 
@@ -437,7 +437,7 @@ ShareGPT
 偏好数据集
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**样例数据集**： `偏好数据样例数据集 <https://github.com/hiyouga/LLaMA-Factory/blob/main/data/dpo_zh_demo.json/>`_
+**样例数据集**： `偏好数据样例数据集 <https://github.com/hiyouga/LlamaFactory/blob/main/data/dpo_zh_demo.json/>`_
 
 Sharegpt 格式的偏好数据集同样需要在 ``chosen`` 列中提供更优的消息，并在 ``rejected`` 列中提供更差的消息。下面是一个例子：
 

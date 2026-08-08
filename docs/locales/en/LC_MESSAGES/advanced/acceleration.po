@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, LlamaFactory team.
-# This file is distributed under the same license as the LLaMA Factory
+# This file is distributed under the same license as the LlamaFactory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
@@ -24,10 +24,10 @@ msgstr "Acceleration"
 
 #: ../../source/advanced/acceleration.rst:4 86f71382feb54ad3a56260b1c208cf58
 msgid ""
-"LLaMA-Factory 支持多种加速技术，包括：:ref:`FlashAttention <flashattn>` 、 "
+"LlamaFactory 支持多种加速技术，包括：:ref:`FlashAttention <flashattn>` 、 "
 ":ref:`Unsloth <sloth>` 、 :ref:`Liger Kernel <ligerkernel>`  。"
 msgstr ""
-"LLaMA-Factory supports multiple acceleration techniques, including: :ref:`FlashAttention <flashattn>`, "
+"LlamaFactory supports multiple acceleration techniques, including: :ref:`FlashAttention <flashattn>`, "
 ":ref:`Unsloth <sloth>`, :ref:`Liger Kernel <ligerkernel>`."
 
 #: ../../source/advanced/acceleration.rst:13 df4db3178001448291a4ae64f3d93d5f

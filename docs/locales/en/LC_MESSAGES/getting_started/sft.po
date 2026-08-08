@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, LlamaFactory team.
-# This file is distributed under the same license as the LLaMA Factory
+# This file is distributed under the same license as the LlamaFactory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
@@ -35,8 +35,8 @@ msgid "也可以通过追加参数更新 yaml 文件中的参数:"
 msgstr "You can also update the YAML parameters by appending them:"
 
 #: ../../source/getting_started/train.rst:18
-msgid "LLaMA-Factory 默认使用所有可见的计算设备。根据需求可通过 ``CUDA_VISIBLE_DEVICES`` 或 ``ASCEND_RT_VISIBLE_DEVICES`` 指定计算设备。"
-msgstr "By default, LLaMA-Factory uses all visible computing devices. You can specify which devices to use via ``CUDA_VISIBLE_DEVICES`` or ``ASCEND_RT_VISIBLE_DEVICES`` if needed."
+msgid "LlamaFactory 默认使用所有可见的计算设备。根据需求可通过 ``CUDA_VISIBLE_DEVICES`` 或 ``ASCEND_RT_VISIBLE_DEVICES`` 指定计算设备。"
+msgstr "By default, LlamaFactory uses all visible computing devices. You can specify which devices to use via ``CUDA_VISIBLE_DEVICES`` or ``ASCEND_RT_VISIBLE_DEVICES`` if needed."
 
 #: ../../source/getting_started/sft.rst:19 9bb225e0f4024c1d836eadba17cfa492
 msgid ""

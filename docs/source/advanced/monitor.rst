@@ -1,7 +1,7 @@
 实验监控
 ================
 
-LLaMA-Factory 支持多种训练可视化工具，包括：:ref:`LlamaBoard <LlamaBoard>` 、 :ref:`SwanLab <SwanLab>`、:ref:`TensorBoard <TensorBoard>` 、 :ref:`Wandb <Wandb>` 、 :ref:`MLflow <MLflow>` 。
+LlamaFactory 支持多种训练可视化工具，包括：:ref:`LlamaBoard <LlamaBoard>` 、 :ref:`SwanLab <SwanLab>`、:ref:`TensorBoard <TensorBoard>` 、 :ref:`Wandb <Wandb>` 、 :ref:`MLflow <MLflow>` 。
 
 LlamaBoard
 --------------------------

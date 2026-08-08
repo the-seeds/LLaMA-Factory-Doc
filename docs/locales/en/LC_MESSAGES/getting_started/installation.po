@@ -1,18 +1,19 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, LlamaFactory team.
-# This file is distributed under the same license as the LLaMA Factory
+# This file is distributed under the same license as the LlamaFactory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-05 01:10+0800\n"
+"Project-Id-Version: LlamaFactory\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-07 17:28+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -152,18 +153,18 @@ msgstr "Otherwise, check the system environment variables to ensure CUDA is corr
 
 #: ../../source/getting_started/installation.rst:95
 #: a1bb186efe7e4b1eb80d1f9c14c19266
-msgid "LLaMA-Factory 安装"
-msgstr "LLaMA-Factory Installation"
+msgid "LlamaFactory 安装"
+msgstr "LlamaFactory Installation"
 
 #: ../../source/getting_started/installation.rst:97
 #: 29ca2cbd15524915947729355e5cd09b
-msgid "在安装 LLaMA-Factory 之前，请确保您安装了下列依赖:"
-msgstr "Before installing LLaMA-Factory, please make sure you have installed the following dependencies:"
+msgid "在安装 LlamaFactory 之前，请确保您安装了下列依赖:"
+msgstr "Before installing LlamaFactory, please make sure you have installed the following dependencies:"
 
 #: ../../source/getting_started/installation.rst:99
 #: 019b4f629f0a42f684b10aea2112f263
-msgid "运行以下指令以安装 LLaMA-Factory 及其依赖:"
-msgstr "Run the following commands to install LLaMA-Factory and its dependencies:"
+msgid "运行以下指令以安装 LlamaFactory 及其依赖:"
+msgstr "Run the following commands to install LlamaFactory and its dependencies:"
 
 #: ../../source/getting_started/installation.rst:107
 #: 57f730650c70479badf55b3961a4dbd7
@@ -172,8 +173,8 @@ msgstr "If there are environment conflicts, try to resolve them using ``pip inst
 
 #: ../../source/getting_started/installation.rst:110
 #: 0bfc3771dce04b9eb53c73ceb8029930
-msgid "LLaMA-Factory 校验"
-msgstr "LLaMA-Factory Verification"
+msgid "LlamaFactory 校验"
+msgstr "LlamaFactory Verification"
 
 #: ../../source/getting_started/installation.rst:112
 #: ad775080fd04493cbfcf7092facef952
@@ -187,8 +188,8 @@ msgstr "If you can successfully see an interface similar to the one below, it me
 
 #: ../../source/getting_started/installation.rst:119
 #: 3a4c2c7fbcc6408c917a9064c4e16004
-msgid "LLaMA-Factory 高级选项"
-msgstr "LLaMA-Factory Advanced Options"
+msgid "LlamaFactory 高级选项"
+msgstr "LlamaFactory Advanced Options"
 
 #: ../../source/getting_started/installation.rst:126
 #: 9bf2ddb733b1437196d45a3aef5879ce
@@ -252,8 +253,8 @@ msgstr "Open-source deep learning framework PyTorch, widely used in machine lear
 
 #: ../../source/getting_started/installation.rst:153
 #: 638b480dba4a45b4803017fbf8b77750
-msgid "torch-npu"
-msgstr "torch-npu"
+msgid "TorchNPU"
+msgstr "TorchNPU"
 
 #: ../../source/getting_started/installation.rst:154
 #: ea6a951141c44881b735b8185d7e87f2
@@ -396,6 +397,5 @@ msgstr "dev"
 
 #: ../../source/getting_started/installation.rst:184
 #: 820c7cccfc5e4f08b1ff2e844b205d26
-msgid "用于 LLaMA Factory 开发维护。"
-msgstr "For LLaMA Factory development and maintenance."
-
+msgid "用于 LlamaFactory 开发维护。"
+msgstr "For LlamaFactory development and maintenance."

@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, LlamaFactory team.
-# This file is distributed under the same license as the LLaMA Factory
+# This file is distributed under the same license as the LlamaFactory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
@@ -22,8 +22,8 @@ msgid "开始使用"
 msgstr "Getting Started"
 
 #: ../../source/index.rst:34
-msgid "常见问题 <https://github.com/hiyouga/LLaMA-Factory/issues/4614>"
-msgstr "FAQ <https://github.com/hiyouga/LLaMA-Factory/issues/4614>"
+msgid "常见问题 <https://github.com/hiyouga/LlamaFactory/issues/4614>"
+msgstr "FAQ <https://github.com/hiyouga/LlamaFactory/issues/4614>"
 
 #: ../../source/index.rst:34
 msgid "常见问题"
@@ -38,8 +38,8 @@ msgid "多设备后端"
 msgstr "Multi-device Backends"
 
 #: ../../source/index.rst:2 fd8ae0c59b1749b7a93b79608f4c5bd5
-msgid "Welcome to LLaMA Factory!"
-msgstr "Welcome to LLaMA Factory!"
+msgid "Welcome to LlamaFactory!"
+msgstr "Welcome to LlamaFactory!"
 
 #: ../../source/index.rst:4 7e0af92b0ba8464d8c04e1509b274c52
 msgid "logo"
@@ -47,11 +47,11 @@ msgstr "logo"
 
 #: ../../source/index.rst:10 b6505192106e439997a67939acf9e331
 msgid ""
-"LLaMA Factory 是一个简单易用且高效的大型语言模型（Large Language Model）训练与微调平台。通过 LLaMA "
-"Factory，可以在无需编写任何代码的前提下，在本地完成上百种预训练模型的微调，框架特性包括："
+"LlamaFactory 是一个简单易用且高效的大型语言模型（Large Language Model）训练与微调平台。通过 "
+"LlamaFactory，可以在无需编写任何代码的前提下，在本地完成上百种预训练模型的微调，框架特性包括："
 msgstr ""
-"LLaMA Factory is an easy-to-use and efficient platform for training and fine-tuning large language models. "
-"With LLaMA Factory, you can fine-tune hundreds of pre-trained models locally without writing any code. "
+"LlamaFactory is an easy-to-use and efficient platform for training and fine-tuning large language models. "
+"With LlamaFactory, you can fine-tune hundreds of pre-trained models locally without writing any code. "
 "Framework features include:"
 #: ../../source/index.rst:12 9f1d904997c747e29bfba74eaef2ac41
 msgid ""
@@ -98,4 +98,3 @@ msgstr "Experiment Monitors: LlamaBoard, TensorBoard, Wandb, MLflow, SwanLab etc
 #: ../../source/index.rst:21 a08a94d2a0dc451184589260713483a3
 msgid "Documentation"
 msgstr "Documentation"
-

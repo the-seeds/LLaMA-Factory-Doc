@@ -1,12 +1,12 @@
 NPU训练
 ================
 
-本文档介绍如何在华为昇腾 NPU 上进行 LLaMA-Factory 模型训练。
+本文档介绍如何在华为昇腾 NPU 上进行 LlamaFactory 模型训练。
 
 支持设备
 --------
 
-LLaMA-Factory 当前已适配以下昇腾 NPU 设备：
+LlamaFactory 当前已适配以下昇腾 NPU 设备：
 
 - **Atlas A2 训练系列**
 - **Atlas A3 训练系列**
@@ -60,7 +60,7 @@ LLaMA-Factory 当前已适配以下昇腾 NPU 设备：
      - 已支持
    * - **加速**
      - 融合算子
-     - 当前已支持NpuFusedRMSNorm，NpuFusedSwiGlu，NpuFusedRoPE，NpuFusedMoE
+     - 当前已支持 FA、NpuFusedRMSNorm、NpuFusedSwiGlu、NpuFusedRoPE、NpuFusedMoE
 
 .. note::
    NPU 的大部分使用方式与 GPU 保持一致。关于通用的安装步骤，请参考 :doc:`NPU 安装及配置 <npu_installation>`；关于通用的分布式训练（如 FSDP、FSDP2，DeepSpeed）配置，请参考 :doc:`分布式训练 <../../advanced/distributed>`。
@@ -68,7 +68,7 @@ LLaMA-Factory 当前已适配以下昇腾 NPU 设备：
 快速开始
 --------
 
-为了快速上手，建议直接使用 LLaMA-Factory 提供的 Docker 镜像。
+为了快速上手，建议直接使用 LlamaFactory 提供的 Docker 镜像。以下示例使用 A2 Ubuntu 镜像 ``latest-910b-ubuntu``；其他硬件和容器操作系统组合请参考 :doc:`NPU 安装及配置 <npu_installation>`。
 
 1. **启动容器** (请根据实际情况修改 ``device`` 映射)：
 
@@ -82,12 +82,20 @@ LLaMA-Factory 当前已适配以下昇腾 NPU 设备：
          --device=/dev/devmm_svm \
          --device=/dev/hisi_hdc \
          --shm-size=1200g \
+         -v /usr/local/bin/npu-smi:/usr/local/bin/npu-smi \
+         -v /usr/local/dcmi:/usr/local/dcmi \
+         -v /etc/ascend_install.info:/etc/ascend_install.info \
          -v /usr/local/Ascend/driver:/usr/local/Ascend/driver \
-         --name llama_factory_npu \
-         hiyouga/llamafactory:latest-npu-a2 \
+         -v /data:/data \
+         --name llamafactory-npu \
+         hiyouga/llamafactory:latest-910b-ubuntu \
          /bin/bash
 
-2. **配置环境变量**：
+2. **进入容器并配置环境变量**：
+
+   .. code-block:: bash
+
+      docker exec -it llamafactory-npu /bin/bash
 
    进入容器后，**务必** 先加载 Ascend 环境配置，否则无法识别 NPU 设备：
 
@@ -282,22 +290,22 @@ DPO 训练
 融合算子
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-LLaMA-Factory 支持FA，NpuFusedRMSNorm，NpuFusedSwiGlu，NpuFusedRoPE和NpuFusedMoE融合算子。
+LlamaFactory 支持 FA、NpuFusedRMSNorm、NpuFusedSwiGlu、NpuFusedRoPE 和 NpuFusedMoE 融合算子。
 
-可在训练脚本中配置如下参数，模型加载后替换对应模型结构，使能NpuFusedRMSNorm，NpuFusedSwiGlu，NpuFusedRoPE和NpuFusedMoE融合算子，提升训练效率。该接口使能后，代码内部自动识别是否满足模型结构替换的要求，满足的情况对应模型结构会被替换为融合算子形式。
+可在训练脚本中配置如下参数，模型加载后替换对应模型结构，使能NpuFusedRMSNorm、NpuFusedSwiGlu、NpuFusedRoPE和NpuFusedMoE融合算子，提升训练效率。该接口使能后，代码内部自动识别是否满足模型结构替换的要求，满足的情况对应模型结构会被替换为融合算子形式。
 
 .. code-block:: yaml
 
    use_v1_kernels: true
 
 
-同时LLaMA-Factory 支持昇腾 NPU 的 FA 融合算子，代码内部自动识别是否满足模型结构替换的要求，满足的情况对应模型结构会被替换为融合算子形式。在训练配置文件中设置如下参数即可使能：
+同时 LlamaFactory 支持昇腾 NPU 的 FA 融合算子。启用后，Transformers 会为支持的模型选择 FA Attention 后端；对于混合注意力架构，FA 仅作用于其中的 Full Attention 层。在训练配置文件中设置如下参数即可使能：
 
 .. code-block:: yaml
 
    flash_attn: fa2
 
-当前融合算子对模型的支持程度受限，该功能正在持续迭代开发中，以提升泛化性和适用性。
+当前融合算子对模型的支持程度受限，该功能正在持续迭代开发中，以提升泛化性和适用性。当前各融合算子支持的模型系列如下：
 
 .. list-table::
    :align: left
@@ -307,15 +315,15 @@ LLaMA-Factory 支持FA，NpuFusedRMSNorm，NpuFusedSwiGlu，NpuFusedRoPE和NpuFu
    * - 融合算子
      - 支持模型系列
    * - FA
-     - Qwen3, Qwen3-MOE, Qwen3-VL, Qwen3-VL-MOE
+     - Qwen3, Qwen3-MoE, Qwen3-Next, Qwen3-Omni-MoE, Qwen3-Omni-MoE-Thinker, Qwen3-VL, Qwen3-VL-MoE, Qwen3.5, Qwen3.5-MoE
    * - NpuFusedRMSNorm
-     - Qwen3, Qwen3-MOE, Qwen3-VL, Qwen3-VL-MOE
+     - Qwen3, Qwen3-MoE, Qwen3-Next, Qwen3-Omni-MoE, Qwen3-Omni-MoE-Thinker, Qwen3-VL, Qwen3-VL-MoE, Qwen3.5, Qwen3.5-MoE
    * - NpuFusedSwiGlu
-     - Qwen3, Qwen3-MOE, Qwen3-VL, Qwen3-VL-MOE
+     - Qwen3, Qwen3-MoE, Qwen3-Next, Qwen3-Omni-MoE, Qwen3-Omni-MoE-Thinker, Qwen3-VL, Qwen3-VL-MoE, Qwen3.5, Qwen3.5-MoE
    * - NpuFusedRoPE
-     - Qwen3, Qwen3-MOE, Qwen3-VL, Qwen3-VL-MOE
+     - Qwen3, Qwen3-MoE, Qwen3-Next, Qwen3-Omni-MoE, Qwen3-Omni-MoE-Thinker, Qwen3-VL, Qwen3-VL-MoE, Qwen3.5, Qwen3.5-MoE
    * - NpuFusedMoE
-     - Qwen3-MOE，Qwen3-VL-MOE
+     - Qwen3-MoE, Qwen3-Next, Qwen3-Omni-MoE, Qwen3-Omni-MoE-Thinker, Qwen3-VL-MoE, Qwen3.5-MoE
 
 
 算子下发优化

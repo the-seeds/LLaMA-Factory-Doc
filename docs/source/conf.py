@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "LLaMA Factory"
+project = "LlamaFactory"
 copyright = "2024, LlamaFactory team."
 author = "Ziyang Miao, Yaowei Zheng"
 
@@ -26,7 +26,7 @@ gettext_compact = False
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_title = "LLaMA Factory"
+html_title = "LlamaFactory"
 html_theme = "furo"
 html_static_path = ["_static"]
 html_css_files = [

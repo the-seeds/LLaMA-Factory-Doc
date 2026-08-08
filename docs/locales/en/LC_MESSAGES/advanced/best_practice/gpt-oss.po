@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, LlamaFactory team.
-# This file is distributed under the same license as the LLaMA Factory
+# This file is distributed under the same license as the LlamaFactory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
@@ -23,8 +23,8 @@ msgid "3步实现 GPT-OSS 的 LoRA 微调"
 msgstr "3 Steps to LoRA Fine-tuning for GPT-OSS"
 
 #: ../../source/finetune_best_practices.rst:8
-msgid "1. 安装 LLaMA-Factory 和 transformers"
-msgstr "1. Install LLaMA-Factory and transformers"
+msgid "1. 安装 LlamaFactory 和 transformers"
+msgstr "1. Install LlamaFactory and transformers"
 
 #: ../../source/finetune_best_practices.rst:15
 msgid "2. 在单张 GPU 上训练 GPT-OSS（要求显存 > 44 GB, 支持多 GPU）"

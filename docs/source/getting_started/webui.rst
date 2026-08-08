@@ -1,7 +1,7 @@
 WebUI
 ========================
 
-LLaMA-Factory 支持通过 WebUI 零代码微调大语言模型。
+LlamaFactory 支持通过 WebUI 零代码微调大语言模型。
 在完成 :ref:`安装 <installation>` 后，您可以通过以下指令进入 WebUI:
 
 .. code-block:: bash

@@ -1,64 +1,74 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, LlamaFactory team.
-# This file is distributed under the same license as the LLaMA Factory
+# This file is distributed under the same license as the LlamaFactory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: LLaMA Factory \\n"
-"Report-Msgid-Bugs-To: \\n"
-"POT-Creation-Date: 2025-03-05 01:10+0800\\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n"
-"Language: en\\n"
-"Language-Team: en <LL@li.org>\\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\\n"
-"MIME-Version: 1.0\\n"
-"Content-Type: text/plain; charset=utf-8\\n"
-"Content-Transfer-Encoding: 8bit\\n"
-"Generated-By: Babel 2.16.0\\n"
+"Project-Id-Version: LlamaFactory \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-07 18:08+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.16.0\n"
 
-#: ../../source/multibackend/npu/npu_installation.rst:1
+#: ../../source/multibackend/npu/npu_installation.rst:2
+#: a48f9328258c44249859dbf701af7d11
 msgid "NPU安装及配置"
 msgstr "NPU Installation"
 
 #: ../../source/multibackend/npu/npu_installation.rst:4
-msgid "本文档介绍 LLaMA-Factory 在华为昇腾 NPU 上的环境准备方式。当前主要面向 Atlas A2/A3 训练系列设备；开始安装前，请先确认硬件型号和操作系统兼容性，再根据部署方式选择后续步骤。"
-msgstr "This document describes how to prepare the LLaMA-Factory environment on Huawei Ascend NPUs. It currently focuses on Atlas A2/A3 training series devices. Before installation, confirm the hardware model and operating system compatibility, and then choose the appropriate deployment method."
+#: 6fc4388f03c04fcc84703d33cda5067c
+msgid "本文档介绍 LlamaFactory 在华为昇腾 NPU 上的环境准备方式。当前主要面向 Atlas A2/A3 训练系列设备；开始安装前，请先确认硬件型号和操作系统兼容性，再根据部署方式选择后续步骤。"
+msgstr "This document describes how to prepare the LlamaFactory environment on Huawei Ascend NPUs. It currently focuses on Atlas A2/A3 training series devices. Before installation, confirm the hardware model and operating system compatibility, and then choose the appropriate deployment method."
 
 #: ../../source/multibackend/npu/npu_installation.rst:7
+#: 042c3917233f4544a8fcfebb941d0375
 msgid "硬件配套和支持的操作系统"
 msgstr "Hardware Compatibility and Supported Operating Systems"
 
 #: ../../source/multibackend/npu/npu_installation.rst:9
+#: 341b6b9095f74d4eb30e2d7b1695a3ee
 msgid "**表 1**  产品硬件支持列表"
 msgstr "**Table 1**  Hardware Support List"
 
 #: ../../source/multibackend/npu/npu_installation.rst:17
+#: c7e04a45fa2748f9b0921cbe50eb13ac
 msgid "产品"
 msgstr "Product"
 
 #: ../../source/multibackend/npu/npu_installation.rst:18
+#: 6c34553dd19f41168c3f039cf984e292
 msgid "是否支持"
 msgstr "Supported"
 
 #: ../../source/multibackend/npu/npu_installation.rst:19
+#: 3ae18d680f5949b68f51ab31ee9b09a8
 msgid "Ascend 950 系列产品"
 msgstr "Ascend 950 Series Products"
 
 #: ../../source/multibackend/npu/npu_installation.rst:20
 #: ../../source/multibackend/npu/npu_installation.rst:22
 #: ../../source/multibackend/npu/npu_installation.rst:26
+#: db58081649ed42a696a28349ab4dd9ff 92d38c8201d24657bd0bb495c281c44c
+#: 2d3b3a7101304dfaa91a031f1bfd19c4
 msgid "√"
 msgstr "√"
 
 #: ../../source/multibackend/npu/npu_installation.rst:21
+#: 65fa16b2552a4354bb6f38f1ed0623f8
 msgid "Atlas A3 训练系列产品"
 msgstr "Atlas A3 Training Series Products"
 
 #: ../../source/multibackend/npu/npu_installation.rst:23
+#: ab3c65bc396c4538a45712606f996583
 msgid "Atlas A3 推理系列产品"
 msgstr "Atlas A3 Inference Series Products"
 
@@ -67,393 +77,696 @@ msgstr "Atlas A3 Inference Series Products"
 #: ../../source/multibackend/npu/npu_installation.rst:30
 #: ../../source/multibackend/npu/npu_installation.rst:32
 #: ../../source/multibackend/npu/npu_installation.rst:34
+#: d699a7e0bbda46459302d8b7963f4af9 c594e7328d4c4d0590741bdd9afaf4d8
+#: 34781f0b64ce49938cbfbff0477a39dc 05fb830667cb4cbe97f5be848a202273
+#: eb0896e17b2d4c90941f6fcbc219eecb
 msgid "x"
 msgstr "x"
 
 #: ../../source/multibackend/npu/npu_installation.rst:25
+#: 034bae240b2b4b60826aa0ea69ddc0ae
 msgid "Atlas A2 训练系列产品"
 msgstr "Atlas A2 Training Series Products"
 
 #: ../../source/multibackend/npu/npu_installation.rst:27
+#: 9e0e80db57954a54bebc0442bc8ea4e6
 msgid "Atlas A2 推理系列产品"
 msgstr "Atlas A2 Inference Series Products"
 
 #: ../../source/multibackend/npu/npu_installation.rst:29
+#: 3da11b6252824714a6789ba695160c70
 msgid "Atlas 200I/500 A2 推理产品"
 msgstr "Atlas 200I/500 A2 Inference Products"
 
 #: ../../source/multibackend/npu/npu_installation.rst:31
+#: e767ae1bc929437ebcf5b003d5733265
 msgid "Atlas 推理系列产品"
 msgstr "Atlas Inference Series Products"
 
 #: ../../source/multibackend/npu/npu_installation.rst:33
+#: ced7d6ac2bd14787b142e49625537389
 msgid "Atlas 训练系列产品"
 msgstr "Atlas Training Series Products"
 
-#: ../../source/multibackend/npu/npu_installation.rst:36
+#: ../../source/multibackend/npu/npu_installation.rst:38
+#: 7fb21386a1664d118ba2d2caed049bb1
 msgid "本节表格中“√”代表支持，“x”代表不支持。"
 msgstr "In this table, “√” indicates supported and “x” indicates not supported."
 
-#: ../../source/multibackend/npu/npu_installation.rst:38
+#: ../../source/multibackend/npu/npu_installation.rst:40
+#: a9599d0e11fa4225939dfcc8dcc93c8e
 msgid "各硬件产品对应物理机部署场景支持的操作系统请参考 `兼容性查询助手 <https://www.hiascend.com/hardware/compatibility>`_。"
 msgstr "For operating systems supported by each hardware product in physical-machine deployment scenarios, see the `Compatibility Query Assistant <https://www.hiascend.com/hardware/compatibility>`_."
 
-#: ../../source/multibackend/npu/npu_installation.rst:39
+#: ../../source/multibackend/npu/npu_installation.rst:41
+#: 543bec5e73e7418485ea31b43822965c
 msgid "各硬件产品对应虚拟机及容器部署场景支持的操作系统请参考《CANN 软件安装》的“`操作系统兼容性说明 <https://www.hiascend.com/document/detail/zh/canncommercial/900/softwareinst/instg/instg_0101.html?OS=openEuler&InstallType=netyum>`__”章节（商用版）或“`操作系统兼容性说明 <https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/900/softwareinst/instg/instg_0101.html?OS=openEuler&InstallType=netyum>`__”章节（社区版）。"
 msgstr "For operating systems supported by each hardware product in VM and container deployment scenarios, see the “`Operating System Compatibility Description <https://www.hiascend.com/document/detail/zh/canncommercial/900/softwareinst/instg/instg_0101.html?OS=openEuler&InstallType=netyum>`__” section in CANN Software Installation (commercial edition) or the “`Operating System Compatibility Description <https://www.hiascend.com/document/detail/zh/CANNCommunityEdition/900/softwareinst/instg/instg_0101.html?OS=openEuler&InstallType=netyum>`__” section (community edition)."
 
-#: ../../source/multibackend/npu/npu_installation.rst:41
+#: ../../source/multibackend/npu/npu_installation.rst:43
+#: 8fbb77d090514eaeaa25eb0d5638f400
 msgid "确认硬件和操作系统满足上述要求后，可以选择以下三种方式之一进行环境配置及使用："
 msgstr "After confirming that the hardware and operating system meet the preceding requirements, choose one of the following three methods for environment setup and usage:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:43
+#: ../../source/multibackend/npu/npu_installation.rst:45
+#: d557d80cbb9d4e61b22d0115c685a929
 msgid ":ref:`install_form_pip`"
 msgstr ":ref:`install_form_pip`"
 
-#: ../../source/multibackend/npu/npu_installation.rst:44
+#: ../../source/multibackend/npu/npu_installation.rst:46
+#: 29748325e3c240988140e0b034a6d782
 msgid ":ref:`use_form_docker`"
 msgstr ":ref:`use_form_docker`"
 
-#: ../../source/multibackend/npu/npu_installation.rst:45
+#: ../../source/multibackend/npu/npu_installation.rst:47
+#: e1dcd376e8cd41228fd90cb7f391cfee
 msgid ":ref:`install_form_docker`"
 msgstr ":ref:`install_form_docker`"
 
-#: ../../source/multibackend/npu/npu_installation.rst:49
+#: ../../source/multibackend/npu/npu_installation.rst:51
+#: bd3605282cf14d5e9740c72ecb32bb90
 msgid "核心依赖说明"
 msgstr "Core Dependencies"
 
-#: ../../source/multibackend/npu/npu_installation.rst:14
+#: ../../source/multibackend/npu/npu_installation.rst:53
+#: 0f501b6269f84587a2cce4047c9c9061
 msgid "所有安装方式均依赖以下组件："
 msgstr "All installation methods depend on the following components:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:16
+#: ../../source/multibackend/npu/npu_installation.rst:55
+#: 3cbf2fceea4d40379580235a75117f0a
 msgid "**HDK**：固件及驱动"
 msgstr "**HDK**: Firmware and drivers"
 
-#: ../../source/multibackend/npu/npu_installation.rst:17
+#: ../../source/multibackend/npu/npu_installation.rst:56
+#: d1dd70b1a2b140d2ab441669739cebe5
 msgid "**CANN**：异构计算架构"
 msgstr "**CANN**: Heterogeneous Computing Architecture"
 
-#: ../../source/multibackend/npu/npu_installation.rst:18
-msgid "**torch_npu**：PyTorch 的昇腾适配插件"
-msgstr "**torch_npu**: Ascend adaptation plugin for PyTorch"
+#: ../../source/multibackend/npu/npu_installation.rst:57
+#: bdca6ff8277f4519aceceb3da12e9db9
+msgid "**TorchNPU**：PyTorch 的昇腾适配插件"
+msgstr "**TorchNPU**: Ascend adaptation plugin for PyTorch"
 
-#: ../../source/multibackend/npu/npu_installation.rst:20
+#: ../../source/multibackend/npu/npu_installation.rst:59
+#: c64fd758505b47758a4d2fa1d039921a
 msgid "根据安装方式不同，所需操作有所区别："
 msgstr "Required steps vary depending on the installation method:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:22
-msgid "**手动安装**：需手动安装 HDK、CANN 和 torch_npu。"
-msgstr "**Manual installation**: Manually install HDK, CANN, and torch_npu."
+#: ../../source/multibackend/npu/npu_installation.rst:61
+#: d78f8953344c40569bb3278b5738ff21
+msgid "**手动安装**：需手动安装 HDK、CANN 和 TorchNPU。"
+msgstr "**Manual installation**: Manually install HDK, CANN, and TorchNPU."
 
-#: ../../source/multibackend/npu/npu_installation.rst:23
-msgid "**Docker 镜像/构建**：宿主机仅需安装 HDK (驱动/固件)，CANN 和 torch_npu 已集成在镜像中。"
-msgstr "**Docker image/build**: The host only needs to install HDK (driver/firmware). CANN and torch_npu are integrated in the image."
+#: ../../source/multibackend/npu/npu_installation.rst:62
+#: 45c49f314827416d9ae5e67ceced079a
+msgid "**Docker 镜像/构建**：宿主机仅需安装 HDK (驱动/固件)，CANN 和 TorchNPU 已集成在镜像中。"
+msgstr "**Docker image/build**: The host only needs to install HDK (driver/firmware). CANN and TorchNPU are integrated in the image."
 
-#: ../../source/multibackend/npu/npu_installation.rst:28
+#: ../../source/multibackend/npu/npu_installation.rst:68
+#: e181cd8ce4304163b558287e360ccf9f
 msgid "方式一：手动安装环境"
 msgstr "Method 1: Manual Environment Installation"
 
-#: ../../source/multibackend/npu/npu_installation.rst:31
-msgid "本方式需要您手动安装 HDK、CANN 和 torch_npu。"
-msgstr "This method requires you to manually install HDK, CANN, and torch_npu."
+#: ../../source/multibackend/npu/npu_installation.rst:70
+#: a310967860bd4ec28af860d3bbdc3830
+msgid "本方式需要您手动安装 HDK、CANN 和 TorchNPU。"
+msgstr "This method requires you to manually install HDK, CANN, and TorchNPU."
 
-#: ../../source/multibackend/npu/npu_installation.rst:34
+#: ../../source/multibackend/npu/npu_installation.rst:74
+#: a40f090b4c7842f6871937684d7ae17f
 msgid "1. 版本及下载链接"
 msgstr "1. Versions and Download Links"
 
-#: ../../source/multibackend/npu/npu_installation.rst:37
+#: ../../source/multibackend/npu/npu_installation.rst:76
+#: e0397ecdcda843ca8d8d9dc5927c60a2
 msgid "本文档列举了最新的依赖版本及下载链接，请根据设备型号选择："
 msgstr "This document lists the latest dependency versions and download links. Please choose according to your device model:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:44
+#: ../../source/multibackend/npu/npu_installation.rst:83
+#: cec569a4548644b08f1ba49a7c1aa03c
 msgid "设备"
 msgstr "Device"
 
-#: ../../source/multibackend/npu/npu_installation.rst:45
+#: ../../source/multibackend/npu/npu_installation.rst:84
+#: 5398ac8908b94d3dbef40c6742a9b9b9
 msgid "依赖"
 msgstr "Dependency"
 
-#: ../../source/multibackend/npu/npu_installation.rst:46
+#: ../../source/multibackend/npu/npu_installation.rst:85
+#: 19830042fe4e4399be55d3a85a96eb6b
 msgid "链接"
 msgstr "Link"
 
-#: ../../source/multibackend/npu/npu_installation.rst:72
+#: ../../source/multibackend/npu/npu_installation.rst:86
+#: ../../source/multibackend/npu/npu_installation.rst:291
+#: ../../source/multibackend/npu/npu_installation.rst:297
+#: ../../source/multibackend/npu/npu_installation.rst:426
+#: ../../source/multibackend/npu/npu_installation.rst:432
+#: 141559cbe893407aa9ac8fa06730c78e a5035a382db04e819de5efcf9624556b
+#: ac2480e2ce3542919843a91e0a178c62 2ddbfb6416174efeb3e72537f347d266
+#: b06c1d3e7e0a411fac9b555fcc8232aa
+msgid "A3"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:87
+#: ../../source/multibackend/npu/npu_installation.rst:96
+#: 8d8d850b860e43f4853c6f7ff0a7d408 ed6d88afd6de4a9eb4b2030c43a52a21
+msgid "HDK"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:88
+#: fbf19d8df5a142d388aeef99ec36a70b
+msgid "https://www.hiascend.com/hardware/firmware-drivers?ids=d803%2C89dda9ba9de741349efa03687a487678%2C16%2CAArch64%2Conline_Yum"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:90
+#: ../../source/multibackend/npu/npu_installation.rst:99
+#: b551f98d835e444c8edab9d8cc672888 303a6b75f0d14b1d8e75ffa268f35df5
+msgid "CANN"
+msgstr "CANN"
+
+#: ../../source/multibackend/npu/npu_installation.rst:91
+#: ../../source/multibackend/npu/npu_installation.rst:100
+#: 4b828891df134d229f46fb5f7ee68349 2b8d6a0f76ca4cf3802a3fd852777517
+msgid "https://www.hiascend.com/developer/download/community/result?module=cann&cann=9.1.0"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:93
+#: ../../source/multibackend/npu/npu_installation.rst:102
+#: 47afda69827142178bc33aabc6feb217 3b894a2346e14587ab79c9e586680736
+msgid "TorchNPU"
+msgstr "TorchNPU"
+
+#: ../../source/multibackend/npu/npu_installation.rst:94
+#: ../../source/multibackend/npu/npu_installation.rst:103
+#: 73f6693e67e6487d83a885c6e9cb3b2c 251540913c5a4f488aad47ac896e4788
+msgid "2.10.0.post2"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:95
+#: ../../source/multibackend/npu/npu_installation.rst:288
+#: ../../source/multibackend/npu/npu_installation.rst:294
+#: ../../source/multibackend/npu/npu_installation.rst:423
+#: ../../source/multibackend/npu/npu_installation.rst:429
+#: 2588115108a5410c80935d1b33f8109c 24c88f130c3a48a38e4a6a3142c459b8
+#: fad290d10cfd4832ac7d05748a35c41d a2921c0bd13c4e88919acf2077b90591
+#: df4a7b5cc49848769556ad0b4dcf7807
+msgid "A2"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:97
+#: 14795f421c544c06b8a2d6c1e545a748
+msgid "https://www.hiascend.com/hardware/firmware-drivers?ids=d802%2C26958bcc909e4cd48fa56d4c4a43ebec%2C17%2CAArch64%2Conline_Yum"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:106
+#: 6b272ae2e03a4dc2876efb30b8171823
 msgid "2. 驱动及固件"
 msgstr "2. Drivers and Firmware"
 
-#: ../../source/multibackend/npu/npu_installation.rst:75
+#: ../../source/multibackend/npu/npu_installation.rst:108
+#: 42e94bda67f948de8c908f93330bc865
 msgid "请根据实际情况选择 ``.run`` 或 ``.deb`` 的 HDK 安装包，并请注意安装包对 ``aarch64`` 和 ``x86`` 做了区分。"
 msgstr "Choose the HDK installation package in ``.run`` or ``.deb`` format as appropriate, noting that packages are differentiated for ``aarch64`` and ``x86``."
 
-#: ../../source/multibackend/npu/npu_installation.rst:77
+#: ../../source/multibackend/npu/npu_installation.rst:110
+#: 923408c49a124e13af13b2be0ab4ebe4
 msgid "以下以 A2 系列为例。A3 系列包 ``firmware`` 和 ``driver`` 包名有所变化，可以根据链接内实际情况选择。"
 msgstr "The following uses the A2 series as an example. For the A3 series, the ``firmware`` and ``driver`` package names differ; choose based on the linked page."
 
-#: ../../source/multibackend/npu/npu_installation.rst:79
+#: ../../source/multibackend/npu/npu_installation.rst:112
+#: a3fe401180f44789bd1f444e91ffdc2d
 msgid "A3 内部包名类似于 ``Atlas-A3-hdk-npu-driver_25.0.rc1.3_linux-aarch64.run`` 和 ``Atlas-A3-hdk-npu-firmware_7.7.0.3.228.run``，实际安装方式没有变化。"
 msgstr "A3 internal package names are similar to ``Atlas-A3-hdk-npu-driver_25.0.rc1.3_linux-aarch64.run`` and ``Atlas-A3-hdk-npu-firmware_7.7.0.3.228.run``. The installation method does not change."
 
-#: ../../source/multibackend/npu/npu_installation.rst:81
+#: ../../source/multibackend/npu/npu_installation.rst:114
+#: 4487d53a92ca4387a1f4bca219cac366
 msgid "上传安装包，以 root 用户登录，将驱动和固件包上传至服务器（如 ``/home``）。"
 msgstr "Upload installation packages, log in as root and upload the driver and firmware packages to the server (e.g., ``/home``)."
 
-#: ../../source/multibackend/npu/npu_installation.rst:84
+#: ../../source/multibackend/npu/npu_installation.rst:116
+#: 30270e950f9446c29f44b0c30e5cf556
 msgid "增加执行权限，进入安装包目录，执行以下命令。"
 msgstr "Add execution permissions, enter the package directory and execute the following commands."
 
-#: ../../source/multibackend/npu/npu_installation.rst:92
+#: ../../source/multibackend/npu/npu_installation.rst:123
+#: a19ff5521ad148febd07632c3622b71f
 msgid "安装驱动与固件，默认安装路径为 ``/usr/local/Ascend``。"
 msgstr "Install drivers and firmware, The default installation path is ``/usr/local/Ascend``."
 
-#: ../../source/multibackend/npu/npu_installation.rst:95
+#: ../../source/multibackend/npu/npu_installation.rst:125
+#: a35d756d52314a158599eb44c29e5d5d
 msgid "**安装驱动**："
 msgstr "**Install driver**:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:101
+#: ../../source/multibackend/npu/npu_installation.rst:131
+#: 9d841b0ecf0a4dd18a755e634dd89aa9
 msgid "出现 ``Driver package installed successfully!`` 表示成功。"
 msgstr "If ``Driver package installed successfully!`` appears, the installation succeeded."
 
-#: ../../source/multibackend/npu/npu_installation.rst:103
+#: ../../source/multibackend/npu/npu_installation.rst:133
+#: da56aa74106e44088363147a612c116e
 msgid "**安装固件**："
 msgstr "**Install firmware**:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:109
+#: ../../source/multibackend/npu/npu_installation.rst:139
+#: 256687b155d1417d80ced7987993650a
 msgid "出现 ``Firmware package installed successfully!`` 表示成功。"
 msgstr "If ``Firmware package installed successfully!`` appears, the installation succeeded."
 
-#: ../../source/multibackend/npu/npu_installation.rst:111
+#: ../../source/multibackend/npu/npu_installation.rst:143
+#: 7ae8435312e54a9084209d83fadc4c14
 msgid "若未创建默认用户 ``HwHiAiUser``，需在安装命令中指定用户和组： ``./Ascend-hdk-*.run --full --install-username=<username> --install-usergroup=<usergroup>``"
 msgstr "If the default user ``HwHiAiUser`` has not been created, specify the user and group in the installation command: ``./Ascend-hdk-*.run --full --install-username=<username> --install-usergroup=<usergroup>``"
 
-#: ../../source/multibackend/npu/npu_installation.rst:116
+#: ../../source/multibackend/npu/npu_installation.rst:145
+#: 65d3c0cc1c114b7887b7253dfff02aaf
 msgid "重启系统，根据提示决定是否重启。如需重启："
 msgstr "Decide whether to reboot according to prompts. To reboot:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:123
+#: ../../source/multibackend/npu/npu_installation.rst:151
+#: 9cc240b7582e462ba0c40d02b902b22a
 msgid "验证安装，执行以下命令查看驱动加载状态："
 msgstr "Verify installation. Run the following command to check driver load status:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:132
+#: ../../source/multibackend/npu/npu_installation.rst:160
+#: 2daf64c9870248628432c417c47b0bd9
 msgid "3. CANN"
 msgstr "3. CANN"
 
-#: ../../source/multibackend/npu/npu_installation.rst:135
+#: ../../source/multibackend/npu/npu_installation.rst:162
+#: 34dcc25d84044999ba4f52f8c03e345f
 msgid "请根据实际情况选择 ``.run`` 或 ``.deb`` 的 CANN 安装包，并请注意安装包对 ``aarch64`` 和 ``x86`` 做了区分。"
 msgstr "Choose the CANN installation package in ``.run`` or ``.deb`` format as appropriate, noting that packages are differentiated for ``aarch64`` and ``x86``."
 
-#: ../../source/multibackend/npu/npu_installation.rst:137
-msgid "以下以 A2 系列为例。A3 系列唯一区别是 ``ops`` 包名字有所变化，可以根据链接内实际情况选择。A3 内部包名类似于 ``Ascend-cann-A3-ops_9.0.0_linux-aarch64.run``，实际安装方式没有变化。"
-msgstr "The following uses the A2 series as an example. The only difference for the A3 series is the name of the ``ops`` package; choose according to the linked page. A3 internal package names are similar to ``Ascend-cann-A3-ops_9.0.0_linux-aarch64.run``. The installation method does not change."
+#: ../../source/multibackend/npu/npu_installation.rst:164
+#: bc7a453a758d40869c51ce8e924ea7b0
+msgid "以下以 A2 系列为例。A3 系列唯一区别是 ``ops`` 包名字有所变化，可以根据链接内实际情况选择。A3 内部包名类似于 ``Ascend-cann-A3-ops_<version>_linux-aarch64.run``，实际安装方式没有变化。"
+msgstr "The following uses the A2 series as an example. The only difference for the A3 series is the name of the ``ops`` package; choose according to the linked page. A3 package names are similar to ``Ascend-cann-A3-ops_<version>_linux-aarch64.run``. The installation method does not change."
 
-#: ../../source/multibackend/npu/npu_installation.rst:140
+#: ../../source/multibackend/npu/npu_installation.rst:168
+#: 273ab3d19c7247b0a75e3fc474b970b0
 msgid "(1) 安装 Toolkit 开发套件"
 msgstr "(1) Install Toolkit development kit"
 
-#: ../../source/multibackend/npu/npu_installation.rst:143
+#: ../../source/multibackend/npu/npu_installation.rst:170
+#: 4c86f2731733486ebab32c0261da48b7
 msgid "Toolkit 用于训练、推理及开发。"
 msgstr "Toolkit is used for training, inference, and development."
 
-#: ../../source/multibackend/npu/npu_installation.rst:145
+#: ../../source/multibackend/npu/npu_installation.rst:173
+#: bbaf4eaee9dd4fb0ab19578dfece7a3b
 msgid "请确保安装目录可用空间大于 10G。"
 msgstr "Ensure the installation directory has more than 10G of free space."
 
-
-#: ../../source/multibackend/npu/npu_installation.rst:150
+#: ../../source/multibackend/npu/npu_installation.rst:175
+#: 735fb4a1e9074a19869f840789d7695d
 msgid "**授权与安装**：以 root 用户安装，默认安装路径为 ``/usr/local/Ascend``；以普通用户安装，默认安装路径为 ``${HOME}/Ascend``。"
 msgstr "**Authorization and installation**: For root user: ``/usr/local/Ascend``; For normal user: ``${HOME}/Ascend``."
 
-#: ../../source/multibackend/npu/npu_installation.rst:158
+#: ../../source/multibackend/npu/npu_installation.rst:182
+#: 21787ac501eb496ebb3f40183aa5eeb0
 msgid "**配置环境变量**：以 root 用户为例，建议写入 ``~/.bashrc``。"
 msgstr "**Configure environment variables**: For root users, it is recommended to write to ``~/.bashrc``."
 
-#: ../../source/multibackend/npu/npu_installation.rst:166
+#: ../../source/multibackend/npu/npu_installation.rst:190
+#: 0b3b40dfc17d4dafb265e449343e3739
 msgid "(2) 安装 ops 算子包"
 msgstr "(2) Install ops operator package"
 
-#: ../../source/multibackend/npu/npu_installation.rst:169
+#: ../../source/multibackend/npu/npu_installation.rst:192
+#: 232137fdc3a244e2ae5a700164c6d527
 msgid "需在安装 Toolkit 后执行。如需安装静态库，请将 ``--install`` 改为 ``--devel``。"
 msgstr "Execute after installing Toolkit. To install static libraries, replace ``--install`` with ``--devel``."
 
-
-#: ../../source/multibackend/npu/npu_installation.rst:179
+#: ../../source/multibackend/npu/npu_installation.rst:201
+#: b14ea41850b54e759e350e5a19f39a1c
 msgid "(3) 安装 NNAL 神经网络加速库（可选）"
 msgstr "(3) Install NNAL neural network acceleration library (optional)"
 
-#: ../../source/multibackend/npu/npu_installation.rst:182
+#: ../../source/multibackend/npu/npu_installation.rst:203
+#: 6c49759e9098489d93ee0d5aaba717df
 msgid "包含 ATB 和 SiP 加速库。需在安装 Toolkit 后执行。"
 msgstr "Includes ATB and SiP acceleration libraries. Execute after installing Toolkit."
 
-#: ../../source/multibackend/npu/npu_installation.rst:188
+#: ../../source/multibackend/npu/npu_installation.rst:205
+#: bde3111941be4fdebf5137b74dd78e52
 msgid "**授权与安装**："
 msgstr "**Authorization and installation**:"
 
-
-#: ../../source/multibackend/npu/npu_installation.rst:188
+#: ../../source/multibackend/npu/npu_installation.rst:212
+#: 38da016591fb4295b861c990b7fa767d
 msgid "**配置环境变量**："
 msgstr "**Configure environment variables**:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:192
+#: ../../source/multibackend/npu/npu_installation.rst:214
+#: 38cb350e5d3a43b48050d008b5cfab65
 msgid "（二选一，不可同时配置）"
 msgstr "(Choose one of the two, do not configure both)"
 
-#: ../../source/multibackend/npu/npu_installation.rst:196
-msgid "# ATB"
-msgstr "# ATB"
+#: ../../source/multibackend/npu/npu_installation.rst:227
+#: db6aa22e67a04229961c89378a90e180
+msgid "4. TorchNPU"
+msgstr "4. TorchNPU"
 
-#: ../../source/multibackend/npu/npu_installation.rst:199
-msgid "# SiP"
-msgstr "# SiP"
+#: ../../source/multibackend/npu/npu_installation.rst:229
+#: b2a4a42cf1a641588fd3e67bf0d4fec9
+msgid "建议在安装 LlamaFactory 时一并安装 TorchNPU 插件，LlamaFactory 依赖内会持续更新稳定版本的 TorchNPU 插件。"
+msgstr "It is recommended to install the TorchNPU plugin together with LlamaFactory. LlamaFactory dependencies will continue to track stable TorchNPU releases."
 
-#: ../../source/multibackend/npu/npu_installation.rst:204
-msgid "4. torch-npu"
-msgstr "4. torch-npu"
+#: ../../source/multibackend/npu/npu_installation.rst:235
+#: 97f86aa88059411398e70219bbed5d5a
+msgid "当然您也可以手动下载后安装 TorchNPU 插件，例如："
+msgstr "You can also download and install the TorchNPU plugin manually, for example:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:207
-msgid "建议在安装 LLaMA-Factory 时一并安装 ``torch-npu`` 插件，LLaMA-Factory 依赖内会持续更新稳定版本的 ``torch-npu`` 插件。"
-msgstr "It is recommended to install the ``torch-npu`` plugin together when installing LLaMA-Factory. LLaMA-Factory dependencies will continuously update stable versions of the ``torch-npu`` plugin."
+#: ../../source/multibackend/npu/npu_installation.rst:241
+#: f18195cf3b3b43ffa817515aed2b640d
+msgid "安装 TorchNPU 插件需要注意："
+msgstr "Note the following when installing the TorchNPU plugin:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:213
-msgid "当然您也可以手动下载后安装 ``torch-npu`` 插件，例如："
-msgstr "You can also download and install the ``torch-npu`` plugin manually, for example:"
+#: ../../source/multibackend/npu/npu_installation.rst:243
+#: 88d5fe4de7fb4104a2a99ddd2102929e
+msgid "下载的 TorchNPU 会对支持的 Python 版本做区分，请根据实际环境情况选择对应安装包，``pip install torch_npu`` 时，也会一并安装对应版本的 ``torch``。"
+msgstr "TorchNPU packages are built for specific Python versions, so choose the package that matches your environment. Running ``pip install torch_npu`` also installs the corresponding version of ``torch``."
 
-#: ../../source/multibackend/npu/npu_installation.rst:219
-msgid "安装 ``torch-npu`` 插件需要注意："
-msgstr "Notes when installing the ``torch-npu`` plugin:"
+#: ../../source/multibackend/npu/npu_installation.rst:244
+#: 0e8596b2251f457ebfcc333fca160e54
+msgid "环境里安装的 TorchNPU 和 ``torch`` 版本需要对齐。例如 TorchNPU 版本为 ``2.10.0.post2`` 时，``torch`` 的版本也需要为 ``2.10.0``。有时依赖互斥，安装不用依赖的过程会导致 ``torch`` 版本被更新，从而导致报错。"
+msgstr "The TorchNPU and ``torch`` versions installed in the environment must be compatible. For example, TorchNPU ``2.10.0.post2`` requires ``torch`` ``2.10.0``. Dependency conflicts may sometimes cause ``torch`` to be upgraded during another package installation, resulting in errors."
 
-#: ../../source/multibackend/npu/npu_installation.rst:221
-msgid "下载的 ``torch_npu`` 会对支持的 Python 版本做区分，请根据实际环境情况选择对应安装包，``pip install torch_npu`` 时，也会一并安装对应版本的 ``torch``。"
-msgstr "The downloaded ``torch_npu`` distinguishes between supported Python versions. Choose the appropriate installation package for your environment. When running ``pip install torch_npu``, the corresponding version of ``torch`` will be installed together."
-
-#: ../../source/multibackend/npu/npu_installation.rst:222
-msgid "环境里安装的 ``torch-npu`` 和 ``torch`` 版本需要对齐。例如 ``torch-npu`` 版本为 ``2.7.1`` 时，``torch`` 的版本也需要为 ``2.7.1``。有时依赖互斥，安装不用依赖的过程会导致 ``torch`` 版本被更新，从而导致报错。"
-msgstr "The versions of ``torch-npu`` and ``torch`` installed in the environment must be aligned. For example, if ``torch-npu`` is version ``2.7.1``, then ``torch`` must also be version ``2.7.1``. Dependency conflicts may occasionally update ``torch`` during installation, leading to errors."
-
-#: ../../source/multibackend/npu/npu_installation.rst:224
+#: ../../source/multibackend/npu/npu_installation.rst:247
+#: 778be171098b40a0a3fdc766e3eb65c2
 msgid "5. 验证安装"
 msgstr "5. Verify Installation"
 
-#: ../../source/multibackend/npu/npu_installation.rst:227
+#: ../../source/multibackend/npu/npu_installation.rst:249
+#: c6f0f31f37784c849f3c64d26d1b6978
 msgid "执行以下 Python 脚本："
 msgstr "Run the following Python script:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:235
+#: ../../source/multibackend/npu/npu_installation.rst:257
+#: 35a6e05a53bf43b289f306c40d0a301c
 msgid "预期输出：``True``"
 msgstr "Expected output: ``True``"
 
-#: ../../source/multibackend/npu/npu_installation.rst:239
-msgid "该情况说明 ``HDK``、``CANN`` 和 ``torch_npu`` 都正常安装且生效。"
-msgstr "This indicates that ``HDK``, ``CANN``, and ``torch_npu`` are all installed correctly and functioning."
+#: ../../source/multibackend/npu/npu_installation.rst:261
+#: d849f79cca55494dbaf29ccd9d5a3620
+msgid "该情况说明 ``HDK``、``CANN`` 和 TorchNPU 都正常安装且生效。"
+msgstr "This indicates that ``HDK``, ``CANN``, and TorchNPU are installed correctly and working."
 
-#: ../../source/multibackend/npu/npu_installation.rst:245
+#: ../../source/multibackend/npu/npu_installation.rst:268
+#: c36dbbb71ec9401f8eb78634e3caf186
 msgid "方式二：Docker 预安装镜像"
 msgstr "Method 2: Docker Pre-installed Image"
 
-#: ../../source/multibackend/npu/npu_installation.rst:248
+#: ../../source/multibackend/npu/npu_installation.rst:271
+#: 8b8a00cdd707477bb957656d75663d22
 msgid "请确保宿主机已安装固件和驱动，可参考前文进行安装。"
 msgstr "Ensure the host has installed firmware and drivers; refer to the previous section for installation."
 
-#: ../../source/multibackend/npu/npu_installation.rst:251
-msgid "LLaMA-Factory 的官方镜像托管于 `Docker Hub <https://hub.docker.com/r/hiyouga/llamafactory/tags>`__ 和 `quay.io <https://quay.io/repository/ascend/llamafactory?tab=tags>`__，二者镜像无区别。"
-msgstr "LLaMA-Factory's official images are hosted on `Docker Hub <https://hub.docker.com/r/hiyouga/llamafactory/tags>`__ and `quay.io <https://quay.io/repository/ascend/llamafactory?tab=tags>`__; the images are identical."
+#: ../../source/multibackend/npu/npu_installation.rst:273
+#: 942abbaedfe54ac7b9d8bc026f28677d
+msgid "LlamaFactory 的官方镜像托管于 `Docker Hub <https://hub.docker.com/r/hiyouga/llamafactory/tags>`__ 和 `quay.io <https://quay.io/repository/ascend/llamafactory?tab=tags>`__，二者镜像无区别。"
+msgstr "LlamaFactory's official images are hosted on `Docker Hub <https://hub.docker.com/r/hiyouga/llamafactory/tags>`__ and `quay.io <https://quay.io/repository/ascend/llamafactory?tab=tags>`__; the images are identical."
 
-#: ../../source/multibackend/npu/npu_installation.rst:253
+#: ../../source/multibackend/npu/npu_installation.rst:276
+#: aa2eef96d6e84772b30b41c4b4f09a1e
 msgid "1. 拉取镜像"
 msgstr "1. Pull Image"
 
-#: ../../source/multibackend/npu/npu_installation.rst:256
-msgid "下载 main 分支最新镜像（请根据设备选择 A2 或 A3）。如需特定版本镜像，请访问镜像仓库查看 Tag。"
-msgstr "Download the latest image from the main branch (choose A2 or A3 according to your device). For specific version images, visit the image repository to check the tags."
+#: ../../source/multibackend/npu/npu_installation.rst:278
+#: bd2f65a7dc674cfab99fdecbe9872044
+msgid "下载 main 分支最新镜像时，需要同时根据设备和容器操作系统选择 Tag。A2 镜像在 Tag 中使用芯片标识 ``910b``，A3 镜像使用 ``a3``："
+msgstr "When downloading the latest image from the main branch, select the tag according to both the device and the container operating system. A2 images use the ``910b`` identifier in the tag, while A3 images use ``a3``:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:268
-msgid ""
+#: ../../source/multibackend/npu/npu_installation.rst:285
+#: ../../source/multibackend/npu/npu_installation.rst:420
+#: 9d0d13d466ca4732aa09e08d51a34f3a fe30a558a6e242c4bc99f30946dfba26
+msgid "硬件系列"
+msgstr "Hardware Series"
+
+#: ../../source/multibackend/npu/npu_installation.rst:286
+#: ../../source/multibackend/npu/npu_installation.rst:421
+#: ae787dd8a70246709f41ee44718dd3c8 085058d93506440c88af47fc1a3324a4
+msgid "容器操作系统"
+msgstr "Container Operating System"
+
+#: ../../source/multibackend/npu/npu_installation.rst:287
+#: 0fb86a38f6ae4f34883ee131052968b8
+msgid "Tag"
+msgstr "Tag"
+
+#: ../../source/multibackend/npu/npu_installation.rst:289
+#: ../../source/multibackend/npu/npu_installation.rst:292
+#: ../../source/multibackend/npu/npu_installation.rst:424
+#: ../../source/multibackend/npu/npu_installation.rst:427
+#: 68cb36e613514f79a467e05bd584fd52 1dcf0ffad03845ba801618b47703d61d
+#: b7c74412a616430ea7445bf8de09b7e6 dfce778c8fe04b75839d1a15a2e0f173
+msgid "Ubuntu 22.04"
 msgstr ""
 
-#: ../../source/multibackend/npu/npu_installation.rst:270
+#: ../../source/multibackend/npu/npu_installation.rst:290
+#: c077cec458cd49b1b805368465dd18dd
+msgid "``latest-910b-ubuntu``"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:293
+#: 778c47671ef24d209491b42b9f48c913
+msgid "``latest-a3-ubuntu``"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:295
+#: ../../source/multibackend/npu/npu_installation.rst:298
+#: ../../source/multibackend/npu/npu_installation.rst:430
+#: ../../source/multibackend/npu/npu_installation.rst:433
+#: 117ecb4697f04401b921a3f8cad05219 1ecf1ea0123b41cf963bb23b7da1887d
+#: a480ba1b10ad47b6992fbbaa5cf1ac4a 1f2e0b382ed045e192a085d5258d60a0
+msgid "openEuler 24.03"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:296
+#: 42a68395f3e2482f91bcd374a8fce435
+msgid "``latest-910b-openeuler``"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:299
+#: 65d3a5e4e4d24678b50e73f4e1fb557e
+msgid "``latest-a3-openeuler``"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:301
+msgid "根据上表确定 Tag 后，从 Docker Hub 或 quay.io 中选择一个镜像仓库，并执行对应的一条命令将镜像拉取到本地："
+msgstr "After determining the tag from the table above, select one image registry, either Docker Hub or quay.io, and run the corresponding command to pull the image locally:"
+
+#: ../../source/multibackend/npu/npu_installation.rst:315
+#: a9ef0d534d9441d98947838c5e0b9575
+msgid "``latest`` 镜像使用 ``latest-<910b|a3>-<ubuntu|openeuler>`` 格式，定时构建会更新这些 Tag。Release 镜像则使用包含完整版本信息的 Tag："
+msgstr "The ``latest`` images use the ``latest-<910b|a3>-<ubuntu|openeuler>`` format, and scheduled builds update these tags. Release images use tags containing the complete version information:"
+
+#: ../../source/multibackend/npu/npu_installation.rst:323
+#: ac1a4c738b65423c97b6f1c84a8e7351
 msgid "2. 启动容器"
 msgstr "2. Start Container"
 
-#: ../../source/multibackend/npu/npu_installation.rst:273
+#: ../../source/multibackend/npu/npu_installation.rst:325
+#: 28dafceb64d4476fab6b007314610628
 msgid "使用以下命令启动容器（请根据实际情况修改 ``DOCKER_IMAGE`` 和 ``device``）："
 msgstr "Start the container with the following command (modify ``DOCKER_IMAGE`` and ``device`` as appropriate):"
 
-#: ../../source/multibackend/npu/npu_installation.rst:385
+#: ../../source/multibackend/npu/npu_installation.rst:357
+#: 4b14aebfaa5f402f94c82117fe76074b
 msgid "配置 ``--privileged=true`` 可开启特权模式，赋予容器对底层硬件管理设备（如 ``/dev/davinci_manager``）的完整访问权限。这能解决多容器并行场景下，因权限限制导致的驱动初始化失败问题，确保 NPU 资源能被多个容器正常复用。"
 msgstr "Setting ``--privileged=true`` enables privileged mode, granting the container full access to hardware management devices (such as ``/dev/davinci_manager``). This resolves driver initialization failures in multi-container scenarios caused by permission restrictions, ensuring NPU resources can be reused across containers."
 
-#: ../../source/multibackend/npu/npu_installation.rst:389
+#: ../../source/multibackend/npu/npu_installation.rst:359
+#: 0a6b9e3910b94f55942113c6938ceb5b
 msgid "**注意**：若未配置该参数，可能会出现首个容器占用后，后续容器因无权限而无法读取设备的情况。鉴于特权模式的权限过大，生产环境中请务必评估安全风险后慎重使用。"
 msgstr "**Note**: Without this parameter, subsequent containers may fail to access devices due to insufficient permissions after the first container occupies them. Given the broad permissions of privileged mode, evaluate security risks carefully before using it in production."
 
-#: ../../source/multibackend/npu/npu_installation.rst:312
-msgid "3. 进入容器"
-msgstr "3. Enter Container"
+#: ../../source/multibackend/npu/npu_installation.rst:363
+#: db7b0c6c23824541924013cda36f7040
+msgid "3. 验证容器环境"
+msgstr "3. Verify the Container Environment"
 
-#: ../../source/multibackend/npu/npu_installation.rst:321
-msgid "通过 ``--device /dev/davinci<N>`` 挂载指定 NPU 卡（支持 0-7）。容器内设备编号会自动重新映射（例如物理机 davinci6 代表容器内设备 0）。"
-msgstr "Mount specified NPU cards using ``--device /dev/davinci<N>`` (supports 0–7). Device numbers inside the container are automatically remapped (e.g., physical machine davinci6 -> container device 0)."
+#: ../../source/multibackend/npu/npu_installation.rst:365
+#: bd9940491eee41b780a55987aaa0fe80
+msgid "容器启动后，进入容器："
+msgstr "After the container starts, enter it:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:323
-msgid "进入容器后，可使用 ``llamafactory-cli train`` 启动训练；如果当前 shell 尚未加载 Ascend 环境变量，请先执行 ``source /usr/local/Ascend/ascend-toolkit/set_env.sh``。"
-msgstr "After entering the container, you can start training with ``llamafactory-cli train``. If the current shell has not loaded the Ascend environment variables, run ``source /usr/local/Ascend/ascend-toolkit/set_env.sh`` first."
+#: ../../source/multibackend/npu/npu_installation.rst:371
+#: 2dbd8463592d4ae3a660b0d9531c4ffb
+msgid "然后加载 Ascend 环境，并检查软件版本、NPU 可用性与 LlamaFactory 命令："
+msgstr "Then load the Ascend environment and verify the software versions, NPU availability, and the LlamaFactory command:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:327
+#: ../../source/multibackend/npu/npu_installation.rst:382
+#: a10a7bdedc1546ada15e5efed2ccca31
+msgid "部分驱动环境中的 ``npu-smi`` 位于 ``/usr/local/sbin/npu-smi``，此时需要调整挂载源路径。通过 ``--device=/dev/davinci<N>`` 可挂载更多 NPU 设备。容器内设备编号会自动重新映射（例如物理机 davinci6 代表容器内设备 0）。"
+msgstr "In some driver environments, ``npu-smi`` is located at ``/usr/local/sbin/npu-smi``; in that case, adjust the source path of the mount. Use ``--device=/dev/davinci<N>`` to mount additional NPU devices. Device numbers are automatically remapped inside the container (for example, davinci6 on the host becomes device 0 in the container)."
+
+#: ../../source/multibackend/npu/npu_installation.rst:384
+#: 499ed452be714c40bd13e13739b17a2e
+msgid "环境验证通过后，可直接使用 ``llamafactory-cli train`` 启动训练。"
+msgstr "After the environment verification succeeds, you can start training directly with ``llamafactory-cli train``."
+
+#: ../../source/multibackend/npu/npu_installation.rst:389
+#: ec50be9e24eb43d58b0afe1eb9306f4c
 msgid "方式三：Docker 本地构建"
 msgstr "Method 3: Docker Local Build"
 
-#: ../../source/multibackend/npu/npu_installation.rst:331
+#: ../../source/multibackend/npu/npu_installation.rst:392
+#: b6b4ba8ac8e6481baeabf599012f390c
 msgid "请确保宿主机已安装固件和驱动。"
 msgstr "Ensure the host has installed firmware and drivers."
 
-#: ../../source/multibackend/npu/npu_installation.rst:333
-msgid "LLaMA-Factory 提供 :ref:`docker_build` 和 :ref:`docker_compose` 两种构建方式。"
-msgstr "LLaMA-Factory provides two build methods: :ref:`docker_build` and :ref:`docker_compose`."
+#: ../../source/multibackend/npu/npu_installation.rst:394
+#: 6bc7c7ac364e46baaf4f57d9dbbc0812
+msgid "LlamaFactory 提供 :ref:`docker_build` 和 :ref:`docker_compose` 两种构建方式。"
+msgstr "LlamaFactory provides two build methods: :ref:`docker_build` and :ref:`docker_compose`."
 
-#: ../../source/multibackend/npu/npu_installation.rst:338
+#: ../../source/multibackend/npu/npu_installation.rst:400
+#: 5a5cc1da41c145fd90a8525c00ab6b2f
 msgid "1. 使用 Docker Build 构建"
 msgstr "1. Build Using Docker Build"
 
-#: ../../source/multibackend/npu/npu_installation.rst:341
-msgid "构建镜像，在项目根目录下执行："
-msgstr "Build image — execute at the project root:"
+#: ../../source/multibackend/npu/npu_installation.rst:402
+#: 68cc60bce21645c69a034f877acd966b
+msgid "在项目根目录下执行以下命令，构建 A2 Ubuntu 镜像："
+msgstr "Run the following command in the project root to build an A2 Ubuntu image:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:352
-msgid "可修改 ``BASE_IMAGE`` 参数指定其他 CANN 版本（参考 `ascend/cann <https://quay.io/repository/ascend/cann?tab=tags&tag=latest>`__ ）。"
-msgstr "Modify the ``BASE_IMAGE`` parameter to specify other CANN versions (see `ascend/cann <https://quay.io/repository/ascend/cann?tab=tags&tag=latest>`__)."
+#: ../../source/multibackend/npu/npu_installation.rst:413
+#: f67be05f55b14088b6e428c9ce1ce044
+msgid "Dockerfile 默认使用 A2 Ubuntu 基础镜像。如需构建其他组合，可以替换 ``BASE_IMAGE`` 和本地镜像 Tag："
+msgstr "The Dockerfile uses an A2 Ubuntu base image by default. To build another combination, replace ``BASE_IMAGE`` and the local image tag:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:354
-msgid "启动容器"
-msgstr "Start container"
+#: ../../source/multibackend/npu/npu_installation.rst:422
+#: ../../source/multibackend/npu/npu_installation.rst:446
+#: 2a59e9dabb1c42e39e1d7bd4ef7ffccb 92a88b2f526643f4ba431756f891d499
+msgid "``BASE_IMAGE``"
+msgstr ""
 
-#: ../../source/multibackend/npu/npu_installation.rst:385
-msgid "配置 ``--privileged=true`` 可开启特权模式，赋予容器对底层硬件管理设备（如 ``/dev/davinci_manager``）的完整访问权限。这能解决多容器并行场景下，因权限限制导致的驱动初始化失败问题，确保 NPU 资源能被多个容器正常复用。"
-msgstr "Setting ``--privileged=true`` enables privileged mode, granting the container full access to hardware management devices (such as ``/dev/davinci_manager``). This resolves driver initialization failures in multi-container scenarios caused by permission restrictions, ensuring NPU resources can be reused across containers."
+#: ../../source/multibackend/npu/npu_installation.rst:425
+#: ../../source/multibackend/npu/npu_installation.rst:447
+#: 0a9f882980514a2da5f4a205dedf6afc 360b3e85297b4535b51ea2ad63ff4139
+msgid "``quay.io/ascend/cann:9.1.0-910b-ubuntu22.04-py3.12``"
+msgstr ""
 
-#: ../../source/multibackend/npu/npu_installation.rst:389
-msgid "**注意**：若未配置该参数，可能会出现首个容器占用后，后续容器因无权限而无法读取设备的情况。鉴于特权模式的权限过大，生产环境中请务必评估安全风险后慎重使用。"
-msgstr "**Note**: Without this parameter, subsequent containers may fail to access devices due to insufficient permissions after the first container occupies them. Given the broad permissions of privileged mode, evaluate security risks carefully before using it in production."
+#: ../../source/multibackend/npu/npu_installation.rst:428
+#: b4713dcd9bad406c98f4738eda652a69
+msgid "``quay.io/ascend/cann:9.1.0-a3-ubuntu22.04-py3.12``"
+msgstr ""
 
-#: ../../source/multibackend/npu/npu_installation.rst:391
-msgid "(3) 进入容器"
-msgstr "(3) Enter container"
+#: ../../source/multibackend/npu/npu_installation.rst:431
+#: fce806e88a274477b0d79c4361a192d3
+msgid "``quay.io/ascend/cann:9.1.0-910b-openeuler24.03-py3.12``"
+msgstr ""
 
-#: ../../source/multibackend/npu/npu_installation.rst:399
+#: ../../source/multibackend/npu/npu_installation.rst:434
+#: 53607e60929b480ebf3c537f7bce776b
+msgid "``quay.io/ascend/cann:9.1.0-a3-openeuler24.03-py3.12``"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:436
+#: 2fd55cfef4764cb1a721693e0f7030a2
+msgid "可用的 Dockerfile 构建参数如下："
+msgstr "The available Dockerfile build arguments are as follows:"
+
+#: ../../source/multibackend/npu/npu_installation.rst:443
+#: 445f373738a8404c960d0c98ad49dc6d
+msgid "参数"
+msgstr "Argument"
+
+#: ../../source/multibackend/npu/npu_installation.rst:444
+#: 249961e54638490197cac6f12523ad31
+msgid "默认值"
+msgstr "Default"
+
+#: ../../source/multibackend/npu/npu_installation.rst:445
+#: a4c08fed7a1b49dbb7c1c44c456f68d9
+msgid "用途"
+msgstr "Purpose"
+
+#: ../../source/multibackend/npu/npu_installation.rst:448
+#: b6e75728389d4cc1bbd9da0892a18f9a
+msgid "根据设备型号和容器操作系统选择对应的基础镜像"
+msgstr "Select the corresponding base image for the device model and container operating system"
+
+#: ../../source/multibackend/npu/npu_installation.rst:449
+#: a79aaf1e19084f91ad2e86a20d2e1726
+msgid "``PIP_INDEX``"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:450
+#: d8d5171c0dba49999747b772607b8405
+msgid "``https://pypi.org/simple``"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:451
+#: 1b162d49bcba4fa8af1a5a122a69c2ef
+msgid "指定 Python 软件包索引"
+msgstr "Specify the Python package index"
+
+#: ../../source/multibackend/npu/npu_installation.rst:452
+#: 188f307fbf994456a886edda19eee124
+msgid "``PYTORCH_INDEX``"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:453
+#: 4d01f836537a4e0d87d4ed13a21f8d88
+msgid "``https://download.pytorch.org/whl/cpu``"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:454
+#: 0c2baa8ac3c54634a17781d7d688308f
+msgid "指定配合 TorchNPU 使用的 PyTorch wheel 索引"
+msgstr "Specify the PyTorch wheel index used with TorchNPU"
+
+#: ../../source/multibackend/npu/npu_installation.rst:455
+#: 48d17646595746659dd3a0ac3e803011
+msgid "``HTTP_PROXY``"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:456
+#: 430752e178db4e428643e04f20d05d3a
+msgid "空"
+msgstr "Empty"
+
+#: ../../source/multibackend/npu/npu_installation.rst:457
+#: d1a6004c3cb543d39865b3a5603e4d95
+msgid "配置构建期间使用的 HTTP/HTTPS 代理"
+msgstr "Configure the HTTP/HTTPS proxy used during the build"
+
+#: ../../source/multibackend/npu/npu_installation.rst:459
+#: ab297336b9ac4862b541681081e792f9
+msgid "构建完成后，可以复用 :ref:`use_form_docker` 中的 ``docker run`` 命令，并将 ``DOCKER_IMAGE`` 设置为构建时通过 ``-t`` 指定的本地镜像名称。"
+msgstr "After the build completes, reuse the ``docker run`` command in :ref:`use_form_docker` and set ``DOCKER_IMAGE`` to the local image name specified with ``-t`` during the build."
+
+#: ../../source/multibackend/npu/npu_installation.rst:465
+#: 2b6ceffa86e74033ab353761c57a2b47
 msgid "2. 使用 Docker Compose 构建"
 msgstr "2. Build Using Docker Compose"
 
-#: ../../source/multibackend/npu/npu_installation.rst:402
+#: ../../source/multibackend/npu/npu_installation.rst:467
+#: 020195eb6bf94b6c876fa847a701edf4
 msgid "进入目录"
 msgstr "Enter directory"
 
-#: ../../source/multibackend/npu/npu_installation.rst:407
-msgid "构建镜像并直接启动容器，请根据设备型号选择命令："
-msgstr "Build image and start container directly — choose commands based on device model:"
+#: ../../source/multibackend/npu/npu_installation.rst:473
+#: 07c0e232f9ac442a96be52ac0eaa53bc
+msgid "启动容器。若本地镜像不存在，Docker Compose 会先构建镜像。请根据设备型号和容器操作系统选择 profile："
+msgstr "Start the container. If the image is not available locally, Docker Compose builds it first. Select a profile according to the device model and container operating system:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:418
+#: ../../source/multibackend/npu/npu_installation.rst:489
+#: 88a4c3fde87f4429afe223990daf84f3
 msgid "进入容器"
 msgstr "Enter container"
 
-#: ../../source/multibackend/npu/npu_installation.rst:423
-msgid "构建前，请检查 `docker-compose.yml` 中的 `devices` 列表，当前构建时只会挂卡 0，请根据需要做修改。"
-msgstr "Before building, check the `devices` list in `docker-compose.yml`. Currently only card 0 is mounted during build; modify as needed."
+#: ../../source/multibackend/npu/npu_installation.rst:505
+#: a52fac5175cf4fdc8d3b87bfa6bdeef6
+msgid "如果只需要构建镜像而不启动容器，可以使用 ``docker compose --profile <profile> build``。"
+msgstr "To build the image without starting a container, use ``docker compose --profile <profile> build``."
 
+#: ../../source/multibackend/npu/npu_installation.rst:508
+#: f04a19720b8e4e6e8617b38805b261f5
+msgid "构建前，请检查 ``docker-compose.yml`` 中的 ``devices`` 列表，当前默认只会挂载卡 0，请根据需要修改。"
+msgstr "Before building, check the ``devices`` list in ``docker-compose.yml``. By default, only device 0 is mounted; modify the list as needed."

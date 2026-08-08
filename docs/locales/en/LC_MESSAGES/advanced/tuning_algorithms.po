@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2025, LlamaFactory team.
-# This file is distributed under the same license as the LLaMA Factory
+# This file is distributed under the same license as the LlamaFactory
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
@@ -24,11 +24,11 @@ msgstr "Tuning algorithms"
 
 #: ../../source/advanced/adapters.rst:6 dbdce8a639e94307af3ff627763ab812
 msgid ""
-"LLaMA-Factory 支持多种调优算法，包括： :ref:`Full Parameter Fine-tuning <full>` 、 "
+"LlamaFactory 支持多种调优算法，包括： :ref:`Full Parameter Fine-tuning <full>` 、 "
 ":ref:`Freeze <Freeze>` 、 :ref:`LoRA <LoRA>` 、 :ref:`Galore <Galore>` 、 "
 ":ref:`BAdam <BAdam>` 。"
 msgstr ""
-"LLaMA-Factory supports multiple fine-tuning algorithms, including: :ref:`Full Parameter Fine-tuning <full>`, "
+"LlamaFactory supports multiple fine-tuning algorithms, including: :ref:`Full Parameter Fine-tuning <full>`, "
 ":ref:`Freeze <Freeze>`, :ref:`LoRA <LoRA>`, :ref:`Galore <Galore>`, "
 ":ref:`BAdam <BAdam>`."
 
