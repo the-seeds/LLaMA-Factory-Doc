@@ -1,0 +1,781 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2025, LlamaFactory team.
+# This file is distributed under the same license as the LlamaFactory
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: LlamaFactory \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-20 19:15+0800\n"
+"PO-Revision-Date: 2026-08-20 19:20+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: en <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ../../source/advanced/megatron_bridge.rst:4
+#: ../../source/advanced/megatron_bridge.rst:299
+#: c5e6c34ae1d146be96932d0a10681bd2
+#: 3222865d756449fbaa29356b4f5266b8
+msgid "Megatron Bridge"
+msgstr "Megatron Bridge"
+
+#: ../../source/advanced/megatron_bridge.rst:6
+#: 06474ddcbfc3490a8b5d6853f3bd471b
+msgid "`Megatron Bridge <https://docs.nvidia.com/nemo/megatron-bridge/latest/>`__ 是 NVIDIA 提供的 Hugging Face ↔ Megatron-Core 桥梁。LlamaFactory 用它走独立的 PT / SFT 训练路径，而不是 Hugging Face Trainer。"
+msgstr "`Megatron Bridge <https://docs.nvidia.com/nemo/megatron-bridge/latest/>`__ is NVIDIA's Hugging Face ↔ Megatron-Core bridge. LlamaFactory uses it as a standalone PT / SFT path outside the Hugging Face Trainer."
+
+#: ../../source/advanced/megatron_bridge.rst:8
+#: e3b3a51b5dea463586d686690a8f6472
+msgid "启用方式：设置环境变量 ``USE_MEGATRON_BRIDGE=1``。启动器会强制 ``FORCE_TORCHRUN=1``。"
+msgstr "Enable it with ``USE_MEGATRON_BRIDGE=1``. The launcher then forces ``FORCE_TORCHRUN=1``."
+
+#: ../../source/advanced/megatron_bridge.rst:11
+#: e25a03f975894071a69ebe54163d1285
+msgid "这与 ``USE_MCA=1`` 是两个后端，不要同时开启。MCA 详见 `mcore_adapter <https://github.com/alibaba/ROLL/tree/main/mcore_adapter>`__。"
+msgstr "This is a different backend from ``USE_MCA=1``. Do not enable both. See `mcore_adapter <https://github.com/alibaba/ROLL/tree/main/mcore_adapter>`__."
+
+#: ../../source/advanced/megatron_bridge.rst:14
+#: 952d6003a6ae46b89eba5e95925e1733
+msgid "当前范围"
+msgstr "Current scope"
+
+#: ../../source/advanced/megatron_bridge.rst:20
+#: 407f2bcba73440b8bf3e0bb4875b5836
+msgid "项目"
+msgstr "Item"
+
+#: ../../source/advanced/megatron_bridge.rst:21
+#: 5850b656784c44f199634f0bf34d6723
+msgid "支持情况"
+msgstr "Support"
+
+#: ../../source/advanced/megatron_bridge.rst:22
+#: f5586aa771564109a16fb23855a8d869
+msgid "训练阶段"
+msgstr "Stages"
+
+#: ../../source/advanced/megatron_bridge.rst:23
+#: ../../source/advanced/megatron_bridge.rst:308
+#: 1e5e943854c5485e9fbb6ec0b18f75c5
+#: 06a432f9b419445fad1484b3985ac085
+msgid "``pt``、``sft``"
+msgstr "``pt``, ``sft``"
+
+#: ../../source/advanced/megatron_bridge.rst:24
+#: fb021f5ca1f541df95d84a4d5dd91600
+msgid "微调方式"
+msgstr "Finetuning"
+
+#: ../../source/advanced/megatron_bridge.rst:25
+#: ../../source/advanced/megatron_bridge.rst:311
+#: 0899594dd1d742bb8a6b2ef3d1248bd3
+#: 97613d1872ec4ae4a9a26737e07952e6
+msgid "``full``、``lora``"
+msgstr "``full``, ``lora``"
+
+#: ../../source/advanced/megatron_bridge.rst:26
+#: 9fa9c2ca2fee4cd98e613b8daa123e59
+msgid "量化 / QLoRA"
+msgstr "Quantization / QLoRA"
+
+#: ../../source/advanced/megatron_bridge.rst:27
+#: 9a2e5eaac082427ea5a8e667196a7435
+msgid "不支持"
+msgstr "Not supported"
+
+#: ../../source/advanced/megatron_bridge.rst:28
+#: c9f2b11b89494b2dacb14e493b722a3b
+msgid "DeepSpeed / MCA / HyperParallel"
+msgstr "DeepSpeed / MCA / HyperParallel"
+
+#: ../../source/advanced/megatron_bridge.rst:29
+#: 87c4bed16459400cb99157f1b7570d16
+msgid "互斥，不能同时开启"
+msgstr "Mutually exclusive"
+
+#: ../../source/advanced/megatron_bridge.rst:30
+#: e77d76017ded40208202c6e89f97d99e
+msgid "Trainer callback"
+msgstr "Trainer callbacks"
+
+#: ../../source/advanced/megatron_bridge.rst:31
+#: 9bbb547a6bc2485095d92980db5706cf
+msgid "暂不支持，传入会被忽略"
+msgstr "Not supported; ignored if provided"
+
+#: ../../source/advanced/megatron_bridge.rst:32
+#: 67796faefd414afc96574081f6c1a03c
+msgid "多模态 / 音频 / Omni"
+msgstr "Multimodal / audio / Omni"
+
+#: ../../source/advanced/megatron_bridge.rst:33
+#: 0277eea02adb4d98986a30f815896f53
+msgid "v0 未启用"
+msgstr "Not enabled in v0"
+
+#: ../../source/advanced/megatron_bridge.rst:35
+#: 4cbbca61b35d4fc5b6a8cb2f797e7518
+msgid "支持的 Hugging Face ``model_type``："
+msgstr "Supported Hugging Face ``model_type`` values:"
+
+#: ../../source/advanced/megatron_bridge.rst:37
+#: bc2a30d04b84446188a12df35489a9ff
+msgid "``deepseek_v3``、``deepseek_v4``、``llama``、``mistral``、``qwen2``、``qwen3``、``qwen3_5``、``qwen3_5_moe``、``qwen3_5_moe_text``、``qwen3_5_text``、``qwen3_moe``、``qwen3_next``"
+msgstr "``deepseek_v3``, ``deepseek_v4``, ``llama``, ``mistral``, ``qwen2``, ``qwen3``, ``qwen3_5``, ``qwen3_5_moe``, ``qwen3_5_moe_text``, ``qwen3_5_text``, ``qwen3_moe``, ``qwen3_next``"
+
+#: ../../source/advanced/megatron_bridge.rst:39
+#: 4b912a1ca833421eb3f450b46eb3f749
+msgid "未在上表中的模型（包括 VL / Omni）会在启动时报错。"
+msgstr "Any other type, including VL / Omni models, fails at launch."
+
+#: ../../source/advanced/megatron_bridge.rst:42
+#: ca03b4959d2b48d9bcbc3bef54a028b0
+msgid "安装"
+msgstr "Installation"
+
+#: ../../source/advanced/megatron_bridge.rst:44
+#: 4b4fb91d38224b1489686ac4bd9f3b1f
+msgid "推荐先装 PyTorch 与 `TransformerEngine <https://github.com/NVIDIA/TransformerEngine>`__，再安装 Megatron Bridge："
+msgstr "Install PyTorch and `TransformerEngine <https://github.com/NVIDIA/TransformerEngine>`__ first, then Megatron Bridge:"
+
+#: ../../source/advanced/megatron_bridge.rst:51
+#: d996e277a3594bd8be5737d0907a4a59
+msgid "也可以使用 `NeMo Framework 容器 <https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo/tags>`__，或构建本仓库的 CUDA 镜像："
+msgstr "You can also use a `NeMo Framework container <https://catalog.ngc.nvidia.com/orgs/nvidia/containers/nemo/tags>`__, or build the CUDA image in this repo:"
+
+#: ../../source/advanced/megatron_bridge.rst:58
+#: 14f2fbf7d9264e139edfc6b9e750122a
+msgid "验证导入："
+msgstr "Sanity check:"
+
+#: ../../source/advanced/megatron_bridge.rst:67
+#: f4e1c4326e9642af836deb06cf1f86c2
+msgid "APEX 的 ``fused_weight_gradient_mlp_cuda`` 是可选依赖。未安装时，LlamaFactory 会自动关闭 ``gradient_accumulation_fusion``，训练仍可继续。"
+msgstr "The APEX extension ``fused_weight_gradient_mlp_cuda`` is optional. If it is missing, LlamaFactory disables ``gradient_accumulation_fusion`` automatically."
+
+#: ../../source/advanced/megatron_bridge.rst:70
+#: c6ad20da56444466a61042647f250889
+msgid "快速开始"
+msgstr "Quick start"
+
+#: ../../source/advanced/megatron_bridge.rst:72
+#: a1da5bdb445849e9a2b8367d00c0c2ec
+msgid "在仓库根目录执行："
+msgstr "From the repository root:"
+
+#: ../../source/advanced/megatron_bridge.rst:78
+#: b3505e9aac174d74b158ca342ff15f50
+msgid "多卡示例（8 GPU，TP=2）："
+msgstr "Eight GPUs with TP=2:"
+
+#: ../../source/advanced/megatron_bridge.rst:87
+#: 46fb47c4f9e54888b57cb11ddf94c323
+msgid "多机与普通 ``llamafactory-cli train`` 相同，继续使用 ``NNODES``、``NODE_RANK``、``MASTER_ADDR``、``MASTER_PORT``。"
+msgstr "Multi-node launch is the same as a normal ``llamafactory-cli train`` job: set ``NNODES``, ``NODE_RANK``, ``MASTER_ADDR``, and ``MASTER_PORT``."
+
+#: ../../source/advanced/megatron_bridge.rst:89
+#: 624a3a0795ee4ded818668de624752e6
+msgid "完整配置见 ``examples/megatron_bridge/llama3_sft.yaml``。"
+msgstr "See ``examples/megatron_bridge/llama3_sft.yaml`` for a complete config."
+
+#: ../../source/advanced/megatron_bridge.rst:92
+#: 28265c47f8d34bfb8d2ea876453859fb
+msgid "并行与批大小"
+msgstr "Parallelism and batch size"
+
+#: ../../source/advanced/megatron_bridge.rst:94
+#: 18a00c7a5b3f4a6a8fec5af3d6f3e666
+msgid "并行度必须整除 ``world_size``："
+msgstr "The product of parallel sizes must divide ``world_size``:"
+
+#: ../../source/advanced/megatron_bridge.rst:102
+#: 787ae1d0c9a44f838ad8a03dfd68556a
+msgid "``sequence_parallel=true`` 要求 ``tensor_model_parallel_size > 1``。"
+msgstr "``sequence_parallel=true`` requires ``tensor_model_parallel_size > 1``."
+
+#: ../../source/advanced/megatron_bridge.rst:104
+#: e172ab7d29f94ecd8544bf52b25b2a64
+msgid "全局 batch 按 Megatron 语义计算："
+msgstr "Global batch size uses Megatron semantics:"
+
+#: ../../source/advanced/megatron_bridge.rst:112
+#: 3e595f224ba84c87bfb54914d5f4da37
+msgid "训练步数：``max_steps > 0`` 时直接作为 ``train_iters``；否则按 ``num_train_epochs`` 和样本数推算。"
+msgstr "If ``max_steps > 0``, it becomes ``train_iters``. Otherwise the schedule is derived from ``num_train_epochs`` and the dataset length."
+
+#: ../../source/advanced/megatron_bridge.rst:114
+#: 2be6a5c520874d23abf0b85f021ce7a3
+msgid "``context_parallel_size > 1`` 时，SFT 会强制 ``calculate_per_token_loss=true``。若同时开启 ``use_packed_sequences``，packed 序列会按 ``CP * 2`` 对齐。"
+msgstr "When ``context_parallel_size > 1``, SFT forces ``calculate_per_token_loss=true``. Packed sequences, if enabled, are padded to a multiple of ``CP * 2``."
+
+#: ../../source/advanced/megatron_bridge.rst:117
+#: 5b6248401f574197ae597bf41b1cd4c4
+msgid "配置字段"
+msgstr "Configuration"
+
+#: ../../source/advanced/megatron_bridge.rst:119
+#: 0aa5078518aa4205b0a58ad69d93179f
+msgid "Megatron Bridge 专用参数定义在 ``MegatronBridgeArguments``，与普通训练 YAML 写在一起即可。"
+msgstr "Megatron Bridge options live in ``MegatronBridgeArguments`` and are written in the same training YAML."
+
+#: ../../source/advanced/megatron_bridge.rst:122
+#: 695a7be889d3444f8b4a4c212e47f222
+msgid "并行"
+msgstr "Parallelism"
+
+#: ../../source/advanced/megatron_bridge.rst:128
+#: ../../source/advanced/megatron_bridge.rst:157
+#: ../../source/advanced/megatron_bridge.rst:179
+#: ../../source/advanced/megatron_bridge.rst:210
+#: ed4190028c184ab1928f2ac91ca746fe
+#: 3154492079cb4cb287c09cab78345058
+#: bbb06182e6914c94be15b6e5e168a330
+#: 9f8f4f77e1e341a4bcbacab33b5a0758
+msgid "字段"
+msgstr "Field"
+
+#: ../../source/advanced/megatron_bridge.rst:129
+#: ../../source/advanced/megatron_bridge.rst:180
+#: ../../source/advanced/megatron_bridge.rst:211
+#: 45bf811b7f564154b79d47635deca7cc
+#: d02304d4bf404de8b82198050a4a1f53
+#: 0150131d030d44a999be749cce2f5041
+msgid "默认值"
+msgstr "Default"
+
+#: ../../source/advanced/megatron_bridge.rst:130
+#: ../../source/advanced/megatron_bridge.rst:158
+#: ../../source/advanced/megatron_bridge.rst:181
+#: ../../source/advanced/megatron_bridge.rst:212
+#: b09324d7c76044f69a8dbc07d539de58
+#: 38c010dd76074edfb970fffa6680a60b
+#: dc44fb96cbc54ec88939f60041180b81
+#: 2d93a5dd8d99481bb4e0cc2a73b2546d
+msgid "说明"
+msgstr "Meaning"
+
+#: ../../source/advanced/megatron_bridge.rst:131
+#: baefe5a18b3841869e809d07f4f03734
+msgid "``tensor_model_parallel_size``"
+msgstr "``tensor_model_parallel_size``"
+
+#: ../../source/advanced/megatron_bridge.rst:132
+#: ../../source/advanced/megatron_bridge.rst:135
+#: ../../source/advanced/megatron_bridge.rst:138
+#: ../../source/advanced/megatron_bridge.rst:141
+#: 465f97cf181d46d2b91e69280d4ac267
+#: 38c5401a5f414802aac919a96cc5b582
+#: d8b3a352fde145bfadf81dcc472725de
+#: ba1242480c8949fa82c4c56d607f2e4c
+msgid "``1``"
+msgstr "``1``"
+
+#: ../../source/advanced/megatron_bridge.rst:133
+#: 716ab4955598472991fcf3201a6452e1
+msgid "张量并行 TP"
+msgstr "Tensor parallel (TP)"
+
+#: ../../source/advanced/megatron_bridge.rst:134
+#: 4ca53b1511e8420eab8e2da2c012e2af
+msgid "``pipeline_model_parallel_size``"
+msgstr "``pipeline_model_parallel_size``"
+
+#: ../../source/advanced/megatron_bridge.rst:136
+#: dbd608c74a1943bc95d965fc9955c698
+msgid "流水线并行 PP"
+msgstr "Pipeline parallel (PP)"
+
+#: ../../source/advanced/megatron_bridge.rst:137
+#: d6edc098923d4b318fd818351e191349
+msgid "``expert_model_parallel_size``"
+msgstr "``expert_model_parallel_size``"
+
+#: ../../source/advanced/megatron_bridge.rst:139
+#: ec4e83bb659d4399a5e517267dacbab7
+msgid "MoE 专家并行 EP"
+msgstr "Expert parallel (EP) for MoE"
+
+#: ../../source/advanced/megatron_bridge.rst:140
+#: 8f6cb01fc25844d8a87f4e573959f597
+msgid "``context_parallel_size``"
+msgstr "``context_parallel_size``"
+
+#: ../../source/advanced/megatron_bridge.rst:142
+#: d05f0061fc9e4f0aa8f8dd162df16dda
+msgid "上下文并行 CP"
+msgstr "Context parallel (CP)"
+
+#: ../../source/advanced/megatron_bridge.rst:143
+#: ef991c163aac4e09be946d191e51def0
+msgid "``virtual_pipeline_model_parallel_size``"
+msgstr "``virtual_pipeline_model_parallel_size``"
+
+#: ../../source/advanced/megatron_bridge.rst:144
+#: ../../source/advanced/megatron_bridge.rst:195
+#: ../../source/advanced/megatron_bridge.rst:198
+#: ../../source/advanced/megatron_bridge.rst:217
+#: ../../source/advanced/megatron_bridge.rst:223
+#: a3e5a6d640ec41c3991bb0532a198ef8
+#: 0e0ba8ba216f4ec888341974f2c1e588
+#: eda1bc08b0bd4dfab6e753c4767e7aad
+#: 5a04b1f5f5b24699b965f6e56ed294fe
+#: 92afd46d5b664f72b758d64dd5715ae7
+msgid "``None``"
+msgstr "``None``"
+
+#: ../../source/advanced/megatron_bridge.rst:145
+#: fd511b9cc48e42fe8bdc9e243a507062
+msgid "交错流水线 VPP"
+msgstr "Interleaved virtual pipeline (VPP)"
+
+#: ../../source/advanced/megatron_bridge.rst:146
+#: c11de33029ee4130a03e4ae9a96de275
+msgid "``sequence_parallel``"
+msgstr "``sequence_parallel``"
+
+#: ../../source/advanced/megatron_bridge.rst:147
+#: ../../source/advanced/megatron_bridge.rst:214
+#: ../../source/advanced/megatron_bridge.rst:220
+#: ac43ff2c76e04ebb97d78b1b6ea94f58
+#: d3528eb41c1e4816b35b2b4c9a56f435
+#: 9851dae4418747c9b075ac2ca1ec7096
+msgid "``false``"
+msgstr "``false``"
+
+#: ../../source/advanced/megatron_bridge.rst:148
+#: b11ef1c3f1a84d30adeed9af09414ac2
+msgid "序列并行，需 TP > 1"
+msgstr "Sequence parallel; requires TP > 1"
+
+#: ../../source/advanced/megatron_bridge.rst:151
+#: a59c85aeb29a43aea0ef5699360606ce
+msgid "重计算与融合"
+msgstr "Recompute and fusion"
+
+#: ../../source/advanced/megatron_bridge.rst:159
+#: aa5866dbbc3d4aef98827464fd695667
+msgid "``recompute_granularity``"
+msgstr "``recompute_granularity``"
+
+#: ../../source/advanced/megatron_bridge.rst:160
+#: ff4700a4b82240eaa481e13a41393f1e
+msgid "``full`` 或 ``selective``"
+msgstr "``full`` or ``selective``"
+
+#: ../../source/advanced/megatron_bridge.rst:161
+#: a9a8eaad6a4640b489850ea33e1d02c3
+msgid "``recompute_method``"
+msgstr "``recompute_method``"
+
+#: ../../source/advanced/megatron_bridge.rst:162
+#: 4abc75679a584977ba949a245007b31f
+msgid "``uniform`` 或 ``block``"
+msgstr "``uniform`` or ``block``"
+
+#: ../../source/advanced/megatron_bridge.rst:163
+#: 9e2421a1dec04fb8a2bc71e9c2c7f938
+msgid "``recompute_num_layers``"
+msgstr "``recompute_num_layers``"
+
+#: ../../source/advanced/megatron_bridge.rst:164
+#: 5412e5587cb343f8a18aa4b4d9bf2968
+msgid "每个重计算单元的层数"
+msgstr "Layers per recompute unit"
+
+#: ../../source/advanced/megatron_bridge.rst:165
+#: d1e416fdcde743a1a280a7313a5dcd29
+msgid "``account_for_embedding_in_pipeline_split``"
+msgstr "``account_for_embedding_in_pipeline_split``"
+
+#: ../../source/advanced/megatron_bridge.rst:166
+#: a95eddc28d0b4016988093710609000e
+msgid "PP 切分是否计入 embedding"
+msgstr "Include embedding in the PP split"
+
+#: ../../source/advanced/megatron_bridge.rst:167
+#: 0fb5d65c92b24f3d8a97141ffa663383
+msgid "``account_for_loss_in_pipeline_split``"
+msgstr "``account_for_loss_in_pipeline_split``"
+
+#: ../../source/advanced/megatron_bridge.rst:168
+#: f564f3db975c4b8e940de5ab07076bae
+msgid "PP 切分是否计入 loss"
+msgstr "Include loss in the PP split"
+
+#: ../../source/advanced/megatron_bridge.rst:169
+#: dc91fbbf0920407a8d11be55c2e45963
+msgid "``bias_activation_fusion`` / ``apply_rope_fusion`` / ``masked_softmax_fusion`` / ``cross_entropy_loss_fusion``"
+msgstr "``bias_activation_fusion`` / ``apply_rope_fusion`` / ``masked_softmax_fusion`` / ``cross_entropy_loss_fusion``"
+
+#: ../../source/advanced/megatron_bridge.rst:170
+#: e5d6efc539c5487394d78f591400a7fb
+msgid "设为 ``None`` 时保留 Megatron provider 默认值"
+msgstr "``None`` keeps the Megatron provider default"
+
+#: ../../source/advanced/megatron_bridge.rst:173
+#: 695b9184790742ea951194f6652ef4a2
+msgid "优化器与精度"
+msgstr "Optimizer and precision"
+
+#: ../../source/advanced/megatron_bridge.rst:182
+#: 03383ee984f34c608de27d08d7cafa67
+msgid "``use_distributed_optimizer``"
+msgstr "``use_distributed_optimizer``"
+
+#: ../../source/advanced/megatron_bridge.rst:183
+#: ../../source/advanced/megatron_bridge.rst:186
+#: ../../source/advanced/megatron_bridge.rst:189
+#: dda64cea41ca491c92ad0f308a53aec2
+#: b85e159b71d94dc3a93cea91ab2ac5a8
+#: 8c8300d40c8248b8bfe8366fc6f049b9
+msgid "``true``"
+msgstr "``true``"
+
+#: ../../source/advanced/megatron_bridge.rst:184
+#: 1668043efce3403eb78aafacf4975726
+msgid "Megatron distributed optimizer"
+msgstr "Megatron distributed optimizer"
+
+#: ../../source/advanced/megatron_bridge.rst:185
+#: ce128cd7c6ee4fa98ccec2919c87a40b
+msgid "``overlap_param_gather``"
+msgstr "``overlap_param_gather``"
+
+#: ../../source/advanced/megatron_bridge.rst:187
+#: 5c9820b7780b4b65bb2316f17c9e4e80
+msgid "参数 all-gather 与前向重叠"
+msgstr "Overlap parameter all-gather with forward"
+
+#: ../../source/advanced/megatron_bridge.rst:188
+#: 639a7eff70b045838cc726967df36dc1
+msgid "``overlap_grad_reduce``"
+msgstr "``overlap_grad_reduce``"
+
+#: ../../source/advanced/megatron_bridge.rst:190
+#: 94ae3b25bdd14753bb4daa41615f357d
+msgid "梯度 all-reduce 与反向重叠"
+msgstr "Overlap gradient all-reduce with backward"
+
+#: ../../source/advanced/megatron_bridge.rst:191
+#: 0a68ccd063d04662953cb6bcf9cfb765
+msgid "``mixed_precision``"
+msgstr "``mixed_precision``"
+
+#: ../../source/advanced/megatron_bridge.rst:192
+#: f2034715032043d695e0f23d7d838fb5
+msgid "``bf16_mixed``"
+msgstr "``bf16_mixed``"
+
+#: ../../source/advanced/megatron_bridge.rst:193
+#: f8341c8b5d244de49f79fa3bf6585fa6
+msgid "如 ``bf16_mixed``、``fp8``"
+msgstr "For example ``bf16_mixed`` or ``fp8``"
+
+#: ../../source/advanced/megatron_bridge.rst:194
+#: b02470d79abb4297aef95472454e5d85
+msgid "``moe_grouped_gemm``"
+msgstr "``moe_grouped_gemm``"
+
+#: ../../source/advanced/megatron_bridge.rst:196
+#: d0f1b98a745943cba518974c9eb85468
+msgid "MoE grouped GEMM"
+msgstr "Grouped GEMM for MoE experts"
+
+#: ../../source/advanced/megatron_bridge.rst:197
+#: 541b88e082394364a02cbde9e5e2df6c
+msgid "``moe_token_dispatcher_type``"
+msgstr "``moe_token_dispatcher_type``"
+
+#: ../../source/advanced/megatron_bridge.rst:199
+#: 6b916569ac8448689dc14032360cf7aa
+msgid "``allgather`` / ``alltoall`` / ``flex``"
+msgstr "``allgather``, ``alltoall``, or ``flex``"
+
+#: ../../source/advanced/megatron_bridge.rst:201
+#: bf5dd4fa04e0469ea981e2dbcfd81ee2
+msgid "学习率、warmup、``adam_beta1`` / ``adam_beta2``、``weight_decay``、``max_grad_norm`` 仍使用标准 ``TrainingArguments``。``lr_scheduler_type`` 仅映射 ``cosine``、``linear``、``constant``、``constant_with_warmup``；其余会回退到 cosine。``full`` / ``lora`` 的 ``min_lr`` 为 ``0.0``。"
+msgstr "Learning rate, warmup, ``adam_beta1`` / ``adam_beta2``, ``weight_decay``, and ``max_grad_norm`` still come from standard ``TrainingArguments``. ``lr_scheduler_type`` maps ``cosine``, ``linear``, ``constant``, and ``constant_with_warmup``; other values fall back to cosine. For ``full`` / ``lora``, ``min_lr`` is ``0.0``."
+
+#: ../../source/advanced/megatron_bridge.rst:204
+#: 27fb5bbef4384bb2a01e3db8a976d098
+msgid "数据与 checkpoint"
+msgstr "Data and checkpoints"
+
+#: ../../source/advanced/megatron_bridge.rst:213
+#: 5307514139fb40bb839844110c477a8a
+msgid "``use_packed_sequences``"
+msgstr "``use_packed_sequences``"
+
+#: ../../source/advanced/megatron_bridge.rst:215
+#: 112c696da73a4341aac0450ebad9ec96
+msgid "SFT packed sequence"
+msgstr "Packed sequences for SFT"
+
+#: ../../source/advanced/megatron_bridge.rst:216
+#: 034dfbf088d24055aaa4d782445a1f4c
+msgid "``megatron_pretrained_checkpoint``"
+msgstr "``megatron_pretrained_checkpoint``"
+
+#: ../../source/advanced/megatron_bridge.rst:218
+#: 7827d9e36212493eaebe00a8878d0d06
+msgid "已有 Megatron 格式权重；未设置时自动从 HF 转换"
+msgstr "Existing Megatron checkpoint; HF weights are converted if unset"
+
+#: ../../source/advanced/megatron_bridge.rst:219
+#: 932a5ccc44254a9084ac876782463866
+msgid "``export_hf_on_finish``"
+msgstr "``export_hf_on_finish``"
+
+#: ../../source/advanced/megatron_bridge.rst:221
+#: a76423027e6644838fcd73d0b92c7f50
+msgid "训练结束后导出 Hugging Face 权重"
+msgstr "Export Hugging Face weights after training"
+
+#: ../../source/advanced/megatron_bridge.rst:222
+#: bde6b7f35bc84e68b3076f084d42d549
+msgid "``extra_config``"
+msgstr "``extra_config``"
+
+#: ../../source/advanced/megatron_bridge.rst:224
+#: 342477df03b549b889f8bbcd57d8f429
+msgid "JSON 字符串或 JSON 文件，支持点路径覆盖"
+msgstr "JSON string or JSON file; dot-paths are supported"
+
+#: ../../source/advanced/megatron_bridge.rst:233
+#: 1cba1ba989ea491ea1972ce40ea99c77
+msgid "数据流"
+msgstr "Data flow"
+
+#: ../../source/advanced/megatron_bridge.rst:235
+#: b81bb9b15dab4a3885c006e67f1cf6af
+msgid "LlamaFactory 仍负责数据集加载与 ``template``。训练开始前，rank 0 会把对齐后的样本导出到 ``output_dir/mb_dataset/``："
+msgstr "LlamaFactory still loads datasets and applies ``template``. Rank 0 then exports aligned samples to ``output_dir/mb_dataset/`` before training:"
+
+#: ../../source/advanced/megatron_bridge.rst:241
+#: ../../source/advanced/megatron_bridge.rst:307
+#: 638d3d5be7414b13a26cd3816ab56ebb
+#: 0ef6901c2e954799a95ce28fa95c4341
+msgid "阶段"
+msgstr "Stage"
+
+#: ../../source/advanced/megatron_bridge.rst:242
+#: 753620cf933542d8ab28ec7c8afd9be4
+msgid "文件"
+msgstr "Files"
+
+#: ../../source/advanced/megatron_bridge.rst:243
+#: 4f5324f8e2df48e2be1988dab8b2a14d
+msgid "格式"
+msgstr "Format"
+
+#: ../../source/advanced/megatron_bridge.rst:244
+#: 29373665a3074d0aa6cbc9764bd2fde9
+msgid "``pt``"
+msgstr "``pt``"
+
+#: ../../source/advanced/megatron_bridge.rst:245
+#: cf29054f3b8e4ecb87117e4401085e25
+msgid "``training.jsonl``"
+msgstr "``training.jsonl``"
+
+#: ../../source/advanced/megatron_bridge.rst:246
+#: b057a0ffe1ff42b491498839184d39bf
+msgid "``{\"text\": \"...\"}``"
+msgstr "``{\"text\": \"...\"}``"
+
+#: ../../source/advanced/megatron_bridge.rst:247
+#: ea0c7229f6554011ad645b9f32c1bb6a
+msgid "``sft``"
+msgstr "``sft``"
+
+#: ../../source/advanced/megatron_bridge.rst:248
+#: af1912b34fc141028643379c57ab7a84
+msgid "``training.jsonl``、可选 ``validation.jsonl``"
+msgstr "``training.jsonl``, optional ``validation.jsonl``"
+
+#: ../../source/advanced/megatron_bridge.rst:249
+#: 81d3e071480e43ec9e63a697f798d7df
+msgid "优先 Hugging Face ``messages``；无法注入 ``{% generation %}`` 时回退 ShareGPT"
+msgstr "Hugging Face ``messages`` when possible; otherwise ShareGPT"
+
+#: ../../source/advanced/megatron_bridge.rst:251
+#: 084d49139de341f78c154edb260f5787
+msgid "SFT 会尽量使用与 Hugging Face Trainer 相同的 chat template，并为 assistant 回复注入 ``{% generation %}``，以便只对回答计算 loss。"
+msgstr "SFT prefers the same chat template as the Hugging Face Trainer and injects ``{% generation %}`` around assistant turns so loss is computed on responses only."
+
+#: ../../source/advanced/megatron_bridge.rst:254
+#: 4c61d70e5eb047f48cbe1e7376568da7
+msgid "Checkpoint"
+msgstr "Checkpoints"
+
+#: ../../source/advanced/megatron_bridge.rst:256
+#: c8002ea932314fdf9d0eb92b1d424f34
+msgid "SFT 首次运行会把 Hugging Face 权重转换成 Megatron 格式，默认目录为 ``output_dir/megatron_pretrained/``。已转换过的目录会复用。若已有 Megatron checkpoint，直接设置 ``megatron_pretrained_checkpoint``。"
+msgstr "The first SFT run converts Hugging Face weights to Megatron format under ``output_dir/megatron_pretrained/`` and reuses that directory later. Set ``megatron_pretrained_checkpoint`` if you already have a Megatron checkpoint."
+
+#: ../../source/advanced/megatron_bridge.rst:258
+#: 612762e54a384a188b10d7998dabc525
+msgid "训练过程写入 Megatron distributed checkpoint（``torch_dist``）："
+msgstr "Training writes Megatron distributed checkpoints (``torch_dist``):"
+
+#: ../../source/advanced/megatron_bridge.rst:271
+#: 40d70074962841b099f26ec822fd344e
+msgid "续训：保持相同 ``output_dir``，并设置 ``overwrite_output_dir: false``。存在 ``latest_checkpointed_iteration.txt`` 或 ``latest_train_state.pt`` 时会从该目录恢复。不要依赖 Hugging Face 的 ``resume_from_checkpoint`` 路径语义。"
+msgstr "To resume, keep the same ``output_dir`` and set ``overwrite_output_dir: false``. Training resumes when ``latest_checkpointed_iteration.txt`` or ``latest_train_state.pt`` exists. Do not rely on Hugging Face ``resume_from_checkpoint`` path semantics."
+
+#: ../../source/advanced/megatron_bridge.rst:273
+#: ba911ee18758403d88a6432848d4be55
+msgid "``export_hf_on_finish: true`` 时："
+msgstr "With ``export_hf_on_finish: true``:"
+
+#: ../../source/advanced/megatron_bridge.rst:275
+#: dbeb87c562a7438a8f81a7c109e6fb72
+msgid "全参数：导出完整 Hugging Face 目录到 ``output_dir/hf_export/``"
+msgstr "Full finetuning exports a complete Hugging Face folder to ``output_dir/hf_export/``"
+
+#: ../../source/advanced/megatron_bridge.rst:276
+#: 615039db467c4ff39f146d350ab831fa
+msgid "LoRA：只导出 PEFT adapter（Megatron PEFT checkpoint 不含基座权重）"
+msgstr "LoRA exports a PEFT adapter only (Megatron PEFT checkpoints do not store base weights)"
+
+#: ../../source/advanced/megatron_bridge.rst:278
+#: 7e6d4b4129f8415388ce56bc1c356a84
+msgid "短跑、只对比 loss 时建议关掉导出，避免额外 checkpoint 显存开销。"
+msgstr "Disable export on short loss-comparison runs to avoid extra checkpoint memory pressure."
+
+#: ../../source/advanced/megatron_bridge.rst:281
+#: 6f6f3399c0194eb0ae5c2a9af64079a4
+msgid "LoRA"
+msgstr "LoRA"
+
+#: ../../source/advanced/megatron_bridge.rst:289
+#: 3f4664fd886347e58ca3a47fecedf812
+msgid "Megatron Bridge 固定作用在 ``linear_qkv``、``linear_proj``、``linear_fc1``、``linear_fc2``。自定义 ``lora_target`` 会被忽略并打 warning。``lora_rank`` / ``lora_alpha`` 会映射到 Megatron LoRA 的 ``dim`` / ``alpha``；``lora_dropout`` 不会传入。"
+msgstr "Megatron Bridge always targets ``linear_qkv``, ``linear_proj``, ``linear_fc1``, and ``linear_fc2``. A custom ``lora_target`` is ignored with a warning. ``lora_rank`` / ``lora_alpha`` map to Megatron LoRA ``dim`` / ``alpha``; ``lora_dropout`` is not forwarded."
+
+#: ../../source/advanced/megatron_bridge.rst:292
+#: 10c7435f90bc43da86cb8f77c53bb25d
+msgid "与 MCA 的区别"
+msgstr "Difference from MCA"
+
+#: ../../source/advanced/megatron_bridge.rst:300
+#: 8048d74818d44ee8a30c71b98628734c
+msgid "MCA (``mcore_adapter``)"
+msgstr "MCA (``mcore_adapter``)"
+
+#: ../../source/advanced/megatron_bridge.rst:301
+#: 8e590c7c6fab4f4382ceb039c54ee271
+msgid "环境变量"
+msgstr "Environment variable"
+
+#: ../../source/advanced/megatron_bridge.rst:302
+#: 31a6530c8cf546b78acd43ac7dcc72d0
+msgid "``USE_MEGATRON_BRIDGE=1``"
+msgstr "``USE_MEGATRON_BRIDGE=1``"
+
+#: ../../source/advanced/megatron_bridge.rst:303
+#: 43f5d1626b8242f9badc2512384359e7
+msgid "``USE_MCA=1``"
+msgstr "``USE_MCA=1``"
+
+#: ../../source/advanced/megatron_bridge.rst:304
+#: 5cc4dcfcb07a4da7998825108af30de4
+msgid "依赖"
+msgstr "Dependency"
+
+#: ../../source/advanced/megatron_bridge.rst:305
+#: a51a63206166413787e433b898894983
+msgid "``megatron-bridge``"
+msgstr "``megatron-bridge``"
+
+#: ../../source/advanced/megatron_bridge.rst:306
+#: 0c03a5257c4e4ceeb3c97924049784ae
+msgid "``mcore-adapter``"
+msgstr "``mcore-adapter``"
+
+#: ../../source/advanced/megatron_bridge.rst:309
+#: 46eeac12f8794221a5bcac0ab961165a
+msgid "``pt``、``sft``、``dpo``"
+msgstr "``pt``, ``sft``, ``dpo``"
+
+#: ../../source/advanced/megatron_bridge.rst:310
+#: 350c0914659b4752b82edad6f8bfde2c
+msgid "微调"
+msgstr "Finetuning"
+
+#: ../../source/advanced/megatron_bridge.rst:312
+#: 35c27f122f204fd5b13d90ed0bf25731
+msgid "目前以 ``full`` 为主"
+msgstr "Primarily ``full`` today"
+
+#: ../../source/advanced/megatron_bridge.rst:313
+#: 8fbf63fd1d424bfca869a1fa1d3f531f
+msgid "示例"
+msgstr "Examples"
+
+#: ../../source/advanced/megatron_bridge.rst:314
+#: 7778c0c62722427582f6c696680c8f3a
+msgid "``examples/megatron_bridge/``"
+msgstr "``examples/megatron_bridge/``"
+
+#: ../../source/advanced/megatron_bridge.rst:315
+#: ac19c645c53947b1a4fd2898396c61d0
+msgid "``examples/megatron/``"
+msgstr "``examples/megatron/``"
+
+#: ../../source/advanced/megatron_bridge.rst:316
+#: 00c9c356b56244e59efc23d50b3b58d4
+msgid "Docker"
+msgstr "Docker"
+
+#: ../../source/advanced/megatron_bridge.rst:317
+#: 869f4a47a8364f05bab74474dcb4ef84
+msgid "``Dockerfile.mbridge``"
+msgstr "``Dockerfile.mbridge``"
+
+#: ../../source/advanced/megatron_bridge.rst:318
+#: 05e18b02811847858ff7a784b6873cbe
+msgid "``Dockerfile.megatron``"
+msgstr "``Dockerfile.megatron``"
+
+#: ../../source/advanced/megatron_bridge.rst:321
+#: a0edfc28ba8448459b9a4f1948d6fd1d
+msgid "限制与排障"
+msgstr "Limitations"
+
+#: ../../source/advanced/megatron_bridge.rst:323
+#: 6de02264cffe4155986cffb6f1dd228b
+msgid "不要同时设置 ``USE_MEGATRON_BRIDGE`` 和 ``USE_MCA``。"
+msgstr "Do not set ``USE_MEGATRON_BRIDGE`` and ``USE_MCA`` together."
+
+#: ../../source/advanced/megatron_bridge.rst:324
+#: 1a1aa1109f8e4c6e907a46460c44c0e5
+msgid "不要搭配 DeepSpeed、量化模型或 Hugging Face Trainer callback。"
+msgstr "Do not combine this backend with DeepSpeed, quantized models, or Hugging Face Trainer callbacks."
+
+#: ../../source/advanced/megatron_bridge.rst:325
+#: 8e9d8696781942a284726ef2d4bdc92e
+msgid "部分 GPU（例如 V100）保存 distributed optimizer 时，异步 D2H copy 可能失败；LlamaFactory 会改用同步拷贝。"
+msgstr "On some GPUs (for example V100), async D2H copies while saving the distributed optimizer can fail; LlamaFactory falls back to blocking copies."
+
+#: ../../source/advanced/megatron_bridge.rst:326
+#: d51e25be48bd47f3ba7a6562261d7eb2
+msgid "pip 安装的 ``megatron-core`` 若已带 ``helpers_cpp``，会跳过源码树里的 ``make`` 编译。"
+msgstr "If pip-installed ``megatron-core`` already ships ``helpers_cpp``, helper compilation via ``make`` is skipped."
+
+#: ../../source/advanced/megatron_bridge.rst:327
+#: 33a6739eb25e4bfd9f8b98823ff54a91
+msgid "Web UI 可以提交同一份 YAML，但仍需在启动环境中设置 ``USE_MEGATRON_BRIDGE=1``。"
+msgstr "LlamaBoard can submit the same YAML, but the process environment still needs ``USE_MEGATRON_BRIDGE=1``."
+
+#: ../../source/advanced/megatron_bridge.rst:329
+#: d03efdfcbf554651b77b512abb9bf140
+msgid "更多上游概念见 `Megatron Bridge 文档 <https://docs.nvidia.com/nemo/megatron-bridge/latest/>`__。"
+msgstr "See the upstream `Megatron Bridge docs <https://docs.nvidia.com/nemo/megatron-bridge/latest/>`__ for Megatron-side concepts."

@@ -29,7 +29,11 @@ msgstr ""
 "LlamaFactory supports single-node multi-card and Multi-node Multi-card distributed training. It also supports three distributed engines: :ref:`DDP <NativeDDP>`, "
 ":ref:`DeepSpeed <deepspeed_ref>`, and :ref:`FSDP <fsdp_ref>`."
 
-#: ../../source/advanced/distributed.rst:8 6f41c1bfbe2f4d8797e9fcfaa9f71419
+#: ../../source/advanced/distributed.rst:9 74084aacce88432ba55c9de6dc41307f
+msgid "若需使用 Megatron-Core 进行独立的 PT / SFT 训练，请参考 :doc:`Megatron Bridge <megatron_bridge>`。"
+msgstr "For standalone PT / SFT training with Megatron-Core, see :doc:`Megatron Bridge <megatron_bridge>`."
+
+#: ../../source/advanced/distributed.rst:12 6f41c1bfbe2f4d8797e9fcfaa9f71419
 msgid ""
 "`DDP <https://pytorch.org/docs/stable/notes/ddp.html>`__ "
 "(DistributedDataParallel) 通过实现模型并行和数据并行实现训练加速。 使用 DDP "

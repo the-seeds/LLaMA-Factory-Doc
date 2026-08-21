@@ -5,6 +5,9 @@
 
 LlamaFactory 支持单机多卡和多机多卡分布式训练。同时也支持 :ref:`DDP <NativeDDP>`、:ref:`DeepSpeed <deepspeed_ref>` 和 :ref:`FSDP <fsdp_ref>` 三种分布式引擎。
 
+.. seealso::
+   若需使用 Megatron-Core 进行独立的 PT / SFT 训练，请参考 :doc:`Megatron Bridge <megatron_bridge>`。
+
 
 `DDP <https://pytorch.org/docs/stable/notes/ddp.html>`__ (DistributedDataParallel) 通过实现模型并行和数据并行实现训练加速。
 使用 DDP 的程序需要生成多个进程并且为每个进程创建一个 DDP 实例，他们之间通过 ``torch.distributed`` 库同步。

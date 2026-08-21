@@ -40,6 +40,7 @@ Documentation
   advanced/acceleration
   advanced/tuning_algorithms
   advanced/distributed
+  advanced/megatron_bridge
   advanced/quantization
   advanced/trainers
   advanced/monitor
