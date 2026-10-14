@@ -1,0 +1,501 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, LlamaFactory team.
+# This file is distributed under the same license as the LlamaFactory
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: LlamaFactory \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-12 01:35-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:2
+#: fa69b4385b9e4328acefc5f6e0311d08
+msgid "XPU安装及配置"
+msgstr "XPU Installation and Configuration"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:4
+#: 4a8476f3c59243dabe5f7d68d2755aae
+msgid "本文档介绍如何在 Intel GPU（PyTorch 中的 ``xpu`` 设备）上安装 LlamaFactory。"
+msgstr ""
+"This document describes how to install LlamaFactory on Intel GPUs (the "
+"``xpu`` device in PyTorch)."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:7
+#: f3db83c6e2d5447a9cbe7b9b471671ea
+msgid "硬件和操作系统"
+msgstr "Hardware and Operating Systems"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:9
+#: 6477ac70acd7436f81a3fc1fab2c26d3
+msgid ""
+"LlamaFactory 通过 PyTorch 原生的 XPU 后端支持 Intel GPU，无需安装 Intel Extension for "
+"PyTorch (IPEX)。"
+msgstr ""
+"LlamaFactory supports Intel GPUs through PyTorch's native XPU backend; "
+"Intel Extension for PyTorch (IPEX) is not required."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:11
+#: 0f36d9f112a94050a6eade78f25d1ab6
+msgid "**表 1**  已验证环境"
+msgstr "**Table 1**  Validated Environment"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:18
+#: 8f0998e263a2497da8c686ba0802235b
+msgid "项目"
+msgstr "Item"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:19
+#: 028e761a6a5442409893f41523b11157
+msgid "版本"
+msgstr "Version"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:20
+#: 4e71cde7b0044bc9a3d3b00247d0e4b8
+msgid "GPU"
+msgstr "GPU"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:21
+#: 0322fd4f16c6487880f4fa6008a7fcbc
+msgid "Intel Arc Pro B60"
+msgstr "Intel Arc Pro B60"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:22
+#: 89c49ebc13994632b950c6f6a01c9743
+msgid "操作系统"
+msgstr "Operating System"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:23
+#: 4be91a53482c42b3b604bd75812db457
+msgid "Ubuntu 24.04（Docker 镜像）、Ubuntu 25.10（物理机）"
+msgstr "Ubuntu 24.04 (Docker image), Ubuntu 25.10 (bare metal)"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:24
+#: 3d5ce73039664cc1b67d4150e6f63c39
+msgid "PyTorch"
+msgstr "PyTorch"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:25
+#: eda3c444d42a4bd88bcb0030f0be2f34
+msgid "2.13.0+xpu、2.14.0+xpu"
+msgstr "2.13.0+xpu, 2.14.0+xpu"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:26
+#: 14c26c52cc2b4b86813072a6cdc9156e
+msgid "Python"
+msgstr "Python"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:27
+#: df779275f2964e289e9374fd055e5be0
+msgid "3.12"
+msgstr "3.12"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:29
+#: 15876c3302944453a9467e90802102f7
+msgid ""
+"其他 Intel GPU 是否支持，取决于 PyTorch XPU 后端，请参考 `PyTorch XPU 入门文档 "
+"<https://docs.pytorch.org/docs/stable/notes/get_start_xpu.html>`__。"
+msgstr ""
+"Support for other Intel GPUs depends on the PyTorch XPU backend; see the "
+"`PyTorch XPU Getting Started guide "
+"<https://docs.pytorch.org/docs/stable/notes/get_start_xpu.html>`__."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:31
+#: fa2c06bcc6534bb7816ab21e29f64ebe
+msgid "可以选择以下两种方式之一进行环境配置："
+msgstr "Choose one of the following two methods to set up the environment:"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:33
+#: 4cb71e7593624301996d4fe0cfe18258
+msgid ":ref:`xpu_install_form_pip`"
+msgstr ":ref:`xpu_install_form_pip`"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:34
+#: 5d20b2bfd0c54d98a203dca3c70f5b2f
+msgid ":ref:`xpu_install_form_docker`"
+msgstr ":ref:`xpu_install_form_docker`"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:38
+#: bcd9f1f7b59a4bba8e159296b2189a0f
+msgid "核心依赖说明"
+msgstr "Core Dependencies"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:40
+#: 5d2e3b91f9ef4a52bcb09a4f158c91ea
+msgid "所有安装方式均依赖以下组件："
+msgstr "All installation methods depend on the following components:"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:42
+#: 1cb904a66d454b43b04a8ca2092c9d80
+msgid "**GPU 驱动**：内核驱动及 Level Zero 计算运行时"
+msgstr "**GPU driver**: Kernel driver and Level Zero compute runtime"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:43
+#: 7137127ce9c3411dadfa01828df124a7
+msgid ""
+"**PyTorch XPU 版本**：从 PyTorch 官方 XPU 索引安装的 "
+"``torch``、``torchvision``、``torchaudio``"
+msgstr ""
+"**PyTorch XPU build**: ``torch``, ``torchvision`` and ``torchaudio`` "
+"installed from the official PyTorch XPU index"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:45
+#: 258e5f2b9a5847a3a155d76b3c2dc48f
+msgid "根据安装方式不同，所需操作有所区别："
+msgstr "Required steps vary depending on the installation method:"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:47
+#: 00cf9fb8793a465ea8b52ed2d4e2545a
+msgid "**手动安装**：需在宿主机上安装驱动、计算运行时和 PyTorch XPU 版本。"
+msgstr ""
+"**Manual installation**: Install the driver, compute runtime and PyTorch "
+"XPU build on the host."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:48
+#: 63c145e57d50461c9827fd13dffddae0
+msgid "**Docker 本地构建**：宿主机仅需安装内核驱动，计算运行时和 PyTorch 已集成在镜像中。"
+msgstr ""
+"**Docker local build**: The host only needs the kernel driver; the "
+"compute runtime and PyTorch are included in the image."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:54
+#: 38466488efd54147aced789904f77abd
+msgid "方式一：手动安装环境"
+msgstr "Method 1: Manual Environment Installation"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:57
+#: 1c86c91537ce4ce4a95f3d7368eb5959
+msgid "1. 驱动"
+msgstr "1. Driver"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:59
+#: 037b98b8c59f4cf09abb3ddc3d4ef39d
+msgid ""
+"请参考 `Intel GPU 安装指南 <https://dgpu-docs.intel.com/installation-guides"
+"/installing-packages-from-the-intel-ppa.html>`__ "
+"安装驱动和计算运行时。安装完成后，需要将当前用户加入 ``render`` 和 ``video`` 用户组，并重新登录："
+msgstr ""
+"Follow the `Intel GPU installation guide <https://dgpu-docs.intel.com"
+"/installation-guides/installing-packages-from-the-intel-ppa.html>`__ to "
+"install the driver and compute runtime. After installation, add the "
+"current user to the ``render`` and ``video`` groups and log in again:"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:66
+#: 92abcb65acaf48d9ba26c7ad8bf8e483
+msgid "请在 BIOS 中开启 **Resizable BAR**，否则可能出现 ``Bus error (core dumped)`` 或性能下降。"
+msgstr ""
+"Enable **Resizable BAR** in the BIOS. Otherwise you may see ``Bus error "
+"(core dumped)`` or degraded performance."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:69
+#: 8cbf9554fe864a239a88fdd8c96b9470
+msgid "2. PyTorch XPU 版本"
+msgstr "2. PyTorch XPU Build"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:71
+#: e42f011169c949b78a301bc37aa98d57
+msgid ""
+"LlamaFactory 在 ``requirements/xpu.txt`` 中固定了配套的 "
+"``torch``、``torchvision``、``torchaudio`` 版本。请先安装 PyTorch，再安装 "
+"LlamaFactory："
+msgstr ""
+"LlamaFactory pins matching ``torch``, ``torchvision`` and ``torchaudio`` "
+"versions in ``requirements/xpu.txt``. Install PyTorch first, then "
+"LlamaFactory:"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:80
+#: 3c05283ee3834d79aa7cad1b80d0ca9f
+msgid ""
+"请使用 ``--index-url`` 而不是 ``--extra-index-url``，否则 pip 可能会从 PyPI 安装非 XPU "
+"版本的 PyTorch。三个包需要同时安装，版本不配套时会出现 ``RuntimeError: operator torchvision::nms"
+" does not exist``。"
+msgstr ""
+"Use ``--index-url`` rather than ``--extra-index-url``; otherwise pip may "
+"install a non-XPU build of PyTorch from PyPI. The three packages must be "
+"installed together; mismatched versions cause ``RuntimeError: operator "
+"torchvision::nms does not exist``."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:83
+#: ae1a95b967894d2ca3f44705844e469e
+msgid "3. LlamaFactory"
+msgstr "3. LlamaFactory"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:90
+#: 5207b20d29ea48e0bae04d13dfda82b3
+msgid "其余步骤与 :doc:`安装 <../../getting_started/installation>` 一致。"
+msgstr ""
+"The remaining steps are the same as in :doc:`Installation "
+"<../../getting_started/installation>`."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:93
+#: 031cf4449a4f4583955a75a410c7326a
+msgid "4. 验证安装"
+msgstr "4. Verify Installation"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:95
+#: 0fa89032e56d4062a589f8165fb8ee5d
+msgid "执行以下 Python 脚本："
+msgstr "Run the following Python script:"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:102
+#: f58f3407fea6410782b163aba8f1177f
+msgid "预期输出 ``True`` 及可用的 GPU 数量。如果输出 ``0``，请参考 :ref:`xpu_faq`。"
+msgstr ""
+"The expected output is ``True`` followed by the number of available GPUs."
+" If it prints ``0``, see :ref:`xpu_faq`."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:105
+#: cdbf4de80c1a4ae9acdcfe95cdda8d8e
+msgid "5. 可选依赖"
+msgstr "5. Optional Dependencies"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:112
+#: c466356a4a0f4856a09692686b903a36
+msgid "依赖"
+msgstr "Dependency"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:113
+#: 0e3d3b8c86474fc9add054baddfc038c
+msgid "安装说明"
+msgstr "Installation Notes"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:114
+#: 39896b38674042bd8a28e80f754edd94
+msgid "DeepSpeed"
+msgstr "DeepSpeed"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:115
+#: 686690b2e8f34ea9897e17bad440a58f
+msgid ""
+"需要 ``deepspeed>=0.18.7``：``DS_BUILD_OPS=0 pip install "
+"\"deepspeed>=0.18.7\"``。更早的版本在 XPU 上会因 ``ImportError: cannot import name "
+"'DpcppBuildExtension'`` 失败，``requirements/deepspeed.txt`` "
+"中的版本范围目前也包含这些版本。"
+msgstr ""
+"Requires ``deepspeed>=0.18.7``: ``DS_BUILD_OPS=0 pip install "
+"\"deepspeed>=0.18.7\"``. Earlier versions fail on XPU with ``ImportError:"
+" cannot import name 'DpcppBuildExtension'``, and the version range in "
+"``requirements/deepspeed.txt`` currently still includes them."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:116
+#: c2c7c691354645ab8742a219ea0d9bae
+msgid "bitsandbytes"
+msgstr "bitsandbytes"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:117
+#: 374613c22acf4c22a4b6c40176a79c7e
+msgid "``pip install -r requirements/bitsandbytes.txt``"
+msgstr "``pip install -r requirements/bitsandbytes.txt``"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:118
+#: 4c44b273d2754215a31c4416c15b1aef
+msgid "GPTQ / AWQ"
+msgstr "GPTQ / AWQ"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:119
+#: 43119827e0794f1ea438f01acadb9680
+msgid ""
+"``pip install \"gptqmodel==7.2.0\" optimum``。更新的 gptqmodel 版本需要高于 "
+"LlamaFactory 所支持的 transformers 版本。加载 AWQ 模型还需执行 ``pip install --no-deps "
+"autoawq``。"
+msgstr ""
+"``pip install \"gptqmodel==7.2.0\" optimum``. Newer gptqmodel versions "
+"require a newer transformers than LlamaFactory supports. Loading AWQ "
+"models additionally requires ``pip install --no-deps autoawq``."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:120
+#: 435df4f604e74a3a8dabf76800ae0922
+msgid "Liger Kernel"
+msgstr "Liger Kernel"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:121
+#: 15a9e92a87d24643bedf749b4eace152
+msgid ""
+"``pip install --no-deps liger-kernel``。请务必加上 ``--no-deps``，详见 "
+":ref:`xpu_faq`。"
+msgstr ""
+"``pip install --no-deps liger-kernel``. Always add ``--no-deps``; see "
+":ref:`xpu_faq`."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:122
+#: 40c7e1c0828a4d098910675b4d5c2881
+msgid "torch.compile"
+msgstr "torch.compile"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:123
+#: 51de74d6ae144bceb5cdd59a23fdbd07
+msgid "需要 Intel 离线编译器 ``ocloc``，请安装与计算运行时版本一致的 ``intel-ocloc``。"
+msgstr ""
+"Requires Intel's offline compiler ``ocloc``. Install an ``intel-ocloc`` "
+"version that matches the compute runtime."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:129
+#: 54c68653712649bfbb060f430494ff24
+msgid "方式二：Docker 本地构建"
+msgstr "Method 2: Docker Local Build"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:132
+#: 5791180bce544402a0d6ef0c28a2b2f0
+msgid "请确保宿主机已安装内核驱动。目前 XPU 镜像需要在本地构建，Docker Hub 上暂无预构建镜像。"
+msgstr ""
+"Make sure the kernel driver is installed on the host. The XPU image "
+"currently has to be built locally; there is no prebuilt image on Docker "
+"Hub."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:134
+#: 75e4bad1fc984b42889ede54175dee66
+msgid ""
+"镜像基于 Intel Deep Learning Essentials（DLE），其中已包含计算运行时和 "
+"oneAPI。镜像中的计算运行时版本需要与宿主机的内核驱动兼容，可以通过 ``dpkg -l libze-intel-gpu1`` "
+"查看宿主机版本。"
+msgstr ""
+"The image is based on Intel Deep Learning Essentials (DLE), which already"
+" includes the compute runtime and oneAPI. The compute runtime in the "
+"image must be compatible with the host's kernel driver; you can check the"
+" host version with ``dpkg -l libze-intel-gpu1``."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:137
+#: 0b8107af3fbf4e8db40cccaac0569469
+msgid "1. 使用 Docker Build 构建"
+msgstr "1. Build Using Docker Build"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:139
+#: 295230561c794056946476ddf8f7bacc
+msgid "在项目根目录下执行以下命令："
+msgstr "Run the following command in the project root:"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:145
+#: 793722b01e3f413386ed83ea891138bc
+msgid "可用的 Dockerfile 构建参数如下："
+msgstr "The available Dockerfile build arguments are as follows:"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:152
+#: 83a7a588e2bb432ebb57ba9f2398f4a1
+msgid "参数"
+msgstr "Argument"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:153
+#: a3be755a1f1e469382f2abc297633022
+msgid "默认值"
+msgstr "Default"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:154
+#: 1c4fc201d7974ee6a3e3e1fbe59e9102
+msgid "用途"
+msgstr "Purpose"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:155
+#: b99ef188e7f4419abc8f2fef1d7ff604
+msgid "``BASE_IMAGE``"
+msgstr "``BASE_IMAGE``"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:156
+#: 9d79199f185e436ca4f522389480c755
+msgid "``intel/deep-learning-essentials:2026.1.0-devel-ubuntu24.04``"
+msgstr "``intel/deep-learning-essentials:2026.1.0-devel-ubuntu24.04``"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:157
+#: 3a418634a2fc4f799adff02fa3650b5b
+msgid "决定镜像中的计算运行时和 oneAPI 版本"
+msgstr "Determines the compute runtime and oneAPI versions in the image"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:158
+#: 84ae6c5f3c3f496ea0a3db8f2d866eee
+msgid "``PIP_INDEX``"
+msgstr "``PIP_INDEX``"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:159
+#: 9b1dd4894e3b43079310d3ca2ec13c54
+msgid "``https://pypi.org/simple``"
+msgstr "``https://pypi.org/simple``"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:160
+#: 087ff054a1d14bd09c140e62ee966fd9
+msgid "指定 Python 软件包索引（PyTorch 除外）"
+msgstr "Specify the Python package index (except for PyTorch)"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:161
+#: c11ffb24cf5e41c78b6948e583cfe86f
+msgid "``PYTORCH_INDEX``"
+msgstr "``PYTORCH_INDEX``"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:162
+#: b5a92ec7be4046f9be6023ca2620fa1e
+msgid "``https://download.pytorch.org/whl/xpu``"
+msgstr "``https://download.pytorch.org/whl/xpu``"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:163
+#: dc0f0c15032a4b209673333ff5368e06
+msgid "指定 PyTorch XPU 版本的索引"
+msgstr "Specify the index for the PyTorch XPU build"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:164
+#: 7f39dd6c0d6445f49dc96a9f64bfcc15
+msgid "``OCLOC_VERSION``"
+msgstr "``OCLOC_VERSION``"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:165
+#: dc227f9bc03543d080044587d219cf42
+msgid "``26.18.38308.1``"
+msgstr "``26.18.38308.1``"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:166
+#: a6a16aa03e3b469d80e5833498c6149f
+msgid "固定 ``intel-ocloc`` 版本，需与 ``BASE_IMAGE`` 的计算运行时版本一致"
+msgstr ""
+"Pin the ``intel-ocloc`` version; it must match the compute runtime "
+"version of ``BASE_IMAGE``"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:168
+#: 2e6d70fde3a741ceb84729236282cee8
+msgid ""
+"镜像中已安装 DeepSpeed 0.19.6 和 bitsandbytes，并设置了 ``OPTIM_TORCH=0``，详见 "
+":doc:`XPU训练 <xpu_training>`。"
+msgstr ""
+"DeepSpeed 0.19.6 and bitsandbytes are preinstalled in the image, and "
+"``OPTIM_TORCH=0`` is set. See :doc:`XPU Training <xpu_training>`."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:170
+#: 9a8bc7d4c72947c5ad0f0645c01a30d1
+msgid "启动容器："
+msgstr "Start the container:"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:187
+#: f22954ec5eae44ddb7b3795044a7fb50
+msgid "多卡训练需要挂载 ``/dev/dri/by-path``，oneCCL 依赖其中的设备路径进行卡间通信。"
+msgstr ""
+"Multi-card training requires mounting ``/dev/dri/by-path``; oneCCL relies"
+" on the device paths there for inter-card communication."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:190
+#: eacff5d9add1450f860f41a44eed6576
+msgid "2. 使用 Docker Compose 构建"
+msgstr "2. Build Using Docker Compose"
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:199
+#: 12bb7b42e1624b28a45d6df95712d932
+msgid ""
+"``docker-compose.yml`` 中的 ``group_add`` 使用 ``render`` (992) 和 ``video`` "
+"(44) 的数字 GID。如果宿主机不同，请先执行 ``getent group render video`` 查看并修改。"
+msgstr ""
+"The ``group_add`` entries in ``docker-compose.yml`` use the numeric GIDs "
+"of ``render`` (992) and ``video`` (44). If your host differs, run "
+"``getent group render video`` and edit them accordingly."
+
+#: ../../source/multibackend/xpu/xpu_installation.rst:201
+#: 33581694962d402dbafc5362ad1568d5
+msgid "进入容器后，可以执行以下命令确认 GPU 可用："
+msgstr ""
+"After entering the container, run the following command to confirm the "
+"GPU is available:"
+

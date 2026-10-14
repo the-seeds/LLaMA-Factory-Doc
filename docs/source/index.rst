@@ -54,3 +54,4 @@ Documentation
   :caption: 多设备后端
 
   multibackend/npu/index
+  multibackend/xpu/index
