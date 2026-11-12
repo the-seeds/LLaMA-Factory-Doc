@@ -1,0 +1,474 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, LlamaFactory team.
+# This file is distributed under the same license as the LlamaFactory
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: LlamaFactory \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-12 01:42-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:2
+#: ebf7ee48865c48839ff3fed3f8d706e6
+msgid "XPU训练"
+msgstr "XPU Training"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:4
+#: 4c2ebff1823b4f738354231850e6c9fc
+msgid "本文档介绍如何在 Intel GPU 上进行 LlamaFactory 模型训练。"
+msgstr "This document describes how to train LlamaFactory models on Intel GPUs."
+
+#: ../../source/multibackend/xpu/xpu_training.rst:7
+#: cdafa4dbd44440688b45fc417cc1215c
+msgid "支持设备"
+msgstr "Supported Devices"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:9
+#: 18573116a2f34103bef55e2e1160c155
+msgid "已验证设备："
+msgstr "Validated device:"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:11
+#: 887dfac1885142abb8bc82581668e8ca
+msgid "**Intel Arc Pro B60**"
+msgstr "**Intel Arc Pro B60**"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:13
+#: 264a60d1c2914895b4f79f4f5d435c22
+msgid "其他 Intel GPU 请参考 :doc:`XPU 安装及配置 <xpu_installation>` 中的说明。"
+msgstr ""
+"For other Intel GPUs, see :doc:`XPU Installation and Configuration "
+"<xpu_installation>`."
+
+#: ../../source/multibackend/xpu/xpu_training.rst:16
+#: 4fb876f1d517432c98e395b30b5e2554
+msgid "支持功能"
+msgstr "Supported Features"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:24
+#: d5e34c24004943a4b1021e39368e00e2
+msgid "功能"
+msgstr "Feature"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:25
+#: 9689b6b4471e49ae958544b066492fd9
+msgid "支持情况"
+msgstr "Support Status"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:26
+#: e000a8a79ea7439aa8ab71abac6b031a
+msgid "**训练范式**"
+msgstr "**Training Paradigm**"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:27
+#: ae40c7aaac6343b4b72f321db9d17f57
+msgid "PT"
+msgstr "PT"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:28
+#: ../../source/multibackend/xpu/xpu_training.rst:31
+#: ../../source/multibackend/xpu/xpu_training.rst:34
+#: ../../source/multibackend/xpu/xpu_training.rst:37
+#: ../../source/multibackend/xpu/xpu_training.rst:40
+#: ../../source/multibackend/xpu/xpu_training.rst:43
+#: ../../source/multibackend/xpu/xpu_training.rst:46
+#: ../../source/multibackend/xpu/xpu_training.rst:49
+#: ../../source/multibackend/xpu/xpu_training.rst:52
+#: ../../source/multibackend/xpu/xpu_training.rst:55
+#: ../../source/multibackend/xpu/xpu_training.rst:58
+#: ../../source/multibackend/xpu/xpu_training.rst:61
+#: ../../source/multibackend/xpu/xpu_training.rst:64
+#: ../../source/multibackend/xpu/xpu_training.rst:67
+#: ../../source/multibackend/xpu/xpu_training.rst:70
+#: ../../source/multibackend/xpu/xpu_training.rst:73
+#: ../../source/multibackend/xpu/xpu_training.rst:76
+#: ../../source/multibackend/xpu/xpu_training.rst:79
+#: ../../source/multibackend/xpu/xpu_training.rst:85
+#: 0e43dce6c5b3406790cdf2868f770cda 35ea841a005b47babee84e27ce6ddec4
+#: 4118a5b5868345e7aad38b3b66e1fe6a 4fac1b55565840cdb2a3bc5228379fda
+#: 635a77bac7fa4010ac3741da31d832ab 7d37d2e34bc640839af750b59386841f
+#: 8a0873716c404ba882f34b13344a4fe3 91738a85f89f4804915342244e9801f9
+#: 9564a8150ba04f94b19463a65bf56b9c a49089c3130b47b39dfc30c1a178033d
+#: a718409ad6904e17b27a8049d1b72eea b14600a8b3de4c6aa8b614e23033629d
+#: bbb05d67212d4781a03a508a191eac04 cec87517fc2d4e18b787e083274e05c9
+#: de2101464baf439e9b0043bef043d108 e6349020ac1f4ca7a90f4c040ff085f6
+#: eca85d8845c44930ba497de3a0f9d865 ed5fcbd78c574316ad1e09cccb796457
+#: ff5b063af5544e62b172e2af3926b39b
+msgid "已支持"
+msgstr "Supported"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:30
+#: 45f5ca9048fd4e7bba0a2b8d1fb13390
+msgid "SFT"
+msgstr "SFT"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:33
+#: 6a5e8b3b37104ff78bd7d4a9bc86811d
+msgid "RM"
+msgstr "RM"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:36
+#: 494265899758413bbcba01f647fc08f7
+msgid "DPO"
+msgstr "DPO"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:39
+#: 21343fb0a20b4cec8f586a2707eb5af5
+msgid "KTO"
+msgstr "KTO"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:41
+#: 1dc5ade5842747e39008641c5ec68b65
+msgid "**参数范式**"
+msgstr "**Parameter Paradigm**"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:42
+#: 899160a7a7ab4f02b8dc5c5d8bece890
+msgid "Full"
+msgstr "Full"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:45
+#: 517c40fe09b94a919b78ae357a955e96
+msgid "Freeze"
+msgstr "Freeze"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:48
+#: 1c81bcaecba845fbbbb606e4190a516a
+msgid "LoRA（含 rsLoRA、DoRA、PiSSA、LoRA+）"
+msgstr "LoRA (including rsLoRA, DoRA, PiSSA, LoRA+)"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:51
+#: 77dcab7fc497450091f36c9f6a134e49
+msgid "OFT"
+msgstr "OFT"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:53
+#: 1c708238a90e4f54a4e4f278484aebb3
+msgid "**量化**"
+msgstr "**Quantization**"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:54
+#: f06a1c91a11b4baa8b003f2867d30039
+msgid "QLoRA（bitsandbytes 4/8-bit）"
+msgstr "QLoRA (bitsandbytes 4/8-bit)"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:57
+#: 515c47abd6c340da9610e2e9176d51b4
+msgid "GPTQ、AWQ、quanto、FP8"
+msgstr "GPTQ, AWQ, quanto, FP8"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:59
+#: 98e2e1669e004ee68105ad3557d35411
+msgid "**模型合并**"
+msgstr "**Model Merging**"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:60
+#: a5ac700a1d374977916be37ddb391e6a
+msgid "LoRA权重合并"
+msgstr "LoRA Weight Merging"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:62
+#: 9230f1dc946a46bfb0b32ec9bb46a553
+msgid "**分布式**"
+msgstr "**Distributed**"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:63
+#: 9c4a1e7949d14519a994ccd5f1618454
+msgid "DDP"
+msgstr "DDP"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:66
+#: d55d4d38e9d548cd8f8923cfe8aed118
+msgid "FSDP"
+msgstr "FSDP"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:69
+#: 7fcc75a2f384454a98fdeaef68dd952e
+msgid "FSDP2"
+msgstr "FSDP2"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:72
+#: 6bd8800d1892436ebd27045b01e8d4db
+msgid "DeepSpeed ZeRO-2/3"
+msgstr "DeepSpeed ZeRO-2/3"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:74
+#: d0af3bd9b6fb439a83a91bfb3e016aeb
+msgid "**多模态**"
+msgstr "**Multimodal**"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:75
+#: 2c1a311f3a7a40ca825b21a58fb22b01
+msgid "图文模型 LoRA 微调"
+msgstr "Vision-language model LoRA fine-tuning"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:77
+#: c17b3bf255e34047bd2ac9bd2d3ef4f2
+msgid "**加速**"
+msgstr "**Acceleration**"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:78
+#: 9453f842b05f461284faaa0734767f17
+msgid "Liger Kernel"
+msgstr "Liger Kernel"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:81
+#: 070476103f2846ab90c93829303f486f
+msgid "FlashAttention-2"
+msgstr "FlashAttention-2"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:82
+#: da77b13f48194151a063953511ff28c2
+msgid "适配中，当前使用 SDPA"
+msgstr "In progress; SDPA is used for now"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:83
+#: f72eaaf3015e4ecfb7c3f0e70fd84a6b
+msgid "**推理**"
+msgstr "**Inference**"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:84
+#: 0339b18fe9a5435ea133d7ef9cf8af80
+msgid "HuggingFace 引擎、API、WebUI"
+msgstr "HuggingFace engine, API, WebUI"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:87
+#: ca680c3aeb994e6b878997ab88ab76b8
+msgid "vLLM"
+msgstr "vLLM"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:88
+#: 6544271c63cf44e495eabce694bbde13
+msgid "适配中"
+msgstr "In progress"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:91
+#: ddc0fc3c0eed401ba55f661b09a3ccf5
+msgid ""
+"XPU 的大部分使用方式与 GPU 保持一致。关于安装步骤，请参考 :doc:`XPU 安装及配置 "
+"<xpu_installation>`；关于通用的分布式训练（如 FSDP、FSDP2、DeepSpeed）配置，请参考 :doc:`分布式训练 "
+"<../../advanced/distributed>`。"
+msgstr ""
+"Most usage on XPU is consistent with GPU usage. For installation steps, "
+"refer to :doc:`XPU Installation and Configuration <xpu_installation>`; "
+"for general distributed training configurations (such as FSDP, FSDP2, "
+"DeepSpeed), refer to :doc:`Distributed Training "
+"<../../advanced/distributed>`."
+
+#: ../../source/multibackend/xpu/xpu_training.rst:94
+#: c2caafaf245442f8a889be2e247eb5f7
+msgid "快速开始"
+msgstr "Quick Start"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:96
+#: 40329552888943acb25476aa28c304f3
+msgid "**启动容器**，或按照 :ref:`xpu_install_form_pip` 安装环境："
+msgstr ""
+"**Start the container**, or set up the environment by following "
+":ref:`xpu_install_form_pip`:"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:104
+#: ce8f3e3c792142aa8422aaa3512df0d0
+msgid "**开始训练**："
+msgstr "**Start training**:"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:111
+#: fae73a81e5d24b1eab28a1ad96f4495b
+msgid "分布式训练"
+msgstr "Distributed Training"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:113
+#: a5958a474b3d45c6b2d7904d87ac8554
+msgid ""
+"XPU 的分布式训练配置与 :doc:`分布式训练 <../../advanced/distributed>` 文档描述的基本一致，卡间通信使用 "
+"oneCCL（``xccl`` 后端）。本节主要介绍 XPU 环境下的特定配置。"
+msgstr ""
+"Distributed training configuration on XPU is largely the same as "
+"described in :doc:`Distributed Training <../../advanced/distributed>`; "
+"inter-card communication uses oneCCL (the ``xccl`` backend). This section"
+" covers XPU-specific settings."
+
+#: ../../source/multibackend/xpu/xpu_training.rst:118
+#: 3cf15eb421b7441b8061d28bd10a8255
+msgid "关键环境变量"
+msgstr "Key Environment Variables"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:120
+#: 66032b90dea64e2692bcf9be0710baac
+msgid "**OPTIM_TORCH** (多卡训练必需)"
+msgstr "**OPTIM_TORCH** (required for multi-card training)"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:122
+#: bbc6010aa4f342c2bca75f488ab91db0
+msgid ""
+"在物理机上进行多卡训练时，**必须** 设置 ``OPTIM_TORCH=0``。默认配置会开启 PyTorch 的 "
+"``expandable_segments`` 显存分配方式，该方式在 XPU 上会导致多卡 DDP "
+"训练出现段错误（``SIGSEGV``）。Docker 镜像中已默认设置该变量。"
+msgstr ""
+"For multi-card training on bare metal, you **must** set "
+"``OPTIM_TORCH=0``. The default configuration enables PyTorch's "
+"``expandable_segments`` memory allocation, which causes a segmentation "
+"fault (``SIGSEGV``) in multi-card DDP training on XPU. The Docker image "
+"sets this variable by default."
+
+#: ../../source/multibackend/xpu/xpu_training.rst:128
+#: 9daa6dad94244dd58247a23f226e03da
+msgid "**ZE_AFFINITY_MASK** (单机/多机均需关注)"
+msgstr ""
+"**ZE_AFFINITY_MASK** (relevant for both single-node and multi-node "
+"training)"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:130
+#: 7bf7ff64e12647a18777e25ea97da756
+msgid "用于指定参与训练的 GPU 设备，作用与 ``CUDA_VISIBLE_DEVICES`` 相同。"
+msgstr ""
+"Specifies the GPU devices that participate in training; it works the same"
+" as ``CUDA_VISIBLE_DEVICES``."
+
+#: ../../source/multibackend/xpu/xpu_training.rst:132
+#: 0e5f94af73f64ec9bc6f8056308b0815
+msgid "**默认行为**：如果不设置此变量，程序将使用当前节点上的**所有** GPU。"
+msgstr ""
+"**Default behavior**: If this variable is not set, the program uses "
+"**all** GPUs on the current node."
+
+#: ../../source/multibackend/xpu/xpu_training.rst:133
+#: 544cae60b8bd459bba4fc7e26e6782c8
+msgid "**指定设备**：例如仅使用卡 0 和卡 1："
+msgstr "**Specifying devices**: For example, to use only card 0 and card 1:"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:140
+#: 3235d66f375a4632a2ddd923fd665948
+msgid "单机训练"
+msgstr "Single-Node Training"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:142
+#: 58416c50cd124bbbb95bc12cd90d614e
+msgid "当可见的 GPU 多于一张时，``llamafactory-cli`` 会自动使用 ``torchrun`` 启动多卡训练。"
+msgstr ""
+"When more than one GPU is visible, ``llamafactory-cli`` automatically "
+"launches multi-card training with ``torchrun``."
+
+#: ../../source/multibackend/xpu/xpu_training.rst:144
+#: fcfbc09b30bf417898efffa4248dc098
+msgid "**单机多卡示例**："
+msgstr "**Single-node multi-card example**:"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:150
+#: 038a330e02404cef9be133220ab71aa1
+msgid "**DeepSpeed 示例**："
+msgstr "**DeepSpeed example**:"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:156
+#: 2cf322b26e0940aebad9d4b61be2bf3a
+msgid "**FSDP2 示例**："
+msgstr "**FSDP2 example**:"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:165
+#: 5a175dd5291943128374f4b562ae6e1f
+msgid "训练方式"
+msgstr "Training Modes"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:167
+#: 41692dcee51f4d05a3aa0ec82dd44cf6
+msgid "常见训练场景的启动命令与 GPU 相同，例如："
+msgstr ""
+"The launch commands for common training scenarios are the same as on GPU,"
+" for example:"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:189
+#: 1ca88f718325418abd22b0037238ea7d
+msgid "常见问题"
+msgstr "FAQ"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:191
+#: 8b42b4ad9e874f4cab10859d732df937
+msgid "**torch.xpu.device_count() 返回 0**"
+msgstr "**torch.xpu.device_count() returns 0**"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:193
+#: f17896cafdc74d47aa43760ae508435c
+msgid "检查当前用户是否在 ``render`` 和 ``video`` 用户组中。"
+msgstr "Check whether the current user is in the ``render`` and ``video`` groups."
+
+#: ../../source/multibackend/xpu/xpu_training.rst:194
+#: 374a5ffcc2d148dd96dafa5ddc6bfd6c
+msgid "使用 Docker 时，检查镜像中的计算运行时版本是否与宿主机内核驱动兼容。"
+msgstr ""
+"When using Docker, check whether the compute runtime version in the image"
+" is compatible with the host kernel driver."
+
+#: ../../source/multibackend/xpu/xpu_training.rst:195
+#: f108d915dcac4af19a85cc31aa015631
+msgid ""
+"检查是否误装了非 XPU 版本的 PyTorch。可以重新执行 ``pip install --force-reinstall -r "
+"requirements/xpu.txt --index-url https://download.pytorch.org/whl/xpu``。"
+msgstr ""
+"Check whether a non-XPU build of PyTorch was installed by mistake. You "
+"can reinstall it with ``pip install --force-reinstall -r "
+"requirements/xpu.txt --index-url https://download.pytorch.org/whl/xpu``."
+
+#: ../../source/multibackend/xpu/xpu_training.rst:197
+#: e232ebc073da4a12bdc0c184e021e1c7
+msgid "**多卡训练出现段错误（SIGSEGV）**"
+msgstr "**Segmentation fault (SIGSEGV) in multi-card training**"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:199
+#: c32128d67c1b439fbbf3ea9f310c0ff1
+msgid "请设置 ``OPTIM_TORCH=0``，详见 :ref:`关键环境变量 <xpu_env_vars>`。"
+msgstr ""
+"Set ``OPTIM_TORCH=0``; see :ref:`Key Environment Variables "
+"<xpu_env_vars>`."
+
+#: ../../source/multibackend/xpu/xpu_training.rst:201
+#: b318adaa8d0c483a87d1d7ee462f38c2
+msgid "**DeepSpeed 报错 ImportError: cannot import name 'DpcppBuildExtension'**"
+msgstr ""
+"**DeepSpeed reports ImportError: cannot import name "
+"'DpcppBuildExtension'**"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:203
+#: 90eb61b4385d4c508636707e439abd0f
+msgid "请安装 ``deepspeed>=0.18.7``。"
+msgstr "Install ``deepspeed>=0.18.7``."
+
+#: ../../source/multibackend/xpu/xpu_training.rst:205
+#: 0141c5ba748f4872a65a6583c91178d0
+msgid "**安装 Liger Kernel 等依赖后，Triton 无法在 XPU 上运行**"
+msgstr ""
+"**Triton does not work on XPU after installing dependencies such as Liger"
+" Kernel**"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:207
+#: b4438a5fa3fd492daec36ff696f4a2c1
+msgid ""
+"部分依赖（如 ``liger-kernel``）会安装 CUDA 版本的 ``triton`` 包，覆盖 XPU 版本的 ``triton-"
+"xpu``。请使用 ``pip install --no-deps`` 安装这些依赖，并通过 ``pip list | grep triton``"
+" 确认只安装了 ``triton-xpu``。"
+msgstr ""
+"Some dependencies (such as ``liger-kernel``) install the CUDA ``triton`` "
+"package, which overrides the XPU ``triton-xpu``. Install these "
+"dependencies with ``pip install --no-deps`` and confirm with ``pip list |"
+" grep triton`` that only ``triton-xpu`` is installed."
+
+#: ../../source/multibackend/xpu/xpu_training.rst:209
+#: d160c38fbc534db8a9b92b0fdfa9c847
+msgid "**torch.compile 报错 FileNotFoundError: 'ocloc'**"
+msgstr "**torch.compile reports FileNotFoundError: 'ocloc'**"
+
+#: ../../source/multibackend/xpu/xpu_training.rst:211
+#: 59a86a3d42134f91b282f02c12a3c51a
+msgid "请安装与计算运行时版本一致的 ``intel-ocloc``。"
+msgstr "Install an ``intel-ocloc`` version that matches the compute runtime."
+
