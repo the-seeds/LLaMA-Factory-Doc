@@ -26,8 +26,8 @@ msgstr "NPU Installation"
 
 #: ../../source/multibackend/npu/npu_installation.rst:4
 #: 6fc4388f03c04fcc84703d33cda5067c
-msgid "本文档介绍 LlamaFactory 在华为昇腾 NPU 上的环境准备方式。当前主要面向 Atlas A2/A3 训练系列设备；开始安装前，请先确认硬件型号和操作系统兼容性，再根据部署方式选择后续步骤。"
-msgstr "This document describes how to prepare the LlamaFactory environment on Huawei Ascend NPUs. It currently focuses on Atlas A2/A3 training series devices. Before installation, confirm the hardware model and operating system compatibility, and then choose the appropriate deployment method."
+msgid "本文档介绍 LlamaFactory 在华为昇腾 NPU 上的环境准备方式。当前主要面向 Atlas A2/A3 训练系列设备和 Ascend 950PR&950DT 系列产品；开始安装前，请先确认硬件型号和操作系统兼容性，再根据部署方式选择后续步骤。"
+msgstr "This document describes how to prepare the LlamaFactory environment on Huawei Ascend NPUs. It currently focuses on Atlas A2/A3 training series devices and Ascend 950PR&950DT series products. Before installation, confirm the hardware model and operating system compatibility, and then choose the appropriate deployment method."
 
 #: ../../source/multibackend/npu/npu_installation.rst:7
 #: 042c3917233f4544a8fcfebb941d0375
@@ -50,9 +50,10 @@ msgid "是否支持"
 msgstr "Supported"
 
 #: ../../source/multibackend/npu/npu_installation.rst:19
+#: ../../source/multibackend/npu/npu_installation.rst:86
 #: 3ae18d680f5949b68f51ab31ee9b09a8
-msgid "Ascend 950 系列产品"
-msgstr "Ascend 950 Series Products"
+msgid "Ascend 950PR&950DT 系列产品"
+msgstr "Ascend 950PR&950DT Series Products"
 
 #: ../../source/multibackend/npu/npu_installation.rst:20
 #: ../../source/multibackend/npu/npu_installation.rst:22
@@ -63,6 +64,7 @@ msgid "√"
 msgstr "√"
 
 #: ../../source/multibackend/npu/npu_installation.rst:21
+#: ../../source/multibackend/npu/npu_installation.rst:95
 #: 65fa16b2552a4354bb6f38f1ed0623f8
 msgid "Atlas A3 训练系列产品"
 msgstr "Atlas A3 Training Series Products"
@@ -84,6 +86,7 @@ msgid "x"
 msgstr "x"
 
 #: ../../source/multibackend/npu/npu_installation.rst:25
+#: ../../source/multibackend/npu/npu_installation.rst:104
 #: 034bae240b2b4b60826aa0ea69ddc0ae
 msgid "Atlas A2 训练系列产品"
 msgstr "Atlas A2 Training Series Products"
@@ -203,11 +206,6 @@ msgstr "1. Versions and Download Links"
 msgid "本文档列举了最新的依赖版本及下载链接，请根据设备型号选择："
 msgstr "This document lists the latest dependency versions and download links. Please choose according to your device model:"
 
-#: ../../source/multibackend/npu/npu_installation.rst:83
-#: cec569a4548644b08f1ba49a7c1aa03c
-msgid "设备"
-msgstr "Device"
-
 #: ../../source/multibackend/npu/npu_installation.rst:84
 #: 5398ac8908b94d3dbef40c6742a9b9b9
 msgid "依赖"
@@ -217,17 +215,6 @@ msgstr "Dependency"
 #: 19830042fe4e4399be55d3a85a96eb6b
 msgid "链接"
 msgstr "Link"
-
-#: ../../source/multibackend/npu/npu_installation.rst:86
-#: ../../source/multibackend/npu/npu_installation.rst:291
-#: ../../source/multibackend/npu/npu_installation.rst:297
-#: ../../source/multibackend/npu/npu_installation.rst:426
-#: ../../source/multibackend/npu/npu_installation.rst:432
-#: 141559cbe893407aa9ac8fa06730c78e a5035a382db04e819de5efcf9624556b
-#: ac2480e2ce3542919843a91e0a178c62 2ddbfb6416174efeb3e72537f347d266
-#: b06c1d3e7e0a411fac9b555fcc8232aa
-msgid "A3"
-msgstr ""
 
 #: ../../source/multibackend/npu/npu_installation.rst:87
 #: ../../source/multibackend/npu/npu_installation.rst:96
@@ -249,7 +236,7 @@ msgstr "CANN"
 #: ../../source/multibackend/npu/npu_installation.rst:91
 #: ../../source/multibackend/npu/npu_installation.rst:100
 #: 4b828891df134d229f46fb5f7ee68349 2b8d6a0f76ca4cf3802a3fd852777517
-msgid "https://www.hiascend.com/developer/download/community/result?module=cann&cann=9.1.0"
+msgid "https://www.hiascend.com/developer/download/community/result?module=cann&cann=9.2.0"
 msgstr ""
 
 #: ../../source/multibackend/npu/npu_installation.rst:93
@@ -261,24 +248,17 @@ msgstr "TorchNPU"
 #: ../../source/multibackend/npu/npu_installation.rst:94
 #: ../../source/multibackend/npu/npu_installation.rst:103
 #: 73f6693e67e6487d83a885c6e9cb3b2c 251540913c5a4f488aad47ac896e4788
-msgid "2.10.0.post2"
-msgstr ""
-
-#: ../../source/multibackend/npu/npu_installation.rst:95
-#: ../../source/multibackend/npu/npu_installation.rst:288
-#: ../../source/multibackend/npu/npu_installation.rst:294
-#: ../../source/multibackend/npu/npu_installation.rst:423
-#: ../../source/multibackend/npu/npu_installation.rst:429
-#: 2588115108a5410c80935d1b33f8109c 24c88f130c3a48a38e4a6a3142c459b8
-#: fad290d10cfd4832ac7d05748a35c41d a2921c0bd13c4e88919acf2077b90591
-#: df4a7b5cc49848769556ad0b4dcf7807
-msgid "A2"
+msgid "2.10.0.post7"
 msgstr ""
 
 #: ../../source/multibackend/npu/npu_installation.rst:97
 #: 14795f421c544c06b8a2d6c1e545a748
 msgid "https://www.hiascend.com/hardware/firmware-drivers?ids=d802%2C26958bcc909e4cd48fa56d4c4a43ebec%2C17%2CAArch64%2Conline_Yum"
 msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:88
+msgid "当前 Ascend 950PR&950DT 系列产品为受限获取。如您需要下载配套固件与驱动，请点击 `商用版 <https://support.huawei.com/enterprise/zh/ascend-computing/ascend-hdk-pid-252764743/software>`__ 获取。"
+msgstr "Access to Ascend 950PR&950DT series products is currently restricted. To download the corresponding firmware and drivers, visit the `Commercial Edition <https://support.huawei.com/enterprise/zh/ascend-computing/ascend-hdk-pid-252764743/software>`__ download page."
 
 #: ../../source/multibackend/npu/npu_installation.rst:106
 #: 6b272ae2e03a4dc2876efb30b8171823
@@ -452,8 +432,8 @@ msgstr "TorchNPU packages are built for specific Python versions, so choose the 
 
 #: ../../source/multibackend/npu/npu_installation.rst:244
 #: 0e8596b2251f457ebfcc333fca160e54
-msgid "环境里安装的 TorchNPU 和 ``torch`` 版本需要对齐。例如 TorchNPU 版本为 ``2.10.0.post2`` 时，``torch`` 的版本也需要为 ``2.10.0``。有时依赖互斥，安装不用依赖的过程会导致 ``torch`` 版本被更新，从而导致报错。"
-msgstr "The TorchNPU and ``torch`` versions installed in the environment must be compatible. For example, TorchNPU ``2.10.0.post2`` requires ``torch`` ``2.10.0``. Dependency conflicts may sometimes cause ``torch`` to be upgraded during another package installation, resulting in errors."
+msgid "环境里安装的 TorchNPU 和 ``torch`` 版本需要对齐。例如 TorchNPU 版本为 ``2.10.0.post7`` 时，``torch`` 的版本也需要为 ``2.10.0``。有时依赖互斥，安装不用依赖的过程会导致 ``torch`` 版本被更新，从而导致报错。"
+msgstr "The TorchNPU and ``torch`` versions installed in the environment must be compatible. For example, TorchNPU ``2.10.0.post7`` requires ``torch`` ``2.10.0``. Dependency conflicts may sometimes cause ``torch`` to be upgraded during another package installation, resulting in errors."
 
 #: ../../source/multibackend/npu/npu_installation.rst:247
 #: 778be171098b40a0a3fdc766e3eb65c2
@@ -497,14 +477,15 @@ msgstr "1. Pull Image"
 
 #: ../../source/multibackend/npu/npu_installation.rst:278
 #: bd2f65a7dc674cfab99fdecbe9872044
-msgid "下载 main 分支最新镜像时，需要同时根据设备和容器操作系统选择 Tag。A2 镜像在 Tag 中使用芯片标识 ``910b``，A3 镜像使用 ``a3``："
-msgstr "When downloading the latest image from the main branch, select the tag according to both the device and the container operating system. A2 images use the ``910b`` identifier in the tag, while A3 images use ``a3``:"
+msgid "下载 main 分支最新镜像时，需要同时根据设备和容器操作系统选择 Tag。Atlas A2 训练系列产品镜像在 Tag 中使用芯片标识 ``910b``，Atlas A3 训练系列产品镜像使用 ``a3``，Ascend 950PR&950DT 系列产品镜像使用 ``950``："
+msgstr "When downloading the latest image from the main branch, select the tag according to both the device and the container operating system. Atlas A2 training series product images use the ``910b`` identifier in the tag, while Atlas A3 training series product images use ``a3`` and Ascend 950PR&950DT series product images use ``950``:"
 
 #: ../../source/multibackend/npu/npu_installation.rst:285
 #: ../../source/multibackend/npu/npu_installation.rst:420
+#: ../../source/multibackend/npu/npu_installation.rst:83
 #: 9d0d13d466ca4732aa09e08d51a34f3a fe30a558a6e242c4bc99f30946dfba26
-msgid "硬件系列"
-msgstr "Hardware Series"
+msgid "产品系列"
+msgstr "Product Series"
 
 #: ../../source/multibackend/npu/npu_installation.rst:286
 #: ../../source/multibackend/npu/npu_installation.rst:421
@@ -555,14 +536,22 @@ msgstr ""
 msgid "``latest-a3-openeuler``"
 msgstr ""
 
+#: ../../source/multibackend/npu/npu_installation.rst:306
+msgid "``latest-950-ubuntu``"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:309
+msgid "``latest-950-openeuler``"
+msgstr ""
+
 #: ../../source/multibackend/npu/npu_installation.rst:301
 msgid "根据上表确定 Tag 后，从 Docker Hub 或 quay.io 中选择一个镜像仓库，并执行对应的一条命令将镜像拉取到本地："
 msgstr "After determining the tag from the table above, select one image registry, either Docker Hub or quay.io, and run the corresponding command to pull the image locally:"
 
 #: ../../source/multibackend/npu/npu_installation.rst:315
 #: a9ef0d534d9441d98947838c5e0b9575
-msgid "``latest`` 镜像使用 ``latest-<910b|a3>-<ubuntu|openeuler>`` 格式，定时构建会更新这些 Tag。Release 镜像则使用包含完整版本信息的 Tag："
-msgstr "The ``latest`` images use the ``latest-<910b|a3>-<ubuntu|openeuler>`` format, and scheduled builds update these tags. Release images use tags containing the complete version information:"
+msgid "``latest`` 镜像使用 ``latest-<910b|a3|950>-<ubuntu|openeuler>`` 格式，定时构建会更新这些 Tag。Release 镜像则使用包含完整版本信息的 Tag："
+msgstr "The ``latest`` images use the ``latest-<910b|a3|950>-<ubuntu|openeuler>`` format, and scheduled builds update these tags. Release images use tags containing the complete version information:"
 
 #: ../../source/multibackend/npu/npu_installation.rst:323
 #: ac1a4c738b65423c97b6f1c84a8e7351
@@ -631,13 +620,13 @@ msgstr "1. Build Using Docker Build"
 
 #: ../../source/multibackend/npu/npu_installation.rst:402
 #: 68cc60bce21645c69a034f877acd966b
-msgid "在项目根目录下执行以下命令，构建 A2 Ubuntu 镜像："
-msgstr "Run the following command in the project root to build an A2 Ubuntu image:"
+msgid "在项目根目录下执行以下命令，构建 Atlas A2 训练系列产品 Ubuntu 镜像："
+msgstr "Run the following command in the project root to build an Atlas A2 training series product Ubuntu image:"
 
 #: ../../source/multibackend/npu/npu_installation.rst:413
 #: f67be05f55b14088b6e428c9ce1ce044
-msgid "Dockerfile 默认使用 A2 Ubuntu 基础镜像。如需构建其他组合，可以替换 ``BASE_IMAGE`` 和本地镜像 Tag："
-msgstr "The Dockerfile uses an A2 Ubuntu base image by default. To build another combination, replace ``BASE_IMAGE`` and the local image tag:"
+msgid "Dockerfile 默认使用 Atlas A2 训练系列产品 Ubuntu 基础镜像。如需构建其他组合，可以替换 ``BASE_IMAGE`` 和本地镜像 Tag："
+msgstr "The Dockerfile uses an Atlas A2 training series product Ubuntu base image by default. To build another combination, replace ``BASE_IMAGE`` and the local image tag:"
 
 #: ../../source/multibackend/npu/npu_installation.rst:422
 #: ../../source/multibackend/npu/npu_installation.rst:446
@@ -648,22 +637,30 @@ msgstr ""
 #: ../../source/multibackend/npu/npu_installation.rst:425
 #: ../../source/multibackend/npu/npu_installation.rst:447
 #: 0a9f882980514a2da5f4a205dedf6afc 360b3e85297b4535b51ea2ad63ff4139
-msgid "``quay.io/ascend/cann:9.1.0-910b-ubuntu22.04-py3.12``"
+msgid "``quay.io/ascend/cann:9.2.0-910b-ubuntu22.04-py3.12``"
 msgstr ""
 
 #: ../../source/multibackend/npu/npu_installation.rst:428
 #: b4713dcd9bad406c98f4738eda652a69
-msgid "``quay.io/ascend/cann:9.1.0-a3-ubuntu22.04-py3.12``"
+msgid "``quay.io/ascend/cann:9.2.0-a3-ubuntu22.04-py3.12``"
 msgstr ""
 
 #: ../../source/multibackend/npu/npu_installation.rst:431
 #: fce806e88a274477b0d79c4361a192d3
-msgid "``quay.io/ascend/cann:9.1.0-910b-openeuler24.03-py3.12``"
+msgid "``quay.io/ascend/cann:9.2.0-910b-openeuler24.03-py3.12``"
 msgstr ""
 
 #: ../../source/multibackend/npu/npu_installation.rst:434
 #: 53607e60929b480ebf3c537f7bce776b
-msgid "``quay.io/ascend/cann:9.1.0-a3-openeuler24.03-py3.12``"
+msgid "``quay.io/ascend/cann:9.2.0-a3-openeuler24.03-py3.12``"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:459
+msgid "``quay.io/ascend/cann:9.2.0-950-ubuntu22.04-py3.12``"
+msgstr ""
+
+#: ../../source/multibackend/npu/npu_installation.rst:462
+msgid "``quay.io/ascend/cann:9.2.0-950-openeuler24.03-py3.12``"
 msgstr ""
 
 #: ../../source/multibackend/npu/npu_installation.rst:436

@@ -49,6 +49,10 @@ msgstr "**Atlas A2 Training Series**"
 msgid "**Atlas A3 训练系列**"
 msgstr "**Atlas A3 Training Series**"
 
+#: ../../source/multibackend/npu/npu_training.rst:13
+msgid "**Ascend 950PR&950DT 系列产品**"
+msgstr "**Ascend 950PR&950DT Series Products**"
+
 #: ../../source/multibackend/npu/npu_training.rst:15
 #: f3954b9817034da694d3a10d6d8808d3
 msgid "支持功能"

@@ -1,7 +1,7 @@
 NPU安装及配置
 =================
 
-本文档介绍 LlamaFactory 在华为昇腾 NPU 上的环境准备方式。当前主要面向 Atlas A2/A3 训练系列设备；开始安装前，请先确认硬件型号和操作系统兼容性，再根据部署方式选择后续步骤。
+本文档介绍 LlamaFactory 在华为昇腾 NPU 上的环境准备方式。当前主要面向 Atlas A2/A3 训练系列设备和 Ascend 950PR&950DT 系列产品；开始安装前，请先确认硬件型号和操作系统兼容性，再根据部署方式选择后续步骤。
 
 硬件配套和支持的操作系统
 ------------------------
@@ -16,7 +16,7 @@ NPU安装及配置
 
    * - 产品
      - 是否支持
-   * - Ascend 950 系列产品
+   * - Ascend 950PR&950DT 系列产品
      - √
    * - Atlas A3 训练系列产品
      - √
@@ -77,30 +77,39 @@ NPU安装及配置
 
 .. list-table::
    :align: left
-   :widths: 5 10 50
+   :widths: 32 14 54
    :header-rows: 1
 
-   * - 设备
+   * - 产品系列
      - 依赖
      - 链接
-   * - A3
+   * - Ascend 950PR&950DT 系列产品
+     - HDK
+     - 当前 Ascend 950PR&950DT 系列产品为受限获取。如您需要下载配套固件与驱动，请点击 `商用版 <https://support.huawei.com/enterprise/zh/ascend-computing/ascend-hdk-pid-252764743/software>`__ 获取。
+   * -
+     - CANN
+     - https://www.hiascend.com/developer/download/community/result?module=cann&cann=9.2.0
+   * -
+     - TorchNPU
+     - 2.10.0.post7
+   * - Atlas A3 训练系列产品
      - HDK
      - https://www.hiascend.com/hardware/firmware-drivers?ids=d803%2C89dda9ba9de741349efa03687a487678%2C16%2CAArch64%2Conline_Yum
    * -
      - CANN
-     - https://www.hiascend.com/developer/download/community/result?module=cann&cann=9.1.0
+     - https://www.hiascend.com/developer/download/community/result?module=cann&cann=9.2.0
    * -
      - TorchNPU
-     - 2.10.0.post2
-   * - A2
+     - 2.10.0.post7
+   * - Atlas A2 训练系列产品
      - HDK
      - https://www.hiascend.com/hardware/firmware-drivers?ids=d802%2C26958bcc909e4cd48fa56d4c4a43ebec%2C17%2CAArch64%2Conline_Yum
    * -
      - CANN
-     - https://www.hiascend.com/developer/download/community/result?module=cann&cann=9.1.0
+     - https://www.hiascend.com/developer/download/community/result?module=cann&cann=9.2.0
    * -
      - TorchNPU
-     - 2.10.0.post2
+     - 2.10.0.post7
 
 2. 驱动及固件
 ~~~~~~~~~~~~~~~~~~~~
@@ -236,12 +245,12 @@ Toolkit 用于训练、推理及开发。
 
 .. code-block:: bash
 
-    pip install torch_npu-2.10.0.post2-cp312-cp312-manylinux_2_28_aarch64.whl
+    pip install torch_npu-2.10.0.post7-cp312-cp312-manylinux_2_28_aarch64.whl
 
 安装 TorchNPU 插件需要注意：
 
 - 下载的 TorchNPU 会对支持的 Python 版本做区分，请根据实际环境情况选择对应安装包，``pip install torch_npu`` 时，也会一并安装对应版本的 ``torch``。
-- 环境里安装的 TorchNPU 和 ``torch`` 版本需要对齐。例如 TorchNPU 版本为 ``2.10.0.post2`` 时，``torch`` 的版本也需要为 ``2.10.0``。有时依赖互斥，安装不用依赖的过程会导致 ``torch`` 版本被更新，从而导致报错。
+- 环境里安装的 TorchNPU 和 ``torch`` 版本需要对齐。例如 TorchNPU 版本为 ``2.10.0.post7`` 时，``torch`` 的版本也需要为 ``2.10.0``。有时依赖互斥，安装不用依赖的过程会导致 ``torch`` 版本被更新，从而导致报错。
 
 5. 验证安装
 ~~~~~~~~~~~~~~~~
@@ -275,28 +284,34 @@ LlamaFactory 的官方镜像托管于 `Docker Hub <https://hub.docker.com/r/hiyo
 1. 拉取镜像
 ~~~~~~~~~~~~~~~~~~~~
 
-下载 main 分支最新镜像时，需要同时根据设备和容器操作系统选择 Tag。A2 镜像在 Tag 中使用芯片标识 ``910b``，A3 镜像使用 ``a3``：
+下载 main 分支最新镜像时，需要同时根据设备和容器操作系统选择 Tag。Atlas A2 训练系列产品镜像在 Tag 中使用芯片标识 ``910b``，Atlas A3 训练系列产品镜像使用 ``a3``，Ascend 950PR&950DT 系列产品镜像使用 ``950``：
 
 .. list-table::
    :align: left
-   :widths: 15 20 30
+   :widths: 35 25 40
    :header-rows: 1
 
-   * - 硬件系列
+   * - 产品系列
      - 容器操作系统
      - Tag
-   * - A2
+   * - Atlas A2 训练系列产品
      - Ubuntu 22.04
      - ``latest-910b-ubuntu``
-   * - A3
+   * - Atlas A3 训练系列产品
      - Ubuntu 22.04
      - ``latest-a3-ubuntu``
-   * - A2
+   * - Atlas A2 训练系列产品
      - openEuler 24.03
      - ``latest-910b-openeuler``
-   * - A3
+   * - Atlas A3 训练系列产品
      - openEuler 24.03
      - ``latest-a3-openeuler``
+   * - Ascend 950PR&950DT 系列产品
+     - Ubuntu 22.04
+     - ``latest-950-ubuntu``
+   * - Ascend 950PR&950DT 系列产品
+     - openEuler 24.03
+     - ``latest-950-openeuler``
 
 根据上表确定 Tag 后，从 Docker Hub 或 quay.io 中选择一个镜像仓库，并执行对应的一条命令将镜像拉取到本地：
 
@@ -307,18 +322,22 @@ LlamaFactory 的官方镜像托管于 `Docker Hub <https://hub.docker.com/r/hiyo
     docker pull hiyouga/llamafactory:latest-a3-ubuntu
     docker pull hiyouga/llamafactory:latest-910b-openeuler
     docker pull hiyouga/llamafactory:latest-a3-openeuler
+    docker pull hiyouga/llamafactory:latest-950-ubuntu
+    docker pull hiyouga/llamafactory:latest-950-openeuler
 
     # quay.io
     docker pull quay.io/ascend/llamafactory:latest-910b-ubuntu
     docker pull quay.io/ascend/llamafactory:latest-a3-ubuntu
     docker pull quay.io/ascend/llamafactory:latest-910b-openeuler
     docker pull quay.io/ascend/llamafactory:latest-a3-openeuler
+    docker pull quay.io/ascend/llamafactory:latest-950-ubuntu
+    docker pull quay.io/ascend/llamafactory:latest-950-openeuler
 
-``latest`` 镜像使用 ``latest-<910b|a3>-<ubuntu|openeuler>`` 格式，定时构建会更新这些 Tag。Release 镜像则使用包含完整版本信息的 Tag：
+``latest`` 镜像使用 ``latest-<910b|a3|950>-<ubuntu|openeuler>`` 格式，定时构建会更新这些 Tag。Release 镜像则使用包含完整版本信息的 Tag：
 
 .. code-block:: text
 
-    <LlamaFactory-version>-cann<CANN-version>-torch_npu<TorchNPU-version>-<910b|a3>-<OS-and-version>-py<Python-version>
+    <LlamaFactory-version>-cann<CANN-version>-torch_npu<TorchNPU-version>-<910b|a3|950>-<OS-and-version>-py<Python-version>
 
 
 2. 启动容器
@@ -401,52 +420,58 @@ LlamaFactory 提供 :ref:`docker_build` 和 :ref:`docker_compose` 两种构建�
 1. 使用 Docker Build 构建
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-在项目根目录下执行以下命令，构建 A2 Ubuntu 镜像：
+在项目根目录下执行以下命令，构建 Atlas A2 训练系列产品 Ubuntu 镜像：
 
 .. code-block:: shell
 
     docker build \
         -f ./docker/docker-npu/Dockerfile \
-        --build-arg BASE_IMAGE=quay.io/ascend/cann:9.1.0-910b-ubuntu22.04-py3.12 \
+        --build-arg BASE_IMAGE=quay.io/ascend/cann:9.2.0-910b-ubuntu22.04-py3.12 \
         --build-arg PIP_INDEX=https://pypi.org/simple \
         -t llamafactory:npu-910b-ubuntu \
         .
 
-Dockerfile 默认使用 A2 Ubuntu 基础镜像。如需构建其他组合，可以替换 ``BASE_IMAGE`` 和本地镜像 Tag：
+Dockerfile 默认使用 Atlas A2 训练系列产品 Ubuntu 基础镜像。如需构建其他组合，可以替换 ``BASE_IMAGE`` 和本地镜像 Tag：
 
 .. list-table::
    :align: left
-   :widths: 15 20 55
+   :widths: 32 22 46
    :header-rows: 1
 
-   * - 硬件系列
+   * - 产品系列
      - 容器操作系统
      - ``BASE_IMAGE``
-   * - A2
+   * - Atlas A2 训练系列产品
      - Ubuntu 22.04
-     - ``quay.io/ascend/cann:9.1.0-910b-ubuntu22.04-py3.12``
-   * - A3
+     - ``quay.io/ascend/cann:9.2.0-910b-ubuntu22.04-py3.12``
+   * - Atlas A3 训练系列产品
      - Ubuntu 22.04
-     - ``quay.io/ascend/cann:9.1.0-a3-ubuntu22.04-py3.12``
-   * - A2
+     - ``quay.io/ascend/cann:9.2.0-a3-ubuntu22.04-py3.12``
+   * - Atlas A2 训练系列产品
      - openEuler 24.03
-     - ``quay.io/ascend/cann:9.1.0-910b-openeuler24.03-py3.12``
-   * - A3
+     - ``quay.io/ascend/cann:9.2.0-910b-openeuler24.03-py3.12``
+   * - Atlas A3 训练系列产品
      - openEuler 24.03
-     - ``quay.io/ascend/cann:9.1.0-a3-openeuler24.03-py3.12``
+     - ``quay.io/ascend/cann:9.2.0-a3-openeuler24.03-py3.12``
+   * - Ascend 950PR&950DT 系列产品
+     - Ubuntu 22.04
+     - ``quay.io/ascend/cann:9.2.0-950-ubuntu22.04-py3.12``
+   * - Ascend 950PR&950DT 系列产品
+     - openEuler 24.03
+     - ``quay.io/ascend/cann:9.2.0-950-openeuler24.03-py3.12``
 
 可用的 Dockerfile 构建参数如下：
 
 .. list-table::
    :align: left
-   :widths: 20 35 45
+   :widths: 22 45 33
    :header-rows: 1
 
    * - 参数
      - 默认值
      - 用途
    * - ``BASE_IMAGE``
-     - ``quay.io/ascend/cann:9.1.0-910b-ubuntu22.04-py3.12``
+     - ``quay.io/ascend/cann:9.2.0-910b-ubuntu22.04-py3.12``
      - 根据设备型号和容器操作系统选择对应的基础镜像
    * - ``PIP_INDEX``
      - ``https://pypi.org/simple``
@@ -476,33 +501,45 @@ Dockerfile 默认使用 A2 Ubuntu 基础镜像。如需构建其他组合，可�
 
 .. code-block:: shell
 
-  # A2 + Ubuntu
+  # Atlas A2 训练系列产品 + Ubuntu
   docker compose --profile a2-ubuntu up -d
 
-  # A3 + Ubuntu
+  # Atlas A3 训练系列产品 + Ubuntu
   docker compose --profile a3-ubuntu up -d
 
-  # A2 + openEuler
+  # Atlas A2 训练系列产品 + openEuler
   docker compose --profile a2-openeuler up -d
 
-  # A3 + openEuler
+  # Atlas A3 训练系列产品 + openEuler
   docker compose --profile a3-openeuler up -d
+
+  # Ascend 950PR&950DT 系列产品 + Ubuntu
+  docker compose --profile 950-ubuntu up -d
+
+  # Ascend 950PR&950DT 系列产品 + openEuler
+  docker compose --profile 950-openeuler up -d
 
 (3) 进入容器
 
 .. code-block:: shell
 
-  # A2 + Ubuntu
+  # Atlas A2 训练系列产品 + Ubuntu
   docker exec -it llamafactory-910b-ubuntu /bin/bash
 
-  # A3 + Ubuntu
+  # Atlas A3 训练系列产品 + Ubuntu
   docker exec -it llamafactory-a3-ubuntu /bin/bash
 
-  # A2 + openEuler
+  # Atlas A2 训练系列产品 + openEuler
   docker exec -it llamafactory-910b-openeuler /bin/bash
 
-  # A3 + openEuler
+  # Atlas A3 训练系列产品 + openEuler
   docker exec -it llamafactory-a3-openeuler /bin/bash
+
+  # Ascend 950PR&950DT 系列产品 + Ubuntu
+  docker exec -it llamafactory-950-ubuntu /bin/bash
+
+  # Ascend 950PR&950DT 系列产品 + openEuler
+  docker exec -it llamafactory-950-openeuler /bin/bash
 
 如果只需要构建镜像而不启动容器，可以使用 ``docker compose --profile <profile> build``。
 
